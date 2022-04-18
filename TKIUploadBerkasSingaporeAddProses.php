@@ -13,6 +13,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $suratijin_sing = $_FILES['suratijin_sing']['name'];
   $expaspor_sing = $_FILES['expaspor_sing']['name'];
   $skck_sing = $_FILES['skck_sing']['name'];
+  $rekomid_sing = $_FILES['rekomid_sing']['name'];
+  $biometri_sing = $_FILES['biometri_sing']['name'];
   $status_proses_sing = $_POST['status_proses_sing'];
 
   if($ektp_sing != "") {
@@ -70,6 +72,22 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $file_tmpsk = $_FILES['skck_sing']['tmp_name'];   
     $angka_acak     = rand(1,999);
     $skck_baru = $angka_acak.'-'.$skck_sing;
+    //Rekom id
+    if($rekomid_sing != "") {
+    $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+    $rekomid = explode('.', $rekomid_sing); //memisahkan nama file dengan ekstensi yang diupload
+    $ekstensirek = strtolower(end($rekomid));
+    $file_tmprek = $_FILES['rekomid_sing']['tmp_name'];   
+    $angka_acak     = rand(1,999);
+    $rekomid_baru = $angka_acak.'-'.$rekomid_sing;
+    //Biometri
+    if($biometri_sing != "") {
+    $ekstensi_diperbolehkanbio = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+    $biometri = explode('.', $biometri_sing); //memisahkan nama file dengan ekstensi yang diupload
+    $ekstensibio = strtolower(end($biometri));
+    $file_tmpbio = $_FILES['biometri_sing']['tmp_name'];   
+    $angka_acak     = rand(1,999);
+    $biometri_baru = $angka_acak.'-'.$biometri_sing;
 
           if(in_array($ekstensiektp, $ekstensi_diperbolehkanektp) === true)  {     
                   move_uploaded_file($file_tmpektp, 'berkas/'.$ektp_baru); //memindah file gambar ke folder gambar
@@ -85,8 +103,12 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   move_uploaded_file($file_tmpep, 'berkas/'.$expaspor_baru);
                   if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                   move_uploaded_file($file_tmpsk, 'berkas/'.$skck_baru);  
+                  if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
+                  move_uploaded_file($file_tmprek, 'berkas/'.$rekomid_baru); 
+                  if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
+                  move_uploaded_file($file_tmpbio, 'berkas/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$status_proses_sing')";
+                    $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$rekomid_baru', '$status_proses_sing')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -103,13 +125,15 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
               }
               }
+              }
+              }
                else {     
                //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
                   echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='TKIUploadBerkasSingaporeAdd.php';</script>";
               }
             }
   } else {
-     $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', null, null, null, null, null, null, null, '$status_proses')";
+     $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', null, null, null, null, null, null, null, null, null, '$status_proses')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -120,6 +144,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                       //silahkan ganti index.php sesuai halaman yang akan dituju
                       echo "<script>alert('Data berhasil ditambah.');window.location='TKIUploadBerkasSingapore.php';</script>";
                     }
+  }
+  }
   }
   }
   }

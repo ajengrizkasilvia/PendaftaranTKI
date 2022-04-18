@@ -13,6 +13,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $suratijin_malay = $_FILES['suratijin_malay']['name'];
   $expaspor_malay = $_FILES['expaspor_malay']['name'];
   $skck_malay = $_FILES['skck_malay']['name'];
+  $rekomid_malay = $_FILES['rekomid_malay']['name'];
+  $biometri_malay = $_FILES['biometri_malay']['name'];
   $status_proses_malay = $_POST['status_proses_malay'];
 
   if($ektp_malay != "") {
@@ -70,6 +72,22 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $file_tmpsk = $_FILES['skck_malay']['tmp_name'];   
     $angka_acak     = rand(1,999);
     $skck_baru = $angka_acak.'-'.$skck_malay;
+    //Rekom ID
+    if($rekomid_malay != "") {
+      $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+      $rekomid = explode('.', $rekomid_malay); //memisahkan nama file dengan ekstensi yang diupload
+      $ekstensirek = strtolower(end($rekomid));
+      $file_tmprek = $_FILES['rekomid_malay']['tmp_name'];   
+      $angka_acak     = rand(1,999);
+      $rekomid_baru = $angka_acak.'-'.$rekomid_malay;
+    //Biometri
+    if($biometri_malay != "") {
+      $ekstensi_diperbolehkanbio = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+      $biometri = explode('.', $biometri_malay); //memisahkan nama file dengan ekstensi yang diupload
+      $ekstensibio = strtolower(end($biometri));
+      $file_tmpbio = $_FILES['biometri_malay']['tmp_name'];   
+      $angka_acak     = rand(1,999);
+      $biometri_baru = $angka_acak.'-'.$biometri_malay;
 
           if(in_array($ekstensiektp, $ekstensi_diperbolehkanektp) === true)  {     
                   move_uploaded_file($file_tmpektp, 'berkas/'.$ektp_baru); //memindah file gambar ke folder gambar
@@ -85,8 +103,12 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   move_uploaded_file($file_tmpep, 'berkas/'.$expaspor_baru);
                   if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                   move_uploaded_file($file_tmpsk, 'berkas/'.$skck_baru);  
+                  if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
+                  move_uploaded_file($file_tmprek, 'berkas/'.$rekomid_baru); 
+                  if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
+                  move_uploaded_file($file_tmpbio, 'berkas/'.$biometri_baru);                   
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, status_proses_malay) VALUES ('$id_dft', '$sektor_malay', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$status_proses_malay')";
+                    $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, rekomid_malay, biometri_malay, status_proses_malay) VALUES ('$id_dft', '$sektor_malay', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$status_proses_malay')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -103,13 +125,15 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
               }
               }
+              }
+              }
                else {     
                //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
                   echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='TKIUploadBerkasMalayAdd.php';</script>";
               }
             }
   } else {
-     $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, status_proses_malay) VALUES ('$id_dft', '$sektor_malay', null, null, null, null, null, null, null, '$status_proses')";
+     $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, rekomid_malay, biometri_malay, status_proses_malay) VALUES ('$id_dft', '$sektor_malay', null, null, null, null, null, null, null, null, null, '$status_proses')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -120,6 +144,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                       //silahkan ganti index.php sesuai halaman yang akan dituju
                       echo "<script>alert('Data berhasil ditambah.');window.location='TKIUploadBerkasMalay.php';</script>";
                     }
+  }
+  }
   }
   }
   }
