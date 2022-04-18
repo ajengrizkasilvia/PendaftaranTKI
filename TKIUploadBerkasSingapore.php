@@ -86,11 +86,6 @@
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="TKIBlkln.php">
-                    <i class="fas fa-fw fa-building"></i>
-                    <span>BLKLN</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -157,14 +152,13 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Data TKI Singapore</h1>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Singapore</h6><br>
+                            <a href="TKIUploadBerkasSingaporeAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -181,6 +175,8 @@
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
+                                            <th>Rekom ID</th>
+                                            <th>Biometri</th>
                                             <th>Status Proses</th>
                                         </tr>
                                     </thead>                 
@@ -203,6 +199,8 @@
                                             <td><img src="berkas/<?php echo $d['suratijin_sing']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/<?php echo $d['expaspor_sing']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/<?php echo $d['rekomid_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/<?php echo $d['biometri_sing']; ?>" style="width: 300px;"></td>
                                             <td><?php echo $d['status_proses_sing']; ?></td>
                                         </tr>
                                         <?php 

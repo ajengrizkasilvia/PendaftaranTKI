@@ -83,13 +83,6 @@
                     <span>Test TKI</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="TKIBlkln.php">
-                    <i class="fas fa-fw fa-building"></i>
-                    <span>BLKLN</span></a>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -201,6 +194,14 @@
                     <div class="form-group">
                         <td>SKCK</td>
                         <td><input type="file" name="skck_sing" class="form-control"/></td>
+                    </div>
+                    <div class="form-group">
+                        <td>Rekom Id</td>
+                        <td><input type="file" name="rekomid_sing" class="form-control"/></td>
+                    </div>
+                    <div class="form-group">
+                        <td>Biometri</td>
+                        <td><input type="file" name="biometri_sing" class="form-control"/></td>
                     </div>
                     <div class="form-group">
                         <td>Status Proses</td>

@@ -85,13 +85,6 @@
                     <span>Test TKI</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="TKIBlkln.php">
-                    <i class="fas fa-fw fa-building"></i>
-                    <span>BLKLN</span></a>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -156,15 +149,14 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Hongkong</h6><br>
-                        <div class="card-body">
+                            <a href="TKIUploadBerkasHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
+                            <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
@@ -179,6 +171,8 @@
                                             <th>Surat Ijin</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
+                                            <th>Rekom ID</th>
+                                            <th>Biometri</th>
                                             <th>Status Proses</th>
                                         </tr>
                                     </thead>
@@ -201,6 +195,8 @@
                                             <td><img src="berkas/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/<?php echo $d['rekomid_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
                                             <td><?php echo $d['status_proses_hk']; ?></td>
                                         </tr>
                                         <?php 
