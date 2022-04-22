@@ -4,10 +4,13 @@
   	<title>Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link rel="stylesheet" href="css/style.css">
+
 	</head>
 	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
 	<a href="index.php" style="color: #fff">Back to Landing Page</a>
@@ -21,7 +24,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
-						<h3 class="mb-4 text-center">Register</h3>
+						<h3 class="mb-4 text-center">Register Admin</h3>
 						<form action="prosesregistrasi.php" method="post">
 							<div class="form-group">
 								<input type="text" class="form-control" name="nama" placeholder="Enter name" id="nama">
@@ -44,9 +47,10 @@
 								</script>
 							</div>
 							<div class="form-group">
-								<td>
+                                <td>
                                     <select class="form-control" name="role" id="role">
                                         <option>--pilih role--</option>
+                                        <option value='1'>Admin</option>
                                         <option value='2'>TKI</option>
                                     </select>   
                                 </td>
@@ -75,9 +79,12 @@
 			</div>
 		</div>
 	</section>
+
 	<script src="js/jquery.min.js"></script>
   	<script src="js/popper.js"></script>
   	<script src="js/bootstrap.min.js"></script>
   	<script src="js/main.js"></script>
+
 	</body>
 </html>
+

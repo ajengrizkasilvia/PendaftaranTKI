@@ -51,6 +51,13 @@
                     <span>Beranda</span></a>
             </li>
 
+             <!-- Nav Item - Tables -->
+             <li class="nav-item">
+                <a class="nav-link" href="TKIFormDaftar.php">
+                    <i class="fas fa-fw fa-edit"></i>
+                    <span>Form Pendaftaran</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -75,13 +82,6 @@
                 <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
                     <span>Test TKI</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="TKIBlkln.php">
-                    <i class="fas fa-fw fa-building"></i>
-                    <span>BLKLN</span></a>
             </li>
 
             <!-- Divider -->
