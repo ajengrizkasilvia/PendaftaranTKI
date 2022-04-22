@@ -13,13 +13,16 @@
     $suratijin_malay = $_POST['suratijin_malay'];
     $expaspor_malay = $_POST['expaspor_malay'];
     $skck_malay = $_POST['skck_malay'];
+    $rekomid_malay = $_POST['rekomid_malay'];
+    $biometri_malay = $_POST['biometri_malay'];
 	$status_proses_malay= $_POST['status_proses_malay'];
 	
 
     // update data ke database
 	$query="UPDATE malaysia SET id_dft='$id_dft', sektor_malay='$sektor_malay', ektp_malay='$ektp_malay', kk_malay='$kk_malay',
                                                 akte_malay='$akte_malay', suratnikah_malay='$suratnikah_malay',
-                                                expaspor_malay='$expaspor_malay', skck_malay='$skck_malay', status_proses_malay= '$status_proses_malay' 
+                                                expaspor_malay='$expaspor_malay', skck_malay='$skck_malay', rekomid_malay='$rekomid_malay',
+                                                biometri_malay='$biometri_malay',status_proses_malay= '$status_proses_malay' 
                                                 WHERE id_malaysia='$id_malaysia'";
 	$result = mysqli_query($konektor, $query);
     if ($result) {

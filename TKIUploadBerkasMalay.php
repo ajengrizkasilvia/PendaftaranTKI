@@ -197,15 +197,15 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></p>
                                             <td><?php echo $d['sektor_malay']; ?></p>
-                                            <td><img src="berkas/<?php echo $d['ektp_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['kk_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['akte_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['suratnikah_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['suratijin_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['expaspor_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['skck_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['rekomid_malay']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['biometri_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['ektp_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['kk_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['akte_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['suratnikah_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['suratijin_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['expaspor_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['skck_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['rekomid_malay']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Malaysia/<?php echo $d['biometri_malay']; ?>" style="width: 300px;"></td>
                                             <td><?php echo $d['status_proses_malay']; ?></td>
                                         </tr>
                                         <?php 

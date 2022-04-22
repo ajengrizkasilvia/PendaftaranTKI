@@ -80,6 +80,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $file_tmprek = $_FILES['rekomid_hk']['tmp_name'];   
     $angka_acak     = rand(1,999);
     $rekomid_baru = $angka_acak.'-'.$rekomid_hk;
+    //Biometri
     if($biometri_hk != "") {
     $ekstensi_diperbolehkanbio = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
     $biometri = explode('.', $biometri_hk); //memisahkan nama file dengan ekstensi yang diupload
@@ -89,23 +90,23 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $biometri_baru = $angka_acak.'-'.$biometri_hk;
 
           if(in_array($ekstensiektp, $ekstensi_diperbolehkanektp) === true)  {     
-                  move_uploaded_file($file_tmpektp, 'berkas/'.$ektp_baru); //memindah file gambar ke folder gambar
+                  move_uploaded_file($file_tmpektp, 'berkas/Hongkong/'.$ektp_baru); //memindah file gambar ke folder gambar
                   if(in_array($ekstensikk, $ekstensi_diperbolehkankk) === true)  {
-                  move_uploaded_file($file_tmpkk, 'berkas/'.$kk_baru);
+                  move_uploaded_file($file_tmpkk, 'berkas/Hongkong/'.$kk_baru);
                   if(in_array($ekstensiakte, $ekstensi_diperbolehkanakte) === true)  {
-                  move_uploaded_file($file_tmpakte, 'berkas/'.$akte_baru);
+                  move_uploaded_file($file_tmpakte, 'berkas/Hongkong/'.$akte_baru);
                   if(in_array($ekstensisn, $ekstensi_diperbolehkansn) === true)  {
-                  move_uploaded_file($file_tmpsn, 'berkas/'.$suratnikah_baru);
+                  move_uploaded_file($file_tmpsn, 'berkas/Hongkong/'.$suratnikah_baru);
                   if(in_array($ekstensisi, $ekstensi_diperbolehkansi) === true)  {
-                  move_uploaded_file($file_tmpsi, 'berkas/'.$suratijin_baru);
+                  move_uploaded_file($file_tmpsi, 'berkas/Hongkong/'.$suratijin_baru);
                   if(in_array($ekstensiep, $ekstensi_diperbolehkanep) === true)  {
-                  move_uploaded_file($file_tmpep, 'berkas/'.$expaspor_baru);
+                  move_uploaded_file($file_tmpep, 'berkas/Hongkong/'.$expaspor_baru);
                   if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
-                  move_uploaded_file($file_tmpsk, 'berkas/'.$skck_baru);  
+                  move_uploaded_file($file_tmpsk, 'berkas/Hongkong/'.$skck_baru);  
                   if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                  move_uploaded_file($file_tmprek, 'berkas/'.$rekomid_baru); 
+                  move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$rekomid_baru); 
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
-                  move_uploaded_file($file_tmpbio, 'berkas/'.$biometri_baru); 
+                  move_uploaded_file($file_tmpbio, 'berkas/Hongkong/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
                     $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, status_proses_hk) VALUES ('$id_dft', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$status_proses_hk')";
                     $result = mysqli_query($konektor, $query);

@@ -199,15 +199,15 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['sektor_sing']; ?></td>
-                                            <td><img src="berkas/<?php echo $d['ektp_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['kk_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['akte_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['suratnikah_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['suratijin_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['expaspor_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['rekomid_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['biometri_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['ektp_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['kk_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['akte_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['suratnikah_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['suratijin_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['expaspor_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['rekomid_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['biometri_sing']; ?>" style="width: 300px;"></td>
                                             <td><?php echo $d['status_proses_sing']; ?></td>
                                         </tr>
                                         <?php 

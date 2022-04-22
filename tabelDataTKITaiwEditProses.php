@@ -13,13 +13,16 @@
     $suratijin_taiw = $_POST['suratijin_taiw'];
     $expaspor_taiw = $_POST['expaspor_taiw'];
     $skck_taiw = $_POST['skck_taiw'];
+    $rekomid_taiw = $_POST['rekomid_taiw'];
+    $biometri_taiw = $_POST['biometri_taiw'];
 	$status_proses_taiw= $_POST['status_proses_taiw'];
 	
 
     // update data ke database
 	$query="UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', ektp_taiw='$skck_taiw', kk_taiw='$kk_taiw',
-                                                akte_taiw='$akte_taiw', suratnikah_taiw='$suratnikah_taiw',
-                                                expaspor_taiw='$expaspor_taiw', skck_taiw='$skck_taiw', status_proses_taiw= '$status_proses_taiw' 
+                                                akte_taiw='$akte_taiw', suratnikah_taiw='$suratnikah_taiw', suratijin_taiw='$suratijin_taiw',
+                                                expaspor_taiw='$expaspor_taiw', skck_taiw='$skck_taiw', rekomid_taiw='$rekomid_taiw',
+                                                biometri_taiw='$biometri_taiw',status_proses_taiw= '$status_proses_taiw' 
                                                 WHERE id_taiwan='$id_taiwan'";
     $result = mysqli_query($konektor, $query);
     if ($result) {

@@ -90,23 +90,23 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $biometri_baru = $angka_acak.'-'.$biometri_sing;
 
           if(in_array($ekstensiektp, $ekstensi_diperbolehkanektp) === true)  {     
-                  move_uploaded_file($file_tmpektp, 'berkas/'.$ektp_baru); //memindah file gambar ke folder gambar
+                  move_uploaded_file($file_tmpektp, 'berkas/Singapore/'.$ektp_baru); //memindah file gambar ke folder gambar
                   if(in_array($ekstensikk, $ekstensi_diperbolehkankk) === true)  {
-                  move_uploaded_file($file_tmpkk, 'berkas/'.$kk_baru);
+                  move_uploaded_file($file_tmpkk, 'berkas/Singapore/'.$kk_baru);
                   if(in_array($ekstensiakte, $ekstensi_diperbolehkanakte) === true)  {
-                  move_uploaded_file($file_tmpakte, 'berkas/'.$akte_baru);
+                  move_uploaded_file($file_tmpakte, 'berkas/Singapore/'.$akte_baru);
                   if(in_array($ekstensisn, $ekstensi_diperbolehkansn) === true)  {
-                  move_uploaded_file($file_tmpsn, 'berkas/'.$suratnikah_baru);
+                  move_uploaded_file($file_tmpsn, 'berkas/Singapore/'.$suratnikah_baru);
                   if(in_array($ekstensisi, $ekstensi_diperbolehkansi) === true)  {
-                  move_uploaded_file($file_tmpsi, 'berkas/'.$suratijin_baru);
+                  move_uploaded_file($file_tmpsi, 'berkas/Singapore/'.$suratijin_baru);
                   if(in_array($ekstensiep, $ekstensi_diperbolehkanep) === true)  {
-                  move_uploaded_file($file_tmpep, 'berkas/'.$expaspor_baru);
+                  move_uploaded_file($file_tmpep, 'berkas/Singapore/'.$expaspor_baru);
                   if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
-                  move_uploaded_file($file_tmpsk, 'berkas/'.$skck_baru);  
+                  move_uploaded_file($file_tmpsk, 'berkas/Singapore/'.$skck_baru);  
                   if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                  move_uploaded_file($file_tmprek, 'berkas/'.$rekomid_baru); 
+                  move_uploaded_file($file_tmprek, 'berkas/Singapore/'.$rekomid_baru); 
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
-                  move_uploaded_file($file_tmpbio, 'berkas/'.$biometri_baru); 
+                  move_uploaded_file($file_tmpbio, 'berkas/Singapore/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
                     $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$rekomid_baru', '$status_proses_sing')";
                     $result = mysqli_query($konektor, $query);

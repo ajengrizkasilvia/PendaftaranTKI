@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -209,11 +208,13 @@
                                             <th>Sektor</th>
                                             <th>E-KTP</th>
                                             <th>Kartu Keluarga</th>
-                                            <th>Akta Kelahiran</th>
-                                            <th>Surat Menikah</th>
-                                            <th>Surat Ijin Ortu/Suami</th>
+                                            <th>Akta Lahir</th>
+                                            <th>Surat Nikah</th>
+                                            <th>Surat Ijin</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
+                                            <th>Rekom ID</th>
+                                            <th>Biometri</th>
                                             <th>Status Proses</th>
                                             <th>Action</th>
                                         </tr>
@@ -229,13 +230,15 @@
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $d['nama_lengkap']; ?></p>
                                     <td><?php echo $d['sektor_hk']; ?></p>
-                                    <td><img src="berkas/<?php echo $d['ektp_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/<?php echo $d['kk_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/<?php echo $d['akte_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/<?php echo $d['suratnikah_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
                                     <td><?php echo $d['status_proses_hk']; ?></td>
                                     <td>
                                         <a href="tabelDataTKIHongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">EDIT</a>

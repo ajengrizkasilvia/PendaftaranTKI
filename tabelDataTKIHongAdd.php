@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -203,22 +202,10 @@
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
-                                        <td>
-                                            <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                            <?php 
-                                                include 'config.php';
-                                                $konektor = mysqli_connect("localhost","root","", "tki");
-                                                $data = mysqli_query($konektor, 'SELECT * FROM pendaftaran LEFT JOIN hongkong ON hongkong.id_dft = pendaftaran.nama_lengkap ASC');
-                                            ?>
-                                            <select class="form-control" name="id_dft">
-                                                <option>--pilih nama tki--</option>
-                                                <?php if (mysqli_num_rows($sql) > 0) { ?>
-                                                    <?php while ($row = mysqli_fetch_array($sql)) { ?>
-                                                        <option><?php echo $row['nama_lengkap'] ?></option>
-                                                    <?php } ?>
-                                                <?php } ?>
-                                            </select>
-                                        </td>
+                                            <td>
+                                                <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                                <input type="text" name="id_dft" class="form-control"/>
+                                            </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Sektor</label>
@@ -251,6 +238,14 @@
                                     <div class="form-group">
                                         <td>SKCK</td>
                                         <td><input type="file" name="skck_hk" class="form-control"/></td>
+                                    </div>
+                                    <div class="form-group">
+                                        <td>Rekom Id</td>
+                                        <td><input type="file" name="rekomid_hk" class="form-control"/></td>
+                                    </div>
+                                    <div class="form-group">
+                                        <td>Biometri</td>
+                                        <td><input type="file" name="biometri_hk" class="form-control"/></td>
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>

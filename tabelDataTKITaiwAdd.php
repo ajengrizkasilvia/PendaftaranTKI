@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -255,6 +254,14 @@
                                             <td>
                                                 <input type="file" name="skck_taiw" class="form-control"/>
                                             </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <td>Rekom Id</td>
+                                            <td><input type="file" name="rekomid_taiw" class="form-control"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <td>Biometri</td>
+                                            <td><input type="file" name="biometri_taiw" class="form-control"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Status Proses</label>

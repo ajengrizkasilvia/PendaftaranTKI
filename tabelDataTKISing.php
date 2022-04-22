@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -214,6 +213,8 @@
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
+                                            <th>Rekom ID</th>
+                                            <th>Biometri</th>
                                             <th>Status Proses</th>
                                             <th>Action</th>
                                         </tr>
@@ -230,13 +231,15 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['sektor_sing']; ?></td>
-                                            <td><img src="berkas/<?php echo $d['ektp_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['kk_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['akte_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['suratnikah_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['suratijin_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['expaspor_sing']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['ektp_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['kk_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['akte_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['suratnikah_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['suratijin_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['expaspor_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['rekomid_sing']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Singapore/<?php echo $d['biometri_sing']; ?>" style="width: 300px;"></td>
                                             <td><?php echo $d['status_proses_sing']; ?></td>
                                                 <td>
                                                     <a href="tabelDataTKISingEdit.php?id_singapore=<?php echo $d['id_singapore']; ?>">EDIT</a>

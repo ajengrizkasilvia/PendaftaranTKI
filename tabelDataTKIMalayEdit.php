@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -221,31 +220,39 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <td>E-KTP</td>
-                                                    <td><input type="text" class="form-control" name="ektp_malay" value="<?php echo $d['ektp_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="ektp_malay" value="<?php echo $d['ektp_malay']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>Kartu Keluarga</td>
-                                                    <td><input type="text" class="form-control" name="kk_malay" value="<?php echo $d['kk_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="kk_malay" value="<?php echo $d['kk_malay']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>Akta Kelahiran</td>
-                                                    <td><input type="text" class="form-control" name="akte_malay" value="<?php echo $d['akte_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="akte_malay" value="<?php echo $d['akte_malay']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>Surat Menikah</td>
-                                                    <td><input type="text" class="form-control" name="suratnikah_malay" value="<?php echo $d['suratnikah_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="suratnikah_malay" value="<?php echo $d['suratnikah_malay']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>Surat Ijin Ortu/Suami</td>
-                                                    <td><input type="text" class="form-control" name="suratijin_malay" value="<?php echo $d['suratijin_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="suratijin_malay" value="<?php echo $d['suratijin_malay']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>Ex Paspor</td>
-                                                    <td><input type="text" class="form-control" name="expaspor_malay" value="<?php echo $d['expaspor_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="expaspor_malay" value="<?php echo $d['expaspor_malay']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>SKCK</td>
-                                                    <td><input type="text" class="form-control" name="skck_malay" value="<?php echo $d['skck_malay']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="skck_malay" value="<?php echo $d['skck_malay']; ?>"></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Rekom Id</td>
+                                                    <td><input type="file" name="rekomid_malay" class="form-control" value="<?php echo $d['rekomid_malay']; ?>"></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Biometri</td>
+                                                    <td><input type="file" name="biometri_malay" class="form-control" value="<?php echo $d['biometri_malay']; ?>"/></td>
                                                 </div>
                                                 <div class="form-group">
                                                     <td>Status Proses</td>
