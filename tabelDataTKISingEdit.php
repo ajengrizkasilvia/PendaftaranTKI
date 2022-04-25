@@ -205,7 +205,7 @@
                                     $data = mysqli_query($konektor,"SELECT * FROM singapore WHERE id_singapore='$id_singapore'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelDataTKISingEditProses.php">
+                                        <form method="post" action="tabelDataTKISingEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group">			
                                                     <td>Nama TKI</td>

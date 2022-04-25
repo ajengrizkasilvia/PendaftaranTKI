@@ -169,6 +169,8 @@
                     while($d = mysqli_fetch_array($data)){
                         ?>
                             <!--<?php echo $no++; ?> -->
+                            </h5>No Telp</h5>
+                            <p><?php echo $d['no_telp']; ?></p>
                             </h5>NIK</h5>
                             <p><?php echo $d['nik']; ?></p>
                             </h5>Nama Lengkap</h5>
@@ -197,6 +199,8 @@
                             <p><?php echo $d['agama']; ?></p>
                             </h5>Pengalaman Kerja</h5>
                             <p><?php echo $d['pengalaman_kerja']; ?></p>
+                            </h5>Medical Check</h5>
+                            <P><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></P>
 
                 
                         <?php 

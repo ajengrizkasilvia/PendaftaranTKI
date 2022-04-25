@@ -166,8 +166,12 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form method="post" action="TKIFormDaftarProses.php">
+                                <form method="post" action="TKIFormDaftarProses.php" enctype="multipart/form-data">
                                     <fieldset>
+                                        <div class="form-group">
+                                            <label>No Telp</label>
+                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp"/></td>
+                                        </div>
                                         <div class="form-group">			
                                             <label>NIK</label>
                                                 <td>
@@ -184,10 +188,10 @@
                                             <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
-                                                    <option value='1'>Hongkong</option>
-                                                    <option value='2'>Taiwan</option>
-                                                    <option value='3'>Singapore</option>
-                                                    <option value='4'>Malaysia</option>
+                                                    <option value='9'>Hongkong</option>
+                                                    <option value='13'>Taiwan</option>
+                                                    <option value='14'>Singapore</option>
+                                                    <option value='15'>Malaysia</option>
                                                 </select>   
                                             </td>
                                         </div>
@@ -249,6 +253,11 @@
                                             <label>Pengalaman Kerja</label>
                                             <td><input type="text" name="pengalaman_kerja" class="form-control" placeholder="Masukkan pengalaman kerja"/></td>
                                         </div>
+                                        <div class="form-group">
+                                            <td>Medical Check</td>
+                                            <td><input type="file" name="medical_check" class="form-control"/></td>
+                                        </div>
+                                        <br>
                                         <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>

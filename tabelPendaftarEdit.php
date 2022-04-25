@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -206,8 +205,12 @@
                                     $data = mysqli_query($konektor,"SELECT * FROM pendaftaran WHERE id_dft='$id_dft'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelPendaftarEditProses.php">
+                                        <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
+                                                <div class="form-group">
+                                                    <label>No Telp</label>
+                                                    <td><input type="text" class="form-control" name="no_telp" value="<?php echo $d['no_telp']; ?>"></td>
+                                                </div>
                                                 <div class="form-group">			
                                                     <label>NIK</label>
                                                     <td>
@@ -224,10 +227,10 @@
                                                     <td>
                                                         <select class="form-control" name="id_negara">
                                                             <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
-                                                            <option value='2'>Taiwan</option>
-                                                            <option value='3'>Singapore</option>
-                                                            <option value='4'>Malaysia</option>
+                                                            <option value='9'>Hongkong</option>
+                                                            <option value='13'>Taiwan</option>
+                                                            <option value='14'>Singapore</option>
+                                                            <option value='15'>Malaysia</option>
                                                         </select>   
                                                     </td>
                                                 </div>
@@ -289,6 +292,11 @@
                                                     <label>Pengalaman Kerja</label>
                                                     <td><input type="text" class="form-control" name="pengalaman_kerja" value="<?php echo $d['pengalaman_kerja']; ?>"></td>
                                                 </div>
+                                                <div class="form-group">
+                                                    <td>Medical Check</td>
+                                                    <td><input type="file" name="medical_check" class="form-control"/></td>
+                                                </div>
+                                                <br>
                                                 <p>
                                                     <td></td>
                                                     <td><input type="submit" value="SIMPAN"></td>

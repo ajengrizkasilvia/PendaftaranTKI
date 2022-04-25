@@ -205,7 +205,7 @@
                                     $data = mysqli_query($konektor,"SELECT * FROM taiwan WHERE id_taiwan='$id_taiwan'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelDataTKITaiwEditProses.php">
+                                        <form method="post" action="tabelDataTKITaiwEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group">			
                                                     <td>Nama TKI</td>
@@ -220,7 +220,7 @@
                                                 </tr>
                                                 <div class="form-group">
                                                     <td>E-KTP</td>
-                                                    <td><input type="file" class="form-control" name="sektor_taiw" value="<?php echo $d['ektp_taiw']; ?>"></td>
+                                                    <td><input type="file" class="form-control" name="ektp_taiw" value="<?php echo $d['ektp_taiw']; ?>"></td>
                                                 </tr>
                                                 <div class="form-group">
                                                     <td>Kartu Keluarga</td>

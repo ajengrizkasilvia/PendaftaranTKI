@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -205,6 +204,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>No Telp</th>
                                             <th>NIK</th>
                                             <th>Nama Lengkap</th>
                                             <th>Negara Tujuan</th>
@@ -233,6 +233,7 @@
                                             ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
+                                                <td><?php echo $d['no_telp']; ?></td>
                                                 <td><?php echo $d['nik']; ?></td>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
                                                 <td><?php echo $d['negara_tujuan']; ?></td>
