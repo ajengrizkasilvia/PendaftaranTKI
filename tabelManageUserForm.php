@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -184,8 +183,11 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Manage User</h1>
-                    <p class="mb-4">Manage User merupakan fitur untuk mengelola data-data user yang login. Admin dapat mengedit, menambah, dan menghapus data user.</p>
-                    <p>Role : 1 -> admin, 2 -> user</p>
+                    <p class="mb-4">Isi form tambah user dengan benar dan sesuai.
+                    Pilih Role : 1 -> admin, Role 2 -> tki
+                    </p>
+                    Tekan <a href="tabelManageUser.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -223,7 +225,6 @@
                                         <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>
-                                            <td><input type="submit" href="tabelManageUSer.php" value="Cancel"></td>
                                         </p>		
                                     </fieldset>
                                 </form>

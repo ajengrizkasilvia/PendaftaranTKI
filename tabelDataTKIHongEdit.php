@@ -100,7 +100,7 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+               <li class="nav-item">
                 <a class="nav-link" href="tabelNegaraTujuan.php">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Negara Tujuan</span></a>
@@ -183,13 +183,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
+                        <h1 class="h3 mb-2 text-gray-800">TKI Hongkong</h1>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
+                    Pastikan berkas dengan format nama_negaraTujuan. 
+                    Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -261,7 +259,6 @@
                                                 <p>
                                                     <td></td>
                                                     <td><input type="submit" value="SIMPAN"></td>
-                                                    <td><input type="submit" href="tabelDataTKIHong.php" value="Cancel"></td>
                                                 </p>		
                                             </fieldset>
                                         </form>

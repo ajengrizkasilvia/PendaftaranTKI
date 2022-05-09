@@ -184,12 +184,10 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Data TKI Taiwan</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
+                    Pastikan berkas dengan format nama_negaraTujuan.jpg 
+                    Tekan <a href="tabelDataTKITaiw.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -261,7 +259,6 @@
                                                 <div class="form-group">
                                                     <td></td>
                                                     <td><input type="submit" value="SIMPAN"></td>
-                                                    <td><input type="submit" href="tabelDataTKITaiw.php" value="Cancel"></td>
                                                 </tr>		
                                             </fieldset>
                                         </form>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PT Hendrarta Argaraya - ADMINs</title>
+    <title>PT Hendrarta Argaraya - ADMIN</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template-->

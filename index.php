@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="#content">Home Page</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Negara Tujuan</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
                         <li class="nav-item"><a class="nav-link" href="login.php">Login Disini!</a></li>
                     </ul>
                 </div>
@@ -48,7 +48,8 @@
         <section class="page-section" id="content">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Partners for success abroad</h2>
+                    <h2 class="section-heading text-uppercase">Mitra untuk Sukses di Luar Negeri</h2>
+                    <h3 class="section-subheading text-muted">Partners for Success Abroad</h3>
                     <h3 class="section-subheading text-muted">PT Hendrarta Argaraya merupakan Perusahaan Penenmpatan Kerja Indonesia Swasta (PPTKIS)
                                                             yang telah mendapat ijin dan pengakuan resmi Pemerintah Indonesia untuk melakukan kegiatan 
                                                             perekrutan calon tenaga kerja, pendidikan dan pelatihan, dan penempatan kerja diluar negeri.</h3>
@@ -118,6 +119,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Tentang Kami</h2>
+                    <h3 class="section-subheading text-muted">About Us</h3>
                     <h3 class="section-subheading text-muted">Banyak kegiatan-kegiatan tambahan selama mengikuti proses penempatan
                         anda bekerja ke luar negeri, akan mendidik dan menghibur anda dengan baik dan nayaman.
                     </h3>
@@ -248,8 +250,8 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Kontak Kami</h2>
+                    <h3 class="section-subheading text-muted">Contact Us</h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->

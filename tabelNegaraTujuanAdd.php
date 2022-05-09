@@ -93,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -184,43 +183,50 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
+                    <p class="mb-4">Isi form tambah negara tujuan dengan benar dan sesuai.
+                    Upload gambar negara dengan format namanegara.jpg.
+                    </p>
+                    Tekan <a href="tabelNegaraTujuan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tambah Negara</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Negara</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form method="post" action="tabelNegaraTujuanAddProses.php" enctype="multipart/form-data">
-                                    <table>
-                                        <tr>			
-                                            <td>Negara</td>
+                                    <fieldset>
+                                        <div class="form-group">			
+                                            <label>Nama Negara</label>
                                             <td>
                                                 <input type="hidden" name="id_negara" value="<?php echo $d['id_negara']; ?>">
-                                                <input type="text" name="negara_tujuan">
+                                                <input type="text" name="negara_tujuan" class="form-control" placeholder="Masukkan nama negara tujuan"/>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kriteria</td>
-                                            <td><textarea type="text" name="kriteria" rows="7" cols="50"></textarea>
-                                        </tr>
-                                        <tr>
-                                            <td>Persyaratan</td>
-                                            <td><textarea type="text" name="persyaratan" rows="7" cols="50"></textarea>
-                                        </tr>
-                                        <tr>
-                                            <td>Gaji</td>
-                                            <td><input type="text" name="jumlah_gaji"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gambar Negara</td>
-                                            <td><input type="file" name="gambar_negara"></td>
-                                        </tr>
-                                        <tr>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Kriteria</label>
+                                            <td><input type="text" name="kriteria" class="form-control" placeholder="Masukkan kriteria negara tersebut"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Persyaratan Dokumen</label>
+                                            <td><input type="text" name="persyaratan" class="form-control" placeholder="Masukkan persyaratan dokumen negara tersebut"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Gaji / Uang Saku</label>
+                                            <td><input type="text" name="jumlah_gaji" class="form-control" placeholder="Masukkan jumlah gaji negara tersebut"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Gambar Negara</label>
+                                            <td>
+                                                <input type="file" name="gambar_negara" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>
-                                        </tr>		
-                                    </table>
+                                        </p>		
+                                    </fieldset>
                                 </form>
                             </div>
                         </div>

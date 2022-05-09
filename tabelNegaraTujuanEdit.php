@@ -26,7 +26,15 @@
 </head>
 
 <body id="page-top">
-
+    <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['role']==""){
+		header("location:login.php?pesan=gagal");
+	}
+ 
+	?>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -85,7 +93,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -93,7 +100,7 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+               <li class="nav-item">
                 <a class="nav-link" href="tabelNegaraTujuan.php">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Negara Tujuan</span></a>
@@ -140,171 +147,14 @@
                         </button>
                     </form>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['username']; ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -314,14 +164,6 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -340,61 +182,67 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
+                    </div>
+                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dan gambar negara dengan benar dan sesuai.
+                    Pastikan berkas dengan format namaNegara.jpg 
+                    Tekan <a href="tabelNegaraTujuan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tambah Negara</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Daftar Negara Tujuan</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                             <?php
-	include 'config.php';
-    $konektor = mysqli_connect("localhost","root","", "tki");
-	$id_negara = $_GET['id_negara'];
-	$data = mysqli_query($konektor,"select * from negara where id_negara='$id_negara'");
-	while($d = mysqli_fetch_array($data)){
-		?>
-		<form method="post" action="tabelNegaraTujuanEditProses.php" enctype="multipart/form-data">
-			<table>
-				<tr>			
-					<td>Negara</td>
-					<td>
-                    <input type="hidden" name="id_negara" value="<?php echo $d['id_negara']; ?>">
-						<input type="text" name="negara_tujuan" value="<?php echo $d['negara_tujuan']; ?>">
-					</td>
-				</tr>
-				<tr>
-					<td>Kriteria</td>
-					<td><input type="text" name="kriteria" value="<?php echo $d['kriteria']; ?>"></td>
-				</tr>
-				<tr>
-					<td>Persyaratan</td>
-					<td><input type="text" name="persyaratan" value="<?php echo $d['persyaratan']; ?>"></td>
-				</tr>
-                <tr>
-					<td>Gaji</td>
-					<td><input type="text" name="jumlah_gaji" value="<?php echo $d['jumlah_gaji']; ?>"></td>
-				</tr>
-                <tr>
-                <td>Gambar Negara</td>
-                    <td><img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                    <input type="file" name="gambar_negara" /></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="SIMPAN"></td>
-                    <td><input type="submit" href="tabelPendaftar.php" value="Cancel"></td>
-				</tr>		
-			</table>
-		</form>
-        <?php 
-	}
-	?>
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $id_negara = $_GET['id_negara'];
+                                $data = mysqli_query($konektor,"select * from negara where id_negara='$id_negara'");
+                                while($d = mysqli_fetch_array($data)){
+                            ?>      
+                                        <form method="post" action="tabelNegaraTujuanEditProses.php" enctype="multipart/form-data">
+                                            <fieldset>
+                                                <div class="form-group">			
+                                                    <td>Nama Negara</td>
+                                                    <td>
+                                                        <input type="hidden" name="id_negara" value="<?php echo $d['id_negara']; ?>">
+                                                        <input type="text" class="form-control" name="negara_tujuan" value="<?php echo $d['negara_tujuan']; ?>">
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Kriteria</td>
+                                                    <td><input type="text" class="form-control" name="kriteria" value="<?php echo $d['kriteria']; ?>"></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Persyaratan Dokumen</td>
+                                                    <td><input type="text" class="form-control" name="persyaratan" value="<?php echo $d['persyaratan']; ?>"></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Gaji / Uang Saku</td>
+                                                    <td><input type="text" class="form-control" name="jumlah_gaji" value="<?php echo $d['jumlah_gaji']; ?>"></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Gambar Negara</td>
+                                                    <td><img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 350px;float: left;margin-bottom: 10px;">
+                                                    <input type="file" name="gambar_negara" class="form-control"/></td>
+                                                </div>
+                                                <p>
+                                                    <td></td>
+                                                    <td><input type="submit" value="SIMPAN"></td>
+                                                    <!-- <td><input type="submit" href="tabelNegaraTujuan.php" value="Cancel"></td> -->
+                                                    <td><button type="cancel" onclick="javascript:window.location='tabelNegaraTujuan.php';">Cancel</button></td>
+                                                </p>		
+                                            </fieldset>
+                                        </form>
+                                        <?php 
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 
@@ -405,7 +253,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
                     </div>
                 </div>
             </footer>

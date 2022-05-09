@@ -184,12 +184,15 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
+                    <p class="mb-4">Negara Tujuan merupakan fitur untuk mengelola daftar negara tujuan PT yang akan ditampilkan pada halaman utama.
+                        Admin dapat mengedit, menambah, dan menghapus data negara tujuan.
+                    </p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Negara Tujuan</h6><br>
                             <a href="tabelNegaraTujuanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Add New Destination</a>
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
