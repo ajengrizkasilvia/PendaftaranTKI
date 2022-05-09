@@ -204,63 +204,90 @@
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelDataTKISingEditProses.php" enctype="multipart/form-data">
-                                            <fieldset>
-                                                <div class="form-group">			
+                                            <table>
+                                                <tr>			
                                                     <td>Nama TKI</td>
                                                     <td>
                                                         <input type="hidden" name="id_singapore" value="<?php echo $d['id_singapore']; ?>">
                                                         <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
+                                                </tr>
+                                                <tr>
                                                     <td>Sektor</td>
                                                     <td><input type="text" class="form-control" name="sektor_sing" value="<?php echo $d['sektor_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                </tr>
+                                                <tr>
                                                     <td>E-KTP</td>
-                                                    <td><input type="file" class="form-control" name="ektp_sing" value="<?php echo $d['ektp_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['ektp_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="ektp_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Kartu Keluarga</td>
-                                                    <td><input type="file" class="form-control" name="kk_sing" value="<?php echo $d['kk_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['kk_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="kk_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Akta Kelahiran</td>
-                                                    <td><input type="file" class="form-control" name="akte_sing" value="<?php echo $d['akte_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['akte_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="akte_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Surat Menikah</td>
-                                                    <td><input type="file" class="form-control" name="suratnikah_sing" value="<?php echo $d['suratnikah_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['suratnikah_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="suratnikah_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Surat Ijin Ortu/Suami</td>
-                                                    <td><input type="file" class="form-control" name="suratijin_sing" value="<?php echo $d['suratijin_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['suratijin_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="suratijin_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Ex Paspor</td>
-                                                    <td><input type="file" class="form-control" name="expaspor_sing" value="<?php echo $d['expaspor_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['expaspor_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="expaspor_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>SKCK</td>
-                                                    <td><input type="file" class="form-control" name="skck_sing" value="<?php echo $d['skck_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['skck_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="skck_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Rekom Id</td>
-                                                    <td><input type="file" name="rekomid_sing" class="form-control" value="<?php echo $d['rekomid_sing']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['rekomid_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="rekomid_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Biometri</td>
-                                                    <td><input type="file" name="biometri_sing" class="form-control" value="<?php echo $d['biometri_sing']; ?>"/></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                        <img src="berkas/Singapore/<?php echo $d['biometri_sing']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="biometri_sing" /></td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Status Proses</td>
                                                     <td><input type="text" class="form-control" name="status_proses_sing" value="<?php echo $d['status_proses_sing']; ?>"></td>
-                                                </div>
-                                                <p>
+                                                </tr>
+                                                <tr>
                                                     <td></td>
                                                     <td><input type="submit" value="SIMPAN"></td>
-                                                </p>		
-                                            </fieldset>
+                                                </tr>		
+                                            </table>
                                         </form>
                                         <?php 
                                     }
