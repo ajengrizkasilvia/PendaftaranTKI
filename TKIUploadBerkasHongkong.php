@@ -181,6 +181,7 @@
                                             <th>Rekom ID</th>
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
+                                            <th>Keterangan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -204,7 +205,8 @@
                                             <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['status_proses_hk']; ?></td>
+                                            <td><?php echo $d['id_tahapdua']; ?></td>
+                                            <td><?php echo $d['keterangan_hk']; ?></td>
                                         </tr>
                                         <?php 
                                             }

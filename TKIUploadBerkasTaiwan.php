@@ -183,6 +183,7 @@
                                             <th>Rekom ID</th>
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
+                                            <th>Keterangan</th>
                                         </tr>
                                     </thead>
                                         <tbody>
@@ -206,7 +207,8 @@
                                                 <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
                                                 <td><img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 300px;"></td>
                                                 <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><?php echo $d['status_proses_taiw']; ?></td>
+                                                <td><?php echo $d['id_tahapdua']; ?></td>
+                                                <td><?php echo $d['keterangan_taiw']; ?></td>
                                             </tr>
                                             <?php 
                                                 }

@@ -15,7 +15,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $skck_malay = $_FILES['skck_malay']['name'];
   $rekomid_malay = $_FILES['rekomid_malay']['name'];
   $biometri_malay = $_FILES['biometri_malay']['name'];
-  $status_proses_malay = $_POST['status_proses_malay'];
+  $id_tahapdua = $_POST['id_tahapdua'];
+  $keterangan_malay = $_POST['keterangan_malay'];
 
   if($ektp_malay != "") {
     $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -108,7 +109,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Malaysia/'.$biometri_baru);                   
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, rekomid_malay, biometri_malay, status_proses_malay) VALUES ('$id_dft', '$sektor_malay', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$status_proses_malay')";
+                    $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, rekomid_malay, biometri_malay, id_tahapdua, keterangan_malay) VALUES ('$id_dft', '$sektor_malay', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_malay')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -133,7 +134,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, rekomid_malay, biometri_malay, status_proses_malay) VALUES ('$id_dft', '$sektor_malay', null, null, null, null, null, null, null, null, null, '$status_proses')";
+     $query = "INSERT INTO malaysia (id_dft, sektor_malay, ektp_malay, kk_malay, akte_malay, suratnikah_malay, suratijin_malay, expaspor_malay, skck_malay, rekomid_malay, biometri_malay, id_tahapdua, keterangan_malay) VALUES ('$id_dft', '$sektor_malay', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_malay')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){

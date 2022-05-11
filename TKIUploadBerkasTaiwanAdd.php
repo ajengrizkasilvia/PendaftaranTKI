@@ -228,10 +228,19 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
-                                        <td>
-                                            <input type="text" name="status_proses_taiw" class="form-control" placeholder="Masukkan status proses tki saat ini"/>
-                                        </td>
-                                    </div>
+                                            <td>
+                                            <select class="form-control" name="id_tahapdua">
+                                                <option>--pilih status proses--</option>
+                                                <option value='1'>Diajukan</option>
+                                            </select>  
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Keterangan</label>
+                                            <td>
+                                                <input type="text" name="keterangan_taiw" class="form-control"/>
+                                            </td>
+                                        </div>
                                     <p>
                                         <td></td>
                                         <td><input type="submit" value="SIMPAN"></td>
