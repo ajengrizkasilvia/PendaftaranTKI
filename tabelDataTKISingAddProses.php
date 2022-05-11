@@ -15,7 +15,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $skck_sing = $_FILES['skck_sing']['name'];
   $rekomid_sing = $_FILES['rekomid_sing']['name'];
   $biometri_sing = $_FILES['biometri_sing']['name'];
-  $status_proses_sing = $_POST['status_proses_sing'];
+  $id_tahapdua = $_POST['id_tahapdua'];
+  $keterangan_sing = $_POST['keterangan_sing'];
 
   if($ektp_sing != "") {
     $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -108,7 +109,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Singapore/'.$biometri_baru);  
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$rekomid_baru', '$status_proses_sing')";
+                    $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, id_tahapdua, keterangan_sing) VALUES ('$id_dft', '$sektor_sing', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$rekomid_baru', '$id_tahapdua', '$keterangan_sing')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -133,7 +134,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, status_proses_sing) VALUES ('$id_dft', '$sektor_sing', null, null, null, null, null, null, null, null, null, '$status_proses')";
+     $query = "INSERT INTO singapore (id_dft, sektor_sing, ektp_sing, kk_sing, akte_sing, suratnikah_sing, suratijin_sing, expaspor_sing, skck_sing, rekomid_sing, biometri_sing, id_tahapdua, keterangan_sing) VALUES ('$id_dft', '$sektor_sing', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_sing')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){

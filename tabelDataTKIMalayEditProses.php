@@ -15,7 +15,8 @@
     $skck_malay = $_FILES['skck_malay']['name'];
     $rekomid_malay = $_FILES['rekomid_malay']['name'];
     $biometri_malay = $_FILES['biometri_malay']['name'];
-    $status_proses_malay = $_POST['status_proses_malay'];
+    $id_tahapdua = $_POST['id_tahapdua'];
+    $keterangan_malay = $_POST['keterangan_malay'];
   
     if($ektp_malay != "") {
       $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -112,7 +113,7 @@
         $query  = "UPDATE malaysia SET id_dft='$id_dft', sektor_malay='$sektor_malay', ektp_malay='$ektp_baru', kk_malay='$kk_baru',
              akte_malay='$akte_baru', suratnikah_malay='$suratnikah_baru', suratijin_malay='$suratijin_baru',
              expaspor_malay='$expaspor_baru', skck_malay='$skck_baru', rekomid_malay='$rekomid_baru',
-             biometri_malay='$biometri_baru', status_proses_malay= '$status_proses_malay' 
+             biometri_malay='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_malay= '$keterangan_malay' 
              WHERE id_malaysia='$id_malaysia'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -137,7 +138,7 @@
         }
 } else {
 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-$query  = "UPDATE malaysia SET id_dft='$id_dft', sektor_malay='$sektor_malay', status_proses_malay= '$status_proses_malay' 
+$query  = "UPDATE malaysia SET id_dft='$id_dft', sektor_malay='$sektor_malay', id_tahapdua='$id_tahapdua', keterangan_malay= '$keterangan_malay'
 WHERE id_malaysia='$id_malaysia'";
 $result = mysqli_query($konektor, $query);
 // periska query apakah ada error

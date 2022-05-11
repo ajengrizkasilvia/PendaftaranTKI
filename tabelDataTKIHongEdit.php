@@ -281,7 +281,19 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Status Proses</td>
-                                                    <td><input type="text" class="form-control" name="status_proses_hk" value="<?php echo $d['status_proses_hk']; ?>"></td>
+                                                    <td>
+                                                        <select class="form-control" name="id_tahapdua">
+                                                        <option>--pilih status proses--</option>
+                                                        <option value='1'>Diajukan</option>
+                                                        <option value='2'>Divertifikasi</option>
+                                                        <option value='3'>Diterima</option>
+                                                        <option value='4'>Ditolak</option>
+                                                        </select>  
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Keterangan</td>
+                                                    <td><input type="text" class="form-control" name="keterangan_hk" value="<?php echo $d['keterangan_hk']; ?>"></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>

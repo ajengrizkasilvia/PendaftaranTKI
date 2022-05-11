@@ -5,7 +5,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
 
 	// membuat variabel untuk menampung data dari form
   $id_dft = $_POST['id_dft'];
-  $sektor_hk = $_POST['sektor_hk'];
+  $id_tahapdua = $_POST['id_tahapdua'];
+	$sektor_hk = $_POST['sektor_hk'];
   $ektp_hk = $_FILES['ektp_hk']['name'];
   $kk_hk = $_FILES['kk_hk']['name'];
   $akte_hk = $_FILES['akte_hk']['name'];
@@ -15,7 +16,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $skck_hk = $_FILES['skck_hk']['name'];
   $rekomid_hk = $_FILES['rekomid_hk']['name'];
   $biometri_hk = $_FILES['biometri_hk']['name'];
-  $status_proses_hk = $_POST['status_proses_hk'];
+  $keterangan_hk = $_POST['keterangan_hk'];
 
   if($ektp_hk != "") {
     $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -108,7 +109,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Hongkong/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, status_proses_hk) VALUES ('$id_dft', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$status_proses_hk')";
+                    $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id_dft', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -116,7 +117,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                              " - ".mysqli_error($konektor));
                     } else {
                       //tampil alert dan akan redirect ke halaman index.php
-                      echo "<script>alert('Data berhasil ditambah.');window.location='TKIUploadBerkasHongkong.php';</script>";
+                      echo "<script>alert('Data berhasil ditambah.');window.location='tabelDataTKIHongAdd.php';</script>";
                     }
   
               }
@@ -133,7 +134,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, status_proses_hk) VALUES ('$id_dft', '$sektor_hk', null, null, null, null, null, null, null, null, null, '$status_proses')";
+     $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id_dft', '$sektor_hk', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_hk')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -142,7 +143,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                     } else {
                       //tampil alert dan akan redirect ke halaman index.php
                       //silahkan ganti index.php sesuai halaman yang akan dituju
-                      echo "<script>alert('Data berhasil ditambah.');window.location='tabelDataTKIHong.php';</script>";
+                      echo "<script>alert('Data berhasil diubah.');window.location='tabelDataTKIHong.php';</script>";
                     }
   }
   }
