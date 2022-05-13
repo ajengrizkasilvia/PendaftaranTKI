@@ -262,9 +262,18 @@
                                             <td><input type="file" name="biometri_sing" class="form-control"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <td>Status Proses</td>
+                                        <label>Status Proses</label>
                                             <td>
-                                                <input type="text" name="status_proses_sing" class="form-control" placeholder="Masukkan status proses tki saat ini"/>
+                                            <select class="form-control" name="id_tahapdua">
+                                                <option>--pilih status proses--</option>
+                                                <option value='1'>Diajukan</option>
+                                            </select>  
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <td>Keterangan</td>
+                                            <td>
+                                                <input type="text" name="keterangan_sing" class="form-control"/>
                                             </td>
                                         </div>
                                         <p>

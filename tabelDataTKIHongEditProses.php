@@ -15,7 +15,8 @@
     $skck_hk = $_FILES['skck_hk']['name'];
     $rekomid_hk = $_FILES['rekomid_hk']['name'];
     $biometri_hk = $_FILES['biometri_hk']['name'];
-	$status_proses_hk= $_POST['status_proses_hk'];
+    $id_tahapdua = $_POST['id_tahapdua'];
+    $keterangan_hk = $_POST['keterangan_hk'];
 	
     //EKTP
     if($ektp_hk != "") {
@@ -114,7 +115,7 @@
         $query  = "UPDATE hongkong SET id_dft='$id_dft', sektor_hk='$sektor_hk', ektp_hk='$ektp_baru', kk_hk='$kk_baru',
              akte_hk='$akte_baru', suratnikah_hk='$suratnikah_baru', suratijin_hk='$suratijin_baru',
              expaspor_hk='$expaspor_baru', skck_hk='$skck_baru', rekomid_hk='$rekomid_baru',
-             biometri_hk='$biometri_baru', status_proses_hk= '$status_proses_hk' 
+             biometri_hk='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
              WHERE id_hongkong='$id_hongkong'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -139,7 +140,7 @@
         }
 } else {
 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-$query  = "UPDATE hongkong SET id_dft='$id_dft', sektor_hk='$sektor_hk', status_proses_hk= '$status_proses_hk' 
+$query  = "UPDATE hongkong SET id_dft='$id_dft', sektor_hk='$sektor_hk', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk'
 WHERE id_hongkong='$id_hongkong'";
 $result = mysqli_query($konektor, $query);
 // periska query apakah ada error

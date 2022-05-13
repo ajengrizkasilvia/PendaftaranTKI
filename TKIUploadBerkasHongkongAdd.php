@@ -212,6 +212,21 @@
                         <td>Biometri</td>
                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
                     </div>
+                    <div class="form-group">
+                        <label>Status Proses</label>
+                        <td>
+                            <select class="form-control" name="id_tahapdua">
+                            <option>--pilih status proses--</option>
+                            <option value='1'>Diajukan</option>
+                            </select>  
+                        </td>
+                    </div>
+                    <div class="form-group">
+                        <label>Keterangan</label>
+                        <td>
+                            <input type="text" name="keterangan_hk" class="form-control"/>
+                        </td>
+                    </div>
                     <p>
                         <td></td>
                         <td><input type="submit" value="SIMPAN"></td>

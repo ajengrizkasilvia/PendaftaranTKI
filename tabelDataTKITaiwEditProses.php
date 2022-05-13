@@ -15,7 +15,8 @@
     $skck_taiw = $_FILES['skck_taiw']['name'];
     $rekomid_taiw = $_FILES['rekomid_taiw']['name'];
     $biometri_taiw = $_FILES['biometri_taiw']['name'];
-    $status_proses_taiw = $_POST['status_proses_taiw'];
+    $id_tahapdua = $_POST['id_tahapdua'];
+    $keterangan_taiw = $_POST['keterangan_taiw'];
   
     if($ektp_taiw != "") {
       $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -112,7 +113,7 @@
         $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru', kk_taiw='$kk_baru',
              akte_taiw='$akte_baru', suratnikah_taiw='$suratnikah_baru', suratijin_taiw='$suratijin_baru',
              expaspor_taiw='$expaspor_baru', skck_taiw='$skck_baru', rekomid_taiw='$rekomid_baru',
-             biometri_taiw='$biometri_baru', status_proses_taiw= '$status_proses_taiw' 
+             biometri_taiw='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
              WHERE id_taiwan='$id_taiwan'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -137,7 +138,7 @@
         }
 } else {
 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-$query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', status_proses_taiw= '$status_proses_taiw' 
+$query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw'
              WHERE id_taiwan='$id_taiwan'";
 $result = mysqli_query($konektor, $query);
 // periska query apakah ada error

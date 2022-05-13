@@ -15,7 +15,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $skck_taiw = $_FILES['skck_taiw']['name'];
   $rekomid_taiw = $_FILES['rekomid_taiw']['name'];
   $biometri_taiw = $_FILES['biometri_taiw']['name'];
-  $status_proses_taiw = $_POST['status_proses_taiw'];
+  $id_tahapdua = $_POST['id_tahapdua'];
+  $keterangan_taiw = $_POST['keterangan_taiw'];
 
   if($ektp_taiw != "") {
     $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -108,7 +109,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Taiwan/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO taiwan (id_dft, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, status_proses_taiw) VALUES ('$id_dft', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$status_proses_taiw')";
+                    $query = "INSERT INTO taiwan (id_dft, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id_dft', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -133,7 +134,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO taiwan (id_dft, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, status_proses_taiw) VALUES ('$id_dft', '$sektor_taiw', null, null, null, null, null, null, null, null, null, '$status_proses')";
+     $query = "INSERT INTO taiwan (id_dft, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id_dft', '$sektor_taiw', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_taiw')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
