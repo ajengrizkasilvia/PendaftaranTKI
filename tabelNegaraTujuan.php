@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -93,7 +94,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>

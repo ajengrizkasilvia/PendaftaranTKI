@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -224,7 +225,9 @@
                                             include 'config.php';
                                             $konektor = mysqli_connect("localhost","root","", "tki");
                                             $no = 1;
-                                            $data = mysqli_query($konektor,"SELECT * FROM singapore INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft");
+                                            $data = mysqli_query($konektor,"SELECT * FROM singapore 
+                                                                            INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft
+                                                                            INNER JOIN tahapdua ON singapore.id_tahapdua = tahapdua.id_tahapdua");
                                             while($d = mysqli_fetch_array($data)){
                                         ?>
                                         <tr>
@@ -240,7 +243,7 @@
                                             <td><img src="berkas/Singapore/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Singapore/<?php echo $d['rekomid_sing']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Singapore/<?php echo $d['biometri_sing']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['id_tahapdua']; ?></td>
+                                            <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_sing']; ?></td>
                                                 <td>
                                                     <a href="tabelDataTKISingEdit.php?id_singapore=<?php echo $d['id_singapore']; ?>">EDIT</a>

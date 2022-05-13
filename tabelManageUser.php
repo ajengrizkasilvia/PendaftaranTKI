@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -210,7 +211,7 @@
                                             include 'config.php';
                                             $konektor = mysqli_connect("localhost","root","", "tki");
                                             $no = 1;
-                                            $data = mysqli_query($konektor,"select * from user");
+                                            $data = mysqli_query($konektor,"SELECT * FROM user");
                                             while($d = mysqli_fetch_array($data)){
                                         ?>
                                                 <tr>

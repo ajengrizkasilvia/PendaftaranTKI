@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - TKI</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link

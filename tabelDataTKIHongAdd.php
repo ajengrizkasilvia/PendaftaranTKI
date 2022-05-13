@@ -198,11 +198,32 @@
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKIHongAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
+                                    <?php 
+                                        include 'config.php';
+                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                        $no = 1;
+                                        $data = mysqli_query($konektor,"SELECT * FROM hongkong 
+                                                                        INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
+                                                                        INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
+                                                                        ORDER BY nama_lengkap ASC");
+                                        while($d = mysqli_fetch_array($data)){
+                                    ?>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
                                             <td>
                                                 <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                <input type="text" name="id_dft" class="form-control" placeholder="Masukkan Nama Lengkap"/>
+                                                <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan Nama Lengkap"/> -->
+                                                <label>Nama TKI</label>
+                                                <td>
+                                                    <select class="form-control" name="id_dft">
+                                                        <option>--pilih nama tki--</option>
+                                                        <?php if (mysqli_num_rows($data) > 0) { ?>
+                                                            <?php while ($row = mysqli_fetch_array($data)) { ?>
+                                                                <option><?php echo $row["nama_lengkap"] ?></option>
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                    </select>  
+                                                </td>
                                             </td>
                                     </div>
                                     <div class="form-group">
@@ -247,17 +268,23 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
-                                            <td>
+                                        <td>
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
+                                                <option value='2'>Diverifikasi</option>
+                                                <option value='3'>Diterima</option>
+                                                <option value='4'>Ditolak</option>
                                             </select>  
-                                            </td>
+                                        </td>
                                     </div>
                                     <div class="form-group">
                                         <td>Keterangan</td>
                                         <td><input type="text" class="form-control" name="keterangan_hk"></td>
                                     </div>
+                                    <?php 
+                                    }
+                                    ?>
                                     <p>
                                         <td></td>
                                         <td><input type="submit" value="SIMPAN"></td>

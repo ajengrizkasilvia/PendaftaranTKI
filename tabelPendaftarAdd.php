@@ -218,10 +218,10 @@
                                             <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
-                                                    <option value='9'>Hongkong</option>
-                                                    <option value='13'>Taiwan</option>
-                                                    <option value='14'>Singapore</option>
-                                                    <option value='15'>Malaysia</option>
+                                                    <option value='1'>Hongkong</option>
+                                                    <option value='2'>Taiwan</option>
+                                                    <option value='3'>Singapore</option>
+                                                    <option value='4'>Malaysia</option>
                                                 </select>   
                                             </td>
                                         </div>
@@ -286,6 +286,10 @@
                                         <div class="form-group">
                                             <td>Medical Check</td>
                                             <td><input type="file" name="medical_check" class="form-control"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <td>Pas Foto</td>
+                                            <td><input type="file" name="pas_foto" class="form-control"/></td>
                                         </div>
                                         <br>
                                         <p>

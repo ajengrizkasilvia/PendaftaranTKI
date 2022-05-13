@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -198,89 +199,114 @@
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKIMalayAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
+                                    <?php 
+                                        include 'config.php';
+                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                        $no = 1;
+                                        $data = mysqli_query($konektor,"SELECT * FROM malaysia 
+                                                                            INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft
+                                                                            INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua
+                                                                            ORDER BY nama_lengkap");
+                                        while($d = mysqli_fetch_array($data)){
+                                    ?>
                                     <div class="form-group">			
-                                            <label>Nama TKI</label>
+                                        <label>Nama TKI</label>
                                         <td>
                                             <input type="hidden" name="id_malaysia" value="<?php echo $d['id_malaysia']; ?>">
-                                            <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
+                                            <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/> -->
+                                            <label>Nama TKI</label>
+                                                <td>
+                                                    <select class="form-control" name="id_dft">
+                                                        <option>--pilih nama tki--</option>
+                                                        <?php if (mysqli_num_rows($data) > 0) { ?>
+                                                            <?php while ($row = mysqli_fetch_array($data)) { ?>
+                                                                <option><?php echo $row["nama_lengkap"] ?></option>
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                    </select>  
+                                                </td>
                                         </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Sektor</label>
-                                            <td>
-                                                <input type="text" name="sektor_malay" class="form-control" placeholder="Masukkan sektor tki"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>E-KTP</label>
-                                            <td>
-                                                <input type="file" name="ektp_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Kartu Keluarga</label>
-                                            <td>
-                                                <input type="file" name="kk_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Akta Kelahiran</label>
-                                            <td>
-                                                <input type="file" name="akte_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Surat Menikah</label>
-                                            <td>
-                                                <input type="file" name="suratnikah_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Surat Ijin Ortu/Suami</label>
-                                            <td>
-                                                <input type="file" name="suratijin_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Ex Paspor</label>
-                                            <td>
-                                                <input type="file" name="expaspor_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>SKCK</label>
-                                            <td>
-                                                <input type="file" name="skck_malay" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Rekom Id</td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sektor</label>
+                                        <td>
+                                            <input type="text" name="sektor_malay" class="form-control" placeholder="Masukkan sektor tki"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>E-KTP</label>
+                                        <td>
+                                            <input type="file" name="ektp_malay" class="form-control"/>                                            </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Kartu Keluarga</label>
+                                        <td>
+                                            <input type="file" name="kk_malay" class="form-control"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Akta Kelahiran</label>
+                                        <td>
+                                            <input type="file" name="akte_malay" class="form-control"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Surat Menikah</label>
+                                        <td>
+                                            <input type="file" name="suratnikah_malay" class="form-control"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Surat Ijin Ortu/Suami</label>
+                                        <td>
+                                            <input type="file" name="suratijin_malay" class="form-control"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ex Paspor</label>
+                                        <td>
+                                            <input type="file" name="expaspor_malay" class="form-control"/>                                            </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>SKCK</label>
+                                        <td>
+                                            <input type="file" name="skck_malay" class="form-control"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <td>Rekom Id</td>
                                             <td><input type="file" name="rekomid_malay" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Biometri</td>
+                                    </div>
+                                    <div class="form-group">
+                                        <td>Biometri</td>
                                             <td><input type="file" name="biometri_malay" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
                                         <label>Status Proses</label>
                                             <td>
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
+                                                <option value='2'>Diverifikasi</option>
+                                                <option value='3'>Diterima</option>
+                                                <option value='4'>Ditolak</option>
                                             </select>  
                                             </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Keterangan</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Keterangan</label>
                                             <td>
                                                 <input type="text" name="keterangan_malay" class="form-control"/>
                                             </td>
-                                        </div>
-                                        <p>
-                                            <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                        </p>		
-                                    </fieldset>
+                                    </div>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <p>
+                                        <td></td>
+                                        <td><input type="submit" value="SIMPAN"></td>
+                                    </p>		
+                                </fieldset>
                                 </form>
                             </div>
                         </div>

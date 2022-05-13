@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -285,7 +286,7 @@
                                                         <select class="form-control" name="id_tahapdua">
                                                         <option>--pilih status proses--</option>
                                                         <option value='1'>Diajukan</option>
-                                                        <option value='2'>Divertifikasi</option>
+                                                        <option value='2'>Diverifikasi</option>
                                                         <option value='3'>Diterima</option>
                                                         <option value='4'>Ditolak</option>
                                                         </select>  

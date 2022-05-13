@@ -258,6 +258,10 @@
                                             <td>Medical Check</td>
                                             <td><input type="file" name="medical_check" class="form-control"/></td>
                                         </div>
+                                        <div class="form-group">
+                                            <td>Pas Foto</td>
+                                            <td><input type="file" name="pas_foto" class="form-control"/></td>
+                                        </div>
                                         <br>
                                         <p>
                                             <td></td>

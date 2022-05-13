@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -215,15 +216,18 @@
                                             <th>Rekom ID</th>
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
+                                            <th>Keterangan</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                        <tr>
+                                    </tbody>
                                             <?php 
                                                 include 'config.php';
                                                 $konektor = mysqli_connect("localhost","root","", "tki");
                                                 $no = 1;
-                                                $data = mysqli_query($konektor,"SELECT * FROM malaysia INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft");
+                                                $data = mysqli_query($konektor,"SELECT * FROM malaysia 
+                                                                                INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft
+                                                                                INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua");
                                                 while($d = mysqli_fetch_array($data)){
                                             ?>
                                             <td><?php echo $no++; ?></td>
@@ -238,7 +242,7 @@
                                             <td><img src="berkas/Malaysia/<?php echo $d['skck_malay']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['rekomid_malay']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['biometri_malay']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['id_tahapdua']; ?></td>
+                                            <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_malay']; ?></td>
                                             <td>
                                                 <a href="tabelDataTKIMalayEdit.php?id_malaysia=<?php echo $d['id_malaysia']; ?>">EDIT</a>
@@ -253,7 +257,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 

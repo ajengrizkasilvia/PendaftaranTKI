@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -218,6 +219,8 @@
                                             <th>Status</th>
                                             <th>Agama</th>
                                             <th>Pengalaman Kerja</th>
+                                            <th>Medical Check-up</th>
+                                            <th>Pas Foto</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -247,7 +250,8 @@
                                                 <td><?php echo $d['status']; ?></td>
                                                 <td><?php echo $d['agama']; ?></td>
                                                 <td><?php echo $d['pengalaman_kerja']; ?></td>
-
+                                                <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
                                                 <td>
                                                     <a href="tabelPendaftarEdit.php?id_dft=<?php echo $d['id_dft']; ?>">EDIT</a>
                                                     <a href="tabelPendaftarDelete.php?id_dft=<?php echo $d['id_dft']; ?>">HAPUS</a>

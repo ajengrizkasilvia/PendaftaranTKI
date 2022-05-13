@@ -198,11 +198,31 @@
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKISingAddProses.php" enctype="multipart/form-data">
                                     <fieldset>
+                                        <?php 
+                                            include 'config.php';
+                                            $konektor = mysqli_connect("localhost","root","", "tki");
+                                            $no = 1;
+                                            $data = mysqli_query($konektor,"SELECT * FROM singapore 
+                                                                            INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft
+                                                                            INNER JOIN tahapdua ON singapore.id_tahapdua = tahapdua.id_tahapdua");
+                                            while($d = mysqli_fetch_array($data)){
+                                        ?>
                                         <div class="form-group">			
                                             <td>Nama TKI</td>
                                             <td>
                                                 <input type="hidden" name="id_singapore" value="<?php echo $d['id_singapore']; ?>">
-                                                <input type="text" name="id_dft" class="form-control"/>
+                                                <!-- <input type="text" name="id_dft" class="form-control"/> -->
+                                                <label>Nama TKI</label>
+                                                <td>
+                                                    <select class="form-control" name="id_dft">
+                                                        <option>--pilih nama tki--</option>
+                                                        <?php if (mysqli_num_rows($data) > 0) { ?>
+                                                            <?php while ($row = mysqli_fetch_array($data)) { ?>
+                                                                <option><?php echo $row["nama_lengkap"] ?></option>
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                    </select>  
+                                                </td>
                                             </td>
                                         </div>
                                         <div class="form-group">
@@ -267,6 +287,9 @@
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
+                                                <option value='2'>Diverifikasi</option>
+                                                <option value='3'>Diterima</option>
+                                                <option value='4'>Ditolak</option>
                                             </select>  
                                             </td>
                                         </div>
@@ -276,6 +299,9 @@
                                                 <input type="text" name="keterangan_sing" class="form-control"/>
                                             </td>
                                         </div>
+                                        <?php 
+                                        }
+                                        ?>
                                         <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>
