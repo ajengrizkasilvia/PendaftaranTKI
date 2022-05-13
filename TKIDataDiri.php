@@ -151,8 +151,9 @@
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-2 text-gray-800">Data Diri</h1>
+    <h1 class="h3 mb-2 text-gray-800">Halaman Data Diri</h1>
 </div>
+    <p class="mb-4">Berikut merupakan data diri anda. Apabila ada data yang tidak sesuai silahkan konfirmasi ke Admin.</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">

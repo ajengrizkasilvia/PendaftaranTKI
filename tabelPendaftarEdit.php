@@ -206,7 +206,7 @@
                                         <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group">
-                                                    <label>No Telp</label>
+                                                    <label>No Telp / WA</label>
                                                     <td><input type="text" class="form-control" name="no_telp" value="<?php echo $d['no_telp']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">			

@@ -186,8 +186,8 @@
                         <h1 class="h3 mb-2 text-gray-800">Pendaftar</h1>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
-                    Upload berkas medical check-up dengan format nama_umur_medicalcheck.jpg. 
-                    Tekan <a href="tabelPendaftar.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    Upload berkas medical check-up dengan format nama_umur_medicalcheck.jpg. </p>
+                    <p> Tekan <a href="tabelPendaftar.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -199,8 +199,8 @@
                                 <form method="post" action="tabelPendaftarAddProses.php" enctype="multipart/form-data">
                                     <fieldset>
                                         <div class="form-group">
-                                            <label>No Telp</label>
-                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp"/></td>
+                                            <label>No Telp / WA</label>
+                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
                                         </div>
                                         <div class="form-group">			
                                             <label>NIK</label>

@@ -157,7 +157,8 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Form Pendaftaran TKI</h1>
                     </div>
-                    <p class="mb-4">Silahkan isi data dibawah ini dengan lengkap</p>
+                    <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form pendaftaran dengan benar dan sesuai. 
+                    Upload berkas medical check-up dengan format nama_umur_medicalcheck.jpg. </p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -169,8 +170,8 @@
                                 <form method="post" action="TKIFormDaftarProses.php" enctype="multipart/form-data">
                                     <fieldset>
                                         <div class="form-group">
-                                            <label>No Telp</label>
-                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp"/></td>
+                                            <label>No Telp / WA</label>
+                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
                                         </div>
                                         <div class="form-group">			
                                             <label>NIK</label>
@@ -188,10 +189,10 @@
                                             <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
-                                                    <option value='9'>Hongkong</option>
-                                                    <option value='13'>Taiwan</option>
-                                                    <option value='14'>Singapore</option>
-                                                    <option value='15'>Malaysia</option>
+                                                    <option value='1'>Hongkong</option>
+                                                    <option value='2'>Taiwan</option>
+                                                    <option value='3'>Singapore</option>
+                                                    <option value='4'>Malaysia</option>
                                                 </select>   
                                             </td>
                                         </div>
@@ -261,7 +262,6 @@
                                         <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>
-                                            <td><input type="submit" href="indextki.php" value="Cancel"></td>
                                         </p>		
                                     </fieldset>
                                 </form>

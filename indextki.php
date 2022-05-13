@@ -90,7 +90,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="TKITest">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test TKI</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -174,10 +175,7 @@
                                             <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                                 src="img/undraw_posting_photo.svg" alt="...">
                                         </div>
-                                        <p>Add some quality, svg illustrations to your project courtesy of <a
-                                                target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                            constantly updated collection of beautiful svg images that you can use
-                                            completely free and without attribution!</p>
+                                        <p>Halaman Landing Page merupakan halaman utama dari website PT. Hendrarta Argaraya yang menampilkan profil PT, negara tujuan tenaga kerja dan keterangan lainnya.</p>
                                         <a target="_blank" rel="nofollow" href="index.php">Klik untuk menuju Landing Page &rarr;</a>
                                     </div>
                                 </div>
@@ -191,7 +189,7 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Negara Tujuan</h6>
-                                    <div class="dropdown no-arrow">
+                                    <!-- <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -204,7 +202,7 @@
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">

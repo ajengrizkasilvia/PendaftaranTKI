@@ -186,8 +186,8 @@
                         <h1 class="h3 mb-2 text-gray-800">TKI Hongkong</h1>
                     </div>
                     <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format nama_negaraTujuan.
-                    Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    Upload berkas dengan format namaBerkas_negaraTujuan.jpg.
+                    <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -202,12 +202,12 @@
                                         <label>Nama TKI</label>
                                             <td>
                                                 <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                <input type="text" name="id_dft" class="form-control"/>
+                                                <input type="text" name="id_dft" class="form-control" placeholder="Masukkan Nama Lengkap"/>
                                             </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Sektor</label>
-                                        <td><input type="text" name="sektor_hk" class="form-control"/></td>
+                                        <td><input type="text" name="sektor_hk" class="form-control" placeholder="Masukkan Sektor"/></td>
                                     </div>
                                     <div class="form-group">
                                         <label>E-KTP</label>

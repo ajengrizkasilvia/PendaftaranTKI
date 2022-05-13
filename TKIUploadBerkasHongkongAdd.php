@@ -153,12 +153,14 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-2 text-gray-800">Berkas</h1>
 </div>
+<p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
+    Upload berkas dengan format namaBerkas_negaraTujuan.jpg
+<p> Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Berkas TKI</h6><br>
-        
     </div>
     <div class="card-body">
         <form action="TKIUploadBerkasHongkongAddProses.php" method="post" enctype="multipart/form-data">
@@ -210,14 +212,9 @@
                         <td>Biometri</td>
                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
                     </div>
-                    <div class="form-group">
-                        <label>Status Proses</label>
-                        <td><input type="text" name="status_proses_hk" class="form-control" placeholder="Masukkan status proses tki saat ini"/></td>
-                    </div>
                     <p>
                         <td></td>
                         <td><input type="submit" value="SIMPAN"></td>
-                        <td><input type="submit" href="tabelDataTKIHong.php" value="Cancel"></td>
                     </p>		
                 </fieldset>
 	        </form>
