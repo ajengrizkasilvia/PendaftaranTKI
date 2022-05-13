@@ -211,7 +211,7 @@
                                             <td>Nama TKI</td>
                                             <td>
                                                 <input type="hidden" name="id_singapore" value="<?php echo $d['id_singapore']; ?>">
-                                                <!-- <input type="text" name="id_dft" class="form-control"/> -->
+                                                <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama calon tki"/> -->
                                                 <label>Nama TKI</label>
                                                 <td>
                                                     <select class="form-control" name="id_dft">
