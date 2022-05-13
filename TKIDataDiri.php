@@ -202,6 +202,8 @@
                             <p><?php echo $d['pengalaman_kerja']; ?></p>
                             </h5>Medical Check</h5>
                             <P><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></P>
+                            </h5>Pas Foto</h5>
+                            <P><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></P>
 
                 
                         <?php 
