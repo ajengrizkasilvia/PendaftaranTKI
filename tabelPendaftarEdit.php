@@ -226,7 +226,7 @@
                                                     <td>
                                                         <select class="form-control" name="id_negara">
                                                             <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
+                                                            <option value='9'>Hongkong</option>
                                                             <option value='2'>Taiwan</option>
                                                             <option value='3'>Singapore</option>
                                                             <option value='4'>Malaysia</option>
@@ -294,6 +294,22 @@
                                                 <div class="form-group">
                                                     <td>Medical Check</td>
                                                     <td><input type="file" name="medical_check" class="form-control"/></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Pas Foto</td>
+                                                    <td><input type="file" name="pas_foto" class="form-control"/></td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <td>Status Proses</td>
+                                                    <td>
+                                                        <select class="form-control" name="id_tahapsatu">
+                                                        <option>--pilih status proses--</option>
+                                                        <option value='1'>Diajukan</option>
+                                                        <option value='2'>Diverifikasi</option>
+                                                        <option value='3'>Diterima</option>
+                                                        <option value='4'>Ditolak</option>
+                                                        </select>  
+                                                    </td>
                                                 </div>
                                                 <br>
                                                 <p>

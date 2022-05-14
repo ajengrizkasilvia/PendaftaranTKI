@@ -21,6 +21,7 @@ $agama= $_POST['agama'];
 $pengalaman_kerja= $_POST['pengalaman_kerja'];
 $medical_check = $_FILES['medical_check']['name'];
 $pas_foto = $_FILES['pas_foto']['name'];
+$id_tahapsatu = $_POST['id_tahapsatu'];
  
 
 if($medical_check != "") {
@@ -44,9 +45,9 @@ if($medical_check != "") {
           move_uploaded_file($file_tmppf, 'berkas/PasFoto/'.$pasfoto_baru);
 
         $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, nama_lengkap, tempat_lahir, tanggal_lahir, umur, 
-        alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto)
+        alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
         VALUES('$id_dft', '$id_negara', '$no_telp', '$nik','$nama_lengkap','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
-        '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$medical_baru', '$pas_foto')";
+        '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$medical_baru', '$pasfoto_baru', '$id_tahapsatu')";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error
         if(!$result){
@@ -65,10 +66,10 @@ if($medical_check != "") {
   }
 } else {
     $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, nama_lengkap, tempat_lahir, tanggal_lahir, umur, 
-    alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto)
+    alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
     VALUES('$id_dft','$id_negara', '$no_telp', '$nik','$nama_lengkap','$tempat_lahir','$tanggal_lahir', '$umur', 
     '$alamat_lengkap', '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir',
-    '$status', '$agama', '$pengalaman_kerja', null, null)";
+    '$status', '$agama', '$pengalaman_kerja', null, null, '$id_tahapsatu')";
 
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error

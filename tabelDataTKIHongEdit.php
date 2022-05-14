@@ -221,63 +221,63 @@
                                                     <td>E-KTP</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="ektp_hk" /></td>
+                                                        <input type="file" name="ektp_hk" value="<?php echo $d['ektp_hk']; ?>"></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Kartu Keluarga</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="kk_hk" /></td>
+                                                        <input type="file" name="kk_hk" value="<?php echo $d['kk_hk']; ?>"></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Akta Kelahiran</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="akte_hk" /></td>
+                                                        <input type="file" name="akte_hk" value="<?php echo $d['akte_hk']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Surat Menikah</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="suratnikah_hk" /></td>
+                                                        <input type="file" name="suratnikah_hk" value="<?php echo $d['suratnikah_hk']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Surat Ijin Ortu/Suami</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="suratijin_hk" /></td>
+                                                        <input type="file" name="suratijin_hk" value="<?php echo $d['suratijin_hk']; ?>" /></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Ex Paspor</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="expaspor_hk" /></td>
+                                                        <input type="file" name="expaspor_hk" value="<?php echo $d['expaspor_hk']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>SKCK</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="skck_hk" /></td>
+                                                        <input type="file" name="skck_hk" value="<?php echo $d['skck_hk']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Rekom Id</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="rekomid_hk" /></td>
+                                                        <input type="file" name="rekomid_hk" value="<?php echo $d['rekomid_hk']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Biometri</td>
                                                     <td>
                                                         <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="biometri_hk" /></td>
+                                                        <input type="file" name="biometri_hk" value="<?php echo $d['biometri_hk']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>

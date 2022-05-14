@@ -221,6 +221,7 @@
                                             <th>Pengalaman Kerja</th>
                                             <th>Medical Check-up</th>
                                             <th>Pas Foto</th>
+                                            <th>Status Proses</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -252,6 +253,7 @@
                                                 <td><?php echo $d['pengalaman_kerja']; ?></td>
                                                 <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
                                                 <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
+                                                <td><?php echo $d['id_tahapsatu']; ?></td>
                                                 <td>
                                                     <a href="tabelPendaftarEdit.php?id_dft=<?php echo $d['id_dft']; ?>">EDIT</a>
                                                     <a href="tabelPendaftarDelete.php?id_dft=<?php echo $d['id_dft']; ?>">HAPUS</a>

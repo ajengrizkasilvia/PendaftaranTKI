@@ -204,6 +204,8 @@
                             <P><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></P>
                             </h5>Pas Foto</h5>
                             <P><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></P>
+                            </h5>Status Proses</h5>
+                            <p><?php echo $d['id_tahapsatu']; ?></p>
 
                 
                         <?php 
