@@ -152,8 +152,15 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Test TKI</h6><br>
-                            <a href="tabelTestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Add New Data Test</a>
+                            <a href="TKITestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Data Test
+                            </a>
+                            <a href="TKITestSertifKeahlianAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Sertifikasi Keahlian
+                            </a>
+                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Sertifikasi Bahasa
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

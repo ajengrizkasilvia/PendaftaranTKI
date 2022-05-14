@@ -88,7 +88,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="TKITest">
+                <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
                     <span>Test TKI</span></a>
             </li>
@@ -265,8 +265,7 @@
                                         <label>Status Proses</label>
                                         <td>
                                             <select class="form-control" name="id_tahapsatu">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
+                                                <option>--diisi oleh admin--</option>
                                             </select>  
                                         </td>
                                         </div>

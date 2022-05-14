@@ -184,135 +184,68 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">TKI Singapore</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
-                    <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format namaBerkas_negaraTujuan.jpg
-                    Tekan <a href="tabelDataTKISing.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data TKI Singapore</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Data Test TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form method="post" action="tabelDataTKISingAddProses.php" enctype="multipart/form-data">
-                                    <fieldset>
+                                <?php
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $id_test = $_GET['id_test'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM test INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft INNER JOIN negara ON test.id_negara = negara.id_negara WHERE id_test='$id_test'");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
+                                        <form method="post" action="tabelTestEditProses.php">
+                                            <fieldset>
+                                                <div class="form-group">			
+                                                    <label>Nama TKI</label>
+                                                    <td>
+                                                        <input type="hidden" name="id_test" value="<?php echo $d['id_test']; ?>">
+                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Negara Tujuan</label>
+                                                    <td>
+                                                        <select class="form-control" name="id_negara">
+                                                            <option>--Atur Ulang Negara Tujuan--</option>
+                                                            <option value='1'>Hongkong</option>
+                                                            <option value='2'>Taiwan</option>
+                                                            <option value='3'>Singapore</option>
+                                                            <option value='4'>Malaysia</option>
+                                                        </select>   
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Sertifikasi Keahlian</label>
+                                                    <td>
+                                                        <img src="berkas/Keahlian/<?php echo $d['sertif_keahlian']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="sertif_keahlian" />
+                                                    </td>
+                                                </div>
+                                                <br><br><br><br><br><br><br>
+                                                <div class="form-group">
+                                                    <td><input type="submit" value="SIMPAN"></td>
+                                                </div>	
+                                            </fieldset>
+                                        </form>
                                         <?php 
-                                            include 'config.php';
-                                            $konektor = mysqli_connect("localhost","root","", "tki");
-                                            $no = 1;
-                                            $data = mysqli_query($konektor,"SELECT * FROM singapore 
-                                                                            INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft
-                                                                            INNER JOIN tahapdua ON singapore.id_tahapdua = tahapdua.id_tahapdua");
-                                            while($d = mysqli_fetch_array($data)){
-                                        ?>
-                                        <div class="form-group">			
-                                            <td>Nama TKI</td>
-                                            <td>
-                                                <input type="hidden" name="id_singapore" value="<?php echo $d['id_singapore']; ?>">
-                                                <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama calon tki"/> -->
-                                                <label>Nama TKI</label>
-                                                <td>
-                                                    <select class="form-control" name="id_dft">
-                                                        <option>--pilih nama tki--</option>
-                                                        <?php if (mysqli_num_rows($data) > 0) { ?>
-                                                            <?php while ($row = mysqli_fetch_array($data)) { ?>
-                                                                <option><?php echo $row["nama_lengkap"] ?></option>
-                                                            <?php } ?>
-                                                        <?php } ?>
-                                                    </select>  
-                                                </td>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Sektor</td>
-                                            <td>
-                                                <input type="text" name="sektor_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>E-KTP</td>
-                                            <td>
-                                                <input type="file" name="ektp_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Kartu Keluarga</td>
-                                            <td>
-                                                <input type="file" name="kk_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Akta Kelahiran</td>
-                                            <td>
-                                                <input type="file" name="akte_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Surat Menikah</td>
-                                            <td>
-                                                <input type="file" name="suratnikah_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Surat Ijin Ortu/Suami</td>
-                                            <td>
-                                                <input type="file" name="suratijin_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Ex Paspor</td>
-                                            <td>
-                                                <input type="file" name="expaspor_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>SKCK</td>
-                                            <td>
-                                                <input type="file" name="skck_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Rekom Id</td>
-                                            <td><input type="file" name="rekomid_sing" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Biometri</td>
-                                            <td><input type="file" name="biometri_sing" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                        <label>Status Proses</label>
-                                            <td>
-                                            <select class="form-control" name="id_tahapdua">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
-                                            </select>  
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Keterangan</td>
-                                            <td>
-                                                <input type="text" name="keterangan_sing" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <?php 
-                                        }
-                                        ?>
-                                        <p>
-                                            <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                        </p>		
-                                    </fieldset>
-                                </form>
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 
@@ -323,7 +256,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
                     </div>
                 </div>
             </footer>
