@@ -93,6 +93,8 @@
                     <span>Test TKI</span></a>
             </li>
 
+            <!-- Nav Item - Tables -->
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -138,7 +140,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                               <div class="dropdown-divider"></div>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -180,29 +182,32 @@
                                             <th>Sektor</th>
                                             <th>E-KTP</th>
                                             <th>Kartu Keluarga</th>
-                                            <th>Akta Lahir</th>
-                                            <th>Surat Nikah</th>
-                                            <th>Surat Ijin</th>
+                                            <th>Akta Kelahiran</th>
+                                            <th>Surat Menikah</th>
+                                            <th>Surat Ijin Ortu/Suami</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
                                             <th>Rekom ID</th>
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
                                             <th>Keterangan</th>
+                                            <th>Action</th>
                                         </tr>
-                                    </thead>
+                                    </thead>                 
                                     <tbody>
+                                        <?php 
+                                            include 'config.php';
+                                            $konektor = mysqli_connect("localhost","root","", "tki");
+                                            $no = 1;
+                                            $data = mysqli_query($konektor,"SELECT * FROM malaysia 
+                                                                            INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft
+                                                                            INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua");
+                                            while($d = mysqli_fetch_array($data)){
+                                        ?>
                                         <tr>
-                                            <?php 
-                                                include 'config.php';
-                                                $konektor = mysqli_connect("localhost","root","", "tki");
-                                                $no = 1;
-                                                $data = mysqli_query($konektor,"SELECT * FROM malaysia INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft");
-                                                while($d = mysqli_fetch_array($data)){
-                                            ?>
                                             <td><?php echo $no++; ?></td>
-                                            <td><?php echo $d['nama_lengkap']; ?></p>
-                                            <td><?php echo $d['sektor_malay']; ?></p>
+                                            <td><?php echo $d['nama_lengkap']; ?></td>
+                                            <td><?php echo $d['sektor_malay']; ?></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['ektp_malay']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['kk_malay']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['akte_malay']; ?>" style="width: 300px;"></td>
@@ -212,8 +217,11 @@
                                             <td><img src="berkas/Malaysia/<?php echo $d['skck_malay']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['rekomid_malay']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Malaysia/<?php echo $d['biometri_malay']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['id_tahapdua']; ?></td>
+                                            <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_malay']; ?></td>
+                                            <td>
+                                                <a href="TKIUploadBerkasMalayEdit.php?id_malaysia=<?php echo $d['id_malaysia']; ?>">EDIT</a>
+                                            </td>
                                         </tr>
                                         <?php 
                                             }
