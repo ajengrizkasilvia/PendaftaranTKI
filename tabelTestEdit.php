@@ -94,7 +94,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -221,10 +220,10 @@
                                                     <td>
                                                         <select class="form-control" name="id_negara">
                                                             <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='9'>Hongkong</option>
-                                                            <option value='13'>Taiwan</option>
-                                                            <option value='14'>Singapore</option>
-                                                            <option value='15'>Malaysia</option>
+                                                            <option value='1'>Hongkong</option>
+                                                            <option value='2'>Taiwan</option>
+                                                            <option value='3'>Singapore</option>
+                                                            <option value='4'>Malaysia</option>
                                                         </select>   
                                                     </td>
                                                 </div>
@@ -238,7 +237,6 @@
                                                 <br><br><br><br><br><br><br>
                                                 <div class="form-group">
                                                     <td><input type="submit" value="SIMPAN"></td>
-                                                    <td><input type="submit" href="tabelTest.php" value="Cancel"></td>	
                                                 </div>	
                                             </fieldset>
                                         </form>

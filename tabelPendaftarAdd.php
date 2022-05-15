@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -218,7 +219,7 @@
                                             <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
-                                                    <option value='9'>Hongkong</option>
+                                                    <option value='1'>Hongkong</option>
                                                     <option value='2'>Taiwan</option>
                                                     <option value='3'>Singapore</option>
                                                     <option value='4'>Malaysia</option>

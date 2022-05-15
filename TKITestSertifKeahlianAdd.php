@@ -57,8 +57,8 @@
                     <span>Beranda</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
+             <!-- Nav Item - Tables -->
+             <li class="nav-item">
                 <a class="nav-link" href="TKIFormDaftar.php">
                     <i class="fas fa-fw fa-edit"></i>
                     <span>Form Pendaftaran</span></a>
@@ -75,7 +75,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
-                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
+                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">lengkapi Hongkong</a>
                         <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
                         <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
@@ -151,87 +151,46 @@
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-2 text-gray-800">Berkas</h1>
+    <h1 class="h3 mb-2 text-gray-800">Upload Sertifikasi Keahlian</h1>
 </div>
-<p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-    Upload berkas dengan format namaBerkas_negaraTujuan.jpg
-<p> Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Berkas TKI</h6><br>
     </div>
     <div class="card-body">
-        <form action="TKIUploadBerkasHongkongAddProses.php" method="post" enctype="multipart/form-data">
+    <div class="table-responsive">
+        <form method="post" action="TKITestAddProses.php" enctype="multipart/form-data">
             <fieldset>
                 <div class="form-group">			
                     <label>Nama TKI</label>
                     <td>
-                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                        <input type="hidden" name="id_test" value="<?php echo $d['id_test']; ?>">
                         <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
                     </td>
-                    </div>
-                    <div class="form-group">
-                    <label>Sektor</label>
-                        <td><input type="text" name="sektor_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>E-KTP</label>
-                        <td><input type="file" name="ektp_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>Kartu Keluarga</label>
-                        <td><input type="file" name="kk_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>Akta Kelahiran</label>
-                        <td><input type="file" name="akte_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>Surat Menikah</label>
-                        <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>Surat Ijin Ortu/Suami</label>
-                        <td><input type="file" name="suratijin_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>Ex Paspor</label>
-                        <td><input type="file" name="expaspor_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <td>SKCK</td>
-                        <td><input type="file" name="skck_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <td>Rekom Id</td>
-                        <td><input type="file" name="rekomid_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <td>Biometri</td>
-                        <td><input type="file" name="biometri_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>Status Proses</label>
-                        <td>
-                            <select class="form-control" name="id_tahapdua">
-                            <option>--diisi oleh admin--</option>
-                            </select>  
-                        </td>
-                    </div>
-                    <div class="form-group">
-                        <label>Keterangan</label>
-                        <td>
-                            <input type="text" name="keterangan_hk" class="form-control"/>
-                        </td>
-                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Negara Tujuan </label>
+                    <td>
+                        <select class="form-control" name="id_negara">
+                            <option>--pilih negara tujuan--</option>
+                            <option value='1'>Hongkong</option>
+                            <option value='2'>Taiwan</option>
+                            <option value='3'>Singapore</option>
+                            <option value='4'>Malaysia</option>
+                        </select>   
+                    </td>
+                </div>
+                <div class="form-group">
+                    <label>Upload Sertifikasi Keahlian</label>
+                    <td><input type="file" name="sertif_keahlian" class="form-control"/></td>
+                </div>
                     <p>
                         <td></td>
                         <td><input type="submit" value="SIMPAN"></td>
                     </p>		
-                </fieldset>
-	        </form>
+            </fieldset>
+        </form>
     </div>
 </div>
 

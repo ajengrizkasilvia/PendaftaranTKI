@@ -94,7 +94,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -185,12 +184,22 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
+                    <p class="mb-4">Berikut merupakan data-data dari pendaftar atau calon TKI dari semua negara tujuan TKI yang meliputi Sertifikasi Keahlian dan Sertifkasi Bahasa.</p>
+
+                    
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Test TKI</h6><br>
                             <a href="tabelTestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Add New Data Test</a>
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
+                            </a>
+                            <a href="tabelTestSertifKeahlianAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Sertifikasi Keahlian
+                            </a>
+                            <a href="tabelTestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Sertifikasi Bahasa
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -211,20 +220,20 @@
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM test INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft INNER JOIN negara ON test.id_negara = negara.id_negara");
                                         while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $no++; ?></td>
-                                                <td><?php echo $d['nama_lengkap']; ?></td>
-                                                <td><?php echo $d['negara_tujuan']; ?></td>
-                                                <td><img src="nilai/<?php echo $d['nilai']; ?>" style="width: 200px;"></td>
-                                                <td>
-                                                    <a href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
-                                                    <a href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">HAPUS</a>
-                                                </td>
-                                            </tr>
-                                            <?php 
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $no++; ?></td>
+                                            <td><?php echo $d['nama_lengkap']; ?></td>
+                                            <td><?php echo $d['negara_tujuan']; ?></td>
+                                            <td><img src="nilai/<?php echo $d['nilai']; ?>" style="width: 200px;"></td>
+                                            <td>
+                                                <a href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
+                                                <a href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">HAPUS</a>
+                                            </td>
+                                        </tr>
+                                    <?php 
                                         }
-                                        ?>
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>

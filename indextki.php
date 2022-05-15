@@ -88,7 +88,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="TKITest">
+                <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
                     <span>Test TKI</span>
                 </a>
