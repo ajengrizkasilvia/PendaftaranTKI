@@ -18,6 +18,36 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $biometri_hk = $_FILES['biometri_hk']['name'];
   $keterangan_hk = $_POST['keterangan_hk'];
 
+  //EKTP
+  if($ektp_hk != "") {
+    $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+    $ektp = explode('.', $ektp_hk); //memisahkan nama file dengan ekstensi yang diupload
+    $ekstensiektp = strtolower(end($ektp));
+    $file_tmpektp = $_FILES['ektp_hk']['tmp_name'];   
+    $angka_acak     = rand(1,999);
+    $ektp_baru = $angka_acak.'-'.$ektp_hk;
+
+    if(in_array($ekstensiektp, $ekstensi_diperbolehkanektp) === true)  {     
+        move_uploaded_file($file_tmpektp, 'berkas/Hongkong/'.$ektp_baru);
+    } 
+  }else {
+    $ektp_baru = $_POST['ektp_hk_lama'];
+  }
+  $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, id_tahapdua, keterangan_hk) VALUES ('$id_dft', '$sektor_hk', '$ektp_baru', '$id_tahapdua', '$keterangan_hk')";
+                    $result = mysqli_query($konektor, $query);
+  if(!$result){
+    die ("Query gagal dijalankan: ".mysqli_errno($konektor).
+        " - ".mysqli_error($konektor));
+  } else {
+  echo "<script>alert('Data berhasil diubah.');window.location='tabelDataTKIHong.php';</script>";
+  }
+
+
+
+
+
+
+
   if($ektp_hk != "") {
     $ekstensi_diperbolehkanektp = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
     $ektp = explode('.', $ektp_hk); //memisahkan nama file dengan ekstensi yang diupload

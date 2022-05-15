@@ -198,33 +198,10 @@
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKIHongAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM hongkong 
-                                                                        INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
-                                                                        INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
-                                                                        ORDER BY nama_lengkap ASC");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
-                                            <td>
-                                                <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan Nama Lengkap"/> -->
-                                                <label>Nama TKI</label>
-                                                <td>
-                                                    <select class="form-control" name="id_dft">
-                                                        <option>--pilih nama tki--</option>
-                                                        <?php if (mysqli_num_rows($data) > 0) { ?>
-                                                            <?php while ($row = mysqli_fetch_array($data)) { ?>
-                                                                <option><?php echo $row["nama_lengkap"] ?></option>
-                                                            <?php } ?>
-                                                        <?php } ?>
-                                                    </select>  
-                                                </td>
-                                            </td>
+                                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                                <input type="text" name="id_dft" class="form-control"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Sektor</label>
@@ -233,6 +210,7 @@
                                     <div class="form-group">
                                         <label>E-KTP</label>
                                         <td><input type="file" name="ektp_hk" class="form-control"/></td>
+                                        <input type="hidden" name="ektp_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Kartu Keluarga</label>
@@ -282,9 +260,6 @@
                                         <td>Keterangan</td>
                                         <td><input type="text" class="form-control" name="keterangan_hk"></td>
                                     </div>
-                                    <?php 
-                                    }
-                                    ?>
                                     <p>
                                         <td></td>
                                         <td><input type="submit" value="SIMPAN"></td>
