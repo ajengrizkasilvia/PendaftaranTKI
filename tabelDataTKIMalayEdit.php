@@ -222,6 +222,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['ektp_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="ektp_malay" /></td>
+                                                        <input type="hidden" name="ektp_malay_lama" value="<?php echo $d['ektp_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -229,6 +230,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['kk_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="kk_malay" /></td>
+                                                        <input type="hidden" name="kk_malay_lama" value="<?php echo $d['kk_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -236,6 +238,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['akte_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="akte_malay" /></td>
+                                                        <input type="hidden" name="akte_malay_lama" value="<?php echo $d['akte_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -243,6 +246,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['suratnikah_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratnikah_malay" /></td>
+                                                        <input type="hidden" name="suratnikah_malay_lama" value="<?php echo $d['suratnikah_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -250,6 +254,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['suratijin_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratijin_malay" /></td>
+                                                        <input type="hidden" name="suratijin_malay_lama" value="<?php echo $d['suratijin_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -257,6 +262,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['expaspor_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="expaspor_malay" /></td>
+                                                        <input type="hidden" name="expaspor_malay_lama" value="<?php echo $d['expaspor_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -264,6 +270,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['skck_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="skck_malay" /></td>
+                                                        <input type="hidden" name="skck_malay_lama" value="<?php echo $d['skck_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -271,6 +278,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['rekomid_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="rekomid_malay" /></td>
+                                                        <input type="hidden" name="rekomid_malay_lama" value="<?php echo $d['rekomid_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -278,6 +286,7 @@
                                                     <td>
                                                         <img src="berkas/Malaysia/<?php echo $d['biometri_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="biometri_malay" /></td>
+                                                        <input type="hidden" name="biometri_malay_lama" value="<?php echo $d['biometri_malay']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>

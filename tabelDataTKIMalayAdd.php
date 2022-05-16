@@ -199,32 +199,32 @@
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKIMalayAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM malaysia 
-                                                                            INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft
-                                                                            INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua
-                                                                            ORDER BY nama_lengkap");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
+                                     <!-- <?php
+                                        // include 'config.php';
+                                        // $konektor = mysqli_connect("localhost","root","", "tki");
+                                        // $no = 1;
+                                        // $data = mysqli_query($konektor,"SELECT * FROM malaysia 
+                                        //                                     INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft
+                                        //                                     INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua
+                                        //                                     ORDER BY nama_lengkap");
+                                        // while($d = mysqli_fetch_array($data)){
+                                    ?> -->
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
                                         <td>
                                             <input type="hidden" name="id_malaysia" value="<?php echo $d['id_malaysia']; ?>">
-                                            <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama calon tki"/> -->
-                                            <label>Nama TKI</label>
+                                            <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama calon tki"/>
+                                            <!-- <label>Nama TKI</label>
                                                 <td>
                                                     <select class="form-control" name="id_dft">
                                                         <option>--pilih nama tki--</option>
-                                                        <?php if (mysqli_num_rows($data) > 0) { ?>
+                                                         <?php if (mysqli_num_rows($data) > 0) { ?>
                                                             <?php while ($row = mysqli_fetch_array($data)) { ?>
                                                                 <option><?php echo $row["nama_lengkap"] ?></option>
                                                             <?php } ?>
-                                                        <?php } ?>
-                                                    </select>  
-                                                </td>
+                                                        <?php } ?> -->
+                                                    <!-- </select>  
+                                                </td> -->
                                         </td>
                                     </div>
                                     <div class="form-group">
@@ -236,50 +236,61 @@
                                     <div class="form-group">
                                         <label>E-KTP</label>
                                         <td>
-                                            <input type="file" name="ektp_malay" class="form-control"/>                                            </td>
+                                            <input type="file" name="ektp_malay" class="form-control"/> 
+                                            <input type="hidden" name="ektp_malay_lama">
+                                        </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Kartu Keluarga</label>
                                         <td>
                                             <input type="file" name="kk_malay" class="form-control"/>
+                                            <input type="hidden" name="kk_malay_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Akta Kelahiran</label>
                                         <td>
                                             <input type="file" name="akte_malay" class="form-control"/>
+                                            <input type="hidden" name="akte_malay_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Surat Menikah</label>
                                         <td>
                                             <input type="file" name="suratnikah_malay" class="form-control"/>
+                                            <input type="hidden" name="suratnikah_malay_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Surat Ijin Ortu/Suami</label>
                                         <td>
                                             <input type="file" name="suratijin_malay" class="form-control"/>
+                                            <input type="hidden" name="suratijin_malay_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Ex Paspor</label>
                                         <td>
-                                            <input type="file" name="expaspor_malay" class="form-control"/>                                            </td>
+                                            <input type="file" name="expaspor_malay" class="form-control"/>  
+                                            <input type="hidden" name="expaspor_malay_lama">
+                                        </td>
                                     </div>
                                     <div class="form-group">
                                         <label>SKCK</label>
                                         <td>
                                             <input type="file" name="skck_malay" class="form-control"/>
+                                            <input type="hidden" name="skck_malay_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <td>Rekom Id</td>
                                             <td><input type="file" name="rekomid_malay" class="form-control"/></td>
+                                            <input type="hidden" name="rekomid_malay_lama">
                                     </div>
                                     <div class="form-group">
                                         <td>Biometri</td>
                                             <td><input type="file" name="biometri_malay" class="form-control"/></td>
+                                            <input type="hidden" name="biometri_malay_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
@@ -287,9 +298,6 @@
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
                                             </select>  
                                             </td>
                                     </div>
@@ -299,9 +307,9 @@
                                                 <input type="text" name="keterangan_malay" class="form-control"/>
                                             </td>
                                     </div>
-                                    <?php 
-                                    }
-                                    ?>
+                                    <!-- <?php 
+                                    // }
+                                    ?> -->
                                     <p>
                                         <td></td>
                                         <td><input type="submit" value="SIMPAN"></td>

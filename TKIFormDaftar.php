@@ -168,24 +168,24 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form method="post" action="TKIFormDaftarProses.php" enctype="multipart/form-data">
-                                    <fieldset>
-                                        <div class="form-group">
-                                            <label>No Telp / WA</label>
+                                    <table>
+                                        <tr>
+                                            <td>No Telp / WA</td>
                                             <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
-                                        </div>
-                                        <div class="form-group">			
-                                            <label>NIK</label>
+                                        </tr>
+                                        <tr>		
+                                            <td>NIK</td>
                                                 <td>
                                                 <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                 <input type="text" name="nik" class="form-control" placeholder="Masukkan NIK"/>
                                                 </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Nama Lengkap</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Lengkap</td>
                                             <td><input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan nama lengkap"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Negara Tujuan</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Negara Tujuan</td>
                                             <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
@@ -195,25 +195,25 @@
                                                     <option value='4'>Malaysia</option>
                                                 </select>   
                                             </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Tempat Lahir</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Tempat Lahir</td>
                                             <td><input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan tempat lahir"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Tanggal Lahir</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Tanggal Lahir</td>
                                             <td><input type="text" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Umur</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Umur</td>
                                             <td><input type="text" name="umur" class="form-control" placeholder="Masukkan umur"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Alamat Lengkap</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Alamat Lengkap</td>
                                             <td><input type="text" name="alamat_lengkap" class="form-control" placeholder="Masukkan alamat lengkap"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Jenis Kelamin</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Jenis Kelamin</td>
                                             <td>
                                                 <select class="form-control" name="jenis_kelamin">
                                                     <option>--pilih jenis kelamin--</option>
@@ -221,21 +221,21 @@
                                                     <option>Wanita</option>
                                                 </select>   
                                             </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>TB</label>
+                                        </tr>
+                                        <tr>
+                                            <td>TB</td>
                                             <td><input type="text" name="tb" class="form-control" placeholder="Masukkan tinggi badan"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>BB</label>
+                                        </tr>
+                                        <tr>
+                                            <td>BB</td>
                                             <td><input type="text" name="bb" class="form-control" placeholder="Masukkan berat badan"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Pendidikan Terakhir</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Pendidikan Terakhir</td>
                                             <td><input type="text" name="pendidikan_terakhir" class="form-control" placeholder="Masukkan pendidikan terakhir"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Status</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Status</td>
                                             <td>
                                                 <select class="form-control" name="status">
                                                     <option>--pilih status--</option>
@@ -245,36 +245,44 @@
                                                     <option>Cerai Mati</option>
                                                 </select>   
                                             </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Agama</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Agama</td>
                                             <td><input type="text" name="agama" class="form-control" placeholder="Masukkan agama"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Pengalaman Kerja</label>
+                                        </tr>
+                                        <tr>
+                                            <td>Pengalaman Kerja</td>
                                             <td><input type="text" name="pengalaman_kerja" class="form-control" placeholder="Masukkan pengalaman kerja"/></td>
-                                        </div>
-                                        <div class="form-group">
+                                        </tr>
+                                        <tr>
                                             <td>Medical Check</td>
-                                            <td><input type="file" name="medical_check" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
+                                            <td>
+                                            <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                            <input type="file" name="medical_check"/>
+                                            <input type="hidden" name="medical_check_lama" value="<?php echo $d['medical_check']; ?>">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td>Pas Foto</td>
-                                            <td><input type="file" name="pas_foto" class="form-control"/></td>
-                                        </div>
-                                        <label>Status Proses</label>
-                                        <td>
-                                            <select class="form-control" name="id_tahapsatu">
-                                                <option>--diisi oleh admin--</option>
-                                            </select>  
-                                        </td>
-                                        </div>
+                                            <td>
+                                            <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                            <td><input type="file" name="pas_foto"/></td>
+                                            <input type="hidden" name="pas_foto_lama" value="<?php echo $d['pas_foto']; ?>">
+                                        </tr>
+                                        <tr>
+                                            <td>Status Proses</td>
+                                            <td>
+                                                <select class="form-control" name="id_tahapsatu">
+                                                    <option>--diisi oleh admin--</option>
+                                                </select>  
+                                            </td>
+                                        </tr>
                                         <br>
                                         <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>
                                         </p>		
-                                    </fieldset>
+                                    </table>
                                 </form>
                             </div>
                         </div>

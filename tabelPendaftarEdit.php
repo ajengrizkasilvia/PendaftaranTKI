@@ -205,24 +205,24 @@
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
-                                            <fieldset>
-                                                <div class="form-group">
-                                                    <label>No Telp / WA</label>
+                                            <table>
+                                                <tr>
+                                                    <td>No Telp / WA</td>
                                                     <td><input type="text" class="form-control" name="no_telp" value="<?php echo $d['no_telp']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">			
-                                                    <label>NIK</label>
+                                                </tr>
+                                                <tr>			
+                                                    <td>NIK</td>
                                                     <td>
                                                         <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                         <input type="text" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Nama Lengkap</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nama Lengkap</td>
                                                     <td><input type="text" class="form-control" name="nama_lengkap" value="<?php echo $d['nama_lengkap']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Negara Tujuan</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Negara Tujuan</td>
                                                     <td>
                                                         <select class="form-control" name="id_negara">
                                                             <option>--Atur Ulang Negara Tujuan--</option>
@@ -232,25 +232,25 @@
                                                             <option value='4'>Malaysia</option>
                                                         </select>   
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Tempat Lahir</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tempat Lahir</td>
                                                     <td><input type="text" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Tanggal Lahir</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tanggal Lahir</td>
                                                     <td><input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Umur</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Umur</td>
                                                     <td><input type="text" class="form-control" name="umur" value="<?php echo $d['umur']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Alamat Lengkap</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alamat Lengkap</td>
                                                     <td><input type="text" class="form-control" name="alamat_lengkap" value="<?php echo $d['alamat_lengkap']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Jenis Kelamin</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jenis Kelamin</td>
                                                     <td>
                                                         <select class="form-control" name="jenis_kelamin">
                                                             <option>--Atur Ulang Jenis Kelamin--</option>
@@ -258,21 +258,21 @@
                                                             <option>Wanita</option>
                                                         </select>   
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>TB</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>TB</td>
                                                     <td><input type="text" class="form-control" name="tb" value="<?php echo $d['tb']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>BB</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>BB</td>
                                                     <td><input type="text" class="form-control" name="bb" value="<?php echo $d['bb']; ?>"></td>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Pendidikan Terakhir</label>
+                                                <tr>
+                                                    <td>Pendidikan Terakhir</td>
                                                     <td><input type="text" class="form-control" name="pendidikan_terakhir" value="<?php echo $d['pendidikan_terakhir']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Status</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
                                                     <td>
                                                         <select class="form-control" name="status">
                                                             <option>--Atur Ulang Status--</option>
@@ -282,24 +282,32 @@
                                                             <option>Cerai Mati</option>
                                                         </select>   
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Agama</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Agama</td>
                                                     <td><input type="text" class="form-control" name="agama" value="<?php echo $d['agama']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Pengalaman Kerja</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pengalaman Kerja</td>
                                                     <td><input type="text" class="form-control" name="pengalaman_kerja" value="<?php echo $d['pengalaman_kerja']; ?>"></td>
-                                                </div>
-                                                <div class="form-group">
+                                                </tr>
+                                                <tr>
                                                     <td>Medical Check</td>
-                                                    <td><input type="file" name="medical_check" class="form-control"/></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                    <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    <input type="file" name="medical_check">
+                                                    <input type="hidden" name="medical_check_lama" value="<?php echo $d['medical_check']; ?>">
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Pas Foto</td>
-                                                    <td><input type="file" name="pas_foto" class="form-control"/></td>
-                                                </div>
-                                                <div class="form-group">
+                                                    <td>
+                                                    <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    <input type="file" name="pas_foto">
+                                                    <input type="hidden" name="pas_foto_lama" value="<?php echo $d['pas_foto']; ?>">
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td>Status Proses</td>
                                                     <td>
                                                         <select class="form-control" name="id_tahapsatu">
@@ -310,13 +318,13 @@
                                                         <option value='4'>Ditolak</option>
                                                         </select>  
                                                     </td>
-                                                </div>
+                                                </tr>
                                                 <br>
                                                 <p>
                                                     <td></td>
                                                     <td><input type="submit" value="SIMPAN"></td>
                                                 </p>		
-                                            </fieldset>
+                                            </table>
                                         </form>
                                         <?php 
                                     }

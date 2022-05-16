@@ -222,6 +222,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="ektp_taiw" /></td>
+                                                        <input type="hidden" name="ektp_taiw_lama" value="<?php echo $d['ektp_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -229,6 +230,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="kk_taiw" /></td>
+                                                        <input type="hidden" name="kk_taiw_lama" value="<?php echo $d['kk_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -236,6 +238,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="akte_taiw" /></td>
+                                                        <input type="hidden" name="akte_taiw_lama" value="<?php echo $d['akte_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -243,6 +246,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratnikah_taiw" /></td>
+                                                        <input type="hidden" name="suratnikah_taiw_lama" value="<?php echo $d['suratnikah_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -250,6 +254,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratijin_taiw" /></td>
+                                                        <input type="hidden" name="suratijin_taiw_lama" value="<?php echo $d['suratijin_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -257,6 +262,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="expaspor_taiw" /></td>
+                                                        <input type="hidden" name="expaspor_taiw_lama" value="<?php echo $d['expaspor_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -264,6 +270,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="skck_taiw" /></td>
+                                                        <input type="hidden" name="skck_taiw_lama" value="<?php echo $d['skck_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -271,6 +278,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="rekomid_taiw" /></td>
+                                                        <input type="hidden" name="rekomid_taiw_lama" value="<?php echo $d['rekomid_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -278,6 +286,7 @@
                                                     <td>
                                                         <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="biometri_taiw" /></td>
+                                                        <input type="hidden" name="biometri_taiw_lama" value="<?php echo $d['biometri_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>

@@ -215,34 +215,42 @@
                                     <div class="form-group">
                                         <label>Kartu Keluarga</label>
                                         <td><input type="file" name="kk_hk" class="form-control"/></td>
+                                        <input type="hidden" name="kk_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Akta Kelahiran</label>
                                         <td><input type="file" name="akte_hk" class="form-control"/></td>
+                                        <input type="hidden" name="akte_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Surat Menikah</label>
                                         <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
+                                        <input type="hidden" name="suratnikah_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Surat Ijin Ortu/Suami</label>
                                         <td><input type="file" name="suratijin_hk" class="form-control"/></td>
+                                        <input type="hidden" name="suratijin_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Ex Paspor</label>
                                         <td><input type="file" name="expaspor_hk" class="form-control"/></td>
+                                        <input type="hidden" name="expaspor_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <td>SKCK</td>
                                         <td><input type="file" name="skck_hk" class="form-control"/></td>
+                                        <input type="hidden" name="skck_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <td>Rekom Id</td>
                                         <td><input type="file" name="rekomid_hk" class="form-control"/></td>
+                                        <input type="hidden" name="rekomid_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <td>Biometri</td>
                                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
+                                        <input type="hidden" name="biometri_hk_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
@@ -250,9 +258,6 @@
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
                                             </select>  
                                         </td>
                                     </div>

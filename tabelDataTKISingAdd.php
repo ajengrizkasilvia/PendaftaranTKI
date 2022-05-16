@@ -199,21 +199,21 @@
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKISingAddProses.php" enctype="multipart/form-data">
                                     <fieldset>
-                                        <?php 
-                                            include 'config.php';
-                                            $konektor = mysqli_connect("localhost","root","", "tki");
-                                            $no = 1;
-                                            $data = mysqli_query($konektor,"SELECT * FROM singapore 
-                                                                            INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft
-                                                                            INNER JOIN tahapdua ON singapore.id_tahapdua = tahapdua.id_tahapdua");
-                                            while($d = mysqli_fetch_array($data)){
-                                        ?>
+                                        <!-- <?php 
+                                            // include 'config.php';
+                                            // $konektor = mysqli_connect("localhost","root","", "tki");
+                                            // $no = 1;
+                                            // $data = mysqli_query($konektor,"SELECT * FROM singapore 
+                                            //                                 INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft
+                                            //                                 INNER JOIN tahapdua ON singapore.id_tahapdua = tahapdua.id_tahapdua");
+                                            // while($d = mysqli_fetch_array($data)){
+                                        ?> -->
                                         <div class="form-group">			
                                             <td>Nama TKI</td>
                                             <td>
                                                 <input type="hidden" name="id_singapore" value="<?php echo $d['id_singapore']; ?>">
-                                                <!-- <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama calon tki"/> -->
-                                                <label>Nama TKI</label>
+                                                <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama calon tki"/>
+                                                <!-- <label>Nama TKI</label>
                                                 <td>
                                                     <select class="form-control" name="id_dft">
                                                         <option>--pilih nama tki--</option>
@@ -223,7 +223,7 @@
                                                             <?php } ?>
                                                         <?php } ?>
                                                     </select>  
-                                                </td>
+                                                </td> -->
                                             </td>
                                         </div>
                                         <div class="form-group">
@@ -236,51 +236,63 @@
                                             <td>E-KTP</td>
                                             <td>
                                                 <input type="file" name="ektp_sing" class="form-control"/>
+                                                <input type="hidden" name="ektp_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Kartu Keluarga</td>
                                             <td>
                                                 <input type="file" name="kk_sing" class="form-control"/>
+                                                <input type="hidden" name="kk_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Akta Kelahiran</td>
                                             <td>
                                                 <input type="file" name="akte_sing" class="form-control"/>
+                                                <input type="hidden" name="akte_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Surat Menikah</td>
                                             <td>
                                                 <input type="file" name="suratnikah_sing" class="form-control"/>
+                                                <input type="hidden" name="suratnikah_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Surat Ijin Ortu/Suami</td>
                                             <td>
                                                 <input type="file" name="suratijin_sing" class="form-control"/>
+                                                <input type="hidden" name="suratijin_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Ex Paspor</td>
                                             <td>
                                                 <input type="file" name="expaspor_sing" class="form-control"/>
+                                                <input type="hidden" name="expaspor_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>SKCK</td>
                                             <td>
                                                 <input type="file" name="skck_sing" class="form-control"/>
+                                                <input type="hidden" name="skck_sing_lama">
                                             </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Rekom Id</td>
-                                            <td><input type="file" name="rekomid_sing" class="form-control"/></td>
+                                            <td>
+                                                <input type="file" name="rekomid_sing" class="form-control"/>
+                                                <input type="hidden" name="rekomid_sing_lama">
+                                            </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Biometri</td>
-                                            <td><input type="file" name="biometri_sing" class="form-control"/></td>
+                                            <td><input type="file" name="biometri_sing" class="form-control"/>
+                                            <input type="hidden" name="biometri_sing_lama">
+                                        </td>
                                         </div>
                                         <div class="form-group">
                                         <label>Status Proses</label>
@@ -288,9 +300,6 @@
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
                                             </select>  
                                             </td>
                                         </div>
@@ -300,9 +309,9 @@
                                                 <input type="text" name="keterangan_sing" class="form-control"/>
                                             </td>
                                         </div>
-                                        <?php 
-                                        }
-                                        ?>
+                                        <!-- <?php 
+                                        //}
+                                        ?> -->
                                         <p>
                                             <td></td>
                                             <td><input type="submit" value="SIMPAN"></td>
