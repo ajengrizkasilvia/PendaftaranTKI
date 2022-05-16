@@ -199,7 +199,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <form method="post" action="tabelTestAddProses.php" enctype="multipart/form-data">
+                            <form method="post" action="tabelTestSertifKeahlianAdd.php" enctype="multipart/form-data">
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>

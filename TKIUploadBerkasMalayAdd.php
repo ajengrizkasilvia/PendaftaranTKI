@@ -227,7 +227,7 @@
                                 <label>Status Proses</label>
                                 <td>
                                     <select class="form-control" name="id_tahapdua">
-                                    <option>--pilih status proses--</option>
+                                    <option>--klik ajukan status proses--</option>
                                     <option value='1'>Diajukan</option>
                                     </select>  
                                 </td>
@@ -241,7 +241,6 @@
                             <p>
                                 <td></td>
                                     <td><input type="submit" value="SIMPAN"></td>
-                                    <td><input type="submit" href="tabelDataTKIMalay.php" value="Cancel"></td>
                             </p>		
                         </fieldset>
                     </form>

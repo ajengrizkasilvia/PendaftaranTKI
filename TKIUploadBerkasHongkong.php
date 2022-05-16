@@ -187,6 +187,7 @@
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
                                             <th>Keterangan</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -195,7 +196,9 @@
                                                 include 'config.php';
                                                 $konektor = mysqli_connect("localhost","root","", "tki");
                                                 $no = 1;
-                                                $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft");
+                                                $data = mysqli_query($konektor,"SELECT * FROM hongkong 
+                                                                                INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
+                                                                                INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua");
                                                 while($d = mysqli_fetch_array($data)){
                                             ?>
                                             <td><?php echo $no++; ?></td>
@@ -210,8 +213,11 @@
                                             <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['id_tahapdua']; ?></td>
+                                            <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_hk']; ?></td>
+                                            <td>
+                                                <a href="TKIUploadBerkasHongkongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">EDIT</a>
+                                            </td>
                                         </tr>
                                         <?php 
                                             }

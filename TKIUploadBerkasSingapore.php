@@ -191,6 +191,7 @@
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
                                             <th>Keterangan</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>                 
                                     <tbody>
@@ -198,7 +199,9 @@
                                             include 'config.php';
                                             $konektor = mysqli_connect("localhost","root","", "tki");
                                             $no = 1;
-                                            $data = mysqli_query($konektor,"SELECT * FROM singapore INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft");
+                                            $data = mysqli_query($konektor,"SELECT * FROM singapore 
+                                                                            INNER JOIN pendaftaran ON singapore.id_dft = pendaftaran.id_dft
+                                                                            INNER JOIN tahapdua ON singapore.id_tahapdua = tahapdua.id_tahapdua");
                                             while($d = mysqli_fetch_array($data)){
                                         ?>
                                         <tr>
@@ -214,8 +217,11 @@
                                             <td><img src="berkas/Singapore/<?php echo $d['skck_sing']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Singapore/<?php echo $d['rekomid_sing']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Singapore/<?php echo $d['biometri_sing']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['id_tahapdua']; ?></td>
+                                            <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_sing']; ?></td>
+                                            <td>
+                                                <a href="TKIUploadBerkasSingaporeEdit.php?id_singapore=<?php echo $d['id_singapore']; ?>">EDIT</a>
+                                            </td>
                                         </tr>
                                         <?php 
                                             }

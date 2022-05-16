@@ -216,7 +216,8 @@
                         <label>Status Proses</label>
                         <td>
                             <select class="form-control" name="id_tahapdua">
-                            <option>--diisi oleh admin--</option>
+                            <option>--klik ajukan status proses--</option>
+                                <option value='1'>Diajukan</option>
                             </select>  
                         </td>
                     </div>

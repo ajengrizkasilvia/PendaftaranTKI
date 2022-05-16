@@ -214,7 +214,7 @@
                         <label>Status Proses</label>
                         <td>
                             <select class="form-control" name="id_tahapdua">
-                            <option>--pilih status proses--</option>
+                            <option>--klik ajukan status proses--</option>
                             <option value='1'>Diajukan</option>
                             </select>  
                         </td>
