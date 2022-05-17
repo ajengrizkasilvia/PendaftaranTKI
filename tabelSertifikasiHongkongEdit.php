@@ -199,60 +199,63 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
-                    <p class="mb-4">Negara Tujuan merupakan fitur untuk mengelola daftar negara tujuan PT yang akan ditampilkan pada halaman utama.
-                        Admin dapat mengedit, menambah, dan menghapus data negara tujuan.
-                    </p>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                    </div>
+                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
+                    Pastikan sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg.
+                    Tekan <a href="tabelSertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Negara Tujuan</h6><br>
-                            <a href="tabelNegaraTujuanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru</a>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Negara</th>
-                                            <th>Kriteria</th>
-                                            <th>Persyaratan</th>
-                                            <th>Gaji</th>
-                                            <th>Gambar</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $data = mysqli_query($konektor,"select * from negara");
-                                        while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $no++; ?></td>
-                                                <td><?php echo $d['negara_tujuan']; ?></td>
-                                                <td><?php echo $d['kriteria']; ?></td>
-                                                <td><?php echo $d['persyaratan']; ?></td>
-                                                <td><?php echo $d['jumlah_gaji']; ?></td>
-                                                <td style="text-align: center;"><img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 100px;"></td>
-                                                <td>
-                                                    <a href="tabelNegaraTujuanEdit.php?id_negara=<?php echo $d['id_negara']; ?>">EDIT</a>
-                                                    <a href="tabelNegaraTujuanDelete.php?id_negara=<?php echo $d['id_negara']; ?>">HAPUS</a>
-                                                </td>
-                                            </tr>
-                                            <?php 
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                                <?php
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $id_test = $_GET['id_sertif_hk'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                    INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
+                                        <form method="post" action="tabelSertifikasiHongkong.php">
+                                            <fieldset>
+                                                <div class="form-group">			
+                                                    <label>Nama TKI</label>
+                                                    <td>
+                                                        <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
+                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Sertifikasi Keahlian atau Ketrampilan</label>
+                                                    <td>
+                                                        <img src="sertifikasi/keahlianHongkong/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="keahlian_hk" />
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Sertifikasi Bahasa</label>
+                                                    <td>
+                                                        <img src="sertifikasi/bahasaHongkong/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="bahasa_hk" />
+                                                    </td>
+                                                </div>
+                                                <br><br><br><br><br><br><br>
+                                                <div class="form-group">
+                                                    <td><input type="submit" value="SIMPAN"></td>
+                                                </div>	
+                                            </fieldset>
+                                        </form>
+                                        <?php 
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 
@@ -263,7 +266,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
                     </div>
                 </div>
             </footer>

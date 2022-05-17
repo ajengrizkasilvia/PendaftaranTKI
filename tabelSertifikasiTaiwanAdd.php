@@ -113,6 +113,22 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pendaftar</span></a>
             </li>
+            
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
+            </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -184,45 +200,37 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian TKI</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian atau Ketrampilan TKI</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
-                    Upload berkas sertifikasi dengan format nama_negaraTujuanTKI_sertifikasiKeahlian.jpg. </p>
-                    <p> Tekan <a href="tabelTest.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    Upload berkas sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg. </p>
+                    <p> Tekan <a href="tabelSertifikasiTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Sertifikasi Keahlian TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <form method="post" action="tabelTestSertifKeahlianAdd.php" enctype="multipart/form-data">
+                            <form method="post" action="tabelSertifikasiTaiwanAdd.php" enctype="multipart/form-data">
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
                                         <td>
-                                            <input type="hidden" name="id_test" value="<?php echo $d['id_test']; ?>">
+                                            <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
                                             <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
                                         </td>
                                     </div>
                                     <div class="form-group">
-                                        <label>Negara Tujuan </label>
-                                        <td>
-                                            <select class="form-control" name="id_negara">
-                                                <option>--pilih negara tujuan--</option>
-                                                <option value='1'>Hongkong</option>
-                                                <option value='2'>Taiwan</option>
-                                                <option value='3'>Singapore</option>
-                                                <option value='4'>Malaysia</option>
-                                            </select>   
-                                        </td>
+                                        <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
+                                        <td><input type="file" name="keahlian_taiw" class="form-control"/></td>
                                     </div>
                                     <div class="form-group">
-                                        <label>Upload Sertifikasi Keahlian</label>
-                                        <td><input type="file" name="sertif_keahlian" class="form-control"/></td>
+                                        <label>Upload Sertifikasi Bahasa</label>
+                                        <td><input type="file" name="bahasa_taiw" class="form-control"/></td>
                                     </div>
                                          <p>
                                             <td></td>

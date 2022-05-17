@@ -199,28 +199,27 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
-                    <p class="mb-4">Negara Tujuan merupakan fitur untuk mengelola daftar negara tujuan PT yang akan ditampilkan pada halaman utama.
-                        Admin dapat mengedit, menambah, dan menghapus data negara tujuan.
-                    </p>
+                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+
+                    
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Negara Tujuan</h6><br>
-                            <a href="tabelNegaraTujuanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru</a>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
+                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Negara</th>
-                                            <th>Kriteria</th>
-                                            <th>Persyaratan</th>
-                                            <th>Gaji</th>
-                                            <th>Gambar</th>
+                                            <th>Nama TKI</th>
+                                            <th>Sertifikasi Keahlian</th>
+                                            <th>Sertifikas Bahasa</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -229,24 +228,23 @@
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
-                                        $data = mysqli_query($konektor,"select * from negara");
+                                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                        INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
                                         while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $no++; ?></td>
-                                                <td><?php echo $d['negara_tujuan']; ?></td>
-                                                <td><?php echo $d['kriteria']; ?></td>
-                                                <td><?php echo $d['persyaratan']; ?></td>
-                                                <td><?php echo $d['jumlah_gaji']; ?></td>
-                                                <td style="text-align: center;"><img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 100px;"></td>
-                                                <td>
-                                                    <a href="tabelNegaraTujuanEdit.php?id_negara=<?php echo $d['id_negara']; ?>">EDIT</a>
-                                                    <a href="tabelNegaraTujuanDelete.php?id_negara=<?php echo $d['id_negara']; ?>">HAPUS</a>
-                                                </td>
-                                            </tr>
-                                            <?php 
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $no++; ?></td>
+                                            <td><?php echo $d['nama_lengkap']; ?></td>
+                                            <td><img src="sertifikasi/keahlianHongkong/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="sertifikasi/bahasaHongkong/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                            <td>
+                                                <a href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
+                                                <a href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">HAPUS</a>
+                                            </td>
+                                        </tr>
+                                    <?php 
                                         }
-                                        ?>
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -319,4 +317,4 @@
 
 </body>
 
-</html>
+</html> 
