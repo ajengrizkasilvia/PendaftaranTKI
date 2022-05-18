@@ -12,14 +12,17 @@
     <title>PT Hendrarta Argaraya - TKI</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -40,7 +43,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="indextki.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="indexadmin.php">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-house-user"></i>
                 </div>
@@ -75,7 +78,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
-                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">lengkapi Hongkong</a>
+                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
                         <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
                         <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
@@ -98,6 +101,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -111,9 +115,11 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -133,7 +139,6 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -141,70 +146,83 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-<!-- Page Heading -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-2 text-gray-800">Upload Sertifikasi Keahlian</h1>
-</div>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                    </div>
+                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
+                    Pastikan sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg.
+                    Tekan <a href="TKISertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-    </div>
-    <div class="card-body">
-    <div class="table-responsive">
-        <form method="post" action="TKITestAddProses.php" enctype="multipart/form-data">
-            <fieldset>
-                <div class="form-group">			
-                    <label>Nama TKI</label>
-                    <td>
-                        <input type="hidden" name="id_test" value="<?php echo $d['id_test']; ?>">
-                        <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
-                    </td>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <?php
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $id_test = $_GET['id_sertif_hk'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                    INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
+                                        <form method="post" action="TKISertifikasiHongkongEditProses.php">
+                                            <fieldset>
+                                                <div class="form-group">			
+                                                    <label>Nama TKI</label>
+                                                    <td>
+                                                        <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
+                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Sertifikasi Keahlian atau Ketrampilan</label>
+                                                    <td>
+                                                        <img src="sertifikasi/keahlianHongkong/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="keahlian_hk" />
+                                                    </td>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Sertifikasi Bahasa</label>
+                                                    <td>
+                                                        <img src="sertifikasi/bahasaHongkong/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="bahasa_hk" />
+                                                    </td>
+                                                </div>
+                                                <br><br><br><br><br><br><br>
+                                                <div class="form-group">
+                                                    <td><input type="submit" value="SIMPAN"></td>
+                                                </div>	
+                                            </fieldset>
+                                        </form>
+                                        <?php 
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="form-group">
-                    <label>Negara Tujuan </label>
-                    <td>
-                        <select class="form-control" name="id_negara">
-                            <option>--pilih negara tujuan--</option>
-                            <option value='1'>Hongkong</option>
-                            <option value='2'>Taiwan</option>
-                            <option value='3'>Singapore</option>
-                            <option value='4'>Malaysia</option>
-                        </select>   
-                    </td>
-                </div>
-                <div class="form-group">
-                    <label>Upload Sertifikasi Keahlian</label>
-                    <td><input type="file" name="sertif_keahlian" class="form-control"/></td>
-                </div>
-                    <p>
-                        <td></td>
-                        <td><input type="submit" value="SIMPAN"></td>
-                    </p>		
-            </fieldset>
-        </form>
-    </div>
-</div>
+                <!-- /.container-fluid -->
 
-</div>
-<!-- /.container-fluid -->
-
-</div>
-<!-- End of Main Content -->
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2021</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -252,11 +270,11 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 

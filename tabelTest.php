@@ -125,7 +125,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi TKI:</h6>
                         <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan">Sertifikasi TKI Taiwan</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -210,9 +210,6 @@
                             <a href="tabelTestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
-                            <a href="tabelTestSertifikasiAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Sertifikasi TKI
-                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -238,10 +235,9 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['negara_tujuan']; ?></td>
-                                            <td><img src="sertifikasi/keahlian/<?php echo $d['sertif_keahlian']; ?>" style="width: 300px;"></td>
-                                            <td><img src="sertifikasi/bahasa/<?php echo $d['sertif_bahasa']; ?>" style="width: 300px;"></td>
+                                            
                                             <td>
-                                                <a href="tabelTestSertifikasiEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
+                                                <a href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
                                                 <a href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">HAPUS</a>
                                             </td>
                                         </tr>

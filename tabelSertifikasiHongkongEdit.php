@@ -125,7 +125,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi TKI:</h6>
                         <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan">Sertifikasi TKI Taiwan</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -221,7 +221,7 @@
                                                                     INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelSertifikasiHongkong.php">
+                                        <form method="post" action="tabelSertifikasiHongkongProses.php">
                                             <fieldset>
                                                 <div class="form-group">			
                                                     <label>Nama TKI</label>
