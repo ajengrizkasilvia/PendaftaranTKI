@@ -229,14 +229,14 @@
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="sertifikasi/keahlianHongkong/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="sertifikasi/bahasaHongkong/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
                                             <td>
                                                 <a href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
                                                 <a href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">HAPUS</a>

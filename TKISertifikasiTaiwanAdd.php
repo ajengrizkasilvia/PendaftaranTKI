@@ -86,6 +86,22 @@
                 </div>
             </li>
 
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="TKITest.php">
@@ -182,10 +198,12 @@
                                     <div class="form-group">
                                         <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
                                         <td><input type="file" name="keahlian_taiw" class="form-control"/></td>
+                                        <input type="hidden" name="keahlian_taiw_lama" class="form-control"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Upload Sertifikasi Bahasa</label>
                                         <td><input type="file" name="bahasa_taiw" class="form-control"/></td>
+                                        <input type="hidden" name="bahasa_taiw_lama" class="form-control"/>
                                     </div>
                                          <p>
                                             <td></td>

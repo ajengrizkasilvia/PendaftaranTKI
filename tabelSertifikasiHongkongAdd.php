@@ -227,10 +227,12 @@
                                     <div class="form-group">
                                         <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
                                         <td><input type="file" name="keahlian_hk" class="form-control"/></td>
+                                        <input type="hidden" name="keahlian_hk_lama" class="form-control"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Upload Sertifikasi Bahasa</label>
                                         <td><input type="file" name="bahasa_hk" class="form-control"/></td>
+                                        <input type="hidden" name="bahasa_hk_lama" class="form-control"/>
                                     </div>
                                          <p>
                                             <td></td>

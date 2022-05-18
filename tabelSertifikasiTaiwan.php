@@ -207,7 +207,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <a href="tabelSertifikasiTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
                         </div>
@@ -229,14 +229,14 @@
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
-                                                                        INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                                                        INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="sertifikasi/keahlianTaiwan/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="sertifikasi/bahasaTaiwan/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
                                                 <a href="tabelSertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">EDIT</a>
                                                 <a href="tabelSertifikasiTaiwanDelete.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">HAPUS</a>

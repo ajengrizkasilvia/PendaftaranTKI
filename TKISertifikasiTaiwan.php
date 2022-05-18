@@ -86,6 +86,22 @@
                 </div>
             </li>
 
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="TKITest.php">
@@ -184,14 +200,14 @@
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
-                                                                        INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                                                        INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="sertifikasi/keahlianTaiwan/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="sertifikasi/bahasaTaiwan/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Bahasa//<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
                                                 <a href="TKISertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">EDIT</a>
                                             </td>
