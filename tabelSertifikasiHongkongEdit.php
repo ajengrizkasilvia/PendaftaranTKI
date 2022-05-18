@@ -94,7 +94,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="#">Jepang</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
                         <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
@@ -113,6 +112,22 @@
                 <a class="nav-link" href="tabelPendaftar.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pendaftar</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -185,54 +200,48 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian TKI</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
+                    Pastikan sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg.
+                    Tekan <a href="tabelSertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi Keahlian TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
-                                    $id_test = $_GET['id_test'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM test INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft INNER JOIN negara ON test.id_negara = negara.id_negara WHERE id_test='$id_test'");
+                                    $id_test = $_GET['id_sertif_hk'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                    INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelTestEditProses.php">
+                                        <form method="post" action="tabelSertifikasiHongkongProses.php">
                                             <fieldset>
                                                 <div class="form-group">			
                                                     <label>Nama TKI</label>
                                                     <td>
-                                                        <input type="hidden" name="id_test" value="<?php echo $d['id_test']; ?>">
+                                                        <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
                                                         <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                     </td>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Negara Tujuan</label>
+                                                    <label>Sertifikasi Keahlian atau Ketrampilan</label>
                                                     <td>
-                                                        <select class="form-control" name="id_negara">
-                                                            <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
-                                                            <option value='2'>Taiwan</option>
-                                                            <option value='3'>Singapore</option>
-                                                            <option value='4'>Malaysia</option>
-                                                        </select>   
+                                                        <img src="sertifikasi/keahlianHongkong/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="keahlian_hk" />
                                                     </td>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Sertifikasi Keahlian</label>
+                                                    <label>Sertifikasi Bahasa</label>
                                                     <td>
-                                                        <img src="berkas/Keahlian/<?php echo $d['sertif_keahlian']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="sertif_keahlian" />
+                                                        <img src="sertifikasi/bahasaHongkong/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="bahasa_hk" />
                                                     </td>
                                                 </div>
                                                 <br><br><br><br><br><br><br>

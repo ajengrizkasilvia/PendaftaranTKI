@@ -113,6 +113,22 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pendaftar</span></a>
             </li>
+            
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
+            </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -184,68 +200,48 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian atau Ketrampilan TKI</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
+                    Upload berkas sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg. </p>
+                    <p> Tekan <a href="tabelSertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Data Test TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <?php
-                                    include 'config.php';
-                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                    $id_test = $_GET['id_test'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM test INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft INNER JOIN negara ON test.id_negara = negara.id_negara WHERE id_test='$id_test'");
-                                    while($d = mysqli_fetch_array($data)){
-                                ?>
-                                        <form method="post" action="tabelTestEditProses.php">
-                                            <fieldset>
-                                                <div class="form-group">			
-                                                    <label>Nama TKI</label>
-                                                    <td>
-                                                        <input type="hidden" name="id_test" value="<?php echo $d['id_test']; ?>">
-                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                    </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Negara Tujuan</label>
-                                                    <td>
-                                                        <select class="form-control" name="id_negara">
-                                                            <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
-                                                            <option value='2'>Taiwan</option>
-                                                            <option value='3'>Singapore</option>
-                                                            <option value='4'>Malaysia</option>
-                                                        </select>   
-                                                    </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Sertifikasi Keahlian</label>
-                                                    <td>
-                                                        <img src="berkas/Keahlian/<?php echo $d['sertif_keahlian']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="sertif_keahlian" />
-                                                    </td>
-                                                </div>
-                                                <br><br><br><br><br><br><br>
-                                                <div class="form-group">
-                                                    <td><input type="submit" value="SIMPAN"></td>
-                                                </div>	
-                                            </fieldset>
-                                        </form>
-                                        <?php 
-                                    }
-                                ?>
+                            <form method="post" action="tabelSertifikasiHongkongAddProses.php" enctype="multipart/form-data">
+                                <fieldset>
+                                    <div class="form-group">			
+                                        <label>Nama TKI</label>
+                                        <td>
+                                            <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
+                                            <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
+                                        <td><input type="file" name="keahlian_hk" class="form-control"/></td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Upload Sertifikasi Bahasa</label>
+                                        <td><input type="file" name="bahasa_hk" class="form-control"/></td>
+                                    </div>
+                                         <p>
+                                            <td></td>
+                                            <td><input type="submit" value="SIMPAN"></td>
+                                         </p>		
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -256,7 +252,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>

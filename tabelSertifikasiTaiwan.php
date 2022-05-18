@@ -199,131 +199,54 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Pendaftar</h1>
-                    </div>
-                    <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
-                    Upload berkas medical check-up dengan format nama_umur_medicalcheck.jpg. </p>
-                    <p> Tekan <a href="tabelPendaftar.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Taiwan</h1>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
 
+                    
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Pendaftar</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
+                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form method="post" action="tabelPendaftarAddProses.php" enctype="multipart/form-data">
-                                    <fieldset>
-                                        <div class="form-group">
-                                            <label>No Telp / WA</label>
-                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
-                                        </div>
-                                        <div class="form-group">			
-                                            <label>NIK</label>
-                                                <td>
-                                                <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                <input type="text" name="nik" class="form-control" placeholder="Masukkan NIK"/>
-                                                </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Nama Lengkap</label>
-                                            <td><input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan nama lengkap"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Negara Tujuan</label>
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama TKI</th>
+                                            <th>Sertifikasi Keahlian</th>
+                                            <th>Sertifikasi Bahasa</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php 
+                                        include 'config.php';
+                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                        $no = 1;
+                                        $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                        INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                        while($d = mysqli_fetch_array($data)){
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $no++; ?></td>
+                                            <td><?php echo $d['nama_lengkap']; ?></td>
+                                            <td><img src="sertifikasi/keahlianTaiwan/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="sertifikasi/bahasaTaiwan/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
-                                                <select class="form-control" name="id_negara">
-                                                    <option>--pilih negara tujuan--</option>
-                                                    <option value='1'>Hongkong</option>
-                                                    <option value='2'>Taiwan</option>
-                                                    <option value='3'>Singapore</option>
-                                                    <option value='4'>Malaysia</option>
-                                                </select>   
+                                                <a href="tabelSertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">EDIT</a>
+                                                <a href="tabelSertifikasiTaiwanDelete.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">HAPUS</a>
                                             </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Tempat Lahir</label>
-                                            <td><input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan tempat lahir"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Tanggal Lahir</label>
-                                            <td><input type="text" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Umur</label>
-                                            <td><input type="text" name="umur" class="form-control" placeholder="Masukkan umur"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Alamat Lengkap</label>
-                                            <td><input type="text" name="alamat_lengkap" class="form-control" placeholder="Masukkan alamat lengkap"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Jenis Kelamin</label>
-                                            <td>
-                                                <select class="form-control" name="jenis_kelamin">
-                                                    <option>--pilih jenis kelamin--</option>
-                                                    <option>Pria</option>
-                                                    <option>Wanita</option>
-                                                </select>   
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>TB</label>
-                                            <td><input type="text" name="tb" class="form-control" placeholder="Masukkan tinggi badan"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>BB</label>
-                                            <td><input type="text" name="bb" class="form-control" placeholder="Masukkan berat badan"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Pendidikan Terakhir</label>
-                                            <td><input type="text" name="pendidikan_terakhir" class="form-control" placeholder="Masukkan pendidikan terakhir"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Status</label>
-                                            <td>
-                                                <select class="form-control" name="status">
-                                                    <option>--pilih status--</option>
-                                                    <option>Menikah</option>
-                                                    <option>Belum Menikah</option>
-                                                    <option>Cerai Hidup</option>
-                                                    <option>Cerai Mati</option>
-                                                </select>   
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Agama</label>
-                                            <td><input type="text" name="agama" class="form-control" placeholder="Masukkan agama"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Pengalaman Kerja</label>
-                                            <td><input type="text" name="pengalaman_kerja" class="form-control" placeholder="Masukkan pengalaman kerja"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Medical Check</td>
-                                            <td><input type="file" name="medical_check" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                            <td>Pas Foto</td>
-                                            <td><input type="file" name="pas_foto" class="form-control"/></td>
-                                        </div>
-                                        <div class="form-group">
-                                        <label>Status Proses</label>
-                                        <td>
-                                            <select class="form-control" name="id_tahapsatu">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                            </select>  
-                                        </td>
-                                        </div>
-                                        <br>
-                                        <p>
-                                            <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                        </p>		
-                                    </fieldset>
-                                </form>
+                                        </tr>
+                                    <?php 
+                                        }
+                                    ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -394,4 +317,4 @@
 
 </body>
 
-</html>
+</html> 

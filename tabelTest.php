@@ -103,7 +103,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-globe"></i>
                     <span>Negara Tujuan</span></a>
             </li>
 
@@ -112,6 +112,22 @@
                 <a class="nav-link" href="tabelPendaftar.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Pendaftar</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -194,12 +210,6 @@
                             <a href="tabelTestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
-                            <a href="tabelTestSertifKeahlianAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Upload Sertifikasi Keahlian
-                            </a>
-                            <a href="tabelTestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Upload Sertifikasi Bahasa
-                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -225,7 +235,7 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['negara_tujuan']; ?></td>
-                                            <td><img src="nilai/<?php echo $d['nilai']; ?>" style="width: 200px;"></td>
+                                            
                                             <td>
                                                 <a href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
                                                 <a href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">HAPUS</a>
