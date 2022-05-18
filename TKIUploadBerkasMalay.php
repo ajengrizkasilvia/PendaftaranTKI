@@ -86,6 +86,22 @@
                 </div>
             </li>
 
+             <!-- Nav Item - Pages Collapse Menu -->
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Sertifikasi</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="TKITest.php">
@@ -220,6 +236,7 @@
                                             <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_malay']; ?></td>
                                             <td>
+                                                <a href="TKIUploadBerkasMalayDetail.php?id_malaysia=<?php echo $d['id_malaysia']; ?>">DETAIL</a>
                                                 <a href="TKIUploadBerkasMalayEdit.php?id_malaysia=<?php echo $d['id_malaysia']; ?>">EDIT</a>
                                             </td>
                                         </tr>

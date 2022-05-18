@@ -200,140 +200,114 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">TKI Malaysia</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
+                        <a href="tabelDataTKIHongCetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
-                    <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
-                    Pastikan berkas dengan format namaBerkas_negaraTujuan.jpg
-                    Tekan <a href="tabelDataTKIMalay.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <p class="mb-4">Berikut merupakan data-data dari TKI negara tujuan Hongkong. Untuk merekap semua data dapat dilakukan pada
+                        <a href="tabelDataTKIHongCetak.php">cetak disini</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Data TKI Malaysia</h6>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <?php
+                            <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
-                                    $id_malaysia = $_GET['id_malaysia'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM malaysia WHERE id_malaysia='$id_malaysia'");
+                                    $id_taiwan = $_GET['id_taiwan'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM taiwan WHERE id_taiwan='$id_taiwan'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelDataTKIMalayEditProses.php" enctype="multipart/form-data">
-                                            <table>
-                                                <tr>			
-                                                    <td>Nama TKI</td>
-                                                    <td>
-                                                        <input type="hidden" name="id_malaysia" value="<?php echo $d['id_malaysia']; ?>">
-                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <dtr>
-                                                    <td>Sektor</td>
-                                                    <td><input type="text" class="form-control" name="sektor_malay" value="<?php echo $d['sektor_malay']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>E-KTP</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['ektp_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="ektp_malay" /></td>
-                                                        <input type="hidden" name="ektp_malay_lama" value="<?php echo $d['ektp_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kartu Keluarga</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['kk_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="kk_malay" /></td>
-                                                        <input type="hidden" name="kk_malay_lama" value="<?php echo $d['kk_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Akta Kelahiran</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['akte_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="akte_malay" /></td>
-                                                        <input type="hidden" name="akte_malay_lama" value="<?php echo $d['akte_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Surat Menikah</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['suratnikah_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="suratnikah_malay" /></td>
-                                                        <input type="hidden" name="suratnikah_malay_lama" value="<?php echo $d['suratnikah_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Surat Ijin Ortu/Suami</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['suratijin_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="suratijin_malay" /></td>
-                                                        <input type="hidden" name="suratijin_malay_lama" value="<?php echo $d['suratijin_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ex Paspor</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['expaspor_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="expaspor_malay" /></td>
-                                                        <input type="hidden" name="expaspor_malay_lama" value="<?php echo $d['expaspor_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>SKCK</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['skck_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="skck_malay" /></td>
-                                                        <input type="hidden" name="skck_malay_lama" value="<?php echo $d['skck_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Rekom Id</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['rekomid_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="rekomid_malay" /></td>
-                                                        <input type="hidden" name="rekomid_malay_lama" value="<?php echo $d['rekomid_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Biometri</td>
-                                                    <td>
-                                                        <img src="berkas/Malaysia/<?php echo $d['biometri_malay']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="biometri_malay" /></td>
-                                                        <input type="hidden" name="biometri_malay_lama" value="<?php echo $d['biometri_malay']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Status Proses</td>
-                                                    <td>
-                                                        <select class="form-control" name="id_tahapdua">
-                                                        <option>--pilih status proses--</option>
-                                                        <option value='1'>Diajukan</option>
-                                                        <option value='2'>Diverifikasi</option>
-                                                        <option value='3'>Diterima</option>
-                                                        <option value='4'>Ditolak</option>
-                                                        </select>  
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Keterangan</td>
-                                                    <td><input type="text" class="form-control" name="keterangan_malay" value="<?php echo $d['keterangan_malay']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td><input type="submit" value="SIMPAN"></td>
-                                                </tr>		
-                                    </table>
-                                        </form>
-                                        <?php 
-                                    }
-                                ?>
-                            </div>
-                        </div>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>			
+                                            <td>Nama TKI</td>
+                                            <td>
+                                                <?php echo $d['id_dft']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sektor</td>
+                                            <td>
+                                                <?php echo $d['sektor_taiw']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>E-KTP</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kartu Keluarga</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Akta Kelahiran</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surat Menikah</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surat Ijin Ortu/Suami</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ex Paspor</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKCK</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rekom Id</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Biometri</td>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status Proses</td>
+                                            <td> 
+                                                <?php echo $d['id_tahapdua']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Keterangan</td>
+                                            <td>
+                                                <?php echo $d['keterangan_taiw']; ?>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            <?php 
+                                }
+                            ?>
                     </div>
                 </div>
+            </div>
+        </div>
                 <!-- /.container-fluid -->
 
             </div>
@@ -343,7 +317,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>

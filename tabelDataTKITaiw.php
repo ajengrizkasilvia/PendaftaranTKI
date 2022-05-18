@@ -262,6 +262,7 @@
                                             <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_taiw']; ?></td>
                                                 <td>
+                                                    <a href="tabelDataTKITaiwDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">DETAIL</a>
                                                     <a href="tabelDataTKITaiwEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">EDIT</a>
                                                     <a href="tabelDataTKITaiwDelete.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">HAPUS</a>
                                                 </td>

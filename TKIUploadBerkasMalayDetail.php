@@ -12,14 +12,17 @@
     <title>PT Hendrarta Argaraya - TKI</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -40,7 +43,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="indextki.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="indexadmin.php">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-house-user"></i>
                 </div>
@@ -114,6 +117,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -127,9 +131,11 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -149,7 +155,6 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -157,122 +162,136 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-2 text-gray-800">Berkas</h1>
-            </div>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
+                    </div>
+                    <p class="mb-4">Berikut merupakan data berkas-berkas anda. Tekan menu upload berkas untuk mengupload berkas jika anda dinyatakan lolos tahap pertama. 
+                        Apabila terdapat data yang tidak sesuai silahkan upload ulang berkas anda dengan tekan menu upload berkas lagi dan konfirmasi ke Admin.
+                    </p>
+                    <p> Cek status proses untuk mengetahui proses anda. </p>
 
-            <!-- DataTales Example -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Berkas TKI Malaysia</h6><br>      
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Hongkong</h6><br>
+                            <a href="TKIUploadBerkasHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
+                            <div class="card-body">
+                            <div class="table-responsive">
+                            <?php
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $id_malaysia = $_GET['id_malaysia'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM malaysia WHERE id_malaysia='$id_malaysia'");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>			
+                                            <td>Nama TKI</td>
+                                            <td>
+                                                <?php echo $d['id_dft']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sektor</td>
+                                            <td>
+                                                <?php echo $d['sektor_malay']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>E-KTP</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['ektp_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kartu Keluarga</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['kk_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Akta Kelahiran</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['akte_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surat Menikah</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['suratnikah_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surat Ijin Ortu/Suami</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['suratijin_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ex Paspor</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['expaspor_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKCK</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['skck_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rekom Id</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['rekomid_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Biometri</td>
+                                            <td>
+                                                <img src="berkas/Malaysia/<?php echo $d['biometri_malay']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status Proses</td>
+                                            <td> 
+                                                <?php echo $d['id_tahapdua']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Keterangan</td>
+                                            <td>
+                                                <?php echo $d['keterangan_malay']; ?>
+                                            </td>
+                                        </tr>
+                                        <?php 
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <form action="TKIUploadBerkasMalayAddProses.php" method="post" enctype="multipart/form-data">
-                        <fieldset>
-                            <div class="form-group">			
-                                    <label>Nama TKI</label>
-                                <td>
-                                    <input type="hidden" name="id_malaysia" value="<?php echo $d['id_malaysia']; ?>">
-                                    <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>Sektor</label>
-                                <td>
-                                    <input type="text" name="sektor_malay" class="form-control" placeholder="Masukkan sektor tki"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>E-KTP</label>
-                                <td><input type="file" name="ektp_malay" class="form-control"/></td>
-                            </div>
-                            <div class="form-group">
-                                    <label>Kartu Keluarga</label>
-                                <td>
-                                    <input type="file" name="kk_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>Akta Kelahiran</label>
-                                <td>
-                                    <input type="file" name="akte_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>Surat Menikah</label>
-                                <td>
-                                    <input type="file" name="suratnikah_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>Surat Ijin Ortu/Suami</label>
-                                <td>
-                                    <input type="file" name="suratijin_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>Ex Paspor</label>
-                                <td>
-                                    <input type="file" name="expaspor_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                    <label>SKCK</label>
-                                <td>
-                                    <input type="file" name="skck_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                <td>Rekom Id</td>
-                                <td><input type="file" name="rekomid_malay" class="form-control"/></td>
-                            </div>
-                            <div class="form-group">
-                                <td>Biometri</td>
-                                <td><input type="file" name="biometri_malay" class="form-control"/></td>
-                            </div>
-                            <div class="form-group">
-                                <label>Status Proses</label>
-                                <td>
-                                    <select class="form-control" name="id_tahapdua">
-                                    <option>--klik ajukan status proses--</option>
-                                    <option value='1'>Diajukan</option>
-                                    </select>  
-                                </td>
-                            </div>
-                            <div class="form-group">
-                                <label>Keterangan</label>
-                                <td>
-                                    <input type="text" name="keterangan_malay" class="form-control"/>
-                                </td>
-                            </div>
-                            <p>
-                                <td></td>
-                                    <td><input type="submit" value="SIMPAN"></td>
-                            </p>		
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- /.container-fluid -->
+                <!-- /.container-fluid -->
 
-    </div>
-<!-- End of Main Content -->
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2021</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -320,11 +339,11 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 

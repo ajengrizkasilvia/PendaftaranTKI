@@ -261,7 +261,7 @@
                                     <td><?php echo $d['keterangan']; ?></td>
                                     <td><?php echo $d['keterangan_hk']; ?></td>
                                     <td>
-                                    <a href="tabelDataTKIHongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">DETAIL</a>
+                                        <a href="tabelDataTKIHongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">DETAIL</a>
                                         <a href="tabelDataTKIHongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">EDIT</a>
                                         <a href="tabelDataTKIHongDelete.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">HAPUS</a>
                                     </td>
