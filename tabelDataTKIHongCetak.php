@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cetak Data Pendaftar</title>
+	<title>Cetak All Data Pendaftar</title>
 </head>
 <body>
  
@@ -12,7 +12,9 @@
 
     <?php 
 		$no = 1;
-		$data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft");
+		$data = mysqli_query($konektor,"SELECT * FROM hongkong 
+                                        INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
+                                        INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua");
 		while($d = mysqli_fetch_array($data)){
 	?>
      <div class="card-body">
@@ -59,8 +61,27 @@
                 <th><img src="berkas/<?php echo $d['skck_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
+                <th>Rekom Id</th>
+                <th>
+                <img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 280px;"></th>
+            </tr>
+            <tr>
+                <th>Biometri</th>
+                <th>
+                <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width:280px;">
+                </th>
+            </tr>
+            <tr>
                 <th>Status Proses</th>
-                <th><?php echo $d['status_proses_hk']; ?></th>
+                <th>
+                <?php echo $d['keterangan']; ?>
+                </th>
+            </tr>
+            <tr>
+                <th>Keterangan</th>
+                <th>
+                <?php echo $d['keterangan_hk']; ?>
+                </th>
             </tr>
 		<?php 
 		}

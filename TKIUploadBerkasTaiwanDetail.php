@@ -171,17 +171,17 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Berkas TKI Taiwan</h1>
                     </div>
-                    <p class="mb-4">Berikut merupakan data berkas-berkas anda. Tekan menu upload berkas untuk mengupload berkas jika anda dinyatakan lolos tahap pertama. 
+                    <p class="mb-4">Berikut merupakan detail berkas-berkas anda. Tekan menu upload berkas untuk mengupload berkas jika anda dinyatakan lolos tahap pertama. 
                         Apabila terdapat data yang tidak sesuai silahkan upload ulang berkas anda dengan tekan menu upload berkas lagi dan konfirmasi ke Admin.
                     </p>
-                    <p> Cek status proses untuk mengetahui proses anda. </p>
+                    <p> Cek status proses untuk mengetahui proses anda. Tekan <a href="TKIUploadBerkasTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Hongkong</h6><br>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Berkas</h6><br>
                             <a href="TKIUploadBerkasHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
                             <div class="card-body">
@@ -190,7 +190,9 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_taiwan = $_GET['id_taiwan'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM taiwan WHERE id_taiwan='$id_taiwan'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM taiwan 
+                                                                    INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
+                                                                    WHERE id_taiwan='$id_taiwan'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -264,7 +266,7 @@
                                         <tr>
                                             <td>Status Proses</td>
                                             <td> 
-                                                <?php echo $d['id_tahapdua']; ?>
+                                                <?php echo $d['keterangan']; ?>
                                             </td>
                                         </tr>
                                         <tr>
