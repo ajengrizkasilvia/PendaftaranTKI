@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PT Hendrarta Argaraya - ADMIN</title>
+    <title>PT Hendrarta Argaraya - TKI</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
@@ -47,7 +47,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-house-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIP<sub>Admin</sub></div>
+                <div class="sidebar-brand-text mx-3">SIP<sub>TKI</sub></div>
             </a>
 
             <!-- Divider -->
@@ -55,63 +55,35 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="indexadmin.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                <a class="nav-link" href="indextki.php">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Beranda</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Pengaturan
-            </div>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelManageUser.php">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Manage User</span></a>
+             <!-- Nav Item - Tables -->
+             <li class="nav-item">
+                <a class="nav-link" href="TKIFormDaftar.php">
+                    <i class="fas fa-fw fa-edit"></i>
+                    <span>Form Pendaftaran</span></a>
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Tenaga Kerja
-            </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data TKI</span>
+                    <span>General</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Negara Tujuan:</h6>
-                        <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
-                        <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
+                        <h6 class="collapse-header">Data TKI</h6>
+                        <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
+                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
+                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
+                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
+                        <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -124,15 +96,15 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tabelTest.php">
+                <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
                     <span>Test TKI</span></a>
             </li>
@@ -144,6 +116,7 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -189,9 +162,7 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
@@ -199,48 +170,48 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Taiwan</h1>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
 
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Sertifikasi Keahlian</th>
-                                            <th>Sertifikasi Bahasa</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
+                            <?php 
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft");
+                                        $id_sertif_taiw = $_GET['id_sertif_taiw'];
+                                        $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                        INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft
+                                                                        WHERE id_sertif_taiw='$id_sertif_taiw'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
                                         <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                            <td>Nama Lengkap</td>
                                             <td>
-                                                <a href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">DETAIL</a>
-                                                <a href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
-                                                <a href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">HAPUS</a>
+                                            <?php echo $d['nama_lengkap']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sertifikasi Keahlian</td>
+                                            <td>
+                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sertifikasi Bahasa</td>
+                                            <td>
+                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">                                                 
                                             </td>
                                         </tr>
                                     <?php 
@@ -251,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
                 <!-- /.container-fluid -->
 
@@ -318,4 +289,4 @@
 
 </body>
 
-</html> 
+</html>

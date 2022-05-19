@@ -215,15 +215,6 @@
                             <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Sertifikasi Keahlian</th>
-                                            <th>Sertifikasi Bahasa</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                     <?php 
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
@@ -238,6 +229,7 @@
                                             <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
+                                                <a href="tabelSertifikasiTaiwanDetail.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">DETAIL</a>
                                                 <a href="tabelSertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">EDIT</a>
                                                 <a href="tabelSertifikasiTaiwanDelete.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">HAPUS</a>
                                             </td>

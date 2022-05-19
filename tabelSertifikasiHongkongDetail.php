@@ -213,34 +213,34 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Sertifikasi Keahlian</th>
-                                            <th>Sertifikasi Bahasa</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
+                            <?php 
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
+                                        $id_sertif_hk = $_GET['id_sertif_hk'];
                                         $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft");
+                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft
+                                                                        WHERE id_sertif_hk='$id_sertif_hk'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
                                         <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                            <td>Nama Lengkap</td>
                                             <td>
-                                                <a href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">DETAIL</a>
-                                                <a href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
-                                                <a href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">HAPUS</a>
+                                            <?php echo $d['nama_lengkap']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sertifikasi Keahlian</td>
+                                            <td>
+                                                <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sertifikasi Bahasa</td>
+                                            <td>
+                                                <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 800px;">                                                 
                                             </td>
                                         </tr>
                                     <?php 

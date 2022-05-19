@@ -199,50 +199,51 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Taiwan</h1>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
 
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <a href="tabelSertifikasiTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Sertifikasi Keahlian</th>
-                                            <th>Sertifikasi Bahasa</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
+                                <?php 
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft");
+                                        $id_sertif_taiw = $_GET['id_sertif_taiw'];
+                                        $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                        INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft
+                                                                        WHERE id_sertif_taiw='$id_sertif_taiw'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
                                         <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                            <td>Nama Lengkap</td>
                                             <td>
-                                                <a href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">DETAIL</a>
-                                                <a href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
-                                                <a href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">HAPUS</a>
+                                            <?php echo $d['nama_lengkap']; ?>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>Sertifikasi Keahlian</td>
+                                            <td>
+                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sertifikasi Bahasa</td>
+                                            <td>
+                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">                                                 
+                                            </td>
+                                        </tr>
+                                        
                                     <?php 
                                         }
                                     ?>

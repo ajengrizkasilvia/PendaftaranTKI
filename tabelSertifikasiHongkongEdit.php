@@ -216,39 +216,40 @@
                                 <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
-                                    $id_test = $_GET['id_sertif_hk'];
+                                    $id_sertif_hk = $_GET['id_sertif_hk'];
                                     $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                    INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft");
+                                                                    WHERE id_sertif_hk='$id_sertif_hk'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelSertifikasiHongkongProses.php">
-                                            <fieldset>
-                                                <div class="form-group">			
-                                                    <label>Nama TKI</label>
+                                        <form method="post" action="tabelSertifikasiHongkongEditProses.php">
+                                            <table>
+                                                <tr>			
+                                                    <td>Nama TKI</td>
                                                     <td>
                                                         <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
                                                         <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Sertifikasi Keahlian atau Ketrampilan</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sertifikasi Keahlian atau Ketrampilan</td>
                                                     <td>
-                                                        <img src="sertifikasi/keahlianHongkong/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="keahlian_hk" />
+                                                        <input type="hidden" name="keahlian_hk_lama" value="<?php echo $d['keahlian_hk']; ?>">
                                                     </td>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Sertifikasi Bahasa</label>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sertifikasi Bahasa</td>
                                                     <td>
-                                                        <img src="sertifikasi/bahasaHongkong/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                        <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="bahasa_hk" />
+                                                        <input type="hidden" name="bahasa_hk_lama" value="<?php echo $d['bahasa_hk']; ?>">
                                                     </td>
-                                                </div>
-                                                <br><br><br><br><br><br><br>
-                                                <div class="form-group">
+                                                </tr>
+                                                <tr>
                                                     <td><input type="submit" value="SIMPAN"></td>
-                                                </div>	
-                                            </fieldset>
+                                                </tr>	
+                                    </table>
                                         </form>
                                         <?php 
                                     }
