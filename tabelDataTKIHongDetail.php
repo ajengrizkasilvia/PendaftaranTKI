@@ -201,22 +201,26 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
-                        <a href="tabelDataTKIHongCetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="cetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
                     <p class="mb-4">Berikut merupakan data-data dari TKI negara tujuan Hongkong. Untuk merekap semua data dapat dilakukan pada
-                        <a href="tabelDataTKIHongCetak.php">cetak disini</a>.</p>
+                        <a href="cetak.php">cetak disini</a>.</p>
+                    <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Detail TKI</h6>
                         <div class="card-body">
                             <div class="table-responsive">
                             <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_hongkong = $_GET['id_hongkong'];
-                                    $data = mysqli_query($konektor,"select * from hongkong where id_hongkong='$id_hongkong'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong 
+                                                                    INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua 
+                                                                    WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -290,7 +294,7 @@
                                         <tr>
                                             <td>Status Proses</td>
                                             <td> 
-                                                <?php echo $d['id_tahapdua']; ?>
+                                                <?php echo $d['keterangan']; ?>
                                             </td>
                                         </tr>
                                         <tr>
@@ -304,10 +308,10 @@
                             <?php 
                                 }
                             ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
                 <!-- /.container-fluid -->
 
             </div>

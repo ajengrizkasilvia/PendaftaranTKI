@@ -175,59 +175,55 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Data Diri TKI</h6><br>
-                            
                         </div>
                         <div class="card-body">
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara");
-                                        while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                                <!--<?php echo $no++; ?> -->
-                                                </h5>No Telp</h5>
-                                                <p><?php echo $d['no_telp']; ?></p>
-                                                </h5>NIK</h5>
-                                                <p><?php echo $d['nik']; ?></p>
-                                                </h5>Nama Lengkap</h5>
-                                                <p><?php echo $d['nama_lengkap']; ?></p>
-                                                </h5>Negara Tujuan</h5>
-                                                <p><?php echo $d['negara_tujuan']; ?></p>
-                                                </h5>Tempat Lahir</h5>
-                                                <p><?php echo $d['tempat_lahir']; ?></p>
-                                                </h5>Tanggal Lahir</h5>
-                                                <p><?php echo $d['tanggal_lahir']; ?></p>
-                                                </h5>Umur</h5>
-                                                <p><?php echo $d['umur']; ?></p>
-                                                </h5>Alamat Lengkap</h5>
-                                                <p><?php echo $d['alamat_lengkap']; ?></p>
-                                                </h5>Jenis Kelamin</h5>
-                                                <p><?php echo $d['jenis_kelamin']; ?></p>
-                                                </h5>Tinggi Badan</h5>
-                                                <p><?php echo $d['tb']; ?></p>
-                                                </h5>Berat Badan</h5>
-                                                <p><?php echo $d['bb']; ?></p>
-                                                </h5>Pendidikan Terakhir</h5>
-                                                <p><?php echo $d['pendidikan_terakhir']; ?></p>
-                                                </h5>Status</h5>
-                                                <p><?php echo $d['status']; ?></p>
-                                                </h5>Agama</h5>
-                                                <p><?php echo $d['agama']; ?></p>
-                                                </h5>Pengalaman Kerja</h5>
-                                                <p><?php echo $d['pengalaman_kerja']; ?></p>
-                                                </h5>Medical Check</h5>
-                                                <P><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></P>
-                                                </h5>Pas Foto</h5>
-                                                <P><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></P>
-                                                </h5>Status Proses</h5>
-                                                <p><?php echo $d['id_tahapsatu']; ?></p>
-
-                                    
-                                            <?php 
-                                            }
-                                        ?>
-                    
+                        <?php 
+                            include 'config.php';
+                            $konektor = mysqli_connect("localhost","root","", "tki");
+                            $no = 1;
+                            $data = mysqli_query($konektor,"SELECT * FROM pendaftaran INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara");
+                            while($d = mysqli_fetch_array($data)){
+                        ?>
+                        <!--<?php echo $no++; ?> -->
+                        </h5>No Telp</h5>
+                        <p><?php echo $d['no_telp']; ?></p>
+                        </h5>NIK</h5>
+                        <p><?php echo $d['nik']; ?></p>
+                        </h5>Nama Lengkap</h5>
+                        <p><?php echo $d['nama_lengkap']; ?></p>
+                        </h5>Negara Tujuan</h5>
+                        <p><?php echo $d['negara_tujuan']; ?></p>
+                        </h5>Tempat Lahir</h5>
+                        <p><?php echo $d['tempat_lahir']; ?></p>
+                        </h5>Tanggal Lahir</h5>
+                        <p><?php echo $d['tanggal_lahir']; ?></p>
+                        </h5>Umur</h5>
+                        <p><?php echo $d['umur']; ?></p>
+                        </h5>Alamat Lengkap</h5>
+                        <p><?php echo $d['alamat_lengkap']; ?></p>
+                        </h5>Jenis Kelamin</h5>
+                        <p><?php echo $d['jenis_kelamin']; ?></p>
+                        </h5>Tinggi Badan</h5>
+                        <p><?php echo $d['tb']; ?></p>
+                        </h5>Berat Badan</h5>
+                        <p><?php echo $d['bb']; ?></p>
+                        </h5>Pendidikan Terakhir</h5>
+                        <p><?php echo $d['pendidikan_terakhir']; ?></p>
+                        </h5>Status</h5>
+                        <p><?php echo $d['status']; ?></p>
+                        </h5>Agama</h5>
+                        <p><?php echo $d['agama']; ?></p>
+                        </h5>Pengalaman Kerja</h5>
+                        <p><?php echo $d['pengalaman_kerja']; ?></p>
+                        </h5>Medical Check</h5>
+                        <P><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></P>
+                        </h5>Pas Foto</h5>
+                        <P><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></P>
+                        </h5>Status Proses</h5>
+                        <p><?php echo $d['id_tahapsatu']; ?></p>
+                        <?php 
+                            }
+                        ?>
                         </div>
                     </div>
 
