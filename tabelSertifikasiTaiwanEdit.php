@@ -222,7 +222,7 @@
                                                                     WHERE id_sertif_taiw='$id_sertif_taiw'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelSertifikasiTaiwanEditProses.php">
+                                        <form method="post" action="tabelSertifikasiTaiwanEditProses.php" enctype="multipart/form-data">
                                             <table>
                                                 <tr>			
                                                     <td>Nama TKI</td>

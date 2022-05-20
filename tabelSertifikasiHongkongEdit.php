@@ -217,11 +217,10 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_sertif_hk = $_GET['id_sertif_hk'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                    WHERE id_sertif_hk='$id_sertif_hk'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong WHERE id_sertif_hk='$id_sertif_hk'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                        <form method="post" action="tabelSertifikasiHongkongEditProses.php">
+                                        <form method="post" action="tabelSertifikasiHongkongEditProses.php" enctype="multipart/form-data">
                                             <table>
                                                 <tr>			
                                                     <td>Nama TKI</td>
@@ -233,16 +232,16 @@
                                                 <tr>
                                                     <td>Sertifikasi Keahlian atau Ketrampilan</td>
                                                     <td>
-                                                        <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="keahlian_hk" />
+                                                        <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="keahlian_hk" /></td>
                                                         <input type="hidden" name="keahlian_hk_lama" value="<?php echo $d['keahlian_hk']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sertifikasi Bahasa</td>
                                                     <td>
-                                                        <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="bahasa_hk" />
+                                                        <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="bahasa_hk" /></td>
                                                         <input type="hidden" name="bahasa_hk_lama" value="<?php echo $d['bahasa_hk']; ?>">
                                                     </td>
                                                 </tr>
