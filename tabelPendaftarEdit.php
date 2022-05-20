@@ -229,12 +229,13 @@
                                                 <tr>			
                                                     <td>NIK</td>
                                                     <td>
-                                                        <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                        
                                                         <input type="text" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Nama Lengkap</td>
+                                                    <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                     <td><input type="text" class="form-control" name="nama_lengkap" value="<?php echo $d['nama_lengkap']; ?>"></td>
                                                 </tr>
                                                 <tr>
@@ -242,7 +243,7 @@
                                                     <td>
                                                         <select class="form-control" name="id_negara">
                                                             <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='9'>Hongkong</option>
+                                                            <option value='1'>Hongkong</option>
                                                             <option value='2'>Taiwan</option>
                                                             <option value='3'>Singapore</option>
                                                             <option value='4'>Malaysia</option>

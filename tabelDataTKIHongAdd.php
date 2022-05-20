@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>PT Hendrarta Argaraya - ADMIN</title>
-
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -202,7 +203,7 @@
                         <h1 class="h3 mb-2 text-gray-800">TKI Hongkong</h1>
                     </div>
                     <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format namaBerkas_negaraTujuan.jpg.
+                    Upload berkas dengan format namaTKI_negaraTujuan_namaBerkas.jpg.
                     <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

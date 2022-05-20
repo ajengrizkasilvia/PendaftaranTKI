@@ -217,7 +217,7 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_hongkong = $_GET['id_hongkong'];
-                                    $data = mysqli_query($konektor,"select * from hongkong where id_hongkong='$id_hongkong'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelDataTKIHongEditProses.php" enctype="multipart/form-data">
