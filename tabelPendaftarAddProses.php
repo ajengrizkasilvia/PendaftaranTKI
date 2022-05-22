@@ -3,7 +3,7 @@
 include 'config.php';
 $konektor = mysqli_connect("localhost","root","", "tki");
 // menangkap data yang di kirim dari form
-$id_dft = $_POST['id_dft'];
+$id = $_POST['id'];
 $id_negara = $_POST['id_negara'];
 $no_telp = $_POST['no_telp'];
 $nik = $_POST['nik'];
