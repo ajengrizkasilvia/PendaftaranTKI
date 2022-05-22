@@ -247,7 +247,9 @@
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara");
+                                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
+                                                                        INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
+                                                                        INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu");
                                         while($d = mysqli_fetch_array($data)){
                                             ?>
                                             <tr>
@@ -269,7 +271,7 @@
                                                 <td><?php echo $d['pengalaman_kerja']; ?></td>
                                                 <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
                                                 <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
-                                                <td><?php echo $d['id_tahapsatu']; ?></td>
+                                                <td><?php echo $d['keterangan']; ?></td>
                                                 <td>
                                                     <a href="tabelPendaftarEdit.php?id_dft=<?php echo $d['id_dft']; ?>">EDIT</a>
                                                     <a href="tabelPendaftarDelete.php?id_dft=<?php echo $d['id_dft']; ?>">HAPUS</a>

@@ -61,7 +61,10 @@
                             <i class="fas fa-award fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Visi Misi</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <p class="text-muted">Menjadi salah satu perusahaan jasa tenaga kerja yang terbaik di Indonesia.          
+                        Menjalin kerjasama dengan Mitra Luar Negeri yang berkualitas.
+                        Mengedepankan etos kerja, skill dan etika yang baik sebagai cerminan martabat Bangsa.
+                        </p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -69,15 +72,16 @@
                             <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Legalitas</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <p class="text-muted">PT. Hendrarta Argaraya adalah perusahaan Pelaksana Penempatan Tenaga Kerja Indonesia Swasta (PPTKIS) yang resmi sebagaimana tercantum dalam keputusan Menakertrans RI nomor 543 tahun 2016.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-chalkboard-teacher fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Berpengalaman</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Motto</h4>
+                        <p class="text-muted">Memberikan sistem Pelayanan yang Cepat, Tepat dan Akurat untuk setiap Proses.
+                            Menjamin Kepuasan Mitra Kerja di Dalam Negeri maupun Luar Negeri.</p>
                     </div>
                 </div>
             </div>

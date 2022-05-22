@@ -203,7 +203,7 @@
                         <h1 class="h3 mb-2 text-gray-800">Negara Tujuan</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dan gambar negara dengan benar dan sesuai.
-                    Pastikan berkas dengan format namaNegara.jpg 
+                    Pastikan berkas dengan format namaNegara.jpg </p>
                     Tekan <a href="tabelNegaraTujuan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
@@ -250,7 +250,7 @@
                                                     <td></td>
                                                     <td><input type="submit" value="SIMPAN"></td>
                                                     <!-- <td><input type="submit" href="tabelNegaraTujuan.php" value="Cancel"></td> -->
-                                                    <td><button type="cancel" onclick="javascript:window.location='tabelNegaraTujuan.php';">Cancel</button></td>
+                                                    
                                                 </p>		
                                             </fieldset>
                                         </form>

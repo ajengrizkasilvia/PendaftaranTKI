@@ -239,7 +239,7 @@
                                                 <td>Role</td>
                                                 <td>
                                                     <select class="form-control" name="role">
-                                                        <option></option>
+                                                        <option>--atur ulang pilih role--</option>
                                                         <option value='1'>Admin</option>
                                                         <option value='2'>TKI</option>
                                                     </select>   
