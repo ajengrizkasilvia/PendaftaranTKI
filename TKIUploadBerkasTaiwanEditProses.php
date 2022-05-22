@@ -4,7 +4,7 @@
     $konektor = mysqli_connect("localhost","root","", "tki");
     // menangkap data yang di kirim dari form
     $id_taiwan = $_POST['id_taiwan'];
-    $id_dft= $_POST['id_dft'];
+    $id= $_POST['id'];
 	$sektor_taiw = $_POST['sektor_taiw'];
     $ektp_taiw = $_FILES['ektp_taiw']['name'];
     $kk_taiw = $_FILES['kk_taiw']['name'];
@@ -33,7 +33,7 @@
     }else {
         $ektp_baru = $_POST['ektp_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru',
         id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -59,7 +59,7 @@
     }else {
         $kk_baru = $_POST['kk_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', kk_taiw='$kk_baru',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', kk_taiw='$kk_baru',
          id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -85,7 +85,7 @@
     }else {
         $akte_baru = $_POST['akte_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', akte_taiw='$akte_baru',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', akte_taiw='$akte_baru',
         id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -111,7 +111,7 @@
     }else {
         $suratnikah_baru = $_POST['suratnikah_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', suratnikah_taiw='$suratnikah_baru', 
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', suratnikah_taiw='$suratnikah_baru', 
         id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -137,7 +137,7 @@
     }else {
         $suratijin_baru = $_POST['suratijin_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', suratijin_taiw='$suratijin_baru',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', suratijin_taiw='$suratijin_baru',
          id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -163,7 +163,7 @@
     }else {
         $expaspor_baru = $_POST['expaspor_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', 
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', 
         expaspor_taiw='$expaspor_baru',  id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -189,7 +189,7 @@
     }else {
         $skck_baru = $_POST['skck_taiw_lama'];
     }
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         skck_taiw='$skck_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -215,7 +215,7 @@
     }else {
         $rekomid_baru = $_POST['rekomid_taiw_lama'];
     } 
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         rekomid_taiw='$rekomid_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -241,7 +241,7 @@
     }else {
         $biometri_baru = $_POST['biometri_taiw_lama'];
     } 
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw',
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         biometri_taiw='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
      $result = mysqli_query($konektor, $query);
@@ -346,7 +346,7 @@
 
                                                                                 //Biometri
                                                                                 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-                                                                                $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru', kk_taiw='$kk_baru',
+                                                                                $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru', kk_taiw='$kk_baru',
                                                                                     akte_taiw='$akte_baru', suratnikah_taiw='$suratnikah_baru', suratijin_taiw='$suratijin_baru',
                                                                                     expaspor_taiw='$expaspor_baru', skck_taiw='$skck_baru', rekomid_taiw='$rekomid_baru',
                                                                                     biometri_taiw='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
@@ -402,7 +402,7 @@
             //file untuk format foto
                                         }  else {
                                             // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-                                            $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw'
+                                            $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw'
                                             WHERE id_taiwan='$id_taiwan'";
                                             $result = mysqli_query($konektor, $query);
                                             // periska query apakah ada error

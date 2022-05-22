@@ -185,7 +185,7 @@
                     <label>Nama TKI</label>
                     <td>
                         <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                        <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
+                        <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
                     </td>
                     </div>
                     <div class="form-group">
@@ -195,38 +195,47 @@
                     <div class="form-group">
                         <label>E-KTP</label>
                         <td><input type="file" name="ektp_hk" class="form-control"/></td>
+                        <input type="hidden" name="ektp_hk_lama">
                     </div>
                     <div class="form-group">
                         <label>Kartu Keluarga</label>
                         <td><input type="file" name="kk_hk" class="form-control"/></td>
+                        <input type="hidden" name="kk_hk_lama">
                     </div>
                     <div class="form-group">
                         <label>Akta Kelahiran</label>
                         <td><input type="file" name="akte_hk" class="form-control"/></td>
+                        <input type="hidden" name="akte_hk_lama">
                     </div>
                     <div class="form-group">
                         <label>Surat Menikah</label>
                         <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
+                        <input type="hidden" name="suratnikah_hk_lama">
                     </div>
                     <div class="form-group">
                         <label>Surat Ijin Ortu/Suami</label>
                         <td><input type="file" name="suratijin_hk" class="form-control"/></td>
+                        <input type="hidden" name="suratijin_hk_lama">
                     </div>
                     <div class="form-group">
                         <label>Ex Paspor</label>
                         <td><input type="file" name="expaspor_hk" class="form-control"/></td>
+                        <input type="hidden" name="expaspor_hk_lama">
                     </div>
                     <div class="form-group">
                         <td>SKCK</td>
                         <td><input type="file" name="skck_hk" class="form-control"/></td>
+                        <input type="hidden" name="skck_hk_lama">
                     </div>
                     <div class="form-group">
                         <td>Rekom Id</td>
                         <td><input type="file" name="rekomid_hk" class="form-control"/></td>
+                        <input type="hidden" name="rekomid_hk_lama">
                     </div>
                     <div class="form-group">
                         <td>Biometri</td>
                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
+                        <input type="hidden" name="biometri_hk_lama">
                     </div>
                     <div class="form-group">
                         <label>Status Proses</label>

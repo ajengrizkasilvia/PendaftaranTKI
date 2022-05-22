@@ -192,7 +192,7 @@
                                         <label>Nama TKI</label>
                                         <td>
                                             <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                            <input type="text" name="id_dft" class="form-control" placeholder="Masukkan nama tki"/>
+                                            <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
                                         </td>
                                     </div>
                                     <div class="form-group">

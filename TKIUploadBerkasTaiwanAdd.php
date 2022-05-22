@@ -183,7 +183,7 @@
                                     <label>Nama TKI</label>
                                     <td>
                                         <input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>">
-                                        <input type="text" name="id_dft" class="form-control"/>
+                                        <input type="text" name="id" class="form-control"/>
                                     </td>
                                     </div>
                                     <div class="form-group">
@@ -196,51 +196,60 @@
                                         <label>E-KTP</label>
                                         <td>
                                             <input type="file" name="ektp_taiw" class="form-control"/>
+                                            <input type="hidden" name="ektp_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Kartu Keluarga</label>
                                         <td>
                                             <input type="file" name="kk_taiw" class="form-control"/>
+                                            <input type="hidden" name="kk_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Akta Kelahiran</label>
                                         <td>
                                             <input type="file" name="akte_taiw" class="form-control"/>
+                                            <input type="hidden" name="akte_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Surat Menikah</label>
                                         <td>
                                             <input type="file" name="suratnikah_taiw" class="form-control"/>
+                                            <input type="hidden" name="suratnikah_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Surat Ijin Ortu/Suami</label>
                                         <td>
                                             <input type="file" name="suratijin_taiw" class="form-control"/>
+                                            <input type="hidden" name="uratijin_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Ex Paspor</label>
                                         <td>
                                             <input type="file" name="expaspor_taiw" class="form-control"/>
+                                            <input type="hidden" name="expaspor_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <label>SKCK</label>
                                         <td>
                                             <input type="file" name="skck_taiw" class="form-control"/>
+                                            <input type="hidden" name="skck_taiw_lama">
                                         </td>
                                     </div>
                                     <div class="form-group">
                                         <td>Rekom Id</td>
                                         <td><input type="file" name="rekomid_taiw" class="form-control"/></td>
+                                        <input type="hidden" name="rekomid_taiw_lama">
                                     </div>
                                     <div class="form-group">
                                         <td>Biometri</td>
                                         <td><input type="file" name="biometri_taiw" class="form-control"/></td>
+                                        <input type="hidden" name="biometri_taiw_lama">
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>

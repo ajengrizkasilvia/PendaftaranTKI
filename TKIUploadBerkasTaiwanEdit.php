@@ -193,7 +193,7 @@
                                             <td>Nama TKI</td>
                                             <td>
                                                 <input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>">
-                                                <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
                                             </td>
                                         </tr>
                                         <tr>

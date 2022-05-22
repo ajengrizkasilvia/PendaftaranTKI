@@ -181,7 +181,10 @@
                             include 'config.php';
                             $konektor = mysqli_connect("localhost","root","", "tki");
                             $no = 1;
-                            $data = mysqli_query($konektor,"SELECT * FROM pendaftaran INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara");
+                            $username = $_SESSION['username'];
+                            $data = mysqli_query($konektor,"SELECT * FROM pendaftaran
+                                                            INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
+                                                            INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
                         <!--<?php echo $no++; ?> -->

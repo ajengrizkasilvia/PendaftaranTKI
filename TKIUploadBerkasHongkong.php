@@ -212,11 +212,14 @@
                                                 include 'config.php';
                                                 $konektor = mysqli_connect("localhost","root","", "tki");
                                                 $no = 1;
+                                                $username = $_SESSION['username'];
                                                 $data = mysqli_query($konektor,"SELECT * FROM hongkong 
-                                                                                INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
-                                                                                INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua");
+                                                                                INNER JOIN pendaftaran ON hongkong.id = pendaftaran.id
+                                                                                INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
+                                                                                INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                                                 while($d = mysqli_fetch_array($data)){
                                             ?>
+
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></p>
                                             <td><?php echo $d['sektor_hk']; ?></p>

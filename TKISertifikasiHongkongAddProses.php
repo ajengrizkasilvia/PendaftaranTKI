@@ -4,7 +4,7 @@ include 'config.php';
 $konektor = mysqli_connect("localhost","root","", "tki");
 // menangkap data yang di kirim dari form
 $id_sertif_hk = $_POST['id_sertif_hk'];
-$id_dft = $_POST['id_dft'];
+$id = $_POST['id'];
 $keahlian_hk = $_FILES['keahlian_hk']['name'];
 $bahasa_hk = $_FILES['bahasa_hk']['name'];
 
@@ -40,8 +40,8 @@ if($bahasa_hk != "") {
 }else {
     $bahasa_baru = $_POST['bahasa_hk_lama'];
 } 
-$query = "INSERT INTO sertifhongkong (id_sertif_hk, id_dft, keahlian_hk, bahasa_hk)
-        VALUES('$id_sertif_hk', '$id_dft', '$keahlian_baru', '$bahasa_baru')";
+$query = "INSERT INTO sertifhongkong (id_sertif_hk, id, keahlian_hk, bahasa_hk)
+        VALUES('$id_sertif_hk', '$id', '$keahlian_baru', '$bahasa_baru')";
         $result = mysqli_query($konektor, $query);
 if(!$result){
     die ("Query gagal dijalankan: ".mysqli_errno($konektor).

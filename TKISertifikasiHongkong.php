@@ -199,8 +199,10 @@
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
+                                        $username = $_SESSION['username'];
                                         $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft");
+                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft
+                                                                        INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                         <tr>

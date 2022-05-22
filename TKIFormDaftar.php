@@ -198,7 +198,7 @@
                                         </tr>
                                         <tr>
                                             <td>Nama Lengkap</td>
-                                            <td><input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan nama lengkap"/></td>
+                                            <td><input type="text" name="id" class="form-control" placeholder="Masukkan nama lengkap"/></td>
                                         </tr>
                                         <tr>
                                             <td>Negara Tujuan</td>
@@ -206,9 +206,9 @@
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
                                                     <option value='9'>Hongkong</option>
-                                                    <option value='2'>Taiwan</option>
-                                                    <option value='3'>Singapore</option>
-                                                    <option value='4'>Malaysia</option>
+                                                    <option value='13'>Taiwan</option>
+                                                    <option value='14'>Singapore</option>
+                                                    <option value='15'>Malaysia</option>
                                                 </select>   
                                             </td>
                                         </tr>
@@ -289,7 +289,8 @@
                                             <td>Status Proses</td>
                                             <td>
                                                 <select class="form-control" name="id_tahapsatu">
-                                                    <option>--diisi oleh admin--</option>
+                                                <option>--klik ajukan status proses--</option>
+                                                <option value='1'>Diajukan</option>
                                                 </select>  
                                             </td>
                                         </tr>

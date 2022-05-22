@@ -182,8 +182,6 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Detail Berkas</h6><br>
-                            <a href="TKIUploadBerkasHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
                             <div class="card-body">
                             <div class="table-responsive">
                             <?php
@@ -195,12 +193,13 @@
                                                                     WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
+
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>			
                                             <td>Nama TKI</td>
                                             <td>
-                                                <?php echo $d['id_dft']; ?>
+                                                <?php echo $d['id']; ?>
                                             </td>
                                         </tr>
                                         <tr>

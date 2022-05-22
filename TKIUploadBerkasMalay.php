@@ -215,11 +215,14 @@
                                             include 'config.php';
                                             $konektor = mysqli_connect("localhost","root","", "tki");
                                             $no = 1;
+                                            $username = $_SESSION['username'];
                                             $data = mysqli_query($konektor,"SELECT * FROM malaysia 
                                                                             INNER JOIN pendaftaran ON malaysia.id_dft = pendaftaran.id_dft
-                                                                            INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua");
+                                                                            INNER JOIN tahapdua ON malaysia.id_tahapdua = tahapdua.id_tahapdua
+                                                                            INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                                             while($d = mysqli_fetch_array($data)){
                                         ?>
+
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
