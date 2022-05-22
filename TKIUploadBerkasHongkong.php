@@ -96,8 +96,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -235,8 +235,20 @@
                                             <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_hk']; ?></td>
                                             <td>
-                                                <a href="TKIUploadBerkasHongkongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">DETAIL</a>
-                                                <a href="TKIUploadBerkasHongkongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">EDIT</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-large" href="TKIUploadBerkasHongkongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
+                                                            Detail
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-large" href="TKIUploadBerkasHongkongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
+                                                            Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                         <?php 

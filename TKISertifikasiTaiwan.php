@@ -209,8 +209,20 @@
                                             <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/SertifTaiwan/Bahasa//<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
-                                                <a href="TKISertifikasiTaiwanDetail.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">DETAIL</a>
-                                                <a href="TKISertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">EDIT</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-large" href="TKISertifikasiTaiwanDetail.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">
+                                                            Detail
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-large" href="TKISertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">
+                                                            Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php 

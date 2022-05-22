@@ -13,7 +13,7 @@
     <?php 
 		$no = 1;
 		$data = mysqli_query($konektor,"SELECT * FROM taiwan 
-                                        INNER JOIN pendaftaran ON taiwan.id_dft = pendaftaran.id_dft
+                                        INNER JOIN user ON taiwan.id = user.id
                                         INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua");
 		while($d = mysqli_fetch_array($data)){
 	?>

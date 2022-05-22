@@ -217,8 +217,8 @@
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
-                                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                <input type="text" name="id_dft" class="form-control"/>
+                                            <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                            <input type="text" name="id" class="form-control"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Sektor</label>

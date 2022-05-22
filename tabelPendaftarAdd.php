@@ -217,18 +217,18 @@
                                     <fieldset>
                                         <div class="form-group">
                                             <label>No Telp / WA</label>
+                                            <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                             <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
                                         </div>
                                         <div class="form-group">			
                                             <label>NIK</label>
                                                 <td>
-                                                <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                                 <input type="text" name="nik" class="form-control" placeholder="Masukkan NIK"/>
                                                 </td>
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Lengkap</label>
-                                            <td><input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan nama lengkap"/></td>
+                                            <td><input type="text" name="id" class="form-control" placeholder="Masukkan nama lengkap"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Negara Tujuan</label>
@@ -314,6 +314,9 @@
                                             <select class="form-control" name="id_tahapsatu">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
+                                                <option value='2'>Diverifikasi</option>
+                                                <option value='3'>Diterima</option>
+                                                <option value='4'>Ditolak</option>
                                             </select>  
                                         </td>
                                         </div>

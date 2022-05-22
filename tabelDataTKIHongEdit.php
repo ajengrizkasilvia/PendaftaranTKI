@@ -226,7 +226,7 @@
                                                     <td>Nama TKI</td>
                                                     <td>
                                                         <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>

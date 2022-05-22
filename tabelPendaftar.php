@@ -249,14 +249,15 @@
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
                                                                         INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
-                                                                        INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu");
+                                                                        INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
+                                                                        INNER JOIN user ON pendaftaran.id = user.id");
                                         while($d = mysqli_fetch_array($data)){
                                             ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $d['no_telp']; ?></td>
                                                 <td><?php echo $d['nik']; ?></td>
-                                                <td><?php echo $d['nama_lengkap']; ?></td>
+                                                <td><?php echo $d['id']; ?></td>
                                                 <td><?php echo $d['negara_tujuan']; ?></td>
                                                 <td><?php echo $d['tempat_lahir']; ?></td>
                                                 <td><?php echo $d['tanggal_lahir']; ?></td>
@@ -273,8 +274,20 @@
                                                 <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
                                                 <td><?php echo $d['keterangan']; ?></td>
                                                 <td>
-                                                    <a href="tabelPendaftarEdit.php?id_dft=<?php echo $d['id_dft']; ?>">EDIT</a>
-                                                    <a href="tabelPendaftarDelete.php?id_dft=<?php echo $d['id_dft']; ?>">HAPUS</a>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-warning btn-large" href="tabelPendaftarEdit.php?id_dft=<?php echo $d['id_dft']; ?>">
+                                                            Edit
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-danger btn-large" href="tabelPendaftarDelete.php?id_dft=<?php echo $d['id_dft']; ?>">
+                                                            Hapus
+                                                            </a>
+                                                        </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <?php 

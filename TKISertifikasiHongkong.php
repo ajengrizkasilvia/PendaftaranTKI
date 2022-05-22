@@ -201,8 +201,7 @@
                                         $no = 1;
                                         $username = $_SESSION['username'];
                                         $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft
-                                                                        INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
+                                                                        INNER JOIN user ON sertifhongkong.id = user.id WHERE username='$username'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                         <tr>
@@ -211,8 +210,20 @@
                                             <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
                                             <td>
-                                                <a href="TKISertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">DETAIL</a>
-                                                <a href="TKISertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-large" href="TKISertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                            Detail
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-large" href="TKISertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                            Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php 

@@ -228,7 +228,7 @@
                                         <tr>			
                                             <td>Nama TKI</td>
                                             <td>
-                                                <?php echo $d['id_dft']; ?>
+                                                <?php echo $d['id']; ?>
                                             </td>
                                         </tr>
                                         <tr>

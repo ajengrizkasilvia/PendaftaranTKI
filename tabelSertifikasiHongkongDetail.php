@@ -219,7 +219,7 @@
                                         $no = 1;
                                         $id_sertif_hk = $_GET['id_sertif_hk'];
                                         $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft
+                                                                        INNER JOIN user ON sertifhongkong.id = user.id
                                                                         WHERE id_sertif_hk='$id_sertif_hk'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>

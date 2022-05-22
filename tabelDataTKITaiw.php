@@ -249,7 +249,7 @@
                                             $konektor = mysqli_connect("localhost","root","", "tki");
                                             $no = 1;
                                             $data = mysqli_query($konektor,"SELECT * FROM taiwan 
-                                                                            INNER JOIN pendaftaran ON taiwan.id_dft = pendaftaran.id_dft
+                                                                            INNER JOIN user ON taiwan.id = user.id
                                                                             INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua");
                                             while($d = mysqli_fetch_array($data)){
                                         ?>
@@ -266,7 +266,16 @@
                                             <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><?php echo $d['keterangan']; ?></td>
+                                            <td>
+                                            <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-success btn-large">
+                                                            <?php echo $d['keterangan']; ?>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                            </td>
+                                            <!-- <td><?php echo $d['keterangan']; ?></td> -->
                                             <td><?php echo $d['keterangan_taiw']; ?></td>
                                                 <td>
                                                     <div class="hero-unit">

@@ -236,7 +236,7 @@
                                                 <tr>
                                                     <td>Nama Lengkap</td>
                                                     <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                    <td><input type="text" class="form-control" name="nama_lengkap" value="<?php echo $d['nama_lengkap']; ?>"></td>
+                                                    <td><input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Negara Tujuan</td>

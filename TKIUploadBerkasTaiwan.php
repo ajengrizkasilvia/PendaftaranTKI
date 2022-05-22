@@ -236,8 +236,20 @@
                                                 <td><?php echo $d['keterangan']; ?></td>
                                                 <td><?php echo $d['keterangan_taiw']; ?></td>
                                                 <td>
-                                                    <a href="TKIUploadBerkasTaiwanDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">DETAIL</a>
-                                                    <a href="TKIUploadBerkasTaiwanEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">EDIT</a>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-warning btn-large" href="TKIUploadBerkasTaiwanDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                                Detail
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-danger btn-large" href="TKIUploadBerkasTaiwanEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                                Hapus
+                                                            </a>
+                                                        </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <?php 
