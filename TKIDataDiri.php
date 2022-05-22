@@ -196,8 +196,8 @@
                                         <td><?php echo $d['no_telp']; ?></td>
                                 </tr>
                                 <tr>    
-                                    <th>NIK</th>
-                                        <td><?php echo $d['nik']; ?></tr>
+                                    <th >NIK</th>
+                                        <td><?php echo $d['nik']; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Nama Lengkap</th>
@@ -270,7 +270,6 @@
                         ?>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
     </div>

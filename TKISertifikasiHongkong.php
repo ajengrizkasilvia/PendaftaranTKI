@@ -177,13 +177,37 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <?php 
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $no = 1;
+                                $username = $_SESSION['username'];
+                                $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                INNER JOIN user ON sertifhongkong.id = user.id WHERE username='$username'");
+                                while($d = mysqli_fetch_array($data)){
+                            ?>
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
                             <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
-                            </a>
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru</a>
+                            <a href="TKISertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
+                                class="fas fa-info fa-sm text-white-50"></i> Detail Berkas</a>
+                            <a href="TKISertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
+                                class="fas fa-edit fa-sm text-white-50"></i> Edit Berkas</a>
+                            <?php 
+                                }
+                            ?>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
+                            <?php 
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $no = 1;
+                                $username = $_SESSION['username'];
+                                $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                INNER JOIN user ON sertifhongkong.id = user.id WHERE username='$username'");
+                                while($d = mysqli_fetch_array($data)){
+                            ?>
+                            <!-- <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
@@ -230,11 +254,29 @@
                                         }
                                     ?>
                                     </tbody>
+                                </table> -->
+
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th>Nama TKI</th>
+                                                <td><?php echo $d['nama_lengkap']; ?></td>
+                                        </tr>
+                                        <tr>    
+                                            <th >Sertifikasi Keahlian</th>
+                                                <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sertifikasi Bahasa</th>
+                                                <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                        </tr> 
+                                    <tbody>
                                 </table>
-                            </div>
+                                <?php 
+                                }
+                            ?>
                         </div>
                     </div>
-                    
                 </div>
                 <!-- /.container-fluid -->
 

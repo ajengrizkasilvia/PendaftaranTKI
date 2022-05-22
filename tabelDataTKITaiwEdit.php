@@ -290,11 +290,11 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Rekom Id</td>
+                                                    <td>Kartu Kuning</td>
                                                     <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="rekomid_taiw" /></td>
-                                                        <input type="hidden" name="rekomid_taiw_lama" value="<?php echo $d['rekomid_taiw']; ?>">
+                                                        <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="kartukuning_taiw" /></td>
+                                                        <input type="hidden" name="kartukuning_taiw_lama" value="<?php echo $d['kartukuning_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>

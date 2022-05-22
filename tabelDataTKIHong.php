@@ -236,7 +236,7 @@
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
-                                            <th>Rekom ID</th>
+                                            <th>Kartu Kuning</th>
                                             <th>Biometri</th>
                                             <th>Status Proses</th>
                                             <th>Keterangan</th>
@@ -263,7 +263,7 @@
                                     <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 300px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
                                     <td><?php echo $d['keterangan']; ?></td>
                                     <td><?php echo $d['keterangan_hk']; ?></td>

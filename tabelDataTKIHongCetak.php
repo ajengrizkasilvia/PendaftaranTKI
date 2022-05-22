@@ -61,9 +61,9 @@
                 <th><img src="berkas/<?php echo $d['skck_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
-                <th>Rekom Id</th>
+                <th>Kartu Kuning</th>
                 <th>
-                <img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 280px;"></th>
+                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Biometri</th>

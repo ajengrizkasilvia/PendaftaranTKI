@@ -236,7 +236,7 @@
                                         <th>Surat Ijin Ortu/Suami</th>
                                         <th>Ex Paspor</th>
                                         <th>SKCK</th>
-                                        <th>Rekom ID</th>
+                                        <th>Kartu Kuning</th>
                                         <th>Biometri</th>
                                         <th>Status Proses</th>
                                         <th>Keterangan</th>
@@ -264,7 +264,7 @@
                                             <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
                                             <div class="hero-unit">

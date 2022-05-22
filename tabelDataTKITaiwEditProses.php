@@ -13,7 +13,7 @@
     $suratijin_taiw = $_FILES['suratijin_taiw']['name'];
     $expaspor_taiw = $_FILES['expaspor_taiw']['name'];
     $skck_taiw = $_FILES['skck_taiw']['name'];
-    $rekomid_taiw = $_FILES['rekomid_taiw']['name'];
+    $kartukuning_taiw = $_FILES['kartukuning_taiw']['name'];
     $biometri_taiw = $_FILES['biometri_taiw']['name'];
     $id_tahapdua = $_POST['id_tahapdua'];
     $keterangan_taiw = $_POST['keterangan_taiw'];
@@ -201,22 +201,22 @@
     }           
         
     //Rekom id
-    if($rekomid_taiw != "") {
+    if($kartukuning_taiw != "") {
         $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-        $rekomid = explode('.', $rekomid_taiw); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensirek = strtolower(end($rekomid));
-        $file_tmprek = $_FILES['rekomid_taiw']['tmp_name'];   
+        $kartukuning = explode('.', $kartukuning_taiw); //memisahkan nama file dengan ekstensi yang diupload
+        $ekstensirek = strtolower(end($kartukuning));
+        $file_tmprek = $_FILES['kartukuning_taiw']['tmp_name'];   
         $angka_acak     = rand(1,999);
-        $rekomid_baru = $angka_acak.'-'.$rekomid_taiw;
+        $kartukuning_baru = $angka_acak.'-'.$kartukuning_taiw;
 
         if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-            move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$rekomid_baru); 
+            move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
         }
     }else {
-        $rekomid_baru = $_POST['rekomid_taiw_lama'];
+        $kartukuning_baru = $_POST['kartukuning_taiw_lama'];
     } 
     $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw',
-        rekomid_taiw='$rekomid_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
+        kartukuning_taiw='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -310,13 +310,13 @@
       $angka_acak     = rand(1,999);
       $skck_baru = $angka_acak.'-'.$skck_taiw;
       //Rekom Id
-      if($rekomid_taiw != "") {
+      if($kartukuning_taiw != "") {
       $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-      $rekomid = explode('.', $rekomid_taiw); //memisahkan nama file dengan ekstensi yang diupload
-      $ekstensirek = strtolower(end($rekomid));
-      $file_tmprek = $_FILES['rekomid_taiw']['tmp_name'];   
+      $kartukuning = explode('.', $kartukuning_taiw); //memisahkan nama file dengan ekstensi yang diupload
+      $ekstensirek = strtolower(end($kartukuning));
+      $file_tmprek = $_FILES['kartukuning_taiw']['tmp_name'];   
       $angka_acak     = rand(1,999);
-      $rekomid_baru = $angka_acak.'-'.$rekomid_taiw;
+      $kartukuning_baru = $angka_acak.'-'.$kartukuning_taiw;
       //Biometri
       if($biometri_taiw != "") {
       $ekstensi_diperbolehkanbio = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -341,14 +341,14 @@
                     if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                     move_uploaded_file($file_tmpsk, 'berkas/Taiwan/'.$skck_baru);  
                     if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                    move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$rekomid_baru); 
+                    move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
                     if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                     move_uploaded_file($file_tmpbio, 'berkas/Taiwan/'.$biometri_baru);   
         
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru', kk_taiw='$kk_baru',
              akte_taiw='$akte_baru', suratnikah_taiw='$suratnikah_baru', suratijin_taiw='$suratijin_baru',
-             expaspor_taiw='$expaspor_baru', skck_taiw='$skck_baru', rekomid_taiw='$rekomid_baru',
+             expaspor_taiw='$expaspor_baru', skck_taiw='$skck_baru', kartukuning_taiw='$kartukuning_baru',
              biometri_taiw='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
              WHERE id_taiwan='$id_taiwan'";
               $result = mysqli_query($konektor, $query);

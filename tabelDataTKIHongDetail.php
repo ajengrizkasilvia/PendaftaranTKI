@@ -280,9 +280,9 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Rekom Id</td>
+                                            <td>Kartu Kuning</td>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>

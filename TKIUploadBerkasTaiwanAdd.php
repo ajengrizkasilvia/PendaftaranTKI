@@ -243,8 +243,8 @@
                                     </div>
                                     <div class="form-group">
                                         <td>Rekom Id</td>
-                                        <td><input type="file" name="rekomid_taiw" class="form-control"/></td>
-                                        <input type="hidden" name="rekomid_taiw_lama">
+                                        <td><input type="file" name="kartukuning_taiw" class="form-control"/></td>
+                                        <input type="hidden" name="kartukuning_taiw_lama">
                                     </div>
                                     <div class="form-group">
                                         <td>Biometri</td>

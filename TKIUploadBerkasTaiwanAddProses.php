@@ -13,7 +13,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $suratijin_taiw = $_FILES['suratijin_taiw']['name'];
   $expaspor_taiw = $_FILES['expaspor_taiw']['name'];
   $skck_taiw = $_FILES['skck_taiw']['name'];
-  $rekomid_taiw = $_FILES['rekomid_taiw']['name'];
+  $kartukuning_taiw = $_FILES['kartukuning_taiw']['name'];
   $biometri_taiw = $_FILES['biometri_taiw']['name'];
   $id_tahapdua = $_POST['id_tahapdua'];
   $keterangan_taiw = $_POST['keterangan_taiw'];
@@ -131,19 +131,19 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         }         
             
         //Rekom id
-        if($rekomid_taiw != "") {
+        if($kartukuning_taiw != "") {
             $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-            $rekomid = explode('.', $rekomid_taiw); //memisahkan nama file dengan ekstensi yang diupload
-            $ekstensirek = strtolower(end($rekomid));
-            $file_tmprek = $_FILES['rekomid_taiw']['tmp_name'];   
+            $kartukuning = explode('.', $kartukuning_taiw); //memisahkan nama file dengan ekstensi yang diupload
+            $ekstensirek = strtolower(end($kartukuning));
+            $file_tmprek = $_FILES['kartukuning_taiw']['tmp_name'];   
             $angka_acak     = rand(1,999);
-            $rekomid_baru = $angka_acak.'-'.$rekomid_taiw;
+            $kartukuning_baru = $angka_acak.'-'.$kartukuning_taiw;
     
             if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$rekomid_baru); 
+                move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
             }
         }else {
-            $rekomid_baru = $_POST['rekomid_taiw_lama'];
+            $kartukuning_baru = $_POST['kartukuning_taiw_lama'];
         }                   
     
         //Biometri
@@ -161,7 +161,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         }else {
             $biometri_baru = $_POST['biometri_taiw_lama'];
         } 
-        $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
+        $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
         $result = mysqli_query($konektor, $query);
         if(!$result){
             die ("Query gagal dijalankan: ".mysqli_errno($konektor).
@@ -228,13 +228,13 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $angka_acak     = rand(1,999);
     $skck_baru = $angka_acak.'-'.$skck_taiw;
     //Rekom Id
-    if($rekomid_taiw != "") {
+    if($kartukuning_taiw != "") {
     $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-    $rekomid = explode('.', $rekomid_taiw); //memisahkan nama file dengan ekstensi yang diupload
-    $ekstensirek = strtolower(end($rekomid));
-    $file_tmprek = $_FILES['rekomid_taiw']['tmp_name'];   
+    $kartukuning = explode('.', $kartukuning_taiw); //memisahkan nama file dengan ekstensi yang diupload
+    $ekstensirek = strtolower(end($kartukuning));
+    $file_tmprek = $_FILES['kartukuning_taiw']['tmp_name'];   
     $angka_acak     = rand(1,999);
-    $rekomid_baru = $angka_acak.'-'.$rekomid_taiw;
+    $kartukuning_baru = $angka_acak.'-'.$kartukuning_taiw;
     //Biometri
     if($biometri_taiw != "") {
     $ekstensi_diperbolehkanbio = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -259,11 +259,11 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                   move_uploaded_file($file_tmpsk, 'berkas/Taiwan/'.$skck_baru);  
                   if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                  move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$rekomid_baru); 
+                  move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Taiwan/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
+                    $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -287,7 +287,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_taiw')";
+     $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_taiw')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){

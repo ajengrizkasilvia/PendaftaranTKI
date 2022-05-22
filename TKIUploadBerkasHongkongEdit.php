@@ -259,9 +259,9 @@
                                         <tr>
                                             <td>Rekom Id</td>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="rekomid_hk"/></td>
-                                                <input type="hidden" name="rekomid_hk_lama" value="<?php echo $d['rekomid_hk']; ?>"/>
+                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                <input type="file" name="kartukuning_hk"/></td>
+                                                <input type="hidden" name="kartukuning_hk_lama" value="<?php echo $d['kartukuning_hk']; ?>"/>
                                             </td>
                                         </tr>
                                         <tr>

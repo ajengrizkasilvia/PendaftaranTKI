@@ -177,14 +177,36 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <?php 
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $no = 1;
+                                $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft");
+                                    while($d = mysqli_fetch_array($data)){
+                            ?>
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
                             <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
-                            </a>
+                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru</a>
+                            <a href="TKISertifikasiTaiwanDetail.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
+                                class="fas fa-info fa-sm text-white-50"></i> Detail Berkas</a>
+                            <a href="TKISertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
+                                class="fas fa-edit fa-sm text-white-50"></i> Edit Berkas</a>
+                            <?php 
+                                }
+                            ?>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <?php 
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $no = 1;
+                                $username = $_SESSION['username'];
+                                $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                INNER JOIN user ON sertiftaiwan.id = user.id WHERE username='$username'");
+                                while($d = mysqli_fetch_array($data)){
+                            ?>
+                            <!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -229,11 +251,28 @@
                                         }
                                     ?>
                                     </tbody>
+                                </table> -->
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th>Nama TKI</th>
+                                                <td><?php echo $d['nama_lengkap']; ?></td>
+                                        </tr>
+                                        <tr>    
+                                            <th >Sertifikasi Keahlian</th>
+                                                <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sertifikasi Bahasa</th>
+                                                <td><img src="berkas/SertifTaiwan/Bahasa//<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr> 
+                                    <tbody>
                                 </table>
-                            </div>
+                                <?php 
+                                }
+                            ?>
                         </div>
                     </div>
-                    
                 </div>
                 <!-- /.container-fluid -->
 

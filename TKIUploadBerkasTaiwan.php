@@ -96,8 +96,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -182,82 +182,99 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                        <?php 
+                            include 'config.php';
+                            $konektor = mysqli_connect("localhost","root","", "tki");
+                            $no = 1;
+                            $username = $_SESSION['username'];
+                            $data = mysqli_query($konektor,"SELECT * FROM taiwan 
+                                                            INNER JOIN pendaftaran ON taiwan.id = pendaftaran.id
+                                                            INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
+                                                            INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
+                            while($d = mysqli_fetch_array($data)){
+                        ?>
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Taiwan</h6><br>
                             <a href="TKIUploadBerkasTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
+                            <a href="TKIUploadBerkasTaiwanDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
+                                class="fas fa-info fa-sm text-white-50"></i>Detail Berkas</a>
+                            <a href="TKIUploadBerkasTaiwanEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
+                                class="fas fa-edit fa-sm text-white-50"></i>Edit Berkas</a>
+                        <?php 
+                            }
+                        ?>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                        <?php 
+                            include 'config.php';
+                            $konektor = mysqli_connect("localhost","root","", "tki");
+                            $no = 1;
+                            $username = $_SESSION['username'];
+                            $data = mysqli_query($konektor,"SELECT * FROM taiwan 
+                                                            INNER JOIN pendaftaran ON taiwan.id = pendaftaran.id
+                                                            INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
+                                                            INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
+                            while($d = mysqli_fetch_array($data)){
+                        ?>
+                            <table class="table table-bordered">
+                                    <tbody>
                                         <tr>
-                                            <th>No</th>
                                             <th>Nama TKI</th>
-                                            <th>Sektor</th>
-                                            <th>E-KTP</th>
-                                            <th>Kartu Keluarga</th>
-                                            <th>Akta Kelahiran</th>
-                                            <th>Surat Menikah</th>
-                                            <th>Surat Ijin Ortu/Suami</th>
-                                            <th>Ex Paspor</th>
-                                            <th>SKCK</th>
-                                            <th>Rekom ID</th>
-                                            <th>Biometri</th>
-                                            <th>Status Proses</th>
-                                            <th>Keterangan</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                        <tbody>
-                                            <?php 
-                                                include 'config.php';
-                                                $konektor = mysqli_connect("localhost","root","", "tki");
-                                                $no = 1;
-                                                $username = $_SESSION['username'];
-                                                $data = mysqli_query($konektor,"SELECT * FROM taiwan 
-                                                                                INNER JOIN pendaftaran ON taiwan.id = pendaftaran.id
-                                                                                INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
-                                                                                INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
-                                                while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $no++; ?></td>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
+                                        </tr>
+                                        <tr>    
+                                            <th >Sektor</th>
                                                 <td><?php echo $d['sektor_taiw']; ?></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>E-KTP</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['ektp_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr> 
+                                        <tr>   
+                                            <th>Kartu Keluarga</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['kk_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>    
+                                            <th>Akta Kelahiran</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['akte_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>    
+                                            <th>Surat Nikah</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Surat Ijin Ortu/Suami</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ex-Paspor</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>SKCK</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Kartu Kuning</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Biometri</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status Proses</th>
                                                 <td><?php echo $d['keterangan']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Keterangan</th>
                                                 <td><?php echo $d['keterangan_taiw']; ?></td>
-                                                <td>
-                                                    <div class="hero-unit">
-                                                        <p>
-                                                            <a class="btn btn-warning btn-large" href="TKIUploadBerkasTaiwanDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
-                                                                Detail
-                                                            </a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="hero-unit">
-                                                        <p>
-                                                            <a class="btn btn-danger btn-large" href="TKIUploadBerkasTaiwanEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
-                                                                Hapus
-                                                            </a>
-                                                        </p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <?php 
-                                                }
-                                            ?>
-                                    </tbody>
+                                        </tr>
+                                    <tbody>
                                 </table>
-                            </div>
+                                <?php 
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>

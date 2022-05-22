@@ -229,8 +229,8 @@
                     </div>
                     <div class="form-group">
                         <td>Rekom Id</td>
-                        <td><input type="file" name="rekomid_hk" class="form-control"/></td>
-                        <input type="hidden" name="rekomid_hk_lama">
+                        <td><input type="file" name="kartukuning_hk" class="form-control"/></td>
+                        <input type="hidden" name="kartukuning_hk_lama">
                     </div>
                     <div class="form-group">
                         <td>Biometri</td>
