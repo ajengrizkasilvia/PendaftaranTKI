@@ -219,7 +219,7 @@
                                             <label>Nama TKI</label>
                                             <td>
                                                 <input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>">
-                                                <input type="text" name="id_dft" class="form-control"/>
+                                                <input type="text" name="id" class="form-control"/>
                                             </td>
                                         </div>
                                         <div class="form-group">

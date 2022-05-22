@@ -4,7 +4,7 @@ include 'config.php';
 $konektor = mysqli_connect("localhost","root","", "tki");
 
 	// membuat variabel untuk menampung data dari form
-  $id_dft = $_POST['id_dft'];
+  $id = $_POST['id'];
   $id_tahapdua = $_POST['id_tahapdua'];
 	$sektor_hk = $_POST['sektor_hk'];
   $ektp_hk = $_FILES['ektp_hk']['name'];
@@ -161,7 +161,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   }else {
       $biometri_baru = $_POST['biometri_hk_lama'];
   } 
-  $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id_dft', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
+  $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
   $result = mysqli_query($konektor, $query);
    if(!$result){
        die ("Query gagal dijalankan: ".mysqli_errno($konektor).
@@ -264,7 +264,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Hongkong/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id_dft', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
+                    $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -289,7 +289,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO hongkong (id_dft, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id_dft', '$sektor_hk', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_hk')";
+     $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_hk')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){

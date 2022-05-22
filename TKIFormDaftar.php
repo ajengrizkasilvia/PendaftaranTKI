@@ -197,8 +197,23 @@
                                                 </td>
                                         </tr>
                                         <tr>
+                                            <?php 
+                                                include 'config.php';
+                                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                                $no = 1;
+                                                $username = $_SESSION['username'];
+                                                $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                while($d = mysqli_fetch_array($data)){
+                                            ?>
                                             <td>Nama Lengkap</td>
-                                            <td><input type="text" name="id" class="form-control" placeholder="Masukkan nama lengkap"/></td>
+                                            <td class="form-control">
+                                                <?php echo $d['nama_lengkap']; ?>
+                                            </td>
+                                            <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
+                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                            <?php
+                                                }
+                                            ?>
                                         </tr>
                                         <tr>
                                             <td>Negara Tujuan</td>

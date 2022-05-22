@@ -55,6 +55,7 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       }else {
           $pasfoto_baru = $_POST['pas_foto_lama'];
       }
+      $id = $_POST['id_lama'];
       $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
         alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
         VALUES('$id_dft', '$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',

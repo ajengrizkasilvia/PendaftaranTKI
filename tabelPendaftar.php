@@ -249,7 +249,8 @@
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
                                                                         INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
-                                                                        INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu");
+                                                                        INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
+                                                                        INNER JOIN user ON pendaftaran.id = user.id");
                                         while($d = mysqli_fetch_array($data)){
                                             ?>
                                             <tr>

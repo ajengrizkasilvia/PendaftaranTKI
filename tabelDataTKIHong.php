@@ -249,8 +249,9 @@
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM hongkong 
-                                                                        INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
-                                                                        INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua");
+                                                                        INNER JOIN pendaftaran ON hongkong.id = pendaftaran.id
+                                                                        INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
+                                                                        INNER JOIN user ON pendaftaran.id = user.id");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                     <td><?php echo $no++; ?></td>
