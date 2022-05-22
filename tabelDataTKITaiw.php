@@ -206,6 +206,13 @@
                     </div>
                     <p class="mb-4">Berikut merupakan data-data dari TKI negara tujuan Taiwan. Untuk merekap semua data dapat dilakukan pada
                         <a href="tabelDataTKITaiwCetak.php">cetak disini</a>.</p>
+                    <div>    
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="#">Data TKI</a> <span class="divider">/</span></li>
+                            <li class="active">Taiwan</li>
+                        </ul>
+                    </div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -262,9 +269,27 @@
                                             <td><?php echo $d['keterangan']; ?></td>
                                             <td><?php echo $d['keterangan_taiw']; ?></td>
                                                 <td>
-                                                    <a href="tabelDataTKITaiwDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">DETAIL</a>
-                                                    <a href="tabelDataTKITaiwEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">EDIT</a>
-                                                    <a href="tabelDataTKITaiwDelete.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">HAPUS</a>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-primary btn-large" href="tabelDataTKITaiwDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                            Detail
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-warning btn-large" href="tabelDataTKITaiwEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                            Edit
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="hero-unit">
+                                                        <p>
+                                                            <a class="btn btn-danger btn-large" href="tabelDataTKITaiwDelete.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                            Hapus
+                                                            </a>
+                                                        </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <?php 

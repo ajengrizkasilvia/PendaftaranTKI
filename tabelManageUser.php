@@ -232,7 +232,7 @@
                                         ?>
                                                 <tr>
                                                     <td><?php echo $no++; ?></td>
-                                                    <td><?php echo $d['nama']; ?></td>
+                                                    <td><?php echo $d['nama_lengkap']; ?></td>
                                                     <td><?php echo $d['username']; ?></td>
                                                     <td><?php echo $d['password']; ?></td>
                                                     <td><?php echo $d['role']; ?></td>

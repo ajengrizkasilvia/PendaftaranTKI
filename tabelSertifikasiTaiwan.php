@@ -201,13 +201,19 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Taiwan</h1>
                     <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
-
+                    <div>    
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="#">Sertifikasi</a> <span class="divider">/</span></li>
+                            <li class="active">Sertifikasi TKI Taiwan</li>
+                        </ul>
+                    </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="tabelSertifikasiTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
                         </div>
@@ -215,6 +221,15 @@
                             <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama TKI</th>
+                                            <th>Sertifikasi Keahlian</th>
+                                            <th>Sertifikasi Bahasa</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
                                     <?php 
                                         include 'config.php';
                                         $konektor = mysqli_connect("localhost","root","", "tki");
@@ -226,12 +241,30 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
                                             <td>
-                                                <a href="tabelSertifikasiTaiwanDetail.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">DETAIL</a>
-                                                <a href="tabelSertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">EDIT</a>
-                                                <a href="tabelSertifikasiTaiwanDelete.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">HAPUS</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="tabelSertifikasiTaiwanDetail.php?id_sertif_hk=<?php echo $d['id_sertif_taiw']; ?>">
+                                                            Detail
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-large" href="tabelSertifikasiTaiwanEdit.php?id_sertif_hk=<?php echo $d['id_sertif_taiw']; ?>">
+                                                            Edit
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-large" href="tabelSertifikasiTaiwanDelete.php?id_sertif_hk=<?php echo $d['id_sertif_taiw']; ?>">
+                                                            Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php 

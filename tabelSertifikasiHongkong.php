@@ -201,7 +201,13 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
                     <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
-
+                    <div>
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="#">Sertifikasi</a> <span class="divider">/</span></li>
+                            <li class="active">Sertifikasi TKI Hongkong</li>
+                        </ul>
+                    </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -238,9 +244,27 @@
                                             <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
                                             <td>
-                                                <a href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">DETAIL</a>
-                                                <a href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">EDIT</a>
-                                                <a href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">HAPUS</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-primary btn-large" href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                            Detail
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-large" href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                            Edit
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-large" href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                            Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php 
