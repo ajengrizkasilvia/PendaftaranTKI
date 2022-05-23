@@ -83,6 +83,20 @@
                 Tenaga Kerja
             </div>
 
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -100,20 +114,7 @@
                     </div>
                 </div>
             </li>
-
-               <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
-            </li>
-
+            
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -224,12 +225,18 @@
                                         <table>
                                                 <tr>			
                                                     <td>Nama TKI</td>
+<<<<<<< HEAD
                                                     <td class="form-control">
                                                         <?php echo $d['nama_lengkap']; ?>
                                                     </td>
                                                     <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
                                                     <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
                                                     <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+=======
+                                                    <td>
+                                                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -293,11 +300,11 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Rekom Id</td>
+                                                    <td>Kartu Kuning</td>
                                                     <td>
-                                                        <img src="berkas/Hongkong/<?php echo $d['rekomid_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="rekomid_hk"/></td>
-                                                        <input type="hidden" name="rekomid_hk_lama" value="<?php echo $d['rekomid_hk']; ?>"/>
+                                                        <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="kartukuning_hk"/></td>
+                                                        <input type="hidden" name="kartukuning_hk_lama" value="<?php echo $d['kartukuning_hk']; ?>"/>
                                                     </td>
                                                 </tr>
                                                 <tr>

@@ -7,7 +7,7 @@ $id = $_POST['id'];
 $id_negara = $_POST['id_negara'];
 $no_telp = $_POST['no_telp'];
 $nik = $_POST['nik'];
-$nama_lengkap = $_POST['nama_lengkap'];
+$id = $_POST['id'];
 $tempat_lahir= $_POST['tempat_lahir'];
 $tanggal_lahir= $_POST['tanggal_lahir'];
 $umur= $_POST['umur'];
@@ -44,9 +44,9 @@ if($medical_check != "") {
         if(in_array($ekstensipasfoto, $ekstensi_diperbolehkanpf) === true)  {     
           move_uploaded_file($file_tmppf, 'berkas/PasFoto/'.$pasfoto_baru);
 
-        $query = "INSERT INTO pendaftaran (id, id_negara, no_telp, nik, nama_lengkap, tempat_lahir, tanggal_lahir, umur, 
+        $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
         alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
-        VALUES('$id', '$id_negara', '$no_telp', '$nik','$nama_lengkap','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
+        VALUES('$id_dft', '$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
         '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$medical_baru', '$pasfoto_baru', '$id_tahapsatu')";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error
@@ -65,9 +65,9 @@ if($medical_check != "") {
       echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='tabelPendaftarAdd.php';</script>";
   }
 } else {
-    $query = "INSERT INTO pendaftaran (id, id_negara, no_telp, nik, nama_lengkap, tempat_lahir, tanggal_lahir, umur, 
+    $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
     alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
-    VALUES('$id','$id_negara', '$no_telp', '$nik','$nama_lengkap','$tempat_lahir','$tanggal_lahir', '$umur', 
+    VALUES('$id_dft','$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', 
     '$alamat_lengkap', '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir',
     '$status', '$agama', '$pengalaman_kerja', null, null, '$id_tahapsatu')";
 

@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -229,7 +227,11 @@
                                         <tr>			
                                             <td>Nama TKI</td>
                                             <td>
+<<<<<<< HEAD
                                                 <?php echo $d['nama_lengkap']; ?>
+=======
+                                                <?php echo $d['id']; ?>
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                             </td>
                                         </tr>
                                         <tr>

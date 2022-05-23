@@ -184,52 +184,92 @@
                             $username = $_SESSION['username'];
                             $data = mysqli_query($konektor,"SELECT * FROM pendaftaran
                                                             INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
+                                                            INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
                                                             INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
-                        <!--<?php echo $no++; ?> -->
-                        </h5>No Telp</h5>
-                        <p><?php echo $d['no_telp']; ?></p>
-                        </h5>NIK</h5>
-                        <p><?php echo $d['nik']; ?></p>
-                        </h5>Nama Lengkap</h5>
-                        <p><?php echo $d['nama_lengkap']; ?></p>
-                        </h5>Negara Tujuan</h5>
-                        <p><?php echo $d['negara_tujuan']; ?></p>
-                        </h5>Tempat Lahir</h5>
-                        <p><?php echo $d['tempat_lahir']; ?></p>
-                        </h5>Tanggal Lahir</h5>
-                        <p><?php echo $d['tanggal_lahir']; ?></p>
-                        </h5>Umur</h5>
-                        <p><?php echo $d['umur']; ?></p>
-                        </h5>Alamat Lengkap</h5>
-                        <p><?php echo $d['alamat_lengkap']; ?></p>
-                        </h5>Jenis Kelamin</h5>
-                        <p><?php echo $d['jenis_kelamin']; ?></p>
-                        </h5>Tinggi Badan</h5>
-                        <p><?php echo $d['tb']; ?></p>
-                        </h5>Berat Badan</h5>
-                        <p><?php echo $d['bb']; ?></p>
-                        </h5>Pendidikan Terakhir</h5>
-                        <p><?php echo $d['pendidikan_terakhir']; ?></p>
-                        </h5>Status</h5>
-                        <p><?php echo $d['status']; ?></p>
-                        </h5>Agama</h5>
-                        <p><?php echo $d['agama']; ?></p>
-                        </h5>Pengalaman Kerja</h5>
-                        <p><?php echo $d['pengalaman_kerja']; ?></p>
-                        </h5>Medical Check</h5>
-                        <P><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></P>
-                        </h5>Pas Foto</h5>
-                        <P><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></P>
-                        </h5>Status Proses</h5>
-                        <p><?php echo $d['id_tahapsatu']; ?></p>
+                        <table class="table table-bordered">
+                            
+                            <tbody>
+                                <tr>
+                                    <th>No Telp</th>
+                                        <td><?php echo $d['no_telp']; ?></td>
+                                </tr>
+                                <tr>    
+                                    <th >NIK</th>
+                                        <td><?php echo $d['nik']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Nama Lengkap</th>
+                                        <td><?php echo $d['nama_lengkap']; ?></td>
+                                </tr> 
+                                <tr>   
+                                    <th>Negara Tujuan</th>
+                                        <td><?php echo $d['negara_tujuan']; ?></td>
+                                </tr>
+                                <tr>    
+                                    <th>Tempat Lahir</th>
+                                        <td><?php echo $d['tempat_lahir']; ?></td>
+                                </tr>
+                                <tr>    
+                                    <th>Tanggal Lahir</th>
+                                        <td><?php echo $d['tanggal_lahir']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Umur</th>
+                                        <td><?php echo $d['umur']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Alamat Lengkap</th>
+                                        <td><?php echo $d['alamat_lengkap']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Jenis Kelamin</th>
+                                        <td><?php echo $d['jenis_kelamin']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Tinggi Badan</th>
+                                        <td><?php echo $d['tb']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Berat Badan</th>
+                                        <td><?php echo $d['bb']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Pendidikan Terakhir</th>
+                                        <td><?php echo $d['pendidikan_terakhir']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                        <td><?php echo $d['status']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Agama</th>
+                                        <td><?php echo $d['agama']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Pengalaman Kerja</th>
+                                        <td><?php echo $d['pengalaman_kerja']; ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Medical Check</th>
+                                        <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></td>
+                                </tr>
+                                <tr>
+                                    <th>Pas Foto</th>
+                                        <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></td>
+                                </tr>
+                                <tr>
+                                    <th>Status Proses</th>
+                                        <td><?php echo $d['keterangan']; ?></td>
+                                </tr>
+                            <tbody>
+                            </table>
                         <?php 
                             }
                         ?>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
     </div>

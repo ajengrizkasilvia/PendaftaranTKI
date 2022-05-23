@@ -171,7 +171,7 @@
             </div>
             <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
             Pastikan berkas dengan format namaBerkas_negaraTujuan. 
-            Tekan <a href="TKIUploadBerkasTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+            <p> Tekan <a href="TKIUploadBerkasTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -262,9 +262,9 @@
                                         <tr>
                                             <td>Rekom Id</td>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="rekomid_taiw"/></td>
-                                                <input type="hidden" name="rekomid_taiw_lama" value="<?php echo $d['rekomid_taiw']; ?>"/>
+                                                <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                <input type="file" name="kartukuning_taiw"/></td>
+                                                <input type="hidden" name="kartukuning_taiw_lama" value="<?php echo $d['kartukuning_taiw']; ?>"/>
                                             </td>
                                         </tr>
                                         <tr>

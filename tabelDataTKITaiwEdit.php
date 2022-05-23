@@ -83,6 +83,18 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +107,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -293,11 +290,11 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Rekom Id</td>
+                                                    <td>Kartu Kuning</td>
                                                     <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="rekomid_taiw" /></td>
-                                                        <input type="hidden" name="rekomid_taiw_lama" value="<?php echo $d['rekomid_taiw']; ?>">
+                                                        <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="kartukuning_taiw" /></td>
+                                                        <input type="hidden" name="kartukuning_taiw_lama" value="<?php echo $d['kartukuning_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>

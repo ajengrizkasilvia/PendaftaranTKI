@@ -255,10 +255,17 @@
                                     </tr>
                                     <tr>
                                         <td>Rekom Id</td>
+<<<<<<< HEAD
                                         <td><input type="file" name="rekomid_taiw" class="form-control"/></td>
                                         <input type="hidden" name="rekomid_taiw_lama">
                                     </tr>
                                     <tr>
+=======
+                                        <td><input type="file" name="kartukuning_taiw" class="form-control"/></td>
+                                        <input type="hidden" name="kartukuning_taiw_lama">
+                                    </div>
+                                    <div class="form-group">
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                         <td>Biometri</td>
                                         <td><input type="file" name="biometri_taiw" class="form-control"/></td>
                                         <input type="hidden" name="biometri_taiw_lama">

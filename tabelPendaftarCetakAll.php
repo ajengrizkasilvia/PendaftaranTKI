@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Cetak Data Pendaftar</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
 </head>
 <body>
  
@@ -30,7 +32,9 @@
 		</tr>
 		<?php 
 		$no = 1;
-		$data = mysqli_query($konektor,"select * from pendaftaran INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara");
+		$data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
+                                        INNER JOIN user ON pendaftaran.id = user.id
+                                        INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara");
 		while($d = mysqli_fetch_array($data)){
 		?>
 		<tr>

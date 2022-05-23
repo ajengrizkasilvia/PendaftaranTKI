@@ -241,10 +241,17 @@
                     </tr>
                     <tr>
                         <td>Rekom Id</td>
+<<<<<<< HEAD
                         <td><input type="file" name="rekomid_hk" class="form-control"/></td>
                         <input type="hidden" name="rekomid_hk_lama">
                     </dtr>
                     <tr>
+=======
+                        <td><input type="file" name="kartukuning_hk" class="form-control"/></td>
+                        <input type="hidden" name="kartukuning_hk_lama">
+                    </div>
+                    <div class="form-group">
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                         <td>Biometri</td>
                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
                         <input type="hidden" name="biometri_hk_lama">

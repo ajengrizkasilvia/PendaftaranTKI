@@ -7,7 +7,7 @@ $id_dft = $_POST['id_dft'];
 $id_negara = $_POST['id_negara'];
 $no_telp = $_POST['no_telp'];
 $nik = $_POST['nik'];
-$nama_lengkap = $_POST['nama_lengkap'];
+$id = $_POST['id'];
 $tempat_lahir= $_POST['tempat_lahir'];
 $tanggal_lahir= $_POST['tanggal_lahir'];
 $umur= $_POST['umur'];
@@ -38,7 +38,7 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       }else {
           $medical_baru = $_POST['medical_check_lama'];
       }
-      $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', nama_lengkap='$nama_lengkap', tempat_lahir='$tempat_lahir',
+      $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
         status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', medical_check='$medical_baru', id_tahapsatu='$id_tahapsatu'
         WHERE id_dft='$id_dft'";
@@ -65,7 +65,7 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       }else {
           $pasfoto_baru = $_POST['pas_foto_lama'];
       }
-      $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', nama_lengkap='$nama_lengkap', tempat_lahir='$tempat_lahir',
+      $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
         status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', pas_foto='$pasfoto_baru', id_tahapsatu='$id_tahapsatu'
         WHERE id_dft='$id_dft'";
@@ -99,7 +99,7 @@ if($medical_check != "") {
           move_uploaded_file($file_tmppf, 'berkas/PasFoto/'.$pasfoto_baru);
 
 
-        $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', nama_lengkap='$nama_lengkap', tempat_lahir='$tempat_lahir',
+        $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
         status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', medical_check='$medical_baru', pas_foto='$pasfoto_baru', id_tahapsatu='$id_tahapsatu'
         WHERE id_dft='$id_dft'";
@@ -121,7 +121,7 @@ if($medical_check != "") {
 }
 } else {
 
-    $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', nama_lengkap='$nama_lengkap', tempat_lahir='$tempat_lahir',
+    $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
     tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
     status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', null, null, id_tahapsatu='$id_tahapsatu'
     WHERE id_dft='$id_dft'";

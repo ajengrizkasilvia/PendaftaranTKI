@@ -235,7 +235,7 @@
                                         $konektor = mysqli_connect("localhost","root","", "tki");
                                         $no = 1;
                                         $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
-                                                                        INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft");
+                                                                        INNER JOIN user ON sertiftaiwan.id = user.id");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
                                         <tr>

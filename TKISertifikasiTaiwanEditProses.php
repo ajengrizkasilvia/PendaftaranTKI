@@ -4,7 +4,7 @@
     $konektor = mysqli_connect("localhost","root","", "tki");
     // menangkap data yang di kirim dari form
     $id_sertif_taiw = $_POST['id_sertif_taiw'];
-    $id_dft = $_POST['id_dft'];
+    $id = $_POST['id'];
     $keahlian_taiw = $_FILES['keahlian_taiw']['name'];
     $bahasa_taiw = $_FILES['bahasa_taiw']['name'];
 
@@ -23,7 +23,7 @@
     }else {
         $keahlian_baru = $_POST['keahlian_taiw_lama'];
     }
-    $query  = "UPDATE sertiftaiwan SET id_dft='$id_dft', keahlian_taiw='$keahlian_baru'
+    $query  = "UPDATE sertiftaiwan SET id='$id', keahlian_taiw='$keahlian_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -48,7 +48,7 @@
     }else {
         $bahasa_baru = $_POST['bahasa_taiw_lama'];
     }
-    $query  = "UPDATE sertiftaiwan SET id_dft='$id_dft', bahasa_taiw='$bahasa_baru'
+    $query  = "UPDATE sertiftaiwan SET id='$id', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -82,7 +82,7 @@
                 move_uploaded_file($file_tmpbahasa, 'berkas/SertifTaiwan/Bahasa/'.$bahasa_baru);
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-        $query  = "UPDATE sertiftaiwan SET id_dft='$id_dft', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
+        $query  = "UPDATE sertiftaiwan SET id='$id', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -101,7 +101,7 @@
         }
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-        $query  = "UPDATE sertiftaiwan SET id_dft='$id_dft', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
+        $query  = "UPDATE sertiftaiwan SET id='$id', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error

@@ -13,7 +13,7 @@
     $suratijin_hk = $_FILES['suratijin_hk']['name'];
     $expaspor_hk = $_FILES['expaspor_hk']['name'];
     $skck_hk = $_FILES['skck_hk']['name'];
-    $rekomid_hk = $_FILES['rekomid_hk']['name'];
+    $kartukuning_hk = $_FILES['kartukuning_hk']['name'];
     $biometri_hk = $_FILES['biometri_hk']['name'];
     $id_tahapdua = $_POST['id_tahapdua'];
     $keterangan_hk = $_POST['keterangan_hk'];
@@ -33,7 +33,10 @@
     }else {
         $ektp_baru = $_POST['ektp_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', ektp_hk='$ektp_baru',
         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -60,7 +63,10 @@
     }else {
         $kk_baru = $_POST['kk_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', kk_hk='$kk_baru',
          id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -87,7 +93,10 @@
     }else {
         $akte_baru = $_POST['akte_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', akte_hk='$akte_baru',
         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -114,7 +123,10 @@
     }else {
         $suratnikah_baru = $_POST['suratnikah_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', suratnikah_hk='$suratnikah_baru', 
         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -141,7 +153,10 @@
     }else {
         $suratijin_baru = $_POST['suratijin_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', suratijin_hk='$suratijin_baru',
          id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -168,7 +183,10 @@
     }else {
         $expaspor_baru = $_POST['expaspor_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', 
         expaspor_hk='$expaspor_baru',  id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -195,7 +213,10 @@
     }else {
         $skck_baru = $_POST['skck_hk_lama'];
     }
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         skck_hk='$skck_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -208,23 +229,28 @@
      }           
         
     //Rekom id
-    if($rekomid_hk != "") {
+    if($kartukuning_hk != "") {
         $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-        $rekomid = explode('.', $rekomid_hk); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensirek = strtolower(end($rekomid));
-        $file_tmprek = $_FILES['rekomid_hk']['tmp_name'];   
+        $kartukuning = explode('.', $kartukuning_hk); //memisahkan nama file dengan ekstensi yang diupload
+        $ekstensirek = strtolower(end($kartukuning));
+        $file_tmprek = $_FILES['kartukuning_hk']['tmp_name'];   
         $angka_acak     = rand(1,999);
-        $rekomid_baru = $angka_acak.'-'.$rekomid_hk;
+        $kartukuning_baru = $angka_acak.'-'.$kartukuning_hk;
 
         if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-            move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$rekomid_baru); 
+            move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$kartukuning_baru); 
         }
     }else {
-        $rekomid_baru = $_POST['rekomid_hk_lama'];
+        $kartukuning_baru = $_POST['kartukuning_hk_lama'];
     } 
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         rekomid_hk='$rekomid_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
+=======
+    $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
+        kartukuning_hk='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
         WHERE id_hongkong='$id_hongkong'";
      $result = mysqli_query($konektor, $query);
      if(!$result){
@@ -249,7 +275,10 @@
     }else {
         $biometri_baru = $_POST['biometri_hk_lama'];
     } 
+<<<<<<< HEAD
     $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         biometri_hk='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -318,13 +347,13 @@
                                     $angka_acak     = rand(1,999);
                                     $skck_baru = $angka_acak.'-'.$skck_hk;
                                     //Rekom id
-                                    if($rekomid_hk != "") {
+                                    if($kartukuning_hk != "") {
                                         $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-                                        $rekomid = explode('.', $rekomid_hk); //memisahkan nama file dengan ekstensi yang diupload
-                                        $ekstensirek = strtolower(end($rekomid));
-                                        $file_tmprek = $_FILES['rekomid_hk']['tmp_name'];   
+                                        $kartukuning = explode('.', $kartukuning_hk); //memisahkan nama file dengan ekstensi yang diupload
+                                        $ekstensirek = strtolower(end($kartukuning));
+                                        $file_tmprek = $_FILES['kartukuning_hk']['tmp_name'];   
                                         $angka_acak     = rand(1,999);
-                                        $rekomid_baru = $angka_acak.'-'.$rekomid_hk;
+                                        $kartukuning_baru = $angka_acak.'-'.$kartukuning_hk;
                                         //Biometri
                                         if($biometri_hk != "") {
                                             $ekstensi_diperbolehkanbio = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -349,16 +378,19 @@
                                                                     if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                                                                         move_uploaded_file($file_tmpsk, 'berkas/Hongkong/'.$skck_baru);  
                                                                         if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                                                                            move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$rekomid_baru); 
+                                                                            move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$kartukuning_baru); 
                                                                             if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                                                                                 move_uploaded_file($file_tmpbio, 'berkas/Hongkong/'.$biometri_baru);  
 
                                                                                 //Biometri
                                                                                 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+<<<<<<< HEAD
                                                                                 $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                                                                 $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', ektp_hk='$ektp_baru', kk_hk='$kk_baru',
                                                                                     akte_hk='$akte_baru', suratnikah_hk='$suratnikah_baru', suratijin_hk='$suratijin_baru',
-                                                                                    expaspor_hk='$expaspor_baru', skck_hk='$skck_baru', rekomid_hk='$rekomid_baru',
+                                                                                    expaspor_hk='$expaspor_baru', skck_hk='$skck_baru', kartukuning_hk='$kartukuning_baru',
                                                                                     biometri_hk='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
                                                                                     WHERE id_hongkong='$id_hongkong'";
                                                                                     $result = mysqli_query($konektor, $query);
@@ -412,7 +444,10 @@
             //file untuk format foto
                                         }  else {
                                             // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+<<<<<<< HEAD
                                             $id = $_POST['id_lama'];
+=======
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                             $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk'
                                             WHERE id_hongkong='$id_hongkong'";
                                             $result = mysqli_query($konektor, $query);

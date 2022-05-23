@@ -4,7 +4,7 @@
     $konektor = mysqli_connect("localhost","root","", "tki");
     // menangkap data yang di kirim dari form
     $id_sertif_hk = $_POST['id_sertif_hk'];
-    $id_dft = $_POST['id_dft'];
+    $id = $_POST['id'];
     $keahlian_hk = $_FILES['keahlian_hk']['name'];
     $bahasa_hk = $_FILES['bahasa_hk']['name'];
 
@@ -23,7 +23,7 @@
     }else {
         $keahlian_baru = $_POST['keahlian_hk_lama'];
     }
-    $query  = "UPDATE sertifhongkong SET id_dft='$id_dft', keahlian_hk='$keahlian_baru'
+    $query  = "UPDATE sertifhongkong SET id='$id', keahlian_hk='$keahlian_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -48,7 +48,7 @@
     }else {
         $bahasa_baru = $_POST['bahasa_hk_lama'];
     }
-    $query  = "UPDATE sertifhongkong SET id_dft='$id_dft', bahasa_hk='$bahasa_baru'
+    $query  = "UPDATE sertifhongkong SET id='$id', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -82,7 +82,7 @@
                 move_uploaded_file($file_tmpbahasa, 'berkas/SertifHongkong/Bahasa/'.$bahasa_baru);
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-        $query  = "UPDATE sertifhongkong SET id_dft='$id_dft', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
+        $query  = "UPDATE sertifhongkong SET id='$id', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -101,7 +101,7 @@
         }
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-        $query  = "UPDATE sertifhongkong SET id_dft='$id_dft', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
+        $query  = "UPDATE sertifhongkong SET id='$id', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error

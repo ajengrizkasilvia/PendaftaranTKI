@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -215,10 +213,10 @@
                                 <form method="post" action="tabelManageUserFormProses.php">
                                     <fieldset>
                                         <div class="form-group">			
-                                            <label>Nama</label>
+                                            <label>Nama lengkap</label>
                                             <td>
                                                 <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-                                                <input type="text" name="nama" class="form-control" placeholder="Masukkan nama"/>
+                                                <input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan nama lengkap"/>
                                             </td>
                                         </div>
                                         <div class="form-group">
@@ -241,8 +239,8 @@
                                         </div>
                                         <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                        </p>		
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                        </p>
                                     </fieldset>
                                 </form>
                             </div>
