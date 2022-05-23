@@ -190,6 +190,7 @@
                                     $id_taiwan = $_GET['id_taiwan'];
                                     $data = mysqli_query($konektor,"SELECT * FROM taiwan 
                                                                     INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
+                                                                    INNER JOIN user ON taiwan.id = user.id 
                                                                     WHERE id_taiwan='$id_taiwan'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
@@ -198,7 +199,7 @@
                                         <tr>			
                                             <td>Nama TKI</td>
                                             <td>
-                                                <?php echo $d['id']; ?>
+                                                <?php echo $d['nama_lengkap']; ?>
                                             </td>
                                         </tr>
                                         <tr>

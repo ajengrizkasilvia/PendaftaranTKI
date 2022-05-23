@@ -184,16 +184,19 @@
                             include 'config.php';
                             $konektor = mysqli_connect("localhost","root","", "tki");
                             $id_taiwan = $_GET['id_taiwan'];
-                            $data = mysqli_query($konektor,"SELECT * FROM taiwan WHERE id_taiwan='$id_taiwan'");
+                            $data = mysqli_query($konektor,"SELECT * FROM taiwan INNER JOIN user ON taiwan.id = user.id WHERE id_taiwan='$id_taiwan'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
                                 <form method="post" action="TKIUploadBerkasTaiwanEditProses.php" enctype="multipart/form-data">
                                 <table>
                                         <tr>			
-                                            <td>Nama TKI</td>
-                                            <td>
-                                                <input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>">
-                                                <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                        <td>Nama TKI</td>
+                                            <td class="form-control">
+                                                <?php echo $d['nama_lengkap']; ?>
+                                            </td>
+                                            <input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>">
+                                            <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
+                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
                                             </td>
                                         </tr>
                                         <tr>

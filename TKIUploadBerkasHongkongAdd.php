@@ -180,83 +180,95 @@
     </div>
     <div class="card-body">
         <form action="TKIUploadBerkasHongkongAddProses.php" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <div class="form-group">			
-                    <label>Nama TKI</label>
-                    <td>
-                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                        <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
+            <table>
+                <tr>	
+                        <?php 
+                            include 'config.php';
+                            $konektor = mysqli_connect("localhost","root","", "tki");
+                            $no = 1;
+                            $username = $_SESSION['username'];
+                            $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                            while($d = mysqli_fetch_array($data)){
+                        ?>
+                    <td>Nama Lengkap</td>
+                    <td class="form-control">
+                        <?php echo $d['nama_lengkap']; ?>
                     </td>
-                    </div>
-                    <div class="form-group">
-                    <label>Sektor</label>
+                    <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
+                    <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                        <?php
+                            }
+                        ?>
+                    </tr>
+                    <tr>
+                    <td>Sektor</td>
                         <td><input type="text" name="sektor_hk" class="form-control"/></td>
-                    </div>
-                    <div class="form-group">
-                        <label>E-KTP</label>
+                    </tr>
+                    <tr>
+                        <td>E-KTP</td>
                         <td><input type="file" name="ektp_hk" class="form-control"/></td>
                         <input type="hidden" name="ektp_hk_lama">
-                    </div>
-                    <div class="form-group">
-                        <label>Kartu Keluarga</label>
+                    </tr>
+                    <tr>
+                        <td>Kartu Keluarga</td>
                         <td><input type="file" name="kk_hk" class="form-control"/></td>
                         <input type="hidden" name="kk_hk_lama">
-                    </div>
-                    <div class="form-group">
-                        <label>Akta Kelahiran</label>
+                    </tr>
+                    <tr>
+                        <td>Akta Kelahiran</td>
                         <td><input type="file" name="akte_hk" class="form-control"/></td>
                         <input type="hidden" name="akte_hk_lama">
-                    </div>
-                    <div class="form-group">
-                        <label>Surat Menikah</label>
+                    </tr>
+                    <tr>
+                        <td>Surat Menikah</td>
                         <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
                         <input type="hidden" name="suratnikah_hk_lama">
-                    </div>
-                    <div class="form-group">
-                        <label>Surat Ijin Ortu/Suami</label>
+                    </tr>
+                    <tr>
+                        <td>Surat Ijin Ortu/Suami</td>
                         <td><input type="file" name="suratijin_hk" class="form-control"/></td>
                         <input type="hidden" name="suratijin_hk_lama">
-                    </div>
-                    <div class="form-group">
-                        <label>Ex Paspor</label>
+                    </tr>
+                    <tr>
+                        <td>Ex Paspor</td>
                         <td><input type="file" name="expaspor_hk" class="form-control"/></td>
                         <input type="hidden" name="expaspor_hk_lama">
-                    </div>
-                    <div class="form-group">
+                    </tr>
+                    <tr>
                         <td>SKCK</td>
                         <td><input type="file" name="skck_hk" class="form-control"/></td>
                         <input type="hidden" name="skck_hk_lama">
-                    </div>
-                    <div class="form-group">
+                    </tr>
+                    <tr>
                         <td>Rekom Id</td>
                         <td><input type="file" name="rekomid_hk" class="form-control"/></td>
                         <input type="hidden" name="rekomid_hk_lama">
-                    </div>
-                    <div class="form-group">
+                    </dtr>
+                    <tr>
                         <td>Biometri</td>
                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
                         <input type="hidden" name="biometri_hk_lama">
-                    </div>
-                    <div class="form-group">
-                        <label>Status Proses</label>
+                    </tr>
+                    <tr>
+                        <td>Status Proses</td>
                         <td>
                             <select class="form-control" name="id_tahapdua">
                             <option>--klik ajukan status proses--</option>
                                 <option value='1'>Diajukan</option>
                             </select>  
                         </td>
-                    </div>
-                    <div class="form-group">
-                        <label>Keterangan</label>
+                    </tr>
+                    <tr>
+                        <td>Keterangan</td>
                         <td>
                             <input type="text" name="keterangan_hk" class="form-control"/>
                         </td>
-                    </div>
+                    </tr>
                     <p>
                         <td></td>
                         <td><input type="submit" value="SIMPAN"></td>
                     </p>		
-                </fieldset>
+                </table>
 	        </form>
     </div>
 </div>
