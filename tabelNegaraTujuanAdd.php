@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -222,12 +220,12 @@
                                             </td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Kriteria</label>
-                                            <td><input type="text" name="kriteria" class="form-control" placeholder="Masukkan kriteria negara tersebut"/></td>
+                                            <label for="exampleFormControlTextarea1">Kriteria</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="kriteria" placeholder="Masukkan kriteria negara"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label>Persyaratan Dokumen</label>
-                                            <td><input type="text" name="persyaratan" class="form-control" placeholder="Masukkan persyaratan dokumen negara tersebut"/></td>
+                                            <label for="exampleFormControlTextarea1">Persyaratan Dokumen</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="persyaratan" placeholder="Masukkan persyaratan dokumen negara"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Gaji / Uang Saku</label>
@@ -241,7 +239,7 @@
                                         </div>
                                         <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
                                         </p>		
                                     </fieldset>
                                 </form>

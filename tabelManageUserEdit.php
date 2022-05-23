@@ -82,6 +82,20 @@
             <div class="sidebar-heading">
                 Tenaga Kerja
             </div>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -95,23 +109,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -221,10 +220,10 @@
                                     <form method="post" action="tabelManageUserEditProses.php">
                                         <fieldset>
                                             <div class="form-group">			
-                                                <td>Nama</td>
+                                                <td>Nama lengkap</td>
                                                 <td>
                                                     <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-                                                    <input type="text" class="form-control" name="nama" value="<?php echo $d['nama']; ?>">
+                                                    <input type="text" class="form-control" name="nama_lengkap" value="<?php echo $d['nama_lengkap']; ?>">
                                                 </td>
                                             </div>
                                             <div class="form-group">
@@ -247,9 +246,11 @@
                                             </div>
                                             <p>
                                                 <td></td>
-                                                <td><input type="submit" value="SIMPAN"></td>
-                                                <!--<td><input type="submit" href="tabelManageUSer.php" value="Cancel"></td> -->
-                                                <!--<td><button type="cancel" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td>-->
+                                                <!-- <td><input type="submit" value="SIMPAN"></td> -->
+                                                <!-- <td><input type="submit" href="tabelManageUSer.php" value="Cancel"></td> -->
+                                                <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td>
+                                                <!-- <td><button type="cancel" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td> -->
                                             </p>		
                                         </fieldset>
                                     </form>

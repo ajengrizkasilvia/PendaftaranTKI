@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -99,19 +112,6 @@
                         <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -213,92 +213,91 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Detail TKI</h6>
                         <div class="card-body">
-                            <div class="table-responsive">
                             <?php
-                                    include 'config.php';
-                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                    $id_hongkong = $_GET['id_hongkong'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong 
-                                                                    INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua 
-                                                                    WHERE id_hongkong='$id_hongkong'");
-                                    while($d = mysqli_fetch_array($data)){
-                                ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $id_hongkong = $_GET['id_hongkong'];
+                                $data = mysqli_query($konektor,"SELECT * FROM hongkong 
+                                                                INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua 
+                                                                WHERE id_hongkong='$id_hongkong'");
+                                while($d = mysqli_fetch_array($data)){
+                            ?>
+                                <table class="table table-bordered">
+                                    <tbody>
                                         <tr>			
-                                            <td>Nama TKI</td>
+                                            <th>Nama TKI</th>
                                             <td>
                                                 <?php echo $d['id']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Sektor</td>
+                                            <th>Sektor</th>
                                             <td>
                                                 <?php echo $d['sektor_hk']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>E-KTP</td>
+                                            <th>E-KTP</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Kartu Keluarga</td>
+                                            <th>Kartu Keluarga</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Akta Kelahiran</td>
+                                            <th>Akta Kelahiran</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Surat Menikah</td>
+                                            <th>Surat Menikah</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Surat Ijin Ortu/Suami</td>
+                                            <th>Surat Ijin Ortu/Suami</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Ex Paspor</td>
+                                            <th>Ex Paspor</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>SKCK</td>
+                                            <th>SKCK</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Kartu Kuning</td>
+                                            <th>Kartu Kuning</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Biometri</td>
+                                            <th>Biometri</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Status Proses</td>
+                                            <th>Status Proses</th>
                                             <td> 
                                                 <?php echo $d['keterangan']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Keterangan</td>
+                                            <th>Keterangan</th>
                                             <td>
                                                 <?php echo $d['keterangan_hk']; ?>
                                             </td>
@@ -308,6 +307,7 @@
                             <?php 
                                 }
                             ?>
+                            <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='tabelDataTKIHong.php';">Back</button></td>
                         </div>
                     </div>
                 </div>

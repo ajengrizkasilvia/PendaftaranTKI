@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,7 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
-                    </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -204,7 +201,7 @@
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
                     Pastikan berkas dengan format nama_umur_medicalcheck.jpg.
-                    Tekan <a href="tabelPendaftar.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <p> Tekan <a href="tabelPendaftar.php"> BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -223,7 +220,7 @@
                                         <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
                                             <table>
                                                 <tr>
-                                                    <td>No Telp / WA</td>
+                                                    <th>No Telp / WA</th>
                                                     <td><input type="text" class="form-control" name="no_telp" value="<?php echo $d['no_telp']; ?>"></td>
                                                 </tr>
                                                 <tr>			
@@ -245,8 +242,6 @@
                                                             <option>--Atur Ulang Negara Tujuan--</option>
                                                             <option value='1'>Hongkong</option>
                                                             <option value='2'>Taiwan</option>
-                                                            <option value='3'>Singapore</option>
-                                                            <option value='4'>Malaysia</option>
                                                         </select>   
                                                     </td>
                                                 </tr>
@@ -306,7 +301,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Pengalaman Kerja</td>
-                                                    <td><input type="text" class="form-control" name="pengalaman_kerja" value="<?php echo $d['pengalaman_kerja']; ?>"></td>
+                                                    <td>
+                                                        <select class="form-control" name="pengalaman_kerja">
+                                                                <option>--Atur Ulang Pengalaman Kerja--</option>
+                                                                <option>Ex</option>
+                                                                <option>Non</option>
+                                                        </select>  
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Medical Check</td>
@@ -336,10 +337,10 @@
                                                         </select>  
                                                     </td>
                                                 </tr>
-                                                <br>
                                                 <p>
                                                     <td></td>
-                                                    <td><input type="submit" value="SIMPAN"></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelPendaftar.php';">Cancel</button></td>
                                                 </p>		
                                             </table>
                                         </form>

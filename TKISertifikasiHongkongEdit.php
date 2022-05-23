@@ -175,7 +175,7 @@
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
                     Pastikan sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg.
-                    Tekan <a href="TKISertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <p> Tekan <a href="TKISertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -237,8 +235,6 @@
                                                     <option>--pilih negara tujuan--</option>
                                                     <option value='1'>Hongkong</option>
                                                     <option value='2'>Taiwan</option>
-                                                    <option value='3'>Singapore</option>
-                                                    <option value='4'>Malaysia</option>
                                                 </select>   
                                             </td>
                                         </div>
@@ -297,8 +293,14 @@
                                             <td><input type="text" name="agama" class="form-control" placeholder="Masukkan agama"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Pengalaman Kerja</label>
-                                            <td><input type="text" name="pengalaman_kerja" class="form-control" placeholder="Masukkan pengalaman kerja"/></td>
+                                            <label>Pengalaman Kerja Ex / Non</label>
+                                            <td>
+                                                <select class="form-control" name="pengalaman_kerja">
+                                                    <option>---(Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)---</option>
+                                                    <option>Ex</option>
+                                                    <option>Non</option>
+                                                </select>   
+                                            </td>
                                         </div>
                                         <div class="form-group">
                                             <td>Medical Check</td>
@@ -320,10 +322,9 @@
                                             </select>  
                                         </td>
                                         </div>
-                                        <br>
                                         <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
                                         </p>		
                                     </fieldset>
                                 </form>
