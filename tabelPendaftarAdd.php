@@ -230,13 +230,23 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Negara Tujuan</label>
-                                            <td>
+                                            <!-- <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
                                                     <option value='1'>Hongkong</option>
                                                     <option value='2'>Taiwan</option>
                                                 </select>   
-                                            </td>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="id_negara">
+                                                    <option selected>pilih negara tujuan...</option>
+                                                    <option value="1">Hongkong</option>
+                                                    <option value="2">Taiwan</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Tempat Lahir</label>
@@ -256,13 +266,16 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Jenis Kelamin</label>
-                                            <td>
-                                                <select class="form-control" name="jenis_kelamin">
-                                                    <option>--pilih jenis kelamin--</option>
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="jenis_kelamin">
+                                                    <option selected>pilih jenis kelamin...</option>
                                                     <option>Pria</option>
                                                     <option>Wanita</option>
-                                                </select>   
-                                            </td>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label>TB</label>
@@ -278,7 +291,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Status</label>
-                                            <td>
+                                            <!-- <td>
                                                 <select class="form-control" name="status">
                                                     <option>--pilih status--</option>
                                                     <option>Menikah</option>
@@ -286,21 +299,43 @@
                                                     <option>Cerai Hidup</option>
                                                     <option>Cerai Mati</option>
                                                 </select>   
-                                            </td>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02"  name="status">
+                                                    <option selected>pilih status...</option>
+                                                    <option>Menikah</option>
+                                                    <option>Belum Menikah</option>
+                                                    <option>Cerai Hidup</option>
+                                                    <option>Cerai Mati</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Agama</label>
                                             <td><input type="text" name="agama" class="form-control" placeholder="Masukkan agama"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Pengalaman Kerja Ex / Non</label>
-                                            <td>
+                                            <label>Pengalaman Kerja Ex / Non (Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)</label>
+                                            <!-- <td>
                                                 <select class="form-control" name="pengalaman_kerja">
                                                     <option>---(Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)---</option>
                                                     <option>Ex</option>
                                                     <option>Non</option>
                                                 </select>   
-                                            </td>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="pengalaman_kerja">
+                                                    <option selected>pilih pengalaman kerja...</option>
+                                                    <option>Ex</option>
+                                                    <option>Non</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <td>Medical Check</td>
@@ -311,16 +346,28 @@
                                             <td><input type="file" name="pas_foto" class="form-control"/></td>
                                         </div>
                                         <div class="form-group">
-                                        <label>Status Proses</label>
-                                        <td>
-                                            <select class="form-control" name="id_tahapsatu">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
-                                            </select>  
-                                        </td>
+                                            <label>Status Proses</label>
+                                            <!-- <td>
+                                                <select class="form-control" name="id_tahapsatu">
+                                                    <option>--pilih status proses--</option>
+                                                    <option value='1'>Diajukan</option>
+                                                    <option value='2'>Diverifikasi</option>
+                                                    <option value='3'>Diterima</option>
+                                                    <option value='4'>Ditolak</option>
+                                                </select>  
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="id_tahapsatu">
+                                                    <option selected>pilih status proses...</option>
+                                                    <option value='1'>Diajukan</option>
+                                                    <option value='2'>Diverifikasi</option>
+                                                    <option value='3'>Diterima</option>
+                                                    <option value='4'>Ditolak</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <p>
                                             <td></td>

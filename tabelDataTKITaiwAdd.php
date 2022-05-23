@@ -287,12 +287,24 @@
                                         </div>
                                         <div class="form-group">
                                         <label>Status Proses</label>
-                                            <td>
-                                            <select class="form-control" name="id_tahapdua">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                            </select>  
-                                            </td>
+                                            <!-- <td>
+                                                <select class="form-control" name="id_tahapdua">
+                                                    <option>--pilih status proses--</option>
+                                                    <option value='1'>Diajukan</option>
+                                                </select>
+                                                </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
+                                                    <option selected>pilih status proses...</option>
+                                                    <option value='1'>Diajukan</option>
+                                                    <option value='2'>Diverifikasi</option>
+                                                    <option value='3'>Diterima</option>
+                                                    <option value='4'>Ditolak</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Keterangan</label>
@@ -302,7 +314,7 @@
                                         </div>
                                         <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
                                         </p>		
                                     </fieldset>
                                 </form>

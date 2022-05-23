@@ -108,8 +108,6 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
             </li>
@@ -271,12 +269,24 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
-                                        <td>
+                                        <!-- <td>
                                             <select class="form-control" name="id_tahapdua">
                                                 <option>--pilih status proses--</option>
                                                 <option value='1'>Diajukan</option>
                                             </select>  
-                                        </td>
+                                        </td> -->
+                                        <div class="input-group mb-3">
+                                            <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
+                                                <option selected>pilih status proses...</option>
+                                                <option value='1'>Diajukan</option>
+                                                <option value='2'>Diverifikasi</option>
+                                                <option value='3'>Diterima</option>
+                                                <option value='4'>Ditolak</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <td>Keterangan</td>
@@ -284,7 +294,7 @@
                                     </div>
                                     <p>
                                         <td></td>
-                                        <td><input type="submit" value="SIMPAN"></td>
+                                        <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
                                     </p>		
                                 </fieldset>
                                 </form>

@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -204,8 +202,7 @@
                     <div>
                         <ul class="breadcrumb">
                             <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
-                            <li><a href="#">Sertifikasi</a> <span class="divider">/</span></li>
-                            <li class="active">Sertifikasi TKI Hongkong</li>
+                            <li class="active"> Sertifikasi TKI Hongkong</li>
                         </ul>
                     </div>
                     
@@ -246,21 +243,21 @@
                                             <td>
                                                 <div class="hero-unit">
                                                     <p>
-                                                        <a class="btn btn-primary btn-large" href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                        <a class="btn btn-primary btn-sm" href="tabelSertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
                                                             Detail
                                                         </a>
                                                     </p>
                                                 </div>
                                                 <div class="hero-unit">
                                                     <p>
-                                                        <a class="btn btn-warning btn-large" href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                        <a class="btn btn-warning btn-sm" href="tabelSertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
                                                             Edit
                                                         </a>
                                                     </p>
                                                 </div>
                                                 <div class="hero-unit">
                                                     <p>
-                                                        <a class="btn btn-danger btn-large" href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
+                                                        <a class="btn btn-danger btn-sm" href="tabelSertifikasiHongkongDelete.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
                                                             Hapus
                                                         </a>
                                                     </p>
