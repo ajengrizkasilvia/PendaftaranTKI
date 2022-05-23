@@ -18,10 +18,10 @@
 	// 	while($d = mysqli_fetch_array($data)){
 	?> -->
      
-         <h3 ALIGN="Center">PT. HENDRARTA ARGARAYA</h3><br>
+         <h3 ALIGN="Center">PT. HENDRARTA ARGARAYA</h3>
          <h3 ALIGN="Center">APPLICANT'S INFORMATION SHEET</h3><br>
          <div>
-            <table width= "100%" border="1">
+            <table width= "100%">
             <tr>
                 <td color="blue"><b>PERSONAL DATA</b></td>
                 <td><b>個人紀錄</b><td> 
@@ -29,30 +29,24 @@
             <tr>
                 <td><b>Nama TKI</b></td>
                 <td>nama</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>Age</b></td> 
-                <td>umur</td>
-                <td></td>
+                <td colspan="2">umur</td>
                 
             </tr>
             <tr>
                 <td><b>Place / Date of Birtd</b></td>
                 <td>tempat</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>Weight</b></td>
-                <td>berat</td>
-                <td></td>
+                <td colspan="2">berat</td>
             </tr>
             <tr>
                 <td><b>Religion</b></td>
                 <td>agama</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>Height</b></td>
-                <td>tinggi</td>
-                <td></td>
+                <td colspan="2">tinggi</td>
             </tr>
             <tr>
                 <td><b>Marital Status</b></td>
@@ -76,38 +70,30 @@
             <tr>
                 <td><b>Father's Name</b></td>
                 <td>nama ayah</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>Name of Spouse</b></td>
-                <td>nama suami/istri</td>
-                <td></td>
+                <td colspan="2">nama suami/istri</td>
            </tr>
             <tr>
                 <td><b>Occupation</b></td>
                 <td>nama</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>Occupation</b></td>
-                <td>nama</td>
-                <td></td>
+                <td colspan="2">nama</td>
            </tr>
             <tr>
                 <td><b>Mother's Name</b></td>
                 <td>nama ibu</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>No. of Children</b></td>
-                <td>jumlah anak</td>
-                <td></td>
+                <td colspan="2">jumlah anak</td>
             </tr>
             <tr>
                 <td><b>No. of Brother</b></td>
                 <td>jumlah saudara laki-laki</td>
-                <td></td>
-                <td></td>
+                <td colspan="2"></td>
                 <td><b>Ages of Children</b></td>
-                <td>umur anak</td>
-                <td></td>
+                <td colspan="2">umur anak</td>
             </tr>
             <tr>
                 <td><b>No. of Sister</b></td>
@@ -121,7 +107,7 @@
                 <td><br></td>
             </tr>
     </table>
-    <table width= "100%" border="1">
+    <table width= "100%">
             <tr>
                 <td><b>INTERVIEW APPRAISAL</b></td>
                 <td><b>面試評價 </b></td>
@@ -129,16 +115,16 @@
             </tr>
             <tr>
                 <td></td>
-                <td><b>Average</b></td>
-                <td><b>Average</b></td>
-                <td><b>Average</b></td>
-                <td colspan="6" rowspan="11"><b>Foto</b></td>
+                <th>Average</th>
+                <th>Good</th>
+                <th>Excelent</th>
+                <td rowspan="11"><b>Foto</b></td>
             </tr>
             <tr>
                 <td></td>
-                <td><b>平</b></td>
-                <td><b>好</b></td>
-                <td><b>優</b></td>
+                <th>平</th>
+                <th>好</th>
+                <th>優</th>
             </tr>
             <tr>
                 <td><b>Babies Caring</b></td>
@@ -223,6 +209,5 @@
 	 <script>
 		window.print();
 	</script>
- 
 </body>
 </html>

@@ -33,6 +33,7 @@
     }else {
         $ektp_baru = $_POST['ektp_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', ektp_hk='$ektp_baru',
         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -59,6 +60,7 @@
     }else {
         $kk_baru = $_POST['kk_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', kk_hk='$kk_baru',
          id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -85,6 +87,7 @@
     }else {
         $akte_baru = $_POST['akte_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', akte_hk='$akte_baru',
         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -111,6 +114,7 @@
     }else {
         $suratnikah_baru = $_POST['suratnikah_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', suratnikah_hk='$suratnikah_baru', 
         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -137,6 +141,7 @@
     }else {
         $suratijin_baru = $_POST['suratijin_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', suratijin_hk='$suratijin_baru',
          id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -163,6 +168,7 @@
     }else {
         $expaspor_baru = $_POST['expaspor_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', 
         expaspor_hk='$expaspor_baru',  id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -189,6 +195,7 @@
     }else {
         $skck_baru = $_POST['skck_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         skck_hk='$skck_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -213,8 +220,14 @@
             move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$kartukuning_baru); 
         }
     }else {
+<<<<<<< HEAD
+        $rekomid_baru = $_POST['rekomid_hk_lama'];
+    }
+    $id = $_POST['id_lama']; 
+=======
         $kartukuning_baru = $_POST['kartukuning_hk_lama'];
     } 
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         kartukuning_hk='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -240,7 +253,8 @@
         }
     }else {
         $biometri_baru = $_POST['biometri_hk_lama'];
-    } 
+    }
+    $id = $_POST['id_lama']; 
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         biometri_hk='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
@@ -346,6 +360,7 @@
 
                                                                                 //Biometri
                                                                                 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+                                                                                $id = $_POST['id_lama'];
                                                                                 $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', ektp_hk='$ektp_baru', kk_hk='$kk_baru',
                                                                                     akte_hk='$akte_baru', suratnikah_hk='$suratnikah_baru', suratijin_hk='$suratijin_baru',
                                                                                     expaspor_hk='$expaspor_baru', skck_hk='$skck_baru', kartukuning_hk='$kartukuning_baru',
@@ -402,6 +417,7 @@
             //file untuk format foto
                                         }  else {
                                             // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+                                            $id = $_POST['id_lama'];
                                             $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk'
                                             WHERE id_hongkong='$id_hongkong'";
                                             $result = mysqli_query($konektor, $query);

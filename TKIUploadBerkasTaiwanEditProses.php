@@ -33,6 +33,7 @@
     }else {
         $ektp_baru = $_POST['ektp_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru',
         id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -59,6 +60,7 @@
     }else {
         $kk_baru = $_POST['kk_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', kk_taiw='$kk_baru',
          id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -85,6 +87,7 @@
     }else {
         $akte_baru = $_POST['akte_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', akte_taiw='$akte_baru',
         id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -111,6 +114,7 @@
     }else {
         $suratnikah_baru = $_POST['suratnikah_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', suratnikah_taiw='$suratnikah_baru', 
         id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -137,6 +141,7 @@
     }else {
         $suratijin_baru = $_POST['suratijin_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', suratijin_taiw='$suratijin_baru',
          id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -163,6 +168,7 @@
     }else {
         $expaspor_baru = $_POST['expaspor_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', 
         expaspor_taiw='$expaspor_baru',  id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -189,6 +195,7 @@
     }else {
         $skck_baru = $_POST['skck_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         skck_taiw='$skck_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -215,6 +222,7 @@
     }else {
         $kartukuning_baru = $_POST['kartukuning_taiw_lama'];
     } 
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         kartukuning_taiw='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -241,6 +249,7 @@
     }else {
         $biometri_baru = $_POST['biometri_taiw_lama'];
     } 
+    $id = $_POST['id_lama'];
     $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         biometri_taiw='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
@@ -346,6 +355,7 @@
 
                                                                                 //Biometri
                                                                                 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+                                                                                $id = $_POST['id_lama'];
                                                                                 $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', ektp_taiw='$ektp_baru', kk_taiw='$kk_baru',
                                                                                     akte_taiw='$akte_baru', suratnikah_taiw='$suratnikah_baru', suratijin_taiw='$suratijin_baru',
                                                                                     expaspor_taiw='$expaspor_baru', skck_taiw='$skck_baru', kartukuning_taiw='$kartukuning_baru',
@@ -402,6 +412,7 @@
             //file untuk format foto
                                         }  else {
                                             // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+                                            $id = $_POST['id_lama'];
                                             $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw'
                                             WHERE id_taiwan='$id_taiwan'";
                                             $result = mysqli_query($konektor, $query);

@@ -6,7 +6,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
 	// membuat variabel untuk menampung data dari form
   $id = $_POST['id'];
   $id_tahapdua = $_POST['id_tahapdua'];
-	$sektor_hk = $_POST['sektor_hk'];
+  $sektor_hk = $_POST['sektor_hk'];
   $ektp_hk = $_FILES['ektp_hk']['name'];
   $kk_hk = $_FILES['kk_hk']['name'];
   $akte_hk = $_FILES['akte_hk']['name'];
@@ -161,7 +161,12 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   }else {
       $biometri_baru = $_POST['biometri_hk_lama'];
   } 
+<<<<<<< HEAD
+  $id = $_POST['id_lama'];
+  $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, rekomid_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
+=======
   $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
   $result = mysqli_query($konektor, $query);
    if(!$result){
        die ("Query gagal dijalankan: ".mysqli_errno($konektor).
@@ -169,6 +174,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
    } else {
    echo "<script>alert('Data berhasil diubah.');window.location='TKIUploadBerkasHongkong.php';</script>";
    }
+<<<<<<< HEAD
+=======
 
 
 
@@ -309,4 +316,5 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   }
   }
   }
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
 ?>

@@ -161,7 +161,12 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         }else {
             $biometri_baru = $_POST['biometri_taiw_lama'];
         } 
+<<<<<<< HEAD
+        $id = $_POST['id_lama'];
+        $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, rekomid_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$rekomid_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
+=======
         $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
         $result = mysqli_query($konektor, $query);
         if(!$result){
             die ("Query gagal dijalankan: ".mysqli_errno($konektor).
@@ -170,6 +175,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         echo "<script>alert('Data berhasil diubah.');window.location='TKIUploadBerkasTaiwan.php';</script>";
         }
 
+<<<<<<< HEAD
+=======
 
 
   if($ektp_taiw != "") {
@@ -307,4 +314,5 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   }
   }
   }
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
 ?>

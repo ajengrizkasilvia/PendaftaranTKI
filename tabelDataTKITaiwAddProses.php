@@ -170,6 +170,8 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         echo "<script>alert('Data berhasil diubah.');window.location='tabelDataTKITaiw.php';</script>";
         }
 
+<<<<<<< HEAD
+=======
 
 
   if($ektp_taiw != "") {
@@ -307,4 +309,5 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   }
   }
   }
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
 ?>

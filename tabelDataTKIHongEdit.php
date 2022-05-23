@@ -218,16 +218,25 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_hongkong = $_GET['id_hongkong'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong WHERE id_hongkong='$id_hongkong'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelDataTKIHongEditProses.php" enctype="multipart/form-data">
                                         <table>
                                                 <tr>			
                                                     <td>Nama TKI</td>
+<<<<<<< HEAD
+                                                    <td class="form-control">
+                                                        <?php echo $d['nama_lengkap']; ?>
+                                                    </td>
+                                                    <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                                    <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
+                                                    <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+=======
                                                     <td>
                                                         <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
                                                         <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+>>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                                     </td>
                                                 </tr>
                                                 <tr>

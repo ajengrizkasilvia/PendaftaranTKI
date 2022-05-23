@@ -184,16 +184,19 @@
                             include 'config.php';
                             $konektor = mysqli_connect("localhost","root","", "tki");
                             $id_hongkong = $_GET['id_hongkong'];
-                            $data = mysqli_query($konektor,"SELECT * FROM hongkong WHERE id_hongkong='$id_hongkong'");
+                            $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
                                 <form method="post" action="TKIUploadBerkasHongkongEditProses.php" enctype="multipart/form-data">
                                 <table>
                                         <tr>			
                                             <td>Nama TKI</td>
-                                            <td>
-                                                <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                            <td class="form-control">
+                                                <?php echo $d['nama_lengkap']; ?>
+                                            </td>
+                                            <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                            <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
+                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
                                             </td>
                                         </tr>
                                         <tr>
