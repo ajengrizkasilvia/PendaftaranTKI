@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cetak All Data Pendaftar</title>
+	<title></title>
 </head>
 <body>
  
 	<?php 
 	include 'config.php';
     $konektor = mysqli_connect("localhost","root","", "tki");
-	?>
-
-    <?php 
 		$no = 1;
+        $id_taiwan = $_GET['id_taiwan'];
 		$data = mysqli_query($konektor,"SELECT * FROM taiwan 
                                         INNER JOIN user ON taiwan.id = user.id
-                                        INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua");
+                                        INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
+                                        WHERE id_taiwan='$id_taiwan'");
 		while($d = mysqli_fetch_array($data)){
 	?>
      <div class="card-body">
-         <!-- <h2>Berkas Data TKI</h2> -->
+         <h2>Berkas Data TKI</h2>
             <div class="text-center">
             <table border="1" width= "100%">
-            <br><br>
-            <tr>
-                <th colspan="2"><?php echo $no++; ?></th>
-            </tr>
             <tr>
                 <th>Nama TKI</th>
                 <td><?php echo $d['nama_lengkap']; ?></td>

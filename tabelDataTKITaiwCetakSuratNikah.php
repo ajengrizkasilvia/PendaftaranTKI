@@ -8,13 +8,13 @@
             include 'config.php';
             $konektor = mysqli_connect("localhost","root","", "tki");
             $no = 1;
-            $data = mysqli_query($konektor,"SELECT * FROM taiwan 
-                    INNER JOIN user ON taiwan.id = user.id");
+            $id_taiwan = $_GET['id_taiwan'];
+            $data = mysqli_query($konektor,"SELECT suratnikah_taiw FROM taiwan
+                                            INNER JOIN user ON taiwan.id = user.id  
+                                            WHERE id_taiwan='$id_taiwan'");
             while($d = mysqli_fetch_array($data)){
         ?>
      
-         <h3 ALIGN="Center">PT. HENDRARTA ARGARAYA</h3>
-         <h3 ALIGN="Center">Surat Nikah</h3><br><br>
          <div>
             <table width= "100%">
             <tr>
