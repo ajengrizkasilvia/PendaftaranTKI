@@ -190,7 +190,11 @@
                                                 src="img/undraw_posting_photo.svg" alt="...">
                                         </div>
                                         <p>Halaman Landing Page merupakan halaman utama dari website PT. Hendrarta Argaraya yang menampilkan profil PT, negara tujuan tenaga kerja dan keterangan lainnya.</p>
-                                        <a target="_blank" rel="nofollow" href="index.php">Klik untuk menuju Landing Page &rarr;</a>
+                                        <p>
+                                            <a class="btn btn-primary btn-large" href="index.php">
+                                                Website PT
+                                                </a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

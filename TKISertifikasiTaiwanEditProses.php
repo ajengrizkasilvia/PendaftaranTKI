@@ -23,6 +23,7 @@
     }else {
         $keahlian_baru = $_POST['keahlian_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE sertiftaiwan SET id='$id', keahlian_taiw='$keahlian_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
@@ -48,6 +49,7 @@
     }else {
         $bahasa_baru = $_POST['bahasa_taiw_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE sertiftaiwan SET id='$id', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
@@ -82,6 +84,7 @@
                 move_uploaded_file($file_tmpbahasa, 'berkas/SertifTaiwan/Bahasa/'.$bahasa_baru);
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+        $id = $_POST['id_lama'];
         $query  = "UPDATE sertiftaiwan SET id='$id', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
               $result = mysqli_query($konektor, $query);
@@ -101,6 +104,7 @@
         }
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+        $id = $_POST['id_lama'];
         $query  = "UPDATE sertiftaiwan SET id='$id', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
         $result = mysqli_query($konektor, $query);

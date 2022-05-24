@@ -187,29 +187,41 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <form method="post" action="TKISertifikasiTaiwanAddProses.php" enctype="multipart/form-data">
-                                <fieldset>
-                                    <div class="form-group">			
-                                        <label>Nama TKI</label>
-                                        <td>
-                                            <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
-                                            <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
-                                        </td>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
-                                        <td><input type="file" name="keahlian_taiw" class="form-control"/></td>
-                                        <input type="hidden" name="keahlian_taiw_lama" class="form-control"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Upload Sertifikasi Bahasa</label>
-                                        <td><input type="file" name="bahasa_taiw" class="form-control"/></td>
-                                        <input type="hidden" name="bahasa_taiw_lama" class="form-control"/>
-                                    </div>
-                                         <p>
+                                <form method="post" action="TKISertifikasiTaiwanAddProses.php" enctype="multipart/form-data">
+                                    <fieldset>
+                                        <div class="form-group">			
+                                            <label>Nama TKI</label>
+                                            <td>
+                                                    <?php 
+                                                        include 'config.php';
+                                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                                        $no = 1;
+                                                        $username = $_SESSION['username'];
+                                                        $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                        while($d = mysqli_fetch_array($data)){
+                                                    ?>
+                                                    <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
+                                                    <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                    <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
+                                            <td><input type="file" name="keahlian_taiw" class="form-control"/></td>
+                                            <input type="hidden" name="keahlian_taiw_lama" class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Sertifikasi Bahasa</label>
+                                            <td><input type="file" name="bahasa_taiw" class="form-control"/></td>
+                                            <input type="hidden" name="bahasa_taiw_lama" class="form-control"/>
+                                        </div>
+                                        <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                         </p>		
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                        </p>		
                                     </fieldset>
                                 </form>
                             </div>

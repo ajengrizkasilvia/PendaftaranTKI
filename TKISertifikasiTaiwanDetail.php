@@ -179,23 +179,20 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
-                            </a>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Sertifikasi TKI Taiwan</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $id_sertif_taiw = $_GET['id_sertif_taiw'];
-                                        $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
-                                                                        INNER JOIN user ON sertiftaiwan.id = user.id
-                                                                        WHERE id_sertif_taiw='$id_sertif_taiw'");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
+                                <?php 
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $no = 1;
+                                    $id_sertif_taiw = $_GET['id_sertif_taiw'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                    INNER JOIN user ON sertiftaiwan.id = user.id
+                                                                    WHERE id_sertif_taiw='$id_sertif_taiw'");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>

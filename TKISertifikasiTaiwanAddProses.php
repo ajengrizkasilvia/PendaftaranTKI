@@ -40,6 +40,7 @@ if($bahasa_taiw != "") {
 }else {
     $bahasa_baru = $_POST['bahasa_taiw_lama'];
 } 
+$id = $_POST['id_lama'];
 $query = "INSERT INTO sertiftaiwan (id_sertif_taiw, id, keahlian_taiw, bahasa_taiw)
         VALUES('$id_sertif_taiw', '$id', '$keahlian_baru', '$bahasa_baru')";
         $result = mysqli_query($konektor, $query);
