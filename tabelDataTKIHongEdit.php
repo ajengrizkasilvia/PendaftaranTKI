@@ -225,12 +225,9 @@
                                         <table>
                                                 <tr>			
                                                     <td>Nama TKI</td>
-                                                    <td class="form-control">
-                                                        <?php echo $d['nama_lengkap']; ?>
-                                                    </td>
-                                                    <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                    <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
-                                                    <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                    <td>
+                                                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
+                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>

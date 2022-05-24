@@ -83,6 +83,19 @@
                 Tenaga Kerja
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -95,23 +108,8 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -201,59 +199,62 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
                     <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
-
+                    <div>
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="tabelSertifikasiHongkong.php"> Sertifikasi TKI Hongkong</a> <span class="divider">/</span></li>
+                            <li class="active"> Detail</li>
+                        </ul>
+                    </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Detail Sertifikasi TKI</h6><br>
-                            <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
-                            </a>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                             <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $id_sertif_hk = $_GET['id_sertif_hk'];
-                                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN user ON sertifhongkong.id = user.id
-                                                                        WHERE id_sertif_hk='$id_sertif_hk'");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <td>Nama Lengkap</td>
-                                            <td>
+                                include 'config.php';
+                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                $no = 1;
+                                $id_sertif_hk = $_GET['id_sertif_hk'];
+                                $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                INNER JOIN user ON sertifhongkong.id = user.id
+                                                                WHERE id_sertif_hk='$id_sertif_hk'");
+                                 while($d = mysqli_fetch_array($data)){
+                            ?>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
                                             <?php echo $d['nama_lengkap']; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sertifikasi Keahlian</td>
-                                            <td>
-                                                <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">                                                
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sertifikasi Bahasa</td>
-                                            <td>
-                                                <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 800px;">                                                 
-                                            </td>
-                                        </tr>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sertifikasi Keahlian</th>
+                                        <td>
+                                            <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">                                                
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sertifikasi Bahasa</th>
+                                        <td>
+                                            <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 800px;">                                                 
+                                        </td>
+                                    </tr>
                                     <?php 
                                         }
                                     ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
+                            <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='tabelSertifikasiHongkong.php';">Back</button></td>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
+            </div>
+            <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->

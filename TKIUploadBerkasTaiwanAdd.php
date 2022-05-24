@@ -76,8 +76,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -93,8 +91,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -173,8 +171,7 @@
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Berkas TKI Taiwan</h6><br>
-                        
+                        <h6 class="m-0 font-weight-bold text-primary">Berkas TKI Taiwan</h6>
                     </div>
                     <div class="card-body">
                         <form action="TKIUploadBerkasTaiwanAddProses.php" method="post" enctype="multipart/form-data">
@@ -254,18 +251,12 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Rekom Id</td>
-<<<<<<< HEAD
-                                        <td><input type="file" name="rekomid_taiw" class="form-control"/></td>
-                                        <input type="hidden" name="rekomid_taiw_lama">
-                                    </tr>
-                                    <tr>
-=======
+                                        <td>Kartu Kuning</td>
                                         <td><input type="file" name="kartukuning_taiw" class="form-control"/></td>
                                         <input type="hidden" name="kartukuning_taiw_lama">
                                     </div>
+                                    <tr>
                                     <div class="form-group">
->>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                         <td>Biometri</td>
                                         <td><input type="file" name="biometri_taiw" class="form-control"/></td>
                                         <input type="hidden" name="biometri_taiw_lama">

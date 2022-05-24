@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -190,6 +188,22 @@
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
+                                            <!-- <td>
+                                                <?php 
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $username = $_SESSION['username'];
+                                                    $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                    while($d = mysqli_fetch_array($data)){
+                                                ?>
+                                                <td><input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
+                                                <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </td> -->
                                         <td>
                                             <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
                                             <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>

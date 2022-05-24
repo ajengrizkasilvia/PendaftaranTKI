@@ -108,8 +108,6 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
             </li>
@@ -206,13 +204,21 @@
                     </div>
                     <p class="mb-4">Berikut merupakan data-data dari TKI negara tujuan Hongkong. Untuk merekap semua data dapat dilakukan pada
                         <a href="cetak.php">cetak disini</a>.</p>
-                    <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <div>    
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="tabelDataTKIHong.php">Data TKI Hongkong</a> <span class="divider">/</span></li>
+                            <li class="active">Detail</li>
+                        </ul>
+                    </div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Detail TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail TKI Hongkong</h6>
+                        </div>
                         <div class="card-body">
+                            <div class="table-responsive">
                             <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
@@ -223,8 +229,8 @@
                                                                     WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                                <table class="table table-bordered">
+                                    <tbody>
                                         <tr>			
                                             <th>Nama TKI</th>
                                             <td>
@@ -303,11 +309,11 @@
                                                 <?php echo $d['keterangan_hk']; ?>
                                             </td>
                                         </tr>
+                                        <?php 
+                                            }
+                                        ?>
                                     </tbody>
                                 </table>
-                            <?php 
-                                }
-                            ?>
                             <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='tabelDataTKIHong.php';">Back</button></td>
                         </div>
                     </div>

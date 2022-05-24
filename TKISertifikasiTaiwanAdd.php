@@ -78,11 +78,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
-                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
+                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a> 
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
-                    </div>
+                    </div> 
                 </div>
             </li>
 
@@ -177,7 +175,10 @@
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
                     Upload berkas sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg. </p>
-                    <p> Tekan <a href="TKISertifikasiTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <ul class="breadcrumb">
+                            <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
+                            <li class="active">Sertifikasi TKI Taiwan</li>
+                    </ul>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -214,6 +215,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     
                 </div>
                 <!-- /.container-fluid -->

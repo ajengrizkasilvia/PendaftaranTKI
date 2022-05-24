@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -181,6 +179,9 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Hongkong</h6><br>
+                            <a href="TKIUploadBerkasHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i> Upload Berkas</a>
                             <?php 
                                 include 'config.php';
                                 $konektor = mysqli_connect("localhost","root","", "tki");
@@ -192,9 +193,6 @@
                                                                 INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                                 while($d = mysqli_fetch_array($data)){
                             ?>
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Hongkong</h6><br>
-                            <a href="TKIUploadBerkasHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i> Upload Berkas</a>
                             <a href="TKIUploadBerkasHongkongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
                                 class="fas fa-info fa-sm text-white-50"></i> Detail Berkas</a>
                             <a href="TKIUploadBerkasHongkongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
@@ -202,6 +200,7 @@
                             <?php 
                                 }
                             ?>
+                        </div>
                             <div class="card-body">
                                 <?php 
                                     include 'config.php';

@@ -215,7 +215,7 @@
                                 include 'config.php';
                                 $konektor = mysqli_connect("localhost","root","", "tki");
                                 $id_negara = $_GET['id_negara'];
-                                $data = mysqli_query($konektor,"select * from negara where id_negara='$id_negara'");
+                                $data = mysqli_query($konektor,"SELECT * FROM negara WHERE id_negara='$id_negara'");
                                 while($d = mysqli_fetch_array($data)){
                             ?>      
                                         <form method="post" action="tabelNegaraTujuanEditProses.php" enctype="multipart/form-data">

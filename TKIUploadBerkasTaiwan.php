@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -182,6 +180,9 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Taiwan</h6><br>
+                            <a href="TKIUploadBerkasTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
                         <?php 
                             include 'config.php';
                             $konektor = mysqli_connect("localhost","root","", "tki");
@@ -193,13 +194,11 @@
                                                             INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar TKI Taiwan</h6><br>
-                            <a href="TKIUploadBerkasTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Upload Berkas</a>
+                            
                             <a href="TKIUploadBerkasTaiwanDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
-                                class="fas fa-info fa-sm text-white-50"></i>Detail Berkas</a>
+                                class="fas fa-info fa-sm text-white-50"></i> Detail Berkas</a>
                             <a href="TKIUploadBerkasTaiwanEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
-                                class="fas fa-edit fa-sm text-white-50"></i>Edit Berkas</a>
+                                class="fas fa-edit fa-sm text-white-50"></i> Edit Berkas</a>
                         <?php 
                             }
                         ?>
@@ -228,39 +227,39 @@
                                         </tr>
                                         <tr>
                                             <th>E-KTP</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['ektp_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 300px;"></td>
                                         </tr> 
                                         <tr>   
                                             <th>Kartu Keluarga</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['kk_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>    
                                             <th>Akta Kelahiran</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['akte_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>    
                                             <th>Surat Nikah</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
                                             <th>Surat Ijin Ortu/Suami</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
                                             <th>Ex-Paspor</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
                                             <th>SKCK</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
                                             <th>Kartu Kuning</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
                                             <th>Biometri</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
                                             <th>Status Proses</th>

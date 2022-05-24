@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -172,54 +170,56 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
                     <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
-                    <p> Tekan <a href="TKISertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <ul class="breadcrumb">
+                            <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
+                            <li><a href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a> <span class="divider">/</span></li>
+                            <li class="active">Detail</li>
+                    </ul>
 
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
-                            </a>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                             <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $id_sertif_hk = $_GET['id_sertif_hk'];
-                                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft
-                                                                        WHERE id_sertif_hk='$id_sertif_hk'");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <td>Nama Lengkap</td>
-                                            <td>
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $no = 1;
+                                    $id_sertif_hk = $_GET['id_sertif_hk'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
+                                                                    INNER JOIN user ON sertifhongkong.id = user.id
+                                                                    WHERE id_sertif_hk='$id_sertif_hk'");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
                                             <?php echo $d['nama_lengkap']; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sertifikasi Keahlian</td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sertifikasi Keahlian</th>
                                             <td>
                                                 <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">                                                
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sertifikasi Bahasa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sertifikasi Bahasa</th>
                                             <td>
                                                 <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 800px;">                                                 
                                             </td>
-                                        </tr>
-                                    <?php 
-                                        }
+                                    </tr>
+                                <?php 
+                                    }
                                     ?>
                                     </tbody>
                                 </table>
+                                <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='TKISertifikasiHongkong.php';">Back</button></td>
                             </div>
                         </div>
                     </div>

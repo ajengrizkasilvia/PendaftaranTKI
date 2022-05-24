@@ -206,10 +206,9 @@
                     <p class="mb-4">Berikut merupakan data-data dari TKI negara tujuan Hongkong. Untuk merekap semua data dapat dilakukan pada
                         <a href="tabelDataTKIHongCetak.php"> Cetak disini</a>.</p>
                     <div>
-                    <ul class="breadcrumb">
+                        <ul class="breadcrumb">
                             <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
-                            <li><a href="#">Data TKI</a> <span class="divider">/</span></li>
-                            <li class="active">Hongkong</li>
+                            <li class="active"> Data TKI Hongkong</li>
                         </ul>
                     </div>
 
@@ -269,21 +268,21 @@
                                     <td>
                                         <div class="hero-unit">
                                             <p>
-                                                <a class="btn btn-primary btn-large" href="tabelDataTKIHongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
+                                                <a class="btn btn-primary btn-sm" href="tabelDataTKIHongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
                                                 Detail
                                                 </a>
                                             </p>
                                         </div>
                                         <div class="hero-unit">
                                             <p>
-                                                <a class="btn btn-warning btn-large" href="tabelDataTKIHongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
+                                                <a class="btn btn-warning btn-sm" href="tabelDataTKIHongEdit.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
                                                 Edit
                                                 </a>
                                             </p>
                                         </div>
                                         <div class="hero-unit">
                                             <p>
-                                                <a class="btn btn-danger btn-large" href="tabelDataTKIHongDelete.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
+                                                <a class="btn btn-danger btn-sm" href="tabelDataTKIHongDelete.php?id_hongkong=<?php echo $d['id_hongkong']; ?>">
                                                 Hapus
                                                 </a>
                                             </p>

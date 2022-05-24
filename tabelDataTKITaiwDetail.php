@@ -200,19 +200,26 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Data TKI Taiwan</h1>
                         <a href="tabelDataTKITaiwCetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
+                            class="fas fa-download fa-sm text-white-50"></i> Cetak All Data TKI Taiwan</a>
                     </div>
                     <p class="mb-4">Berikut merupakan data-data dari TKI negara tujuan Taiwan. Untuk merekap semua data dapat dilakukan pada
-                        <a href="tabelDataTKIHongCetak.php">cetak disini</a>.</p>
-                        <p> Tekan <a href="tabelDataTKITaiw.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                        <a href="tabelDataTKIHongCetak.php"> Cetak disini</a>.</p>
+                    <div>    
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="tabelDataTKITaiw.php">Data TKI Taiwan</a> <span class="divider">/</span></li>
+                            <li class="active">Detail</li>
+                        </ul>
+                    </div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Detail TKI</h6>
+                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <?php
+                                <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_taiwan = $_GET['id_taiwan'];
@@ -222,96 +229,97 @@
                                                                     WHERE id_taiwan='$id_taiwan'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                                <table class="table table-bordered">
+                                    <tbody>
                                         <tr>			
-                                            <td>Nama TKI</td>
+                                            <th>Nama TKI</th>
                                             <td>
                                                 <?php echo $d['nama_lengkap']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Sektor</td>
+                                            <th>Sektor</th>
                                             <td>
                                                 <?php echo $d['sektor_taiw']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>E-KTP</td>
+                                            <th>E-KTP</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Kartu Keluarga</td>
+                                            <th>Kartu Keluarga</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Akta Kelahiran</td>
+                                            <th>Akta Kelahiran</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Surat Menikah</td>
+                                            <th>Surat Menikah</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Surat Ijin Ortu/Suami</td>
+                                            <th>Surat Ijin Ortu/Suami</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Ex Paspor</td>
+                                            <th>Ex Paspor</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">        
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>SKCK</td>
+                                            <th>SKCK</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">        
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Rekom Id</td>
+                                            <th>Rekom Id</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['rekomid_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Biometri</td>
+                                            <th>Biometri</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Status Proses</td>
+                                            <th>Status Proses</th>
                                             <td> 
                                                 <?php echo $d['keterangan']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Keterangan</td>
+                                            <th>Keterangan</th>
                                             <td>
                                                 <?php echo $d['keterangan_taiw']; ?>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                            <?php 
-                                }
-                            ?>
+                                    <?php 
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='tabelDataTKITaiw.php';">Back</button></td>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-                <!-- /.container-fluid -->
+            <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
