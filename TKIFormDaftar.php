@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -184,90 +182,98 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form method="post" action="TKIFormDaftarProses.php" enctype="multipart/form-data">
-                                    <table>
-                                        <tr>
-                                            <td>No Telp / WA</td>
+                                <fieldset>
+                                        <div class="form-group">
+                                            <label>No Telp / WA</label>
+                                            <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                             <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
-                                        </tr>
-                                        <tr>		
-                                            <td>NIK</td>
-                                                <td>
-                                                <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                <input type="text" name="nik" class="form-control" placeholder="Masukkan NIK"/>
-                                                </td>
-                                        </tr>
-                                        <tr>
-                                            <?php 
-                                                include 'config.php';
-                                                $konektor = mysqli_connect("localhost","root","", "tki");
-                                                $no = 1;
-                                                $username = $_SESSION['username'];
-                                                $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
-                                                while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                            <td>Nama Lengkap</td>
-                                            <td class="form-control">
-                                                <?php echo $d['nama_lengkap']; ?>
-                                            </td>
-                                            <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
-                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                            <?php
-                                                }
-                                            ?>
-                                        </tr>
-                                        <tr>
-                                            <td>Negara Tujuan</td>
+                                        </div>
+                                        <div class="form-group">			
+                                            <label>NIK</label>
+                                                <td><input type="text" name="nik" class="form-control" placeholder="Masukkan NIK"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Lengkap</label>
                                             <td>
+                                                <?php 
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $username = $_SESSION['username'];
+                                                    $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                    while($d = mysqli_fetch_array($data)){
+                                                ?>
+                                                <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Negara Tujuan</label>
+                                            <!-- <td>
                                                 <select class="form-control" name="id_negara">
                                                     <option>--pilih negara tujuan--</option>
                                                     <option value='1'>Hongkong</option>
                                                     <option value='2'>Taiwan</option>
-                                                    <option value='3'>Singapore</option>
-                                                    <option value='4'>Malaysia</option>
                                                 </select>   
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tempat Lahir</td>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="id_negara">
+                                                    <option selected>pilih negara tujuan...</option>
+                                                    <option value="1">Hongkong</option>
+                                                    <option value="2">Taiwan</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Tempat Lahir</label>
                                             <td><input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan tempat lahir"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tanggal Lahir</td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Tanggal Lahir</label>
                                             <td><input type="text" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Umur</td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Umur</label>
                                             <td><input type="text" name="umur" class="form-control" placeholder="Masukkan umur"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alamat Lengkap</td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Alamat Lengkap</label>
                                             <td><input type="text" name="alamat_lengkap" class="form-control" placeholder="Masukkan alamat lengkap"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jenis Kelamin</td>
-                                            <td>
-                                                <select class="form-control" name="jenis_kelamin">
-                                                    <option>--pilih jenis kelamin--</option>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Jenis Kelamin</label>
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="jenis_kelamin">
+                                                    <option selected>pilih jenis kelamin...</option>
                                                     <option>Pria</option>
                                                     <option>Wanita</option>
-                                                </select>   
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>TB</td>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>TB</label>
                                             <td><input type="text" name="tb" class="form-control" placeholder="Masukkan tinggi badan"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>BB</td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>BB</label>
                                             <td><input type="text" name="bb" class="form-control" placeholder="Masukkan berat badan"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pendidikan Terakhir</td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Pendidikan Terakhir</label>
                                             <td><input type="text" name="pendidikan_terakhir" class="form-control" placeholder="Masukkan pendidikan terakhir"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Status</td>
-                                            <td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <!-- <td>
                                                 <select class="form-control" name="status">
                                                     <option>--pilih status--</option>
                                                     <option>Menikah</option>
@@ -275,46 +281,78 @@
                                                     <option>Cerai Hidup</option>
                                                     <option>Cerai Mati</option>
                                                 </select>   
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Agama</td>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02"  name="status">
+                                                    <option selected>pilih status...</option>
+                                                    <option>Menikah</option>
+                                                    <option>Belum Menikah</option>
+                                                    <option>Cerai Hidup</option>
+                                                    <option>Cerai Mati</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Agama</label>
                                             <td><input type="text" name="agama" class="form-control" placeholder="Masukkan agama"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pengalaman Kerja</td>
-                                            <td><input type="text" name="pengalaman_kerja" class="form-control" placeholder="Masukkan pengalaman kerja"/></td>
-                                        </tr>
-                                        <tr>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Pengalaman Kerja Ex / Non (Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)</label>
+                                            <!-- <td>
+                                                <select class="form-control" name="pengalaman_kerja">
+                                                    <option>---(Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)---</option>
+                                                    <option>Ex</option>
+                                                    <option>Non</option>
+                                                </select>   
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="pengalaman_kerja">
+                                                    <option selected>pilih pengalaman kerja...</option>
+                                                    <option>Ex</option>
+                                                    <option>Non</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <td>Medical Check</td>
-                                            <td>
-                                            <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                            <input type="file" name="medical_check"/>
-                                            <input type="hidden" name="medical_check_lama" value="<?php echo $d['medical_check']; ?>">
-                                            </td>
-                                        </tr>
-                                        <tr>
+                                            <td><input type="file" name="medical_check" class="form-control"/></td>
+                                        </div>
+                                        <div class="form-group">
                                             <td>Pas Foto</td>
-                                            <td>
-                                            <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                            <td><input type="file" name="pas_foto"/></td>
-                                            <input type="hidden" name="pas_foto_lama" value="<?php echo $d['pas_foto']; ?>">
-                                        </tr>
-                                        <tr>
-                                            <td>Status Proses</td>
-                                            <td>
+                                            <td><input type="file" name="pas_foto" class="form-control"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status Proses</label>
+                                            <!-- <td>
                                                 <select class="form-control" name="id_tahapsatu">
-                                                <option>--klik ajukan status proses--</option>
-                                                <option value='1'>Diajukan</option>
+                                                    <option>--pilih status proses--</option>
+                                                    <option value='1'>Diajukan</option>
+                                                    <option value='2'>Diverifikasi</option>
+                                                    <option value='3'>Diterima</option>
+                                                    <option value='4'>Ditolak</option>
                                                 </select>  
-                                            </td>
-                                        </tr>
-                                        <br>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="id_tahapsatu">
+                                                    <option selected>pilih ajukan status proses...</option>
+                                                    <option value='1'>Diajukan</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
                                         </p>		
-                                    </table>
+                                    </fieldset>
                                 </form>
                             </div>
                         </div>

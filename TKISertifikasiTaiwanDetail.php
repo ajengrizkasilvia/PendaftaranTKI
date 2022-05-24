@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -172,7 +170,11 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Taiwan</h1>
                     <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
-                    <p> Tekan <a href="TKISertifikasiTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <ul class="breadcrumb">
+                            <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
+                            <li><a href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a> <span class="divider">/</span></li>
+                            <li class="active">Detail</li>
+                    </ul>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -194,22 +196,22 @@
                                                                         WHERE id_sertif_taiw='$id_sertif_taiw'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <td>Nama Lengkap</td>
+                                            <th>Nama Lengkap</th>
                                             <td>
                                             <?php echo $d['nama_lengkap']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Sertifikasi Keahlian</td>
+                                            <th>Sertifikasi Keahlian</th>
                                             <td>
                                                 <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">                                                
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Sertifikasi Bahasa</td>
+                                            <th>Sertifikasi Bahasa</th>
                                             <td>
                                                 <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">                                                 
                                             </td>
@@ -219,6 +221,7 @@
                                     ?>
                                     </tbody>
                                 </table>
+                                <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='TKISertifikasiTaiwan.php';">Back</button></td>
                             </div>
                         </div>
                     </div>

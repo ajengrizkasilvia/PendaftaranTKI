@@ -232,7 +232,7 @@
                                                 <tr>
                                                     <td>Sertifikasi Keahlian atau Ketrampilan</td>
                                                     <td>
-                                                        <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 250px;float: left;margin-bottom: px;">
                                                         <input type="file" name="keahlian_hk" /></td>
                                                         <input type="hidden" name="keahlian_hk_lama" value="<?php echo $d['keahlian_hk']; ?>">
                                                     </td>

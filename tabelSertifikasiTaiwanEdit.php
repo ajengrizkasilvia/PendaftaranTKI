@@ -231,22 +231,25 @@
                                                 <tr>
                                                     <td>Sertifikasi Keahlian atau Ketrampilan</td>
                                                     <td>
-                                                        <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="keahlian_taiw" />
+                                                        <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" class="form-control" style="width: 250px;float: left;margin-bottom: px;">
+                                                        <input type="file" name="keahlian_taiw" /></td>
                                                         <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sertifikasi Bahasa</td>
                                                     <td>
-                                                        <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="bahasa_taiw" />
-                                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
+                                                        <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" class="form-control" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="bahasa_taiw" /></td>
+                                                        <input type="hidden" name="bahasa_taiw_lama" value="<?php echo $d['bahasa_taiw']; ?>">
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td><input type="submit" value="SIMPAN"></td>
-                                                </tr>	
+                                                <p>
+                                                    <td></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiHongkong.php';">Cancel</button></td>
+                                                </p>
+
                                             </table>
                                         </form>
                                         <?php 

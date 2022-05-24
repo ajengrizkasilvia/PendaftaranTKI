@@ -277,21 +277,21 @@
                                                 <td>
                                                     <div class="hero-unit">
                                                         <p>
-                                                            <a class="btn btn-primary btn-large" href="tabelDataTKITaiwDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                            <a class="btn btn-primary btn-sm" href="tabelDataTKITaiwDetail.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
                                                             Detail
                                                             </a>
                                                         </p>
                                                     </div>
                                                     <div class="hero-unit">
                                                         <p>
-                                                            <a class="btn btn-warning btn-large" href="tabelDataTKITaiwEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                            <a class="btn btn-warning btn-sm" href="tabelDataTKITaiwEdit.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
                                                             Edit
                                                             </a>
                                                         </p>
                                                     </div>
                                                     <div class="hero-unit">
                                                         <p>
-                                                            <a class="btn btn-danger btn-large" href="tabelDataTKITaiwDelete.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
+                                                            <a class="btn btn-danger btn-sm" href="tabelDataTKITaiwDelete.php?id_taiwan=<?php echo $d['id_taiwan']; ?>">
                                                             Hapus
                                                             </a>
                                                         </p>

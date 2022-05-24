@@ -220,7 +220,6 @@
                         <div class="card-body">
                             <div class="table-responsive">
                             <?php
-<<<<<<< HEAD
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_hongkong = $_GET['id_hongkong'];
@@ -230,28 +229,12 @@
                                                                     WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-=======
-                                include 'config.php';
-                                $konektor = mysqli_connect("localhost","root","", "tki");
-                                $id_hongkong = $_GET['id_hongkong'];
-                                $data = mysqli_query($konektor,"SELECT * FROM hongkong 
-                                                                INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua 
-                                                                WHERE id_hongkong='$id_hongkong'");
-                                while($d = mysqli_fetch_array($data)){
-                                ?>
                                 <table class="table table-bordered">
                                     <tbody>
->>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                         <tr>			
                                             <th>Nama TKI</th>
                                             <td>
-<<<<<<< HEAD
                                                 <?php echo $d['nama_lengkap']; ?>
-=======
-                                                <?php echo $d['id']; ?>
->>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                                             </td>
                                         </tr>
                                         <tr>

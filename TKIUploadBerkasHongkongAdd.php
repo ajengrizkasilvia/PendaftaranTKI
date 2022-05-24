@@ -176,7 +176,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Berkas TKI</h6><br>
+        <h6 class="m-0 font-weight-bold text-primary">Berkas TKI</h6>
     </div>
     <div class="card-body">
         <form action="TKIUploadBerkasHongkongAddProses.php" method="post" enctype="multipart/form-data">
@@ -240,18 +240,12 @@
                         <input type="hidden" name="skck_hk_lama">
                     </tr>
                     <tr>
-                        <td>Rekom Id</td>
-<<<<<<< HEAD
-                        <td><input type="file" name="rekomid_hk" class="form-control"/></td>
-                        <input type="hidden" name="rekomid_hk_lama">
-                    </dtr>
-                    <tr>
-=======
+                        <td>Kartu Kuning</td>
                         <td><input type="file" name="kartukuning_hk" class="form-control"/></td>
                         <input type="hidden" name="kartukuning_hk_lama">
                     </div>
+                    <tr>
                     <div class="form-group">
->>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
                         <td>Biometri</td>
                         <td><input type="file" name="biometri_hk" class="form-control"/></td>
                         <input type="hidden" name="biometri_hk_lama">

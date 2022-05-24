@@ -79,8 +79,6 @@
                         <h6 class="collapse-header">Data TKI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
@@ -174,13 +172,15 @@
                     <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
                     <ul class="breadcrumb">
                             <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
-                            <li><a href="#">Sertifikasi TKI</a> <span class="divider">/</span></li>
-                            <li class="active">Hongkong</li>
+                            <li class="active"> Sertifikasi TKI Hongkong</li>
                     </ul>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
+                            <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-plus fa-sm text-white-50"></i> Tambah Baru</a>
                             <?php 
                                 include 'config.php';
                                 $konektor = mysqli_connect("localhost","root","", "tki");
@@ -190,9 +190,7 @@
                                                                 INNER JOIN user ON sertifhongkong.id = user.id WHERE username='$username'");
                                 while($d = mysqli_fetch_array($data)){
                             ?>
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
-                            <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru</a>
+                            
                             <a href="TKISertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
                                 class="fas fa-info fa-sm text-white-50"></i> Detail Berkas</a>
                             <a href="TKISertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
@@ -211,55 +209,6 @@
                                                                 INNER JOIN user ON sertifhongkong.id = user.id WHERE username='$username'");
                                 while($d = mysqli_fetch_array($data)){
                             ?>
-                            <!-- <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Sertifikasi Keahlian</th>
-                                            <th>Sertifikasi Bahasa</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $username = $_SESSION['username'];
-                                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong 
-                                                                        INNER JOIN user ON sertifhongkong.id = user.id WHERE username='$username'");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
-                                        <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
-                                            <td>
-                                                <div class="hero-unit">
-                                                    <p>
-                                                        <a class="btn btn-warning btn-large" href="TKISertifikasiHongkongDetail.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
-                                                            Detail
-                                                        </a>
-                                                    </p>
-                                                </div>
-                                                <div class="hero-unit">
-                                                    <p>
-                                                        <a class="btn btn-danger btn-large" href="TKISertifikasiHongkongEdit.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>">
-                                                            Hapus
-                                                        </a>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php 
-                                        }
-                                    ?>
-                                    </tbody>
-                                </table> -->
-
                                 <table class="table table-bordered">
                                     <tbody>
                                         <tr>
