@@ -220,14 +220,8 @@
             move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$kartukuning_baru); 
         }
     }else {
-<<<<<<< HEAD
-        $rekomid_baru = $_POST['rekomid_hk_lama'];
-    }
-    $id = $_POST['id_lama']; 
-=======
         $kartukuning_baru = $_POST['kartukuning_hk_lama'];
     } 
->>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
         kartukuning_hk='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";

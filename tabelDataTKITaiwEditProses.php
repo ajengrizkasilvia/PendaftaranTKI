@@ -220,18 +220,10 @@
             move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
         }
     }else {
-<<<<<<< HEAD
-        $rekomid_baru = $_POST['rekomid_taiw_lama'];
-    }
-    $id = $_POST['id_lama']; 
-    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
-        rekomid_taiw='$rekomid_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
-=======
         $kartukuning_baru = $_POST['kartukuning_taiw_lama'];
     } 
     $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw',
         kartukuning_taiw='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
->>>>>>> b343c2bfefc5efa51e0c8b45a66a72aa1d52fc4b
         WHERE id_taiwan='$id_taiwan'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
