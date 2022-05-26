@@ -232,7 +232,7 @@
                                     </div>
                                     <p>
                                         <td></td>
-                                        <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                        <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
                                     </p>	
                                     </fieldset>
                                 </form>

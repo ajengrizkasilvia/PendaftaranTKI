@@ -210,7 +210,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Daftar Negara Tujuan</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
                             <?php
                                 include 'config.php';
                                 $konektor = mysqli_connect("localhost","root","", "tki");
@@ -221,32 +220,34 @@
                                         <form method="post" action="tabelNegaraTujuanEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group">			
-                                                    <td>Nama Negara</td>
+                                                    <label>Nama Negara</label>
                                                     <td>
                                                         <input type="hidden" name="id_negara" value="<?php echo $d['id_negara']; ?>">
                                                         <input type="text" class="form-control" name="negara_tujuan" value="<?php echo $d['negara_tujuan']; ?>">
                                                     </td>
                                                 </div>
                                                 <div class="form-group">
-                                                    <td>Kriteria</td>
+                                                    <label>Kriteria</label>
                                                     <td><input type="text" class="form-control" name="kriteria" value="<?php echo $d['kriteria']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
-                                                    <td>Persyaratan Dokumen</td>
+                                                    <label>Persyaratan Dokumen</label>
                                                     <td><input type="text" class="form-control" name="persyaratan" value="<?php echo $d['persyaratan']; ?>"></td>
                                                 </div>
                                                 <div class="form-group">
-                                                    <td>Gaji / Uang Saku</td>
-                                                    <td><input type="text" class="form-control" name="jumlah_gaji" value="<?php echo $d['jumlah_gaji']; ?>"></td>
+                                                    <label>Gaji / Uang Saku</label>
+                                                    <input type="text" class="form-control" name="jumlah_gaji" value="<?php echo $d['jumlah_gaji']; ?>"></td>
                                                 </div>
-                                                <div class="form-group">
-                                                    <td>Gambar Negara</td>
-                                                    <td><img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 350px;float: left;margin-bottom: 10px;">
-                                                    <input type="file" name="gambar_negara" class="form-control"/></td>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Gambar Negara</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="gambar_negara"/>
+                                                    </div>			
                                                 </div>
                                                 <p>
                                                     <td></td>
-                                                    <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
                                                     <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelNegaraTujuan.php';">Cancel</button></td>
                                                 </p>		
                                             </fieldset>
@@ -254,7 +255,6 @@
                                         <?php 
                                     }
                                 ?>
-                            </div>
                         </div>
                     </div>
                 </div>

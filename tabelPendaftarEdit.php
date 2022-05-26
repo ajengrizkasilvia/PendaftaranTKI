@@ -209,7 +209,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Data Pendaftar</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
                                 <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
@@ -218,136 +217,179 @@
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
-                                            <table>
-                                                <tr>
-                                                    <th>No Telp / WA</th>
-                                                    <td><input type="text" class="form-control" name="no_telp" value="<?php echo $d['no_telp']; ?>"></td>
-                                                </tr>
-                                                <tr>			
-                                                    <td>NIK</td>
-                                                    <td>
-                                                        
-                                                        <input type="text" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Nama Lengkap</td>
-                                                    <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                    <td><input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Negara Tujuan</td>
-                                                    <td>
-                                                        <select class="form-control" name="id_negara">
-                                                            <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
-                                                            <option value='2'>Taiwan</option>
-                                                        </select>   
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tempat Lahir</td>
-                                                    <td><input type="text" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tanggal Lahir</td>
-                                                    <td><input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Umur</td>
-                                                    <td><input type="text" class="form-control" name="umur" value="<?php echo $d['umur']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Alamat Lengkap</td>
-                                                    <td><input type="text" class="form-control" name="alamat_lengkap" value="<?php echo $d['alamat_lengkap']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jenis Kelamin</td>
-                                                    <td>
-                                                        <select class="form-control" name="jenis_kelamin">
-                                                            <option>--Atur Ulang Jenis Kelamin--</option>
-                                                            <option>Pria</option>
-                                                            <option>Wanita</option>
-                                                        </select>   
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>TB</td>
-                                                    <td><input type="text" class="form-control" name="tb" value="<?php echo $d['tb']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>BB</td>
-                                                    <td><input type="text" class="form-control" name="bb" value="<?php echo $d['bb']; ?>"></td>
+                                            <fieldset>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">No Telp / WA</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                                        <input type="text" class="form-control" name="no_telp" value="<?php echo $d['no_telp']; ?>">
+                                                    </div>
                                                 </div>
-                                                <tr>
-                                                    <td>Pendidikan Terakhir</td>
-                                                    <td><input type="text" class="form-control" name="pendidikan_terakhir" value="<?php echo $d['pendidikan_terakhir']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Status</td>
-                                                    <td>
-                                                        <select class="form-control" name="status">
-                                                            <option>--Atur Ulang Status--</option>
-                                                            <option>Menikah</option>
-                                                            <option>Belum Menikah</option>
-                                                            <option>Cerai Hidup</option>
-                                                            <option>Cerai Mati</option>
-                                                        </select>   
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Agama</td>
-                                                    <td><input type="text" class="form-control" name="agama" value="<?php echo $d['agama']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Pengalaman Kerja</td>
-                                                    <td>
-                                                        <select class="form-control" name="pengalaman_kerja">
-                                                                <option>--Atur Ulang Pengalaman Kerja--</option>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">NIK</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Nama Lengkap</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Negara Tujuan</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="id_negara">
+                                                                <option selected>pilih ulang negara tujuan...</option>
+                                                                <option value="1">Hongkong</option>
+                                                                <option value="2">Taiwan</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Tempat Lahir</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Umur</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="umur" value="<?php echo $d['umur']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Alamat Lengkap</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="alamat_lengkap" value="<?php echo $d['alamat_lengkap']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="jenis_kelamin">
+                                                                <option selected>pilih jenis kelamin...</option>
+                                                                <option>Pria</option>
+                                                                <option>Wanita</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">TB</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="tb" value="<?php echo $d['tb']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">BB</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="bb" value="<?php echo $d['bb']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="pendidikan_terakhir" value="<?php echo $d['pendidikan_terakhir']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Status</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02"  name="status">
+                                                                <option selected>pilih ulang status...</option>
+                                                                <option>Menikah</option>
+                                                                <option>Belum Menikah</option>
+                                                                <option>Cerai Hidup</option>
+                                                                <option>Cerai Mati</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Agama</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="agama" value="<?php echo $d['agama']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pengalaman Kerja Ex/Non (Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="pengalaman_kerja">
+                                                                <option selected>pilih ulang pengalaman kerja...</option>
                                                                 <option>Ex</option>
                                                                 <option>Non</option>
-                                                        </select>  
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Medical Check</td>
-                                                    <td>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Medical Check</label>
+                                                    <div class="col-sm-10">
                                                     <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                     <input type="file" name="medical_check">
                                                     <input type="hidden" name="medical_check_lama" value="<?php echo $d['medical_check']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Pas Foto</td>
-                                                    <td>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pas Foto</label>
+                                                    <div class="col-sm-10">
                                                     <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                     <input type="file" name="pas_foto">
                                                     <input type="hidden" name="pas_foto_lama" value="<?php echo $d['pas_foto']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Status Proses</td>
-                                                    <td>
-                                                        <select class="form-control" name="id_tahapsatu">
-                                                        <option>--pilih status proses--</option>
-                                                        <option value='1'>Diajukan</option>
-                                                        <option value='2'>Diverifikasi</option>
-                                                        <option value='3'>Diterima</option>
-                                                        <option value='4'>Ditolak</option>
-                                                        </select>  
-                                                    </td>
-                                                </tr>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Status Proses</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="id_tahapsatu">
+                                                                <option selected>pilih ulang status proses...</option>
+                                                                <option value='1'>Diajukan</option>
+                                                                <option value='2'>Diverifikasi</option>
+                                                                <option value='3'>Diterima</option>
+                                                                <option value='4'>Ditolak</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <p>
                                                     <td></td>
-                                                    <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
-                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelPendaftar.php';">Cancel</button></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
                                                 </p>		
-                                            </table>
+                                            </fieldset>
                                         </form>
                                         <?php 
                                     }
                                 ?>
-                            </div>
+                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelPendaftar.php';">Cancel</button></td>
                         </div>
                     </div>
                 </div>
