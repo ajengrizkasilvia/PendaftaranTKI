@@ -229,13 +229,23 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Role</label>
-                                            <td>
+                                            <!-- <td>
                                                 <select class="form-control" name="role">
                                                     <option>--pilih role--</option>
                                                     <option value='1'>Admin</option>
                                                     <option value='2'>TKI</option>
                                                 </select>   
-                                            </td>
+                                            </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="role">
+                                                    <option selected>pilih role...</option>
+                                                    <option value='1'>Admin</option>
+                                                    <option value='2'>TKI</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <p>
                                             <td></td>

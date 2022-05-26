@@ -228,32 +228,20 @@
                                             $data = mysqli_query($konektor,"SELECT * FROM user");
                                             while($d = mysqli_fetch_array($data)){
                                         ?>
-                                                <tr>
-                                                    <td><?php echo $no++; ?></td>
-                                                    <td><?php echo $d['nama_lengkap']; ?></td>
-                                                    <td><?php echo $d['username']; ?></td>
-                                                    <td><?php echo $d['password']; ?></td>
-                                                    <td><?php echo $d['role']; ?></td>
-                                                    <td>
-                                                        <div class="hero-unit">
-                                                            <p>
-                                                                <a class="btn btn-warning btn-sm" href="tabelManageUserEdit.php?id=<?php echo $d['id']; ?>">
-                                                                Edit
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                        <div class="hero-unit">
-                                                            <p>
-                                                                <a class="btn btn-danger btn-sm" href="tabelManageUserDelete.php?id=<?php echo $d['id']; ?>">
-                                                                Hapus
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                    </td>
+                                            <tr>
+                                                <td><?php echo $no++; ?></td>
+                                                <td><?php echo $d['nama_lengkap']; ?></td>
+                                                <td><?php echo $d['username']; ?></td>
+                                                <td><?php echo $d['password']; ?></td>
+                                                <td><?php echo $d['role']; ?></td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm" href="tabelManageUserEdit.php?id=<?php echo $d['id']; ?>">Edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="tabelManageUserDelete.php?id=<?php echo $d['id']; ?>">Hapus</a>
+                                                </td>
                                                 </tr>
-                                                <?php 
+                                        <?php 
                                             }
-                                            ?>
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

@@ -194,7 +194,7 @@
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                 <table class="table table-bordered">
-                                    <thead>
+                                    <tbody>
                                         <tr>			
                                             <th>Nama TKI</th>
                                             <td>

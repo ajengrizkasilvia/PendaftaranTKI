@@ -235,13 +235,17 @@
                                     <tr>
                                         <th>Sertifikasi Keahlian</th>
                                         <td>
-                                            <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">                                                
+                                            <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">
+                                            <a href="tabelSertifikasiHongkongCetakKeahlian.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Sertifikasi Bahasa</th>
                                         <td>
-                                            <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 800px;">                                                 
+                                            <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 800px;">
+                                            <a href="tabelSertifikasiHongkongCetakBahasa.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                 
                                         </td>
                                     </tr>
                                     <?php 

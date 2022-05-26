@@ -18,7 +18,7 @@
          <div>
             <table width= "100%">
             <tr>
-                <td><img src="berkas/taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;"></td>
+                <td><img src="berkas/taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 690px;float: left;margin-bottom: 5px;"></td>
             </tr>
 		<?php 
 		    }
