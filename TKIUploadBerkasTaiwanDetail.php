@@ -278,6 +278,7 @@
                                         ?>
                                     </tbody>
                                 </table>
+                                <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='TKIUploadBerkasTaiwan.php';">Back</button></td>
                             </div>
                         </div>
                     </div>

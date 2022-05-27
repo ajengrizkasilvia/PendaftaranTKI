@@ -209,7 +209,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
-                            
                                 <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");

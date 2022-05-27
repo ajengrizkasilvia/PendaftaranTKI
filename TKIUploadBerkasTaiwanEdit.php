@@ -185,7 +185,7 @@
                             $data = mysqli_query($konektor,"SELECT * FROM taiwan INNER JOIN user ON taiwan.id = user.id WHERE id_taiwan='$id_taiwan'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
-                                <form method="post" action="TKIUploadBerkasTaiwanEditProses.php" enctype="multipart/form-data">
+                            <form method="post" action="TKIUploadBerkasTaiwanEditProses.php" enctype="multipart/form-data">
                                 <table>
                                         <tr>			
                                         <td>Nama TKI</td>

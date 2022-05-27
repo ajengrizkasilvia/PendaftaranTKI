@@ -225,7 +225,7 @@
                                                 </td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Nama Lengkap</label>
+                                            <label>Nama Lengkap TKI</label>
                                             <td><input type="text" name="id" class="form-control" placeholder="Masukkan nama lengkap"/></td>
                                         </div>
                                         <div class="form-group">
