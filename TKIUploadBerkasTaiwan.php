@@ -262,6 +262,11 @@
                                                 <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
+                                            <th>Rekom ID</th>
+                                            <td>Klik link berikut <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a></td>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th>Status Proses</th>
                                                 <td><?php echo $d['keterangan']; ?></td>
                                         </tr>

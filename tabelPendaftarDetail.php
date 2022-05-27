@@ -195,131 +195,166 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <!-- Page Heading -->
+                    <?php
+                        include 'config.php';
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $id_dft = $_GET['id_dft'];
+                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran WHERE id_dft='$id_dft'");
+                        while($d = mysqli_fetch_array($data)){
+                    ?>
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">TKI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Data TKI Taiwan</h1>
+                        <a href="tabelPendaftarCetakCV.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            class="fas fa-download fa-sm text-white-50"></i> Download CV</a>
                     </div>
-                    <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format namaTKI_negaraTujuan_namaBerkas.jpg.
-                    <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <?php 
+                        }
+                    ?>
+                    <div>    
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li><a href="tabelPendaftar.php">Pendaftar</a> <span class="divider">/</span></li>
+                            <li class="active">Detail</li>
+                        </ul>
+                    </div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data TKI Hongkong</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form method="post" action="tabelDataTKIHongAddProses.php" enctype="multipart/form-data">
-                                <fieldset>
-                                    <div class="form-group">			
-                                        <label>Nama TKI</label>
-                                        <select class="custom-select" id="inputGroupSelect02" name="id">
-                                            <option selected>pilih nama lengkap...</option>
-                                                <?php
-                                                    include 'config.php';
-                                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                                    $no = 1;
-                                                    $data = mysqli_query($konektor, "SELECT * FROM user");
-                                                        while ($d = mysqli_fetch_array($data)) {
-                                                ?>
-                                                
-                                                    <option value="<?=$d['id'];?>">
-                                                        <?php echo $d['nama_lengkap']; ?>
-                                                    </option>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </select>
-                                            <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Sektor</label>
-                                        <td><input type="text" name="sektor_hk" class="form-control" placeholder="Masukkan Sektor"/></td>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>E-KTP</label>
-                                        <td><input type="file" name="ektp_hk" class="form-control"/></td>
-                                        <input type="hidden" name="ektp_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Kartu Keluarga</label>
-                                        <td><input type="file" name="kk_hk" class="form-control"/></td>
-                                        <input type="hidden" name="kk_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Akta Kelahiran</label>
-                                        <td><input type="file" name="akte_hk" class="form-control"/></td>
-                                        <input type="hidden" name="akte_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Surat Menikah</label>
-                                        <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
-                                        <input type="hidden" name="suratnikah_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Surat Ijin Ortu/Suami</label>
-                                        <td><input type="file" name="suratijin_hk" class="form-control"/></td>
-                                        <input type="hidden" name="suratijin_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Ex Paspor</label>
-                                        <td><input type="file" name="expaspor_hk" class="form-control"/></td>
-                                        <input type="hidden" name="expaspor_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <td>SKCK</td>
-                                        <td><input type="file" name="skck_hk" class="form-control"/></td>
-                                        <input type="hidden" name="skck_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <td>Kartu Kuning</td>
-                                        <td><input type="file" name="kartukuning_hk" class="form-control"/></td>
-                                        <input type="hidden" name="kartukuning_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <td>Biometri</td>
-                                        <td><input type="file" name="biometri_hk" class="form-control"/></td>
-                                        <input type="hidden" name="biometri_hk_lama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Status Proses</label>
-                                        <!-- <td>
-                                            <select class="form-control" name="id_tahapdua">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                            </select>  
-                                        </td> -->
-                                        <div class="input-group mb-3">
-                                            <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
-                                                <option selected>pilih status proses...</option>
-                                                <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
-                                            </select>
-                                            <div class="input-group-append">
-                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <td>Keterangan</td>
-                                        <td><input type="text" class="form-control" name="keterangan_hk"></td>
-                                    </div>
-                                    <p>
-                                        <td></td>
-                                        <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
-                                    </p>		
-                                </fieldset>
-                                </form>
-                            </div>
+                                <?php 
+                                        include 'config.php';
+                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                        $no = 1;
+                                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
+                                                                        INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
+                                                                        INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
+                                                                        INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
+                                        while($d = mysqli_fetch_array($data)){
+                                ?>
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>			
+                                            <th>No Telp</th>
+                                            <td>
+                                                <?php echo $d['no_telp']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>NIK</th>
+                                            <td>
+                                                <?php echo $d['nik']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>			
+                                            <th>Nama TKI</th>
+                                            <td>
+                                                <?php echo $d['nama_lengkap']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Tempat Lahir</th>
+                                            <td>
+                                                <?php echo $d['tempat_lahir']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>			
+                                            <th>Tanggal Lahir</th>
+                                            <td>
+                                                <?php echo $d['tanggal_lahir']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Umur</th>
+                                            <td>
+                                                <?php echo $d['umur']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>			
+                                            <th>Alamat Lengkap</th>
+                                            <td>
+                                                <?php echo $d['alamat_lengkap']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Jenis Kelamin</th>
+                                            <td>
+                                                <?php echo $d['jenis_kelamin']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>			
+                                            <th>Tinggi Badan</th>
+                                            <td>
+                                                <?php echo $d['tb']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Berat Badan</th>
+                                            <td>
+                                                <?php echo $d['bb']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>			
+                                            <th>Pendidikan Terakhir</th>
+                                            <td>
+                                                <?php echo $d['pendidikan_terakhir']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td>
+                                                <?php echo $d['status']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>			
+                                            <th>Agama</th>
+                                            <td>
+                                                <?php echo $d['agama']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Pengalaman Kerja</th>
+                                            <td>
+                                                <?php echo $d['pengalaman_kerja']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Medical Check</th>
+                                            <td>
+                                                <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <a href="tabelPendaftarCetakMedical.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Pas Foto</th>
+                                            <td>
+                                                <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">       
+                                                <a href="tabelPendaftarCetakPasFoto.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                               
+                                            </td>
+                                        </tr> 
+                                        <tr>
+                                            <th>Status Proses</th>
+                                            <td> 
+                                                <?php echo $d['keterangan']; ?>
+                                            </td>
+                                        </tr>
+                                    <?php 
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='tabelPendaftar.php';">Back</button></td>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
+            </div>
+            <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
