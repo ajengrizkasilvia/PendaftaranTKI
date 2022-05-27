@@ -231,9 +231,23 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Nama Lengkap</td>
-                                                    <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                                    <td><input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>"></td>
+                                                <label>Nama Lengkap</label>
+                                                    <select class="custom-select" id="inputGroupSelect02" name="id">
+                                                    <option selected>pilih nama lengkap...</option>
+                                                        <?php
+                                                            include 'config.php';
+                                                            $konektor = mysqli_connect("localhost","root","", "tki");
+                                                            $no = 1;
+                                                            $data = mysqli_query($konektor, "SELECT * FROM user");
+                                                                while ($d = mysqli_fetch_array($data)) {
+                                                        ?>
+                                                            <option value="<?=$d['id'];?>">
+                                                                <?php echo $d['nama_lengkap']; ?>
+                                                            </option>
+                                                        <?php
+                                                            }
+                                                        ?>
+                                                    </select>
                                                 </tr>
                                                 <tr>
                                                     <td>Negara Tujuan</td>

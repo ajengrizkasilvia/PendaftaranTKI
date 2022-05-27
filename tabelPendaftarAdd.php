@@ -226,7 +226,22 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Lengkap</label>
-                                            <td><input type="text" name="id" class="form-control" placeholder="Masukkan nama lengkap"/></td>
+                                            <select class="custom-select" id="inputGroupSelect02" name="id">
+                                            <option selected>pilih nama lengkap...</option>
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $data = mysqli_query($konektor, "SELECT * FROM user");
+                                                        while ($d = mysqli_fetch_array($data)) {
+                                                ?>
+                                                    <option value="<?=$d['id'];?>">
+                                                        <?php echo $d['nama_lengkap']; ?>
+                                                    </option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Negara Tujuan</label>
@@ -240,8 +255,8 @@
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="id_negara">
                                                     <option selected>pilih negara tujuan...</option>
-                                                    <option value="1">Hongkong</option>
-                                                    <option value="2">Taiwan</option>
+                                                    <option value="9">Hongkong</option>
+                                                    <option value="15">Taiwan</option>
                                                 </select>
                                                 <div class="input-group-append">
                                                     <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -253,7 +268,7 @@
                                             <td><input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan tempat lahir"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Tanggal Lahir</label>
+                                            <label>Tanggal Lahir (Contoh Format : 1997-02-14 (tahun-bulan-tanggal))</label>
                                             <td><input type="text" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
                                         </div>
                                         <div class="form-group">
@@ -340,10 +355,12 @@
                                         <div class="form-group">
                                             <td>Medical Check</td>
                                             <td><input type="file" name="medical_check" class="form-control"/></td>
+                                            <input type="hidden" name="medical_check_lama" class="form-control"/>
                                         </div>
                                         <div class="form-group">
                                             <td>Pas Foto</td>
                                             <td><input type="file" name="pas_foto" class="form-control"/></td>
+                                            <input type="hidden" name="pas_foto_lama" class="form-control"/>
                                         </div>
                                         <div class="form-group">
                                             <label>Status Proses</label>

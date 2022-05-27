@@ -23,6 +23,50 @@ $medical_check = $_FILES['medical_check']['name'];
 $pas_foto = $_FILES['pas_foto']['name'];
 $id_tahapsatu = $_POST['id_tahapsatu'];
  
+//Medical
+if($medical_check != "") {
+  $ekstensi_diperbolehkanmedical = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+  $medical = explode('.', $medical_check); //memisahkan nama file dengan ekstensi yang diupload
+  $ekstensimedical = strtolower(end($medical));
+  $file_tmpmedical = $_FILES['medical_check']['tmp_name'];   
+  $angka_acak     = rand(1,999);
+  $medical_baru = $angka_acak.'-'.$medical_check;
+
+  if(in_array($ekstensimedical, $ekstensi_diperbolehkanmedical) === true)  {     
+    move_uploaded_file($file_tmpmedical, 'berkas/Medical/'.$medical_baru);
+  } 
+  }else {
+      $medical_baru = $_POST['medical_check_lama'];
+  }
+
+  //Pas Foto
+  if($pas_foto != "") {
+    $ekstensi_diperbolehkanpf = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+    $pasfoto = explode('.', $pas_foto); //memisahkan nama file dengan ekstensi yang diupload
+    $ekstensipasfoto = strtolower(end($pasfoto));
+    $file_tmppf = $_FILES['pas_foto']['tmp_name'];   
+    $angka_acak     = rand(1,999);
+    $pasfoto_baru = $angka_acak.'-'.$pas_foto;
+
+    if(in_array($ekstensipasfoto, $ekstensi_diperbolehkanpf) === true)  {     
+      move_uploaded_file($file_tmppf, 'berkas/PasFoto/'.$pasfoto_baru);
+      } 
+  }else {
+      $pasfoto_baru = $_POST['pas_foto_lama'];
+  }
+  $id = $_POST['id_lama'];
+  $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
+    alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
+    VALUES('$id_dft', '$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
+    '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$medical_baru', '$pasfoto_baru', '$id_tahapsatu')";
+    $result = mysqli_query($konektor, $query);
+  if(!$result){
+      die ("Query gagal dijalankan: ".mysqli_errno($konektor).
+          " - ".mysqli_error($konektor));
+  } else {
+  echo "<script>alert('Data berhasil diubah.');window.location='TKIDataDiri.php?id=$id';</script>";
+  }
+
 
 if($medical_check != "") {
     $ekstensi_diperbolehkanmedical = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -44,9 +88,9 @@ if($medical_check != "") {
         if(in_array($ekstensipasfoto, $ekstensi_diperbolehkanpf) === true)  {     
           move_uploaded_file($file_tmppf, 'berkas/PasFoto/'.$pasfoto_baru);
 
-        $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
+        $query = "INSERT INTO pendaftaran (id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
         alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
-        VALUES('$id_dft', '$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
+        VALUES('$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
         '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$medical_baru', '$pasfoto_baru', '$id_tahapsatu')";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error
@@ -65,9 +109,9 @@ if($medical_check != "") {
       echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='tabelPendaftarAdd.php';</script>";
   }
 } else {
-    $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
+    $query = "INSERT INTO pendaftaran (id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
     alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
-    VALUES('$id_dft','$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', 
+    VALUES('$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', 
     '$alamat_lengkap', '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir',
     '$status', '$agama', '$pengalaman_kerja', null, null, '$id_tahapsatu')";
 
