@@ -181,7 +181,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
                             <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
@@ -190,40 +189,52 @@
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="TKISertifikasiHongkongEditProses.php" enctype="multipart/form-data">
-                                            <table>
-                                                <tr>			
-                                                    <td>Nama TKI</td>
-                                                    <td>
-                                                        <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly>
-                                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sertifikasi Keahlian atau Ketrampilan</td>
-                                                    <td>
-                                                        <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" class="form-control" style="width: 120px;float: left;margin-bottom: 5px;">
+                                            <fieldset>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
+                                                        <div class="col-sm-10">
+                                                            <?php 
+                                                                include 'config.php';
+                                                                $konektor = mysqli_connect("localhost","root","", "tki");
+                                                                $no = 1;
+                                                                $username = $_SESSION['username'];
+                                                                $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                                while($d = mysqli_fetch_array($data)){
+                                                            ?>
+                                                            <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
+                                                            <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                            <?php
+                                                                }
+                                                            ?>
+                                                        </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="keahlian_hk" /></td>
                                                         <input type="hidden" name="keahlian_hk_lama" value="<?php echo $d['keahlian_hk']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sertifikasi Bahasa</td>
-                                                    <td>
-                                                        <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" class="form-control" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    </div>			
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Sertifikasi Bahasa</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>"  style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="bahasa_hk" /></td>
                                                         <input type="hidden" name="bahasa_hk_lama" value="<?php echo $d['bahasa_hk']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="submit" value="SIMPAN"></td>
-                                                </tr>	
-                                            </table>
+                                                    </div>			
+                                                </div>
+                                                <p>
+                                                    <td></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiHongkong.php';">Cancel</button></td>
+                                                </p>	
+                                            </fieldset>
                                         </form>
                                         <?php 
                                     }
                                 ?>
-                            </div>
                         </div>
                     </div>
                     

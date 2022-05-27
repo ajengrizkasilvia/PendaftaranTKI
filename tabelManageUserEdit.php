@@ -245,7 +245,7 @@
                                                 </td> -->
                                                 <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="role">
-                                                    <option selected>pilih role...</option>
+                                                    <option selected>pilih ulang role...</option>
                                                     <option value='1'>Admin</option>
                                                     <option value='2'>TKI</option>
                                                 </select>

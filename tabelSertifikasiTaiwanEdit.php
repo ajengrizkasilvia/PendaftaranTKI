@@ -228,7 +228,7 @@
                                                         </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
+                                                    <label class="col-sm-2 col-form-label">Sertifikasi Bahasa</label>
                                                     <div class="col-sm-10">
                                                         <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="keahlian_taiw" /></td>
@@ -246,7 +246,7 @@
                                                 <p>
                                                     <td></td>
                                                     <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
-                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiHongkong.php';">Cancel</button></td>
+                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiTaiwan.php';">Cancel</button></td>
                                                 </p>
                                             </fieldset>
                                         </form>

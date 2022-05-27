@@ -109,8 +109,6 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
             </li>
@@ -229,12 +227,14 @@
                                                         <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
                                                     </div>
                                                 </div>
+
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Sektor</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" name="sektor_hk" value="<?php echo $d['sektor_hk']; ?>">
                                                     </div>
                                                 </div>
+
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">E-KTP</label>
                                                     <div class="col-sm-10">
@@ -243,6 +243,7 @@
                                                         <input type="hidden" name="ektp_hk_lama" value="<?php echo $d['ektp_hk']; ?>">
                                                     </div>
                                                 </div>
+                                                
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Kartu Keluarga</label>
                                                     <div class="col-sm-10">
