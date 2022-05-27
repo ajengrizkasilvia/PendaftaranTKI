@@ -225,7 +225,6 @@
                                                 </td>
                                         </div>
                                         <div class="form-group">
-<<<<<<< HEAD
                                             <label>Nama Lengkap</label>
                                             <select class="custom-select" id="inputGroupSelect02" name="id">
                                             <option selected>pilih nama lengkap...</option>
@@ -243,10 +242,6 @@
                                                     }
                                                 ?>
                                             </select>
-=======
-                                            <label>Nama Lengkap TKI</label>
-                                            <td><input type="text" name="id" class="form-control" placeholder="Masukkan nama lengkap"/></td>
->>>>>>> 70bcf0b983507c4cfde4113a2bab0a3233473a26
                                         </div>
                                         <div class="form-group">
                                             <label>Negara Tujuan</label>

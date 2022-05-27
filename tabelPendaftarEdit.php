@@ -229,7 +229,6 @@
                                                 <label class="col-sm-2 col-form-label">NIK</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
-<<<<<<< HEAD
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -294,75 +293,6 @@
                                                 <tr>
                                                     <td>BB</td>
                                                     <td><input type="text" class="form-control" name="bb" value="<?php echo $d['bb']; ?>"></td>
-=======
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Negara Tujuan</label>
-                                                    <div class="col-sm-10">
-                                                        <div class="input-group mb-3">
-                                                            <select class="custom-select" id="inputGroupSelect02" name="id_negara">
-                                                                <option selected>pilih ulang negara tujuan...</option>
-                                                                <option value="1">Hongkong</option>
-                                                                <option value="2">Taiwan</option>
-                                                            </select>
-                                                            <div class="input-group-append">
-                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Tempat Lahir</label>
-                                                    <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                                                    <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Umur</label>
-                                                    <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="umur" value="<?php echo $d['umur']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Alamat Lengkap</label>
-                                                    <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="alamat_lengkap" value="<?php echo $d['alamat_lengkap']; ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                                                    <div class="col-sm-10">
-                                                        <div class="input-group mb-3">
-                                                            <select class="custom-select" id="inputGroupSelect02" name="jenis_kelamin">
-                                                                <option selected>pilih jenis kelamin...</option>
-                                                                <option>Pria</option>
-                                                                <option>Wanita</option>
-                                                            </select>
-                                                            <div class="input-group-append">
-                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">TB</label>
-                                                    <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="tb" value="<?php echo $d['tb']; ?>">
-                                                    </div>
->>>>>>> 70bcf0b983507c4cfde4113a2bab0a3233473a26
                                                 </div>
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">BB</label>
