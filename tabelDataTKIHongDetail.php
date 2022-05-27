@@ -326,6 +326,13 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th>Rekom ID</th>
+                                            <td>
+                                                <p>Klik link berikut untuk rekom id</p>
+                                                <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th>Status Proses</th>
                                             <td> 
                                                 <?php echo $d['keterangan']; ?>

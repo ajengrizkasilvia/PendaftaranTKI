@@ -233,23 +233,29 @@
                                                 </tr>
                                                 <tr>
                                                 <label>Nama Lengkap</label>
-                                                    <select class="custom-select" id="inputGroupSelect02" name="id">
-                                                    <option selected>pilih nama lengkap...</option>
-                                                        <?php
-                                                            include 'config.php';
-                                                            $konektor = mysqli_connect("localhost","root","", "tki");
-                                                            $no = 1;
-                                                            $data = mysqli_query($konektor, "SELECT * FROM user");
-                                                                while ($d = mysqli_fetch_array($data)) {
-                                                        ?>
-                                                            <option value="<?=$d['id'];?>">
-                                                                <?php echo $d['nama_lengkap']; ?>
-                                                            </option>
-                                                        <?php
-                                                            }
-                                                        ?>
-                                                    </select>
+                                                <td>
+                                                    <?php 
+                                                        include 'config.php';
+                                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                                        $no = 1;
+                                                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran
+                                                        INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
+                                                        while($d = mysqli_fetch_array($data)){
+                                                    ?>
+                                                        <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                    <td>
                                                 </tr>
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $id_dft = $_GET['id_dft'];
+                                                    $data = mysqli_query($konektor,"SELECT * FROM pendaftaran WHERE id_dft='$id_dft'");
+                                                    while($d = mysqli_fetch_array($data)){
+                                                ?>
                                                 <tr>
                                                     <td>Negara Tujuan</td>
                                                     <td>
@@ -383,6 +389,9 @@
                                                 </p>		
                                             </fieldset>
                                         </form>
+                                        <?php 
+                                    }
+                                ?>
                                         <?php 
                                     }
                                 ?>

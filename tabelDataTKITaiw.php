@@ -235,6 +235,7 @@
                                         <th>SKCK</th>
                                         <th>Kartu Kuning</th>
                                         <th>Biometri</th>
+                                        <th>Rekom ID</th>
                                         <th>Status Proses</th>
                                         <th>Keterangan</th>
                                         <th>Action</th>
@@ -263,6 +264,7 @@
                                             <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
+                                            <td>Klik link berikut <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a></td>
                                             <td>
                                             <div class="hero-unit">
                                                         <p>

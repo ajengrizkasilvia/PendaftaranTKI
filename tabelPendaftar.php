@@ -273,6 +273,11 @@
                                                 <td><?php echo $d['keterangan']; ?></td>
                                                 <td>
                                                     <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-primary btn-sm" href="tabelPendaftarDetail.php?id_dft=<?php echo $d['id_dft']; ?>">
+                                                        Detail
+                                                        </a>
+                                                    </p>
                                                         <p>
                                                             <a class="btn btn-warning btn-sm" href="tabelPendaftarEdit.php?id_dft=<?php echo $d['id_dft']; ?>">
                                                             Edit

@@ -236,6 +236,7 @@
                                             <th>SKCK</th>
                                             <th>Kartu Kuning</th>
                                             <th>Biometri</th>
+                                            <th>Rekom ID</th>
                                             <th>Status Proses</th>
                                             <th>Keterangan</th>
                                             <th>Action</th>
@@ -263,6 +264,7 @@
                                     <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 300px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
+                                    <td>Klik link berikut <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a></td>
                                     <td><?php echo $d['keterangan']; ?></td>
                                     <td><?php echo $d['keterangan_hk']; ?></td>
                                     <td>

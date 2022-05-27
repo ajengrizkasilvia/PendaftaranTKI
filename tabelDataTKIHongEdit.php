@@ -223,11 +223,29 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
                                                     <div class="col-sm-10">
-                                                        <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                                    <?php 
+                                                        include 'config.php';
+                                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                                        $no = 1;
+                                                        $data = mysqli_query($konektor,"SELECT * FROM hongkong
+                                                        INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
+                                                        while($d = mysqli_fetch_array($data)){
+                                                    ?>
+                                                        <td><input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>"></td>
+                                                        <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                    <?php
+                                                        }
+                                                    ?>
                                                     </div>
                                                 </div>
-
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $id_hongkong = $_GET['id_hongkong'];
+                                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
+                                                    while($d = mysqli_fetch_array($data)){
+                                                ?>
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Sektor</label>
                                                     <div class="col-sm-10">
@@ -338,6 +356,9 @@
                                             </fieldset>
                                         </form>
                                         <?php 
+                                    }
+                                ?>
+                                 <?php 
                                     }
                                 ?>
                                 <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelDataTKIHong.php';">Cancel</button></td>

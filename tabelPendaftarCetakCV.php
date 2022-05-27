@@ -5,22 +5,20 @@
 </head>
 <body>
  
-	<!-- <?php 
-	// include 'config.php';
-    // $konektor = mysqli_connect("localhost","root","", "tki");
-	// ?>
-
-    // <?php 
-	// 	$no = 1;
-	// 	$data = mysqli_query($konektor,"SELECT * FROM hongkong 
-    //                                     INNER JOIN pendaftaran ON hongkong.id_dft = pendaftaran.id_dft
-    //                                     INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua");
-	// 	while($d = mysqli_fetch_array($data)){
-	?> -->
-     
          <h3 ALIGN="Center">PT. HENDRARTA ARGARAYA</h3>
          <h3 ALIGN="Center">APPLICANT'S INFORMATION SHEET</h3><br>
          <div>
+            <?php 
+                include 'config.php';
+                $konektor = mysqli_connect("localhost","root","", "tki");
+                $no = 1;
+                $id_dft = $_GET['id_dft'];
+                $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
+                                    INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
+                                    INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
+                                    INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
+                while($d = mysqli_fetch_array($data)){
+            ?>
             <table width= "100%">
             <tr>
                 <td color="blue"><b>PERSONAL DATA</b></td>
@@ -28,37 +26,37 @@
             </tr>
             <tr>
                 <td><b>Nama TKI</b></td>
-                <td>nama</td>
+                <td><?php echo $d['nama_lengkap']; ?></td>
                 <td colspan="2"></td>
                 <td><b>Age</b></td> 
-                <td colspan="2">umur</td>
+                <td colspan="2"><?php echo $d['umur']; ?></td>
                 
             </tr>
             <tr>
                 <td><b>Place / Date of Birtd</b></td>
-                <td>tempat</td>
+                <td><?php echo $d['tempat_lahir']; ?> <?php echo $d['tanggal_lahir']; ?></td>
                 <td colspan="2"></td>
                 <td><b>Weight</b></td>
-                <td colspan="2">berat</td>
+                <td colspan="2"><?php echo $d['bb']; ?></td>
             </tr>
             <tr>
                 <td><b>Religion</b></td>
-                <td>agama</td>
+                <td><?php echo $d['agama']; ?></td>
                 <td colspan="2"></td>
                 <td><b>Height</b></td>
-                <td colspan="2">tinggi</td>
+                <td colspan="2"><?php echo $d['tb']; ?></td>
             </tr>
             <tr>
                 <td><b>Marital Status</b></td>
-                <td>Marital Status</td>
+                <td><?php echo $d['status']; ?></td>
             </tr>
             <tr>
                 <td><b>Address</b></td>
-                <td>alamat</td>
+                <td><?php echo $d['alamat_lengkap']; ?></td>
             </tr>
             <tr>
                 <td><b>Telephone</b></td>
-                <td>telp</td>
+                <td><?php echo $d['no_telp']; ?></td>
             </tr>
             <tr>
                 <td><br></td>
@@ -199,9 +197,9 @@
                 <td></td>
                 <td colspan="4">SHE HAS EXPERIENCE TAKE CARE OF BABY - ELDERLY - CHILDREN</td>
             </tr>
-		<!-- <?php 
-		//}
-		?> -->
+            <?php 
+                                            }
+                                        ?>
     </div>
 </div>
 
