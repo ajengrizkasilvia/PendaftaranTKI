@@ -218,24 +218,28 @@
                                                                         WHERE id_sertif_taiw='$id_sertif_taiw'");
                                         while($d = mysqli_fetch_array($data)){
                                     ?>
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                                <table class="table table-bordered">
+                                    <tbody>
                                         <tr>
-                                            <td>Nama Lengkap</td>
+                                            <th>Nama Lengkap</th>
                                             <td>
                                             <?php echo $d['nama_lengkap']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Sertifikasi Keahlian</td>
+                                            <th>Sertifikasi Keahlian</th>
                                             <td>
-                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">                                                
+                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">
+                                                <a href="tabelSertifikasiTaiwanCetakKeahlian.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Sertifikasi Bahasa</td>
+                                            <th>Sertifikasi Bahasa</th>
                                             <td>
-                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">                                                 
+                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">    
+                                                <a href="tabelSertifikasiTaiwanCetakBahasa.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                             
                                             </td>
                                         </tr>
                                         
@@ -244,6 +248,7 @@
                                     ?>
                                     </tbody>
                                 </table>
+                                <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='tabelSertifikasiTaiwan.php';">Back</button></td>
                             </div>
                         </div>
                     </div>

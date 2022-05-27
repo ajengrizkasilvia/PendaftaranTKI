@@ -184,48 +184,44 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <form method="post" action="TKISertifikasiHongkongAddProses.php" enctype="multipart/form-data">
-                                <fieldset>
-                                    <div class="form-group">			
-                                        <label>Nama TKI</label>
-                                            <!-- <td>
-                                                <?php 
-                                                    include 'config.php';
-                                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                                    $no = 1;
-                                                    $username = $_SESSION['username'];
-                                                    $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
-                                                    while($d = mysqli_fetch_array($data)){
-                                                ?>
-                                                <td><input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                                <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
-                                                <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </td> -->
-                                        <td>
-                                            <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                            <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
+                                <form method="post" action="TKISertifikasiHongkongAddProses.php" enctype="multipart/form-data">
+                                    <fieldset>
+                                        <div class="form-group">			
+                                            <label>Nama TKI</label>
+                                                <td>
+                                                    <?php 
+                                                        include 'config.php';
+                                                        $konektor = mysqli_connect("localhost","root","", "tki");
+                                                        $no = 1;
+                                                        $username = $_SESSION['username'];
+                                                        $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                        while($d = mysqli_fetch_array($data)){
+                                                    ?>
+                                                    <td><input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
+                                                    <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                    <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
+                                            <td>
+                                                <input type="file" name="keahlian_hk" class="form-control"/>
+                                                <input type="hidden" name="keahlian_hk_lama" class="form-control"/>
                                         </td>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
-                                        <td>
-                                            <input type="file" name="keahlian_hk" class="form-control"/>
-                                            <input type="hidden" name="keahlian_hk_lama" class="form-control"/>
-                                    </td>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Upload Sertifikasi Bahasa</label>
-                                        <td><input type="file" name="bahasa_hk" class="form-control"/>
-                                        <input type="hidden" name="bahasa_hk_lama" class="form-control"/>
-                                    </td>
-                                    </div>
-                                         <p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Sertifikasi Bahasa</label>
+                                            <td><input type="file" name="bahasa_hk" class="form-control"/>
+                                            <input type="hidden" name="bahasa_hk_lama" class="form-control"/>
+                                        </td>
+                                        </div>
+                                        <p>
                                             <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                         </p>		
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                        </p>		
                                     </fieldset>
                                 </form>
                             </div>

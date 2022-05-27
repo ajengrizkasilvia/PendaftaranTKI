@@ -39,7 +39,8 @@ if($bahasa_hk != "") {
     }
 }else {
     $bahasa_baru = $_POST['bahasa_hk_lama'];
-} 
+}
+$id = $_POST['id_lama']; 
 $query = "INSERT INTO sertifhongkong (id_sertif_hk, id, keahlian_hk, bahasa_hk)
         VALUES('$id_sertif_hk', '$id', '$keahlian_baru', '$bahasa_baru')";
         $result = mysqli_query($konektor, $query);

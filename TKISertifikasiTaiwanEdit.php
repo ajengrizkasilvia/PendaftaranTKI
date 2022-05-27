@@ -186,9 +186,7 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_sertif_taiw = $_GET['id_sertif_taiw'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
-                                                                    INNER JOIN user ON sertiftaiwan.id = user.id
-                                                                    WHERE id_sertif_taiw='$id_sertif_taiw'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan INNER JOIN user ON sertiftaiwan.id = user.id WHERE id_sertif_taiw='$id_sertif_taiw'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="TKISertifikasiTaiwanEditProses.php" enctype="multipart/form-data">
@@ -196,8 +194,9 @@
                                                 <tr>			
                                                     <td>Nama TKI</td>
                                                     <td>
-                                                        <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
-                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                                        <td><input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>"></td>
+                                                        <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>

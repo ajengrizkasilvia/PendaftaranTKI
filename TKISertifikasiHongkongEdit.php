@@ -186,7 +186,7 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_sertif_hk = $_GET['id_sertif_hk'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong WHERE id_sertif_hk='$id_sertif_hk'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong INNER JOIN user ON sertifhongkong.id = user.id WHERE id_sertif_hk='$id_sertif_hk'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="TKISertifikasiHongkongEditProses.php" enctype="multipart/form-data">
@@ -195,7 +195,8 @@
                                                     <td>Nama TKI</td>
                                                     <td>
                                                         <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly>
+                                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
                                                     </td>
                                                 </tr>
                                                 <tr>

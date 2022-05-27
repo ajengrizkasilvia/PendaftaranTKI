@@ -23,6 +23,7 @@
     }else {
         $keahlian_baru = $_POST['keahlian_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE sertifhongkong SET id='$id', keahlian_hk='$keahlian_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
@@ -48,6 +49,7 @@
     }else {
         $bahasa_baru = $_POST['bahasa_hk_lama'];
     }
+    $id = $_POST['id_lama'];
     $query  = "UPDATE sertifhongkong SET id='$id', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
@@ -82,6 +84,7 @@
                 move_uploaded_file($file_tmpbahasa, 'berkas/SertifHongkong/Bahasa/'.$bahasa_baru);
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+        $id = $_POST['id_lama'];
         $query  = "UPDATE sertifhongkong SET id='$id', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
               $result = mysqli_query($konektor, $query);
@@ -101,6 +104,7 @@
         }
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
+        $id = $_POST['id_lama'];
         $query  = "UPDATE sertifhongkong SET id='$id', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
         $result = mysqli_query($konektor, $query);

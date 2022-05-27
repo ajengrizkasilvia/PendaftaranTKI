@@ -209,7 +209,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Data TKI Taiwan</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
                                 <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
@@ -218,116 +217,125 @@
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelDataTKITaiwEditProses.php" enctype="multipart/form-data">
-                                            <table>
-                                                <tr>			
-                                                    <td>Nama TKI</td>
-                                                    <td>
+                                            <fieldset>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
+                                                    <div class="col-sm-10">
                                                         <input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>">
                                                         <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sektor</td>
-                                                    <td><input type="text" class="form-control" name="sektor_taiw" value="<?php echo $d['sektor_taiw']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>E-KTP</td>
-                                                    <td>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Sektor</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="sektor_taiw" value="<?php echo $d['sektor_taiw']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">E-KTP</label>
+                                                    <div class="col-sm-10">
                                                         <img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="ektp_taiw" /></td>
                                                         <input type="hidden" name="ektp_taiw_lama" value="<?php echo $d['ektp_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kartu Keluarga</td>
-                                                    <td>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Kartu Keluarga</label>
+                                                    <div class="col-sm-10">
                                                         <img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="kk_taiw" /></td>
                                                         <input type="hidden" name="kk_taiw_lama" value="<?php echo $d['kk_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Akta Kelahiran</td>
-                                                    <td>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Akta Kelahiran</label>
+                                                    <div class="col-sm-10">
                                                         <img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="akte_taiw" /></td>
                                                         <input type="hidden" name="akte_taiw_lama" value="<?php echo $d['akte_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Surat Menikah</td>
-                                                    <td>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Surat Menikah</label>
+                                                    <div class="col-sm-10">
                                                         <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratnikah_taiw" /></td>
                                                         <input type="hidden" name="suratnikah_taiw_lama" value="<?php echo $d['suratnikah_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Surat Ijin Ortu/Suami</td>
-                                                    <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Surat Ijin Ortu/Suami</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratijin_taiw" /></td>
                                                         <input type="hidden" name="suratijin_taiw_lama" value="<?php echo $d['suratijin_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ex Paspor</td>
-                                                    <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Ex Pasport</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="expaspor_taiw" /></td>
                                                         <input type="hidden" name="expaspor_taiw_lama" value="<?php echo $d['expaspor_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>SKCK</td>
-                                                    <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">SKCK</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="skck_taiw" /></td>
                                                         <input type="hidden" name="skck_taiw_lama" value="<?php echo $d['skck_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kartu Kuning</td>
-                                                    <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Kartu Kuning</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="kartukuning_taiw" /></td>
                                                         <input type="hidden" name="kartukuning_taiw_lama" value="<?php echo $d['kartukuning_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Biometri</td>
-                                                    <td>
-                                                        <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Biometri</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="biometri_taiw" /></td>
                                                         <input type="hidden" name="biometri_taiw_lama" value="<?php echo $d['biometri_taiw']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Status Proses</td>
-                                                    <td>
-                                                        <select class="form-control" name="id_tahapdua">
-                                                        <option>--pilih status proses--</option>
-                                                        <option value='1'>Diajukan</option>
-                                                        <option value='2'>Diverifikasi</option>
-                                                        <option value='3'>Diterima</option>
-                                                        <option value='4'>Ditolak</option>
-                                                        </select>  
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Keterangan</td>
-                                                    <td><input type="text" class="form-control" name="keterangan_taiw" value="<?php echo $d['keterangan_taiw']; ?>"></td>
-                                                </tr>
-                                                <tr>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Status Proses</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
+                                                                <option selected>pilih ulang status proses...</option>
+                                                                <option value='1'>Diajukan</option>
+                                                                <option value='2'>Diverifikasi</option>
+                                                                <option value='3'>Diterima</option>
+                                                                <option value='4'>Ditolak</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Keterangan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="keterangan_taiw" value="<?php echo $d['keterangan_taiw']; ?>">
+                                                    </div>
+                                                </div>
+                                                <p>
                                                     <td></td>
-                                                    <td><input type="submit" value="SIMPAN"></td>
-                                                </tr>		
-                                            </table>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                                </p>		
+                                            </fieldset>
                                         </form>
                                         <?php 
                                     }
                                 ?>
-                            </div>
+                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelDataTKITaiw.php';">Cancel</button></td>
                         </div>
                     </div>
                 </div>

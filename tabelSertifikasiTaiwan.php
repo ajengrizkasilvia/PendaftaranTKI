@@ -239,19 +239,19 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
                                                 <div class="hero-unit">
                                                     <p>
-                                                        <a class="btn btn-primary btn-sm" href="tabelSertifikasiTaiwanDetail.php?id_sertif_hk=<?php echo $d['id_sertif_taiw']; ?>">
+                                                        <a class="btn btn-primary btn-sm" href="tabelSertifikasiTaiwanDetail.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">
                                                             Detail
                                                         </a>
                                                     </p>
                                                 </div>
                                                 <div class="hero-unit">
                                                     <p>
-                                                        <a class="btn btn-warning btn-sm" href="tabelSertifikasiTaiwanEdit.php?id_sertif_hk=<?php echo $d['id_sertif_taiw']; ?>">
+                                                        <a class="btn btn-warning btn-sm" href="tabelSertifikasiTaiwanEdit.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">
                                                             Edit
                                                         </a>
                                                     </p>

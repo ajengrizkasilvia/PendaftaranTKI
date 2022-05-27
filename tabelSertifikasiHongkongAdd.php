@@ -199,8 +199,6 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian atau Ketrampilan TKI</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Cetak Disini</a>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
                     Upload berkas sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg. </p>
@@ -232,10 +230,10 @@
                                         <td><input type="file" name="bahasa_hk" class="form-control"/></td>
                                         <input type="hidden" name="bahasa_hk_lama" class="form-control"/>
                                     </div>
-                                         <p>
-                                            <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                         </p>		
+                                    <p>
+                                        <td></td>
+                                        <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                    </p>	
                                     </fieldset>
                                 </form>
                             </div>

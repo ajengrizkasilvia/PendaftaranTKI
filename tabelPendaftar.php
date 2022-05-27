@@ -218,7 +218,6 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Tanggal Daftar</th>
                                             <th>No Telp</th>
                                             <th>NIK</th>
                                             <th>Nama Lengkap</th>
@@ -254,7 +253,6 @@
                                             ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
-                                                <td><?php echo "" . date ("d F, Y (l)"). "" ?></td>
                                                 <td><?php echo $d['no_telp']; ?></td>
                                                 <td><?php echo $d['nik']; ?></td>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
