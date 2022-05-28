@@ -213,7 +213,7 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_dft = $_GET['id_dft'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM pendaftaran WHERE id_dft='$id_dft'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM pendaftaran INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
@@ -226,79 +226,80 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">NIK</label>
+                                                    <label class="col-sm-2 col-form-label">NIK</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                <label>Nama Lengkap</label>
-                                                <td>
-                                                    <?php 
-                                                        include 'config.php';
-                                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                                        $no = 1;
-                                                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran
-                                                        INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
-                                                        while($d = mysqli_fetch_array($data)){
-                                                    ?>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
+                                                    <div class="col-sm-10">
+                                                
                                                         <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
                                                         <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                    <?php
-                                                        }
-                                                    ?>
-                                                    <td>
-                                                </tr>
-                                                <?php
-                                                    include 'config.php';
-                                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                                    $id_dft = $_GET['id_dft'];
-                                                    $data = mysqli_query($konektor,"SELECT * FROM pendaftaran WHERE id_dft='$id_dft'");
-                                                    while($d = mysqli_fetch_array($data)){
-                                                ?>
-                                                <tr>
-                                                    <td>Negara Tujuan</td>
-                                                    <td>
-                                                        <select class="form-control" name="id_negara">
-                                                            <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
-                                                            <option value='2'>Taiwan</option>
-                                                        </select>   
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tempat Lahir</td>
-                                                    <td><input type="text" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tanggal Lahir</td>
-                                                    <td><input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Umur</td>
-                                                    <td><input type="text" class="form-control" name="umur" value="<?php echo $d['umur']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Alamat Lengkap</td>
-                                                    <td><input type="text" class="form-control" name="alamat_lengkap" value="<?php echo $d['alamat_lengkap']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jenis Kelamin</td>
-                                                    <td>
-                                                        <select class="form-control" name="jenis_kelamin">
-                                                            <option>--Atur Ulang Jenis Kelamin--</option>
-                                                            <option>Pria</option>
-                                                            <option>Wanita</option>
-                                                        </select>   
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>TB</td>
-                                                    <td><input type="text" class="form-control" name="tb" value="<?php echo $d['tb']; ?>"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>BB</td>
-                                                    <td><input type="text" class="form-control" name="bb" value="<?php echo $d['bb']; ?>"></td>
+                                                   
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Negara Tujuan</label>
+                                                    <div class="col-sm-10">
+                                                    <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="id_negara">
+                                                                <option selected>pilih ulang negara tujuan...</option>
+                                                                <option value='1'>Hongkong</option>
+                                                                <option value='2'>Taiwan</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Tempat Lahir</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Umur</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="umur" value="<?php echo $d['umur']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Alamat Lengkap</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="alamat_lengkap" value="<?php echo $d['alamat_lengkap']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                                                    <div class="col-sm-10">
+                                                    <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="jenis_kelamin">
+                                                                <option selected>pilih ulang jenis kelamin...</option>
+                                                                <option>Pria</option>
+                                                                <option>Wanita</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">TB</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="tb" value="<?php echo $d['tb']; ?>">
+                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">BB</label>
@@ -389,9 +390,6 @@
                                                 </p>		
                                             </fieldset>
                                         </form>
-                                        <?php 
-                                    }
-                                ?>
                                         <?php 
                                     }
                                 ?>

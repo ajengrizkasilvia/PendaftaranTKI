@@ -174,7 +174,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">Berkas TKI Taiwan</h6>
                     </div>
                     <div class="card-body">
-                        <form action="TKIUploadBerkasTaiwanAddProses.php" method="post" enctype="multipart/form-data">
+                        <!-- <form action="TKIUploadBerkasTaiwanAddProses.php" method="post" enctype="multipart/form-data">
                             <table>
                                 <tr>			
                                             <?php 
@@ -282,7 +282,123 @@
                                         <td><input type="submit" href="tabelDataTKITaiw.php" value="Cancel"></td>
                                     </p>		
                                 </table>
-                            </form>
+                            </form> -->
+                            <form method="post" action="TKIUploadBerkasTaiwanAddProses.php" enctype="multipart/form-data">
+                                    <fieldset>
+                                        <div class="form-group">			
+                                            <label>Nama TKI</label>
+                                            <?php 
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $username = $_SESSION['username'];
+                                                    $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
+                                                    while($d = mysqli_fetch_array($data)){
+                                                ?>
+                                                <td><input type="hidden" name="id_taiwan" value="<?php echo $d['id_taiwan']; ?>"></td>
+                                                <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                <?php
+                                                    }
+                                                ?>
+                                                
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Sektor</label>
+                                            <td>
+                                                <input type="text" name="sektor_taiw" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>E-KTP</label>
+                                            <td>
+                                                <input type="file" name="ektp_taiw" class="form-control"/>
+                                                <input type="hidden" name="ektp_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Kartu Keluarga</label>
+                                            <td>
+                                                <input type="file" name="kk_taiw" class="form-control"/>
+                                                <input type="hidden" name="kk_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Akta Kelahiran</label>
+                                            <td>
+                                                <input type="file" name="akte_taiw" class="form-control"/>
+                                                <input type="hidden" name="akte_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Surat Menikah</label>
+                                            <td>
+                                                <input type="file" name="suratnikah_taiw" class="form-control"/>
+                                                <input type="hidden" name="suratnikah_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Surat Ijin Ortu/Suami</label>
+                                            <td>
+                                                <input type="file" name="suratijin_taiw" class="form-control"/>
+                                                <input type="hidden" name="suratijin_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ex Paspor</label>
+                                            <td>
+                                                <input type="file" name="expaspor_taiw" class="form-control"/>
+                                                <input type="hidden" name="expaspor_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>SKCK</label>
+                                            <td>
+                                                <input type="file" name="skck_taiw" class="form-control"/>
+                                                <input type="hidden" name="skck_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
+                                            <td>Kartu Kuning</td>
+                                            <td><input type="file" name="kartukuning_taiw" class="form-control"/></td>
+                                            <input type="hidden" name="kartukuning_taiw_lama" class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <td>Biometri</td>
+                                            <td><input type="file" name="biometri_taiw" class="form-control"/></td>
+                                            <input type="hidden" name="biometri_taiw_lama" class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                        <label>Status Proses</label>
+                                            <!-- <td>
+                                                <select class="form-control" name="id_tahapdua">
+                                                    <option>--pilih status proses--</option>
+                                                    <option value='1'>Diajukan</option>
+                                                </select>
+                                                </td> -->
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
+                                                    <option selected>pilih ajukan status proses...</option>
+                                                    <option value='1'>Diajukan</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Keterangan</label>
+                                            <td>
+                                                <input type="text" name="keterangan_taiw" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <p>
+                                            <td></td>
+                                            <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                        </p>		
+                                    </fieldset>
+                                </form>
                         </div>
                     </div>
 

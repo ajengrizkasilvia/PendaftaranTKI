@@ -185,40 +185,25 @@
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_sertif_taiw = $_GET['id_sertif_taiw'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan INNER JOIN user ON sertiftaiwan.id = user.id WHERE id_sertif_taiw='$id_sertif_taiw'");
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                    INNER JOIN user ON sertiftaiwan.id = user.id 
+                                                                    WHERE id_sertif_taiw='$id_sertif_taiw'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="TKISertifikasiTaiwanEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
-                                                <!-- <tr>			
-                                                    <td>Nama TKI</td>
-                                                    <td>
-                                                        
-                                                    </td>
-                                                </tr> -->
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
                                                         <div class="col-sm-10">
-                                                            <?php 
-                                                                include 'config.php';
-                                                                $konektor = mysqli_connect("localhost","root","", "tki");
-                                                                $no = 1;
-                                                                $username = $_SESSION['username'];
-                                                                $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
-                                                                while($d = mysqli_fetch_array($data)){
-                                                            ?>
                                                             <td><input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>"></td>
                                                             <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
                                                             <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                            <?php  
-                                                                }
-                                                            ?>
                                                         </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
                                                     <div class="col-sm-10">
-                                                    <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                    <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;height:150px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="keahlian_taiw" />
                                                         <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                                     </div>			
@@ -226,7 +211,7 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Sertifikasi Keahlian</label>
                                                     <div class="col-sm-10">
-                                                    <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
+                                                    <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 150px;height: 150px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="bahasa_taiw" />
                                                         <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                                     </div>			
@@ -238,7 +223,7 @@
                                                 </p>
                                             </fieldset>
                                         </form>
-                                    <?php 
+                                <?php    
                                     }
                                 ?>
                         </div>

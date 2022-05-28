@@ -209,38 +209,39 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
                         </div>
                         <div class="card-body">
-                                <?php
+                        <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
                                     $id_sertif_taiw = $_GET['id_sertif_taiw'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan
-                                                                    INNER JOIN user ON sertiftaiwan.id = user.id
+                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                                    INNER JOIN user ON sertiftaiwan.id = user.id 
                                                                     WHERE id_sertif_taiw='$id_sertif_taiw'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                         <form method="post" action="tabelSertifikasiTaiwanEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Nama TKI</label>
+                                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
                                                         <div class="col-sm-10">
-                                                            <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
-                                                            <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                                            <td><input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>"></td>
+                                                            <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
                                                         </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sertifikasi Bahasa</label>
+                                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
                                                     <div class="col-sm-10">
-                                                        <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="keahlian_taiw" /></td>
+                                                    <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;height:150px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="keahlian_taiw" />
                                                         <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                                     </div>			
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Sertifikasi Keahlian</label>
                                                     <div class="col-sm-10">
-                                                        <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="bahasa_taiw" /></td>
-                                                        <input type="hidden" name="bahasa_taiw_lama" value="<?php echo $d['bahasa_taiw']; ?>">
+                                                    <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 150px;height: 150px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="bahasa_taiw" />
+                                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                                     </div>			
                                                 </div>
                                                 <p>
@@ -250,10 +251,9 @@
                                                 </p>
                                             </fieldset>
                                         </form>
-                                        <?php 
+                                <?php    
                                     }
                                 ?>
-                            
                         </div>
                     </div>
                     

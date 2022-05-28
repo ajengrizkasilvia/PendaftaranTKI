@@ -225,7 +225,8 @@
                                                 <label class="col-sm-2 col-form-label">Nama TKI</label>
                                                     <div class="col-sm-10">
                                                         <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['id']; ?>">
+                                                        <input type="text" class="form-control" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly>
+                                                        <input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

@@ -214,6 +214,7 @@
                                 <?php
                                     include 'config.php';
                                     $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $no = 1;
                                     $id_hongkong = $_GET['id_hongkong'];
                                     $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
                                     while($d = mysqli_fetch_array($data)){
@@ -221,31 +222,16 @@
                                         <form method="post" action="tabelDataTKIHongEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
+                                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
                                                     <div class="col-sm-10">
-                                                    <?php 
-                                                        include 'config.php';
-                                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                                        $no = 1;
-                                                        $data = mysqli_query($konektor,"SELECT * FROM hongkong
-                                                        INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
-                                                        while($d = mysqli_fetch_array($data)){
-                                                    ?>
+                                                    
                                                         <td><input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>"></td>
                                                         <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
                                                         <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                    <?php
-                                                        }
-                                                    ?>
+                                                   
                                                     </div>
                                                 </div>
-                                                <?php
-                                                    include 'config.php';
-                                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                                    $id_hongkong = $_GET['id_hongkong'];
-                                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
-                                                    while($d = mysqli_fetch_array($data)){
-                                                ?>
+                                                
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Sektor</label>
                                                     <div class="col-sm-10">
@@ -355,9 +341,7 @@
                                                 </p>		
                                             </fieldset>
                                         </form>
-                                        <?php 
-                                    }
-                                ?>
+                                       
                                  <?php 
                                     }
                                 ?>

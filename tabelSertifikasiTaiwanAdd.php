@@ -217,10 +217,24 @@
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
-                                        <td>
+                                        <select class="custom-select" id="inputGroupSelect02" name="id">
+                                            <option selected>pilih nama lengkap...</option>
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $data = mysqli_query($konektor, "SELECT * FROM user");
+                                                        while ($d = mysqli_fetch_array($data)) {
+                                                ?>
+                                                
+                                                    <option value="<?=$d['id'];?>">
+                                                        <?php echo $d['nama_lengkap']; ?>
+                                                    </option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
                                             <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
-                                            <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
-                                        </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
@@ -232,10 +246,10 @@
                                         <td><input type="file" name="bahasa_taiw" class="form-control"/></td>
                                         <input type="hidden" name="bahasa_taiw_lama" class="form-control"/>
                                     </div>
-                                         <p>
-                                            <td></td>
-                                            <td><input type="submit" value="SIMPAN"></td>
-                                         </p>		
+                                    <p>
+                                        <td></td>
+                                        <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                    </p>		
                                     </fieldset>
                                 </form>
                             </div>

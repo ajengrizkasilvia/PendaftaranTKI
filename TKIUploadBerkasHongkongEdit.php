@@ -178,142 +178,136 @@
                 </div>
                 <div class="card-body">
                     <?php
-                        include 'config.php';
-                        $konektor = mysqli_connect("localhost","root","", "tki");
-                        $id_hongkong = $_GET['id_hongkong'];
-                        $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
-                        while($d = mysqli_fetch_array($data)){
-                    ?>
-                            <form method="post" action="TKIUploadBerkasHongkongEditProses.php" enctype="multipart/form-data">
-                                <fieldset>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
-                                            <div class="col-sm-10">
-                                                <?php 
-                                                    include 'config.php';
-                                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                                    $no = 1;
-                                                    $username = $_SESSION['username'];
-                                                    $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
-                                                    while($d = mysqli_fetch_array($data)){
-                                                ?>
-                                                <input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>">
-                                                <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
-                                                <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Sektor</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="sektor_hk" value="<?php echo $d['sektor_hk']; ?>">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">E-KTP</label>
-                                            <div class="col-sm-10">
-                                                <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="ektp_hk"></td>
-                                                <input type="hidden" name="ektp_hk_lama" value="<?php echo $d['ektp_hk']; ?>">
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Kartu Keluarga</label>
-                                            <div class="col-sm-10">
-                                                <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="kk_hk"></td>
-                                                <input type="hidden" name="kk_hk_lama" value="<?php echo $d['kk_hk']; ?>">
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Akta Kelahiran</label>
-                                        <div class="col-sm-10">
-                                            <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                            <input type="file" name="akte_hk"/></td>
-                                            <input type="hidden" name="akte_hk_lama" value="<?php echo $d['akte_hk']; ?>"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Surat Menikah</label>
-                                        <div class="col-sm-10">
-                                            <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                            <input type="file" name="suratnikah_hk"/></td>
-                                            <input type="hidden" name="suratnikah_hk_lama" value="<?php echo $d['suratnikah_hk']; ?>"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Surat Ijin Ortu/Suami</label>
-                                        <div class="col-sm-10">
-                                            <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                            <input type="file" name="suratijin_hk"/></td>
-                                            <input type="hidden" name="suratijin_hk_lama" value="<?php echo $d['suratijin_hk']; ?>" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Ex Pasport</label>
-                                            <div class="col-sm-10">
-                                                <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="expaspor_hk"/></td>
-                                                <input type="hidden" name="expaspor_hk_lama" value="<?php echo $d['expaspor_hk']; ?>"/>
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">SKCK</label>
-                                            <div class="col-sm-10">
-                                                <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="skck_hk"/></td>
-                                                <input type="hidden" name="skck_hk_lama" value="<?php echo $d['skck_hk']; ?>"/>
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Kartu Kuning</label>
-                                            <div class="col-sm-10">
-                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="kartukuning_hk"/></td>
-                                                <input type="hidden" name="kartukuning_hk_lama" value="<?php echo $d['kartukuning_hk']; ?>"/>
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Biometri</label>
-                                            <div class="col-sm-10">
-                                                <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
-                                                <input type="file" name="biometri_hk"/></td>
-                                                <input type="hidden" name="biometri_hk_lama" value="<?php echo $d['biometri_hk']; ?>"/>
-                                            </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Status Proses</label>
-                                        <div class="col-sm-10">
-                                            <div class="input-group mb-3">
-                                                <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
-                                                    <option selected>pilih ulang ajukan status proses...</option>
-                                                    <option value='1'>Diajukan</option>
-                                                </select>
-                                                <div class="input-group-append">
-                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                    include 'config.php';
+                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                    $id_hongkong = $_GET['id_hongkong'];
+                                    $data = mysqli_query($konektor,"SELECT * FROM hongkong INNER JOIN user ON hongkong.id = user.id WHERE id_hongkong='$id_hongkong'");
+                                    while($d = mysqli_fetch_array($data)){
+                                ?>
+                                        <form method="post" action="TKIUploadBerkasHongkongEditProses.php" enctype="multipart/form-data">
+                                            <fieldset>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
+                                                    <div class="col-sm-10">
+                                                    
+                                                        <td><input type="hidden" name="id_hongkong" value="<?php echo $d['id_hongkong']; ?>"></td>
+                                                        <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                                    
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Keterangan</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="keterangan_hk" value="<?php echo $d['keterangan_hk']; ?>">
-                                            </div>
-                                    </div>
-                                    <p>
-                                        <td></td>
-                                        <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
-                                    </p>
+                                                
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Sektor</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="sektor_hk" value="<?php echo $d['sektor_hk']; ?>">
+                                                    </div>
+                                                </div>
 
-                                </fieldset>
-                            </form>
-                        <?php 
-                            }
-                        ?>
-                        <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='TKIUploadBerkasHongkong.php';">Cancel</button></td>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">E-KTP</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="ektp_hk"></td>
+                                                        <input type="hidden" name="ektp_hk_lama" value="<?php echo $d['ektp_hk']; ?>">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Kartu Keluarga</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="kk_hk"></td>
+                                                        <input type="hidden" name="kk_hk_lama" value="<?php echo $d['kk_hk']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Akta Kelahiran</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="akte_hk"/></td>
+                                                        <input type="hidden" name="akte_hk_lama" value="<?php echo $d['akte_hk']; ?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Surat Menikah</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="suratnikah_hk"/></td>
+                                                        <input type="hidden" name="suratnikah_hk_lama" value="<?php echo $d['suratnikah_hk']; ?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Surat Ijin Ortu/Suami</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="suratijin_hk"/></td>
+                                                        <input type="hidden" name="suratijin_hk_lama" value="<?php echo $d['suratijin_hk']; ?>" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Ex Pasport</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="expaspor_hk"/></td>
+                                                        <input type="hidden" name="expaspor_hk_lama" value="<?php echo $d['expaspor_hk']; ?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">SKCK</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="skck_hk"/></td>
+                                                        <input type="hidden" name="skck_hk_lama" value="<?php echo $d['skck_hk']; ?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Kartu Kuning</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="kartukuning_hk"/></td>
+                                                        <input type="hidden" name="kartukuning_hk_lama" value="<?php echo $d['kartukuning_hk']; ?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Biometri</label>
+                                                    <div class="col-sm-10">
+                                                        <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="biometri_hk"/></td>
+                                                        <input type="hidden" name="biometri_hk_lama" value="<?php echo $d['biometri_hk']; ?>"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Status Proses</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group mb-3">
+                                                            <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
+                                                                <option selected>pilih ulang status proses...</option>
+                                                                <option value='1'>Diajukan</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Keterangan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="keterangan_hk" value="<?php echo $d['keterangan_hk']; ?>">
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    <td></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                                </p>		
+                                            </fieldset>
+                                        </form>
+                                        
+                                 <?php 
+                                    }
+                                ?>
+                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='TKIUploadBerkasHongkong.php';">Cancel</button></td>
                     </div>
                 </div>
             </div>

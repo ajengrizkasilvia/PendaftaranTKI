@@ -215,10 +215,24 @@
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama TKI</label>
-                                        <td>
+                                        <select class="custom-select" id="inputGroupSelect02" name="id">
+                                            <option selected>pilih nama lengkap...</option>
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $data = mysqli_query($konektor, "SELECT * FROM user");
+                                                        while ($d = mysqli_fetch_array($data)) {
+                                                ?>
+                                                
+                                                    <option value="<?=$d['id'];?>">
+                                                        <?php echo $d['nama_lengkap']; ?>
+                                                    </option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
                                             <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
-                                            <input type="text" name="id" class="form-control" placeholder="Masukkan nama tki"/>
-                                        </td>
                                     </div>
                                     <div class="form-group">
                                         <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
