@@ -352,6 +352,72 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Nama Ayah</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="nama_ayah" value="<?php echo $d['nama_ayah']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pekerjaan Ayah</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="pekerjaan_ayah" value="<?php echo $d['pekerjaan_ayah_']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Nama Ibu</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="nama_ibu" value="<?php echo $d['nama_ibu']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pekerjaan Ibu</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="pekerjaan_ibu" value="<?php echo $d['pekerjaan_ibu']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Jumlah Saudara Laki-laki</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="jml_brother" value="<?php echo $d['jml_brother']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Jumlah Saudara Perempuan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="jml_sister" value="<?php echo $d['jml_sister']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Anak Nomor</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="anak_no" value="<?php echo $d['anak_no']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Nama Pasangan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="nama_pasangan" value="<?php echo $d['nama_pasangan']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pekerjaan Pasangan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="pekerjaan_pasangan" value="<?php echo $d['pekerjaan_pasangan']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Jumlah Anak</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="jml_anak" value="<?php echo $d['jml_anak']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Umur Anak</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="umur_anak" value="<?php echo $d['umur_anak']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Medical Check</label>
                                                     <div class="col-sm-10">
                                                     <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">

@@ -19,6 +19,17 @@ $pendidikan_terakhir= $_POST['pendidikan_terakhir'];
 $status= $_POST['status'];
 $agama= $_POST['agama'];
 $pengalaman_kerja= $_POST['pengalaman_kerja'];
+$nama_ayah = $_POST['nama_ayah'];
+$pekerjaan_ayah = $_POST['pekerjaan_ayah'];
+$nama_ibu = $_POST['nama_ibu'];
+$pekerjaan_ibu = $_POST['pekerjaan_ibu'];
+$jml_brother = $_POST['jml_brother'];
+$jml_sister = $_POST['jml_sister'];
+$anak_no = $_POST['anak_no'];
+$nama_pasangan = $_POST['nama_pasangan'];
+$pekerjaan_pasangan = $_POST['pekerjaan_pasangan'];
+$jml_anak = $_POST['jml_anak'];
+$umur_anak = $_POST['umur_anak'];
 $medical_check = $_FILES['medical_check']['name'];
 $pas_foto = $_FILES['pas_foto']['name'];
 $id_tahapsatu = $_POST['id_tahapsatu'];
@@ -41,7 +52,9 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       $id = $_POST['id_lama'];
       $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
-        status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', medical_check='$medical_baru', id_tahapsatu='$id_tahapsatu'
+        status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', nama_ayah='$nama_ayah', pekerjaan_ayah='$pekerjaan_ayah', nama_ibu='$nama_ibu',
+        pekerjaan_ibu='$pekerjaan_ibu', jml_brother='$jml_brother', jml_sister='$jml_sister', anak_no='$anak_no', nama_pasangan='$nama_pasangan',
+        pekerjaan_pasangan='$pekerjaan_pasangan', jml_anak='$jml_anak', umur_anak='$umur_anak', medical_check='$medical_baru', id_tahapsatu='$id_tahapsatu'
         WHERE id_dft='$id_dft'";
       $result = mysqli_query($konektor, $query);
       if(!$result){
@@ -69,7 +82,9 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       $id = $_POST['id_lama'];
       $query = "UPDATE pendaftaran SET id_negara='$id_negara', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
-        status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', pas_foto='$pasfoto_baru', id_tahapsatu='$id_tahapsatu'
+        status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', nama_ayah='$nama_ayah', pekerjaan_ayah='$pekerjaan_ayah', nama_ibu='$nama_ibu',
+        pekerjaan_ibu='$pekerjaan_ibu', jml_brother='$jml_brother', jml_sister='$jml_sister', anak_no='$anak_no', nama_pasangan='$nama_pasangan',
+        pekerjaan_pasangan='$pekerjaan_pasangan', jml_anak='$jml_anak', umur_anak='$umur_anak' pas_foto='$pasfoto_baru', id_tahapsatu='$id_tahapsatu'
         WHERE id_dft='$id_dft'";
       $result = mysqli_query($konektor, $query);
       if(!$result){

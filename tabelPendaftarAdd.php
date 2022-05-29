@@ -353,6 +353,50 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label>Nama Ayah</label>
+                                            <td><input type="text" name="nama_ayah" class="form-control" placeholder="Masukkan Nama Ayah"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Pekerjaan Ayah</label>
+                                            <td><input type="text" name="pekerjaan_ayah" class="form-control" placeholder="Masukkan Pekerjaan Ayah"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Ibu</label>
+                                            <td><input type="text" name="nama_ibu" class="form-control" placeholder="Masukkan Nama Ibu"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Pekerjaan Ibu</label>
+                                            <td><input type="text" name="pekerjaan_ibu" class="form-control" placeholder="Masukkan Pekerjaan Ibu"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Jumlah Saudara Laki-laki</label>
+                                            <td><input type="text" name="jml_brother" class="form-control" placeholder="Masukkan Jumlah Saudara Laki-laki"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Jumlah Saudara Perempuan</label>
+                                            <td><input type="text" name="jml_sister" class="form-control" placeholder="Masukkan Jumlah Saudara Perempuan"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Anak Nomor</label>
+                                            <td><input type="text" name="anak_no" class="form-control" placeholder="Masukkan Anak Nomor"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Pasangan</label>
+                                            <td><input type="text" name="nama_pasangan" class="form-control" placeholder="Masukkan Nama Pasangan"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Pekerjaan Pasangan</label>
+                                            <td><input type="text" name="pekerjaan_pasangan" class="form-control" placeholder="Masukkan Pekerjaan Pasangan"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Jumlah Anak</label>
+                                            <td><input type="text" name="jml_anak" class="form-control" placeholder="Masukkan Jumlah Anak"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Umur Anak</label>
+                                            <td><input type="text" name="umur_anak" class="form-control" placeholder="Masukkan Umur Anak"/></td>
+                                        </div>
+                                        <div class="form-group">
                                             <td>Medical Check</td>
                                             <td><input type="file" name="medical_check" class="form-control"/></td>
                                             <input type="hidden" name="medical_check_lama" class="form-control"/>

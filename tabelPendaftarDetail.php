@@ -323,6 +323,51 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th>Nama Ayah</th>
+                                            <td><?php echo $d['nama_ayah']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Pekerjaan Ayah</th>
+                                            <td><?php echo $d['pekerjaan_ayah']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nama Ibu</th>
+                                            <td><?php echo $d['nama_ibu']; ?></td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <th>Pekerjaan Ibu</th>
+                                            <td><?php echo $d['pekerjaan_ibu']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Jumlah Saudara Laki-laki</th>
+                                            <td><?php echo $d['jml_brother']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Jumlah Saudara Perempuan</th>
+                                            <td><?php echo $d['jml_sister']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Anak Nomor</th>
+                                            <td><?php echo $d['anak_no']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nama Pasangan</th>
+                                            <td><?php echo $d['nama_pasangan']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Pekerjaan Pasangan</th>
+                                            <td><?php echo $d['pekerjaan_pasangan']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Jumlah Anak</th>
+                                            <td><?php echo $d['jml_anak']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Umur Anak</th>
+                                            <td><?php echo $d['umur_anak']; ?></td>
+                                        </tr>
+                                        <tr>
                                             <th>Medical Check</th>
                                             <td>
                                                 <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">

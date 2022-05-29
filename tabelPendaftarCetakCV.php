@@ -67,39 +67,43 @@
             </tr>
             <tr>
                 <td><b>Father's Name</b></td>
-                <td>nama ayah</td>
+                <td><?php echo $d['nama_ayah']; ?></td>
                 <td colspan="2"></td>
                 <td><b>Name of Spouse</b></td>
-                <td colspan="2">nama suami/istri</td>
+                <td colspan="2"><?php echo $d['nama_pasangan']; ?></td>
            </tr>
             <tr>
                 <td><b>Occupation</b></td>
-                <td>nama</td>
+                <td><?php echo $d['pekerjaan_ayah']; ?></td>
                 <td colspan="2"></td>
                 <td><b>Occupation</b></td>
-                <td colspan="2">nama</td>
+                <td colspan="2"><?php echo $d['pekerjaan_pasangan']; ?></td>
            </tr>
             <tr>
                 <td><b>Mother's Name</b></td>
-                <td>nama ibu</td>
+                <td><?php echo $d['nama_ibu']; ?></td>
                 <td colspan="2"></td>
                 <td><b>No. of Children</b></td>
-                <td colspan="2">jumlah anak</td>
+                <td colspan="2"><?php echo $d['jml_anak']; ?></td>
+            </tr>
+            <tr>
+                <td><b>Occupation</b></td>
+                <td><?php echo $d['pekerjaan_ibu']; ?></td>
+                <td colspan="2"></td>
+                <td><b>Ages of Children</b></td>
+                <td colspan="2"><?php echo $d['umur_anak']; ?></td>
             </tr>
             <tr>
                 <td><b>No. of Brother</b></td>
-                <td>jumlah saudara laki-laki</td>
-                <td colspan="2"></td>
-                <td><b>Ages of Children</b></td>
-                <td colspan="2">umur anak</td>
+                <td><?php echo $d['jml_brother']; ?></td>
             </tr>
             <tr>
                 <td><b>No. of Sister</b></td>
-                <td>jumlah saudara perempuan</td>
+                <td><?php echo $d['jml_sister']; ?></td>
             </tr>
             <tr>
                 <td><b>In The Family, I'm No.</b></td>
-                <td>anak ke-</td>
+                <td><?php echo $d['anak_no']; ?></td>
             </tr>
             <tr>
                 <td><br></td>
@@ -116,7 +120,8 @@
                 <th>Average</th>
                 <th>Good</th>
                 <th>Excelent</th>
-                <td rowspan="11"><b>Foto</b></td>
+                <th></th>
+                <td rowspan="5"><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 210px;"></td>
             </tr>
             <tr>
                 <td></td>
@@ -198,8 +203,8 @@
                 <td colspan="4">SHE HAS EXPERIENCE TAKE CARE OF BABY - ELDERLY - CHILDREN</td>
             </tr>
             <?php 
-                                            }
-                                        ?>
+                }
+            ?>
     </div>
 </div>
 

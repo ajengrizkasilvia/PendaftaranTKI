@@ -19,6 +19,17 @@ $pendidikan_terakhir= $_POST['pendidikan_terakhir'];
 $status= $_POST['status'];
 $agama= $_POST['agama'];
 $pengalaman_kerja= $_POST['pengalaman_kerja'];
+$nama_ayah = $_POST['nama_ayah'];
+$pekerjaan_ayah = $_POST['pekerjaan_ayah'];
+$nama_ibu = $_POST['nama_ibu'];
+$pekerjaan_ibu = $_POST['pekerjaan_ibu'];
+$jml_brother = $_POST['jml_brother'];
+$jml_sister = $_POST['jml_sister'];
+$anak_no = $_POST['anak_no'];
+$nama_pasangan = $_POST['nama_pasangan'];
+$pekerjaan_pasangan = $_POST['pekerjaan_pasangan'];
+$jml_anak = $_POST['jml_anak'];
+$umur_anak = $_POST['umur_anak'];
 $medical_check = $_FILES['medical_check']['name'];
 $pas_foto = $_FILES['pas_foto']['name'];
 $id_tahapsatu = $_POST['id_tahapsatu'];
@@ -57,9 +68,12 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       }
       $id = $_POST['id_lama'];
       $query = "INSERT INTO pendaftaran (id_dft, id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
-        alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, medical_check, pas_foto, id_tahapsatu)
+        alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, nama_ayah, pekerjaan_ayah,
+      nama_ibu, pekerjaan_ibu, jml_brother, jml_sister, anak_no, nama_pasangan, pekerjaan_pasangan, jml_anak, umur_anak, medical_check, pas_foto, id_tahapsatu)
         VALUES('$id_dft', '$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
-        '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$medical_baru', '$pasfoto_baru', '$id_tahapsatu')";
+        '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja',  '$nama_ayah',
+     '$pekerjaan_ayah', '$nama_ibu', '$pekerjaan_ibu', '$jml_brother', '$jml_sister', '$anak_no', '$nama_pasangan',
+     '$pekerjaan_pasangan', '$jml_anak', '$umur_anak', '$medical_baru', '$pasfoto_baru', '$id_tahapsatu')";
         $result = mysqli_query($konektor, $query);
       if(!$result){
           die ("Query gagal dijalankan: ".mysqli_errno($konektor).

@@ -233,6 +233,17 @@
                                             <th>Status</th>
                                             <th>Agama</th>
                                             <th>Pengalaman Kerja</th>
+                                            <th>Nama Ayah</th>
+                                            <th>Pekerjaan Ayah</th>
+                                            <th>Nama Ibu</th>
+                                            <th>Pekerjaan Ibu</th>
+                                            <th>Jumlah Saudara Laki-laki</th>
+                                            <th>Jumlah Saudara Perempuan</th>
+                                            <th>Anak Nomor</th>
+                                            <th>Nama Pasangan</th>
+                                            <th>Pekerjaan Pasangan</th>
+                                            <th>Jumlah Anak</th>
+                                            <th>Umur Anak</th>
                                             <th>Medical Check-up</th>
                                             <th>Pas Foto</th>
                                             <th>Status Proses</th>
@@ -268,6 +279,17 @@
                                                 <td><?php echo $d['status']; ?></td>
                                                 <td><?php echo $d['agama']; ?></td>
                                                 <td><?php echo $d['pengalaman_kerja']; ?></td>
+                                                <td><?php echo $d['nama_ayah']; ?></p>
+                                                <td><?php echo $d['pekerjaan_ayah']; ?></p>
+                                                <td><?php echo $d['nama_ibu']; ?></p>
+                                                <td><?php echo $d['pekerjaan_ibu']; ?></p>
+                                                <td><?php echo $d['jml_brother']; ?></p>
+                                                <td><?php echo $d['jml_sister']; ?></p>
+                                                <td><?php echo $d['anak_no']; ?></p>
+                                                <td><?php echo $d['nama_pasangan']; ?></p>
+                                                <td><?php echo $d['pekerjaan_pasangan']; ?></p>
+                                                <td><?php echo $d['jml_anak']; ?></p>
+                                                <td><?php echo $d['umur_anak']; ?> tahun</p>
                                                 <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
                                                 <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
                                                 <td><?php echo $d['keterangan']; ?></td>
