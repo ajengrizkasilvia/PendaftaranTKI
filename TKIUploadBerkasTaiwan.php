@@ -176,6 +176,45 @@
                         Apabila terdapat data yang tidak sesuai silahkan upload ulang berkas anda dengan tekan menu upload berkas lagi dan konfirmasi ke Admin.
                     </p>
                     <p> Cek status proses untuk mengetahui proses anda. </p>
+                    <?php
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $username = $_SESSION['username'];
+                            $data = mysqli_query($konektor,"SELECT * FROM taiwan 
+                                                            INNER JOIN tahapdua ON taiwan.id_tahapdua = tahapdua.id_tahapdua
+                                                            INNER JOIN user ON taiwan.id = user.id WHERE username='$username'");
+                            while($d = mysqli_fetch_array($data)){
+                            
+                            if($d['keterangan'] == 'diajukan'){ 
+                        ?>
+                            <div class="alert alert-warning">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                Status <strong>"Diajukan!"</strong> periksa kelengkapan berkas anda.
+                            </div>
+                        <?php
+                        } else if($d['keterangan'] == 'divertifikasi'){ 
+                        ?>   
+                             <div class="alert alert-info">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Diverifikasi!"</strong> harap tunggu berkas anda diperiksa.
+                             </div>
+                        <?php
+                         } else if ($d['keterangan'] == 'diterima'){
+                        ?>
+                             <div class="alert alert-success">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Diterima!"</strong> Selamat anda telah memenuhi persyaratan pendaftaran.
+                             </div>
+                        <?php
+                         } else if($d['keterangan'] == 'ditolak'){
+                        ?>
+                             <div class="alert alert-danger">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Ditolak!"</strong> mohon maaf anda belum memenuhi persyaratan pendaftaran.
+                             </div>
+                        <?php
+                         }
+                        }
+                        ?>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

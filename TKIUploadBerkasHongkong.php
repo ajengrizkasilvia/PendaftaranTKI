@@ -171,11 +171,51 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Data TKI Hongkong</h1>
                     </div>
+                   
                     <p class="mb-4">Berikut merupakan data berkas-berkas anda. Tekan menu upload berkas untuk mengupload berkas jika anda dinyatakan lolos tahap pertama. 
                         Apabila terdapat data yang tidak sesuai silahkan upload ulang berkas anda dengan tekan menu upload berkas lagi dan konfirmasi ke Admin.
                     </p>
                     <p> Cek status proses untuk mengetahui proses anda. </p>
-
+                    <?php
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $username = $_SESSION['username'];
+                        $data = mysqli_query($konektor,"SELECT * FROM hongkong 
+                                                        INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
+                                                        INNER JOIN user ON hongkong.id = user.id WHERE username='$username'");
+                            while($d = mysqli_fetch_array($data)){
+                            
+                            if($d['keterangan'] == 'diajukan'){ 
+                        ?>
+                            <div class="alert alert-warning">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                Status <strong>"Diajukan!"</strong> periksa kelengkapan berkas anda.
+                            </div>
+                        <?php
+                        } else if($d['keterangan'] == 'divertifikasi'){ 
+                        ?>   
+                             <div class="alert alert-info">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Diverifikasi!"</strong> harap tunggu berkas anda diperiksa.
+                             </div>
+                        <?php
+                         } else if ($d['keterangan'] == 'diterima'){
+                        ?>
+                             <div class="alert alert-success">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Diterima!"</strong> Selamat anda telah memenuhi persyaratan pendaftaran.
+                             </div>
+                        <?php
+                         } else if($d['keterangan'] == 'ditolak'){
+                        ?>
+                             <div class="alert alert-danger">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Ditolak!"</strong> mohon maaf anda belum memenuhi persyaratan pendaftaran.
+                             </div>
+                        <?php
+                         }
+                        }
+                        ?>
+                    
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -190,7 +230,7 @@
                                 $data = mysqli_query($konektor,"SELECT * FROM hongkong 
                                                                 INNER JOIN pendaftaran ON hongkong.id = pendaftaran.id
                                                                 INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
-                                                                INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
+                                                                INNER JOIN user ON hongkong.id = user.id WHERE username='$username'");
                                 while($d = mysqli_fetch_array($data)){
                             ?>
                             <a href="TKIUploadBerkasHongkongDetail.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
@@ -210,7 +250,7 @@
                                     $data = mysqli_query($konektor,"SELECT * FROM hongkong 
                                                                     INNER JOIN pendaftaran ON hongkong.id = pendaftaran.id
                                                                     INNER JOIN tahapdua ON hongkong.id_tahapdua = tahapdua.id_tahapdua
-                                                                    INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
+                                                                    INNER JOIN user ON hongkong.id = user.id WHERE username='$username'");
                                     while($d = mysqli_fetch_array($data)){
                                 ?>
                                 <table class="table table-bordered">

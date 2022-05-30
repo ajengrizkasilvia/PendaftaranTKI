@@ -161,6 +161,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         }else {
             $biometri_baru = $_POST['biometri_taiw_lama'];
         } 
+        $id = $_POST['id_lama'];
         $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
         $result = mysqli_query($konektor, $query);
         if(!$result){
