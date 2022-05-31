@@ -226,6 +226,14 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama TKI</th>
+                                            <th>Perawatan Bayi</th>
+                                            <th>Peduli Anak-anak</th>
+                                            <th>Pekerjaan Rumah Tangga</th>
+                                            <th>Perawatan Ortu/Cacat</th>
+                                            <th>Memasak</th>
+                                            <th>Bahasa Inggris</th>
+                                            <th>Bahasa Kantonis</th>
+                                            <th>Bahasa Mandarin</th>
                                             <th>Sertifikasi Keahlian</th>
                                             <th>Sertifikasi Bahasa</th>
                                             <th>Action</th>
@@ -243,6 +251,14 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
+                                            <td><?php echo $d['perawatanbayi_hk']; ?></td>
+                                            <td><?php echo $d['pedulianak_hk']; ?></td>
+                                            <td><?php echo $d['pekerjaanrt_hk']; ?></td>
+                                            <td><?php echo $d['perawatanortu_hk']; ?></td>
+                                            <td><?php echo $d['memasak_hk']; ?></td>
+                                            <td><?php echo $d['inggris_hk']; ?></td>
+                                            <td><?php echo $d['kantonis_hk']; ?></td>
+                                            <td><?php echo $d['mandarin_hk']; ?></td>
                                             <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
                                             <td>

@@ -233,6 +233,54 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Lengkap</th>
+                                        <td>
+                                            <?php echo $d['']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <th>Sertifikasi Keahlian</th>
                                         <td>
                                             <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 800px;">
