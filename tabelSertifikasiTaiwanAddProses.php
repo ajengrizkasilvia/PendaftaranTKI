@@ -5,6 +5,14 @@ $konektor = mysqli_connect("localhost","root","", "tki");
 // menangkap data yang di kirim dari form
 $id_sertif_taiw = $_POST['id_sertif_taiw'];
 $id = $_POST['id'];
+$perawatanbayi_taiw = $_POST['perawatanbayi_taiw'];
+$pedulianak_taiw = $_POST['pedulianak_taiw'];
+$pekerjaanrt_taiw = $_POST['pekerjaanrt_taiw'];
+$perawatanortu_taiw = $_POST['perawatanortu_taiw'];
+$memasak_taiw = $_POST['memasak_taiw'];
+$inggris_taiw = $_POST['inggris_taiw'];
+$kantonis_taiw = $_POST['kantonis_taiw'];
+$mandarin_taiw = $_POST['mandarin_taiw'];
 $keahlian_taiw = $_FILES['keahlian_taiw']['name'];
 $bahasa_taiw = $_FILES['bahasa_taiw']['name'];
 
@@ -40,8 +48,8 @@ if($bahasa_taiw != "") {
 }else {
     $bahasa_baru = $_POST['bahasa_taiw_lama'];
 } 
-$query = "INSERT INTO sertiftaiwan (id_sertif_taiw, id, keahlian_taiw, bahasa_taiw)
-        VALUES('$id_sertif_taiw', '$id', '$keahlian_baru', '$bahasa_baru')";
+$query = "INSERT INTO sertiftaiwan (id_sertif_taiw, id, perawatanbayi_taiw, pedulianak_taiw,pekerjaanrt_taiw, perawatanortu_taiw, memasak_taiw, inggris_taiw, kantonis_taiw, mandarin_taiw, keahlian_taiw, bahasa_taiw)
+        VALUES('$id_sertif_taiw', '$id', '$perawatanbayi_taiw','$pedulianak_taiw','$pekerjaanrt_taiw','$perawatanortu_taiw','$memasak_taiw','$inggris_taiw', '$keahlian_baru', '$bahasa_baru')";
         $result = mysqli_query($konektor, $query);
 if(!$result){
     die ("Query gagal dijalankan: ".mysqli_errno($konektor).

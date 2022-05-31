@@ -221,7 +221,14 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama TKI</th>
+                                            <th>Nama TKI</th><th>Perawatan Bayi</th>
+                                            <th>Peduli Anak-anak</th>
+                                            <th>Pekerjaan Rumah Tangga</th>
+                                            <th>Perawatan Ortu/Cacat</th>
+                                            <th>Memasak</th>
+                                            <th>Bahasa Inggris</th>
+                                            <th>Bahasa Kantonis</th>
+                                            <th>Bahasa Mandarin</th>
                                             <th>Sertifikasi Keahlian</th>
                                             <th>Sertifikasi Bahasa</th>
                                             <th>Action</th>
@@ -239,6 +246,14 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
+                                            <td><?php echo $d['perawatanbayi_taiw']; ?></td>
+                                            <td><?php echo $d['pedulianak_taiw']; ?></td>
+                                            <td><?php echo $d['pekerjaanrt_taiw']; ?></td>
+                                            <td><?php echo $d['perawatanortu_taiw']; ?></td>
+                                            <td><?php echo $d['memasak_taiw']; ?></td>
+                                            <td><?php echo $d['inggris_taiw']; ?></td>
+                                            <td><?php echo $d['kantonis_taiw']; ?></td>
+                                            <td><?php echo $d['mandarin_taiw']; ?></td>
                                             <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
                                             <td>
@@ -258,7 +273,7 @@
                                                 </div>
                                                 <div class="hero-unit">
                                                     <p>
-                                                        <a class="btn btn-danger btn-sm" href="tabelSertifikasiTaiwanDelete.php?id_sertif_hk=<?php echo $d['id_sertif_taiw']; ?>">
+                                                        <a class="btn btn-danger btn-sm" href="tabelSertifikasiTaiwanDelete.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>">
                                                             Hapus
                                                         </a>
                                                     </p>

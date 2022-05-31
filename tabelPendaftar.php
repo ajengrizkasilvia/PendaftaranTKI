@@ -270,7 +270,7 @@
                                                 <td><?php echo $d['negara_tujuan']; ?></td>
                                                 <td><?php echo $d['tempat_lahir']; ?></td>
                                                 <td><?php echo $d['tanggal_lahir']; ?></td>
-                                                <td><?php echo $d['umur']; ?></td>
+                                                <td><?php echo $d['umur']; ?> tahun</td>
                                                 <td><?php echo $d['alamat_lengkap']; ?></td>
                                                 <td><?php echo $d['jenis_kelamin']; ?></td>
                                                 <td><?php echo $d['tb']; ?></td>
