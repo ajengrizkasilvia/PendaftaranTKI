@@ -247,8 +247,8 @@
                                                     <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02" name="id_negara">
                                                                 <option selected>pilih ulang negara tujuan...</option>
-                                                                <option value='1'>Hongkong</option>
-                                                                <option value='2'>Taiwan</option>
+                                                                <option value='9'>Hongkong</option>
+                                                                <option value='15'>Taiwan</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -360,7 +360,7 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Pekerjaan Ayah</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="pekerjaan_ayah" value="<?php echo $d['pekerjaan_ayah_']; ?>">
+                                                        <input type="text" class="form-control" name="pekerjaan_ayah" value="<?php echo $d['pekerjaan_ayah']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

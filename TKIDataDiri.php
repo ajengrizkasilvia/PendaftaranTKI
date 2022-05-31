@@ -167,7 +167,47 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Halaman Data Diri</h1>
                     </div>
-                        <p class="mb-4">Berikut merupakan data diri anda. Apabila ada data yang tidak sesuai silahkan konfirmasi ke Admin.</p>
+                        <p>Berikut merupakan data diri anda. Apabila ada data yang tidak sesuai silahkan konfirmasi ke Admin.</p>
+                        <p> Cek status proses untuk mengetahui proses anda. </p>
+                    <?php
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $username = $_SESSION['username'];
+                            $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
+                                                            INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
+                                                            INNER JOIN user ON pendaftaran.id = user.id WHERE username='$username'");
+                            while($d = mysqli_fetch_array($data)){
+                            
+                            if($d['keterangan'] == 'diajukan'){ 
+                        ?>
+                            <div class="alert alert-warning">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                Status <strong>"Diajukan!"</strong> periksa kembali data anda dengan benar.
+                            </div>
+                        <?php
+                        } else if($d['keterangan'] == 'divertifikasi'){ 
+                        ?>   
+                             <div class="alert alert-info">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Diverifikasi!"</strong> harap tunggu data anda diperiksa.
+                             </div>
+                        <?php
+                         } else if ($d['keterangan'] == 'diterima'){
+                        ?>
+                             <div class="alert alert-success">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Diterima!"</strong> Selamat anda telah memenuhi persyaratan pendaftaran.
+                             </div>
+                        <?php
+                         } else if($d['keterangan'] == 'ditolak'){
+                        ?>
+                             <div class="alert alert-danger">
+                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                 Status <strong>"Ditolak!"</strong> mohon maaf anda belum memenuhi persyaratan pendaftaran.
+                             </div>
+                        <?php
+                         }
+                        }
+                        ?>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
