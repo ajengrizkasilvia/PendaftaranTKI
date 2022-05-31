@@ -230,6 +230,142 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Perawatan Bayi</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline"> 
+                                                            <input type="radio" id="pb1" name="perawatanbayi_hk" value="rata-rata" <?php if($d['perawatanbayi_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="pb1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="pb2" name="perawatanbayi_hk" value="baik" <?php if($d['perawatanbayi_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="pb2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="pb3" name="perawatanbayi_hk" value="baik sekali" <?php if($d['perawatanbayi_hk']=="baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="pb3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Peduli Anak-anak</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="pa1" name="pedulianak_hk" value="rata-rata" <?php if($d['pedulianak_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="pa1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="pa2" name="pedulianak_hk" value="baik" <?php if($d['pedulianak_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="pa2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="pa3" name="pedulianak_hk" value="baik sekali" <?php if($d['pedulianak_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="pa3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Pekerjaan Rumah Tangga</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="prt1" name="pekerjaanrt_hk" value="rata-rata" <?php if($d['pekerjaanrt_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="prt1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="prt2" name="pekerjaanrt_hk" value="baik" <?php if($d['pekerjaanrt_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="prt2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="prt3" name="pekerjaanrt_hk" value="baik sekali"<?php if($d['pekerjaanrt_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="prt3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Perawatan Orangtua / Cacat</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="poc1" name="perawatanortu_hk" value="rata-rata"<?php if($d['perawatanortu_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="poc1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="poc2" name="perawatanortu_hk" value="baik"<?php if($d['perawatanortu_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="poc2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="poc3" name="perawatanortu_hk" value="baik sekali"<?php if($d['perawatanortu_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="poc3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Memasak</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="memasak1" name="memasak_hk" value="rata-rata"<?php if($d['memasak_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="memasak1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="memasak2" name="memasak_hk" value="baik"<?php if($d['memasak_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="memasak2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="memasak3" name="memasak_hk" value="baik sekali"<?php if($d['memasak_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="memasak3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Berbicara Bahasa Inggris</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="i1" name="inggris_hk" value="rata-rata"<?php if($d['inggris_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="i1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="i2" name="inggris_hk" value="baik"<?php if($d['inggris_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="i2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="i3" name="inggris_hk" value="baik sekali"<?php if($d['inggris_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="i3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Berbicara Bahasa Kantonis</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="k1" name="kantonis_hk" value="rata-rata"<?php if($d['kantonis_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="k1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="k2" name="kantonis_hk" value="baik"<?php if($d['kantonis_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="k2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="k3" name="kantonis_hk" value="baik sekali"<?php if($d['kantonis_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="k3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Berbicara Bahasa Mandarin</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="m1" name="mandarin_hk" value="rata-rata"<?php if($d['mandarin_hk']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="m1">Rata-rata</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="m2" name="mandarin_hk" value="baik"<?php if($d['mandarin_hk']== "baik") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="m2">Baik</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="m3" name="mandarin_hk" value="baik sekali"<?php if($d['mandarin_hk']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                                            <label class="custom-control-label" for="m3">Baik Sekali</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
                                                     <div class="col-sm-10">
                                                         <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">

@@ -210,55 +210,191 @@
                         </div>
                         <div class="card-body">
                         <?php
-                                    include 'config.php';
-                                    $konektor = mysqli_connect("localhost","root","", "tki");
-                                    $id_sertif_taiw = $_GET['id_sertif_taiw'];
-                                    $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
-                                                                    INNER JOIN user ON sertiftaiwan.id = user.id 
-                                                                    WHERE id_sertif_taiw='$id_sertif_taiw'");
-                                    while($d = mysqli_fetch_array($data)){
-                                ?>
-                                        <form method="post" action="tabelSertifikasiTaiwanEditProses.php" enctype="multipart/form-data">
-                                            <fieldset>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
-                                                        <div class="col-sm-10">
-                                                            <td><input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>"></td>
-                                                            <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
-                                                            <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                                                        </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
-                                                    <div class="col-sm-10">
-                                                    <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;height:150px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="keahlian_taiw" />
-                                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
-                                                    </div>			
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian</label>
-                                                    <div class="col-sm-10">
-                                                    <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 150px;height: 150px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="bahasa_taiw" />
-                                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
-                                                    </div>			
-                                                </div>
-                                                <p>
-                                                    <td></td>
-                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
-                                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiTaiwan.php';">Cancel</button></td>
-                                                </p>
-                                            </fieldset>
-                                        </form>
-                                <?php    
-                                    }
-                                ?>
-                        </div>
+                            include 'config.php';
+                            $konektor = mysqli_connect("localhost","root","", "tki");
+                            $id_sertif_taiw = $_GET['id_sertif_taiw'];
+                            $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
+                                                            INNER JOIN user ON sertiftaiwan.id = user.id 
+                                                            WHERE id_sertif_taiw='$id_sertif_taiw'");
+                            while($d = mysqli_fetch_array($data)){
+                        ?>
+                        <form method="post" action="tabelSertifikasiTaiwanEditProses.php" enctype="multipart/form-data">
+                            <fieldset>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Nama Lengkap TKI</label>
+                                    <div class="col-sm-10">
+                                        <td><input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>"></td>
+                                        <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
+                                        <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Perawatan Bayi</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline"> 
+                                            <input type="radio" id="pb1" name="perawatanbayi_taiw" value="rata-rata" <?php if($d['perawatanbayi_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="pb1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="pb2" name="perawatanbayi_taiw" value="baik" <?php if($d['perawatanbayi_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="pb2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="pb3" name="perawatanbayi_taiw" value="baik sekali" <?php if($d['perawatanbayi_taiw']=="baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="pb3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Peduli Anak-anak</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="pa1" name="pedulianak_taiw" value="rata-rata" <?php if($d['pedulianak_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="pa1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="pa2" name="pedulianak_taiw" value="baik" <?php if($d['pedulianak_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="pa2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="pa3" name="pedulianak_taiw" value="baik sekali" <?php if($d['pedulianak_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="pa3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Pekerjaan Rumah Tangga</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="prt1" name="pekerjaanrt_taiw" value="rata-rata" <?php if($d['pekerjaanrt_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="prt1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="prt2" name="pekerjaanrt_taiw" value="baik" <?php if($d['pekerjaanrt_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="prt2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="prt3" name="pekerjaanrt_taiw" value="baik sekali"<?php if($d['pekerjaanrt_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="prt3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Perawatan Orangtua / Cacat</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="poc1" name="perawatanortu_taiw" value="rata-rata"<?php if($d['perawatanortu_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="poc1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="poc2" name="perawatanortu_taiw" value="baik"<?php if($d['perawatanortu_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="poc2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="poc3" name="perawatanortu_taiw" value="baik sekali"<?php if($d['perawatanortu_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="poc3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Memasak</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="memasak1" name="memasak_taiw" value="rata-rata"<?php if($d['memasak_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="memasak1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="memasak2" name="memasak_taiw" value="baik"<?php if($d['memasak_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="memasak2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="memasak3" name="memasak_taiw" value="baik sekali"<?php if($d['memasak_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="memasak3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Berbicara Bahasa Inggris</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="i1" name="inggris_taiw" value="rata-rata"<?php if($d['inggris_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="i1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="i2" name="inggris_taiw" value="baik"<?php if($d['inggris_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="i2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="i3" name="inggris_taiw" value="baik sekali"<?php if($d['inggris_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="i3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Berbicara Bahasa Kantonis</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="k1" name="kantonis_taiw" value="rata-rata"<?php if($d['kantonis_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="k1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="k2" name="kantonis_taiw" value="baik"<?php if($d['kantonis_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="k2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="k3" name="kantonis_taiw" value="baik sekali"<?php if($d['kantonis_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="k3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Berbicara Bahasa Mandarin</label>
+                                    <div class="col-sm-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="m1" name="mandarin_taiw" value="rata-rata"<?php if($d['mandarin_taiw']== "rata-rata") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="m1">Rata-rata</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="m2" name="mandarin_taiw" value="baik"<?php if($d['mandarin_taiw']== "baik") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="m2">Baik</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="m3" name="mandarin_taiw" value="baik sekali"<?php if($d['mandarin_taiw']== "baik sekali") echo "checked"?> class="custom-control-input">
+                                            <label class="custom-control-label" for="m3">Baik Sekali</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
+                                    <div class="col-sm-10">
+                                        <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;height:150px;float: left;margin-bottom: 5px;">
+                                        <input type="file" name="keahlian_taiw" />
+                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
+                                    </div>			
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian</label>
+                                    <div class="col-sm-10">
+                                        <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 150px;height: 150px;float: left;margin-bottom: 5px;">
+                                        <input type="file" name="bahasa_taiw" />
+                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
+                                    </div>			
+                                </div>
+                                <p>
+                                    <td></td>
+                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                    <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiTaiwan.php';">Cancel</button></td>
+                                </p>
+                            </fieldset>
+                        </form>
+                        <?php    
+                            }
+                        ?>
                     </div>
-                    
                 </div>
-                <!-- /.container-fluid -->
+                    
+            </div>
+            <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
