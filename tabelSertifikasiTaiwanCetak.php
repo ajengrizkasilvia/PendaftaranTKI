@@ -28,6 +28,41 @@
                 <th><?php echo $d['nama_lengkap']; ?>
             </tr>
             <tr>
+                <th bgcolor=yellow colspan=”2″ align=”center”><font color=black>Penilaian Wawancara</th>
+            </tr>
+            <tr>
+                <th>Perawatan Bayi</th>
+                    <th><?php echo $d['perawatanbayi_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Peduli Anak-anak</th>
+                    <th><?php echo $d['pedulianak_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Pekerjaan Rumah Tangga</th>
+                    <th><?php echo $d['pekerjaanrt_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Perawatan Orangtua/Cacat</th>
+                    <th><?php echo $d['perawatanortu_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Memasak</th>
+                    <th><?php echo $d['memasak_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Bahasa Inggris</th>
+                    <th><?php echo $d['inggris_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Bahasa Kantonis</th>
+                    <th><?php echo $d['kantonis_taiw']; ?>
+            </tr>
+            <tr>
+                <th>Bahasa Mandarin</th>
+                    <th><?php echo $d['mandarin_taiw']; ?>
+            </tr>
+            <tr>
                 <th>Sertifikasi Keahlian</th>
                 <th>
                 <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 280px;"></th>

@@ -28,6 +28,41 @@
                 <th><?php echo $d['nama_lengkap']; ?>
             </tr>
             <tr>
+                <th bgcolor=yellow colspan=”2″ align=”center”><font color=black>Penilaian Wawancara</th>
+            </tr>
+            <tr>
+                <th>Perawatan Bayi</th>
+                    <th><?php echo $d['perawatanbayi_hk']; ?>
+            </tr>
+            <tr>
+                <th>Peduli Anak-anak</th>
+                    <th><?php echo $d['pedulianak_hk']; ?>
+            </tr>
+            <tr>
+                <th>Pekerjaan Rumah Tangga</th>
+                    <th><?php echo $d['pekerjaanrt_hk']; ?>
+            </tr>
+            <tr>
+                <th>Perawatan Orangtua/Cacat</th>
+                    <th><?php echo $d['perawatanortu_hk']; ?>
+            </tr>
+            <tr>
+                <th>Memasak</th>
+                    <th><?php echo $d['memasak_hk']; ?>
+            </tr>
+            <tr>
+                <th>Bahasa Inggris</th>
+                    <th><?php echo $d['inggris_hk']; ?>
+            </tr>
+            <tr>
+                <th>Bahasa Kantonis</th>
+                    <th><?php echo $d['kantonis_hk']; ?>
+            </tr>
+            <tr>
+                <th>Bahasa Mandarin</th>
+                    <th><?php echo $d['mandarin_hk']; ?>
+            </tr>
+            <tr>
                 <th>Sertifikasi Keahlian</th>
                 <th>
                 <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 280px;"></th>

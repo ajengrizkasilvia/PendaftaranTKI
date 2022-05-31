@@ -178,7 +178,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
+                            <h6 class="m-0 font-weight-bold text-primary">Sertifikasi TKI Hongkong & Penilaian Wawancara</h6><br>
                             <a href="TKISertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i> Tambah Baru</a>
                             <?php 
@@ -214,6 +214,54 @@
                                         <tr>
                                             <th>Nama TKI</th>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
+                                        </tr>
+                                        <tr>
+                                        <th>Perawatan Bayi</th>
+                                        <td>
+                                            <?php echo $d['perawatanbayi_hk']; ?>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Peduli Anak-anak</th>
+                                            <td>
+                                                <?php echo $d['pedulianak_hk']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Pekerjaan Rumah Tangga</th>
+                                            <td>
+                                                <?php echo $d['pekerjaanrt_hk']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Perawatan Orangtua/Cacat</th>
+                                            <td>
+                                                <?php echo $d['perawatanortu_hk']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Memasak</th>
+                                            <td>
+                                                <?php echo $d['memasak_hk']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bahasa Inggris</th>
+                                            <td>
+                                                <?php echo $d['inggris_hk']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bahasa Kantonis</th>
+                                            <td>
+                                                <?php echo $d['kantonis_hk']; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bahasa Mandarin</th>
+                                            <td>
+                                                <?php echo $d['mandarin_hk']; ?>
+                                            </td>
                                         </tr>
                                         <tr>    
                                             <th >Sertifikasi Keahlian</th>

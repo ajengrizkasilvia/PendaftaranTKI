@@ -233,51 +233,51 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Perawatan Bayi</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['perawatanbayi_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Peduli Anak-anak</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['pedulianak_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Pekerjaan Rumah Tangga</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['pekerjaanrt_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Perawatan Orangtua/Cacat</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['perawatanortu_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Memasak</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['memasak_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Bahasa Inggris</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['inggris_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Bahasa Kantonis</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['kantonis_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Nama Lengkap</th>
+                                        <th>Bahasa Mandarin</th>
                                         <td>
-                                            <?php echo $d['']; ?>
+                                            <?php echo $d['mandarin_hk']; ?>
                                         </td>
                                     </tr>
                                     <tr>
