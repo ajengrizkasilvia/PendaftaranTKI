@@ -203,9 +203,11 @@
                         while($d = mysqli_fetch_array($data)){
                     ?>
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                        <a href="tabelCetakCVHk.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download CV</a>
+                    </div>
                     <p>Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
-                    <a href="tabelCetakCVHk.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download CV</a>
                     <?php 
                         }
                     ?>
