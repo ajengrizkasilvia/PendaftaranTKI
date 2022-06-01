@@ -12,11 +12,10 @@
                 include 'config.php';
                 $konektor = mysqli_connect("localhost","root","", "tki");
                 $no = 1;
-                $id_dft = $_GET['id_dft'];
-                $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
-                                    INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
-                                    INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
-                                    INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
+                $id_sertif_hk = $_GET['id_sertif_hk'];
+                $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong
+                                    INNER JOIN user ON sertifhongkong.id = user.id
+                                    INNER JOIN pendaftaran ON sertifhongkong.id_dft = pendaftaran.id_dft WHERE id_sertif_hk='$id_sertif_hk'");
                 while($d = mysqli_fetch_array($data)){
             ?>
             <table width= "100%">
@@ -131,51 +130,51 @@
             </tr>
             <tr>
                 <td><b>Babies Caring</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="radio" id="pb1" name="perawatanbayi_hk" value="rata-rata" <?php if($d['perawatanbayi_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="pb2" name="perawatanbayi_hk" value="baik" <?php if($d['perawatanbayi_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="pb3" name="perawatanbayi_hk" value="baik sekali" <?php if($d['perawatanbayi_hk']=="baik sekali") echo "checked"?> class="custom-control-input"></td>                                                                           
             </tr>
             <tr>
                 <td><b>Children Caring</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="radio" id="pa1" name="pedulianak_hk" value="rata-rata" <?php if($d['pedulianak_hk']== "rata-rata") echo "checked"?> class="custom-control-input">    
+                <td><input type="radio" id="pa2" name="pedulianak_hk" value="baik" <?php if($d['pedulianak_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="pa3" name="pedulianak_hk" value="baik sekali" <?php if($d['pedulianak_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td></td>
             </tr>
             <tr>
-                <td><b>Household Works</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><b>Household Works</b></td>                                          
+                <td><input type="radio" id="prt1" name="pekerjaanrt_hk" value="rata-rata" <?php if($d['pekerjaanrt_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="prt2" name="pekerjaanrt_hk" value="baik" <?php if($d['pekerjaanrt_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="prt3" name="pekerjaanrt_hk" value="baik sekali"<?php if($d['pekerjaanrt_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
             </tr>
             <tr>
                 <td><b>Care of Elder / Disabled</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="radio" id="poc1" name="perawatanortu_hk" value="rata-rata"<?php if($d['perawatanortu_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="poc2" name="perawatanortu_hk" value="baik"<?php if($d['perawatanortu_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="poc3" name="perawatanortu_hk" value="baik sekali"<?php if($d['perawatanortu_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>                                              
             </tr>
             <tr>
-                <td><b>Cooking</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><b>Cooking</b></td>                                           
+                <td><input type="radio" id="memasak1" name="memasak_hk" value="rata-rata"<?php if($d['memasak_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="memasak2" name="memasak_hk" value="baik"<?php if($d['memasak_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="memasak3" name="memasak_hk" value="baik sekali"<?php if($d['memasak_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
             </tr>
             <tr>
-                <td><b>Spoken English</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><b>Spoken English</b></td>                                            
+                <td><input type="radio" id="i1" name="inggris_hk" value="rata-rata"<?php if($d['inggris_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="i2" name="inggris_hk" value="baik"<?php if($d['inggris_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="i3" name="inggris_hk" value="baik sekali"<?php if($d['inggris_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
             </tr>
             <tr>
-                <td><b>Spoken Cantonesse</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><b>Spoken Cantonesse</b></td>                                         
+                <td><input type="radio" id="k1" name="kantonis_hk" value="rata-rata"<?php if($d['kantonis_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="k2" name="kantonis_hk" value="baik"<?php if($d['kantonis_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="k3" name="kantonis_hk" value="baik sekali"<?php if($d['kantonis_hk']== "baik sekali") echo "checked"?> class="custom-control-input"> </td>
             </tr>
             <tr>
                 <td><b>Spoken Mandarin</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="radio" id="m1" name="mandarin_hk" value="rata-rata"<?php if($d['mandarin_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="m2" name="mandarin_hk" value="baik"<?php if($d['mandarin_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <td><input type="radio" id="m3" name="mandarin_hk" value="baik sekali"<?php if($d['mandarin_hk']== "baik sekali") echo "checked"?> class="custom-control-input">  </td>
             </tr>
             <tr>
                 <td><b>Otder Country Exp.</b></td>

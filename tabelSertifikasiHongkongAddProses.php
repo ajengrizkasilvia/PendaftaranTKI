@@ -5,6 +5,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
 // menangkap data yang di kirim dari form
 $id_sertif_hk = $_POST['id_sertif_hk'];
 $id = $_POST['id'];
+$id_dft = $_POST['id_dft'];
 $perawatanbayi_hk = $_POST['perawatanbayi_hk'];
 $pedulianak_hk = $_POST['pedulianak_hk'];
 $pekerjaanrt_hk = $_POST['pekerjaanrt_hk'];
@@ -47,8 +48,8 @@ if($bahasa_hk != "") {
 }else {
     $bahasa_baru = $_POST['bahasa_hk_lama'];
 } 
-$query = "INSERT INTO sertifhongkong (id_sertif_hk, id, perawatanbayi_hk, pedulianak_hk, pekerjaanrt_hk, perawatanortu_hk, memasak_hk, inggris_hk, kantonis_hk, mandarin_hk, keahlian_hk, bahasa_hk)
-        VALUES('$id_sertif_hk', '$id','$perawatanbayi_hk','$pedulianak_hk','$pekerjaanrt_hk','$perawatanortu_hk','$memasak_hk','$inggris_hk', '$kantonis_hk', '$mandarin_hk', '$keahlian_baru', '$bahasa_baru')";
+$query = "INSERT INTO sertifhongkong (id_sertif_hk, id, id_dft, perawatanbayi_hk, pedulianak_hk, pekerjaanrt_hk, perawatanortu_hk, memasak_hk, inggris_hk, kantonis_hk, mandarin_hk, keahlian_hk, bahasa_hk)
+        VALUES('$id_sertif_hk', '$id', '$id_dft', '$perawatanbayi_hk','$pedulianak_hk','$pekerjaanrt_hk','$perawatanortu_hk','$memasak_hk','$inggris_hk', '$kantonis_hk', '$mandarin_hk', '$keahlian_baru', '$bahasa_baru')";
         $result = mysqli_query($konektor, $query);
 if(!$result){
     die ("Query gagal dijalankan: ".mysqli_errno($konektor).
