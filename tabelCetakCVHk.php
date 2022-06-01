@@ -119,8 +119,8 @@
                 <th>Average</th>
                 <th>Good</th>
                 <th>Excelent</th>
-                <th></th>
-                <td rowspan="5"><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 210px;"></td>
+                <td></td>
+                <th rowspan="15"><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 200px; height: 250px;"></td>
             </tr>
             <tr>
                 <td></td>
@@ -130,62 +130,62 @@
             </tr>
             <tr>
                 <td><b>Babies Caring</b></td>
-                <td><input type="checkbox" id="pb1" name="perawatanbayi_hk" value="rata-rata" <?php if($d['perawatanbayi_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="pb2" name="perawatanbayi_hk" value="baik" <?php if($d['perawatanbayi_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="pb3" name="perawatanbayi_hk" value="baik sekali" <?php if($d['perawatanbayi_hk']=="baik sekali") echo "checked"?> class="custom-control-input"></td>                                                                           
+                <th><input type="checkbox" id="pb1" name="perawatanbayi_hk" value="rata-rata" <?php if($d['perawatanbayi_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></th>
+                <th><input type="checkbox" id="pb2" name="perawatanbayi_hk" value="baik" <?php if($d['perawatanbayi_hk']== "baik") echo "checked"?> class="custom-control-input"></th>
+                <th><input type="checkbox" id="pb3" name="perawatanbayi_hk" value="baik sekali" <?php if($d['perawatanbayi_hk']=="baik sekali") echo "checked"?> class="custom-control-input"></th>                                                                           
             </tr>
             <tr>
                 <td><b>Children Caring</b></td>
-                <td><input type="checkbox" id="pa1" name="pedulianak_hk" value="rata-rata" <?php if($d['pedulianak_hk']== "rata-rata") echo "checked"?> class="custom-control-input">    
-                <td><input type="checkbox" id="pa2" name="pedulianak_hk" value="baik" <?php if($d['pedulianak_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="pa3" name="pedulianak_hk" value="baik sekali" <?php if($d['pedulianak_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td></td>
+                <th><input type="checkbox" id="pa1" name="pedulianak_hk" value="rata-rata" <?php if($d['pedulianak_hk']== "rata-rata") echo "checked"?> class="custom-control-input">    
+                <th><input type="checkbox" id="pa2" name="pedulianak_hk" value="baik" <?php if($d['pedulianak_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="pa3" name="pedulianak_hk" value="baik sekali" <?php if($d['pedulianak_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td></td>
             </tr>
             <tr>
                 <td><b>Household Works</b></td>                                          
-                <td><input type="checkbox" id="prt1" name="pekerjaanrt_hk" value="rata-rata" <?php if($d['pekerjaanrt_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="prt2" name="pekerjaanrt_hk" value="baik" <?php if($d['pekerjaanrt_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="prt3" name="pekerjaanrt_hk" value="baik sekali"<?php if($d['pekerjaanrt_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="prt1" name="pekerjaanrt_hk" value="rata-rata" <?php if($d['pekerjaanrt_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="prt2" name="pekerjaanrt_hk" value="baik" <?php if($d['pekerjaanrt_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="prt3" name="pekerjaanrt_hk" value="baik sekali"<?php if($d['pekerjaanrt_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
             </tr>
             <tr>
                 <td><b>Care of Elder / Disabled</b></td>
-                <td><input type="checkbox" id="poc1" name="perawatanortu_hk" value="rata-rata"<?php if($d['perawatanortu_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="poc2" name="perawatanortu_hk" value="baik"<?php if($d['perawatanortu_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="poc3" name="perawatanortu_hk" value="baik sekali"<?php if($d['perawatanortu_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>                                              
+                <th><input type="checkbox" id="poc1" name="perawatanortu_hk" value="rata-rata"<?php if($d['perawatanortu_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="poc2" name="perawatanortu_hk" value="baik"<?php if($d['perawatanortu_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="poc3" name="perawatanortu_hk" value="baik sekali"<?php if($d['perawatanortu_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>                                              
             </tr>
             <tr>
                 <td><b>Cooking</b></td>                                           
-                <td><input type="checkbox" id="memasak1" name="memasak_hk" value="rata-rata"<?php if($d['memasak_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="memasak2" name="memasak_hk" value="baik"<?php if($d['memasak_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="memasak3" name="memasak_hk" value="baik sekali"<?php if($d['memasak_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="memasak1" name="memasak_hk" value="rata-rata"<?php if($d['memasak_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="memasak2" name="memasak_hk" value="baik"<?php if($d['memasak_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="memasak3" name="memasak_hk" value="baik sekali"<?php if($d['memasak_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
             </tr>
             <tr>
                 <td><b>Spoken English</b></td>                                            
-                <td><input type="checkbox" id="i1" name="inggris_hk" value="rata-rata"<?php if($d['inggris_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="i2" name="inggris_hk" value="baik"<?php if($d['inggris_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="i3" name="inggris_hk" value="baik sekali"<?php if($d['inggris_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="i1" name="inggris_hk" value="rata-rata"<?php if($d['inggris_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="i2" name="inggris_hk" value="baik"<?php if($d['inggris_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="i3" name="inggris_hk" value="baik sekali"<?php if($d['inggris_hk']== "baik sekali") echo "checked"?> class="custom-control-input"></td>
             </tr>
             <tr>
                 <td><b>Spoken Cantonesse</b></td>                                         
-                <td><input type="checkbox" id="k1" name="kantonis_hk" value="rata-rata"<?php if($d['kantonis_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="k2" name="kantonis_hk" value="baik"<?php if($d['kantonis_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="k3" name="kantonis_hk" value="baik sekali"<?php if($d['kantonis_hk']== "baik sekali") echo "checked"?> class="custom-control-input"> </td>
+                <th><input type="checkbox" id="k1" name="kantonis_hk" value="rata-rata"<?php if($d['kantonis_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="k2" name="kantonis_hk" value="baik"<?php if($d['kantonis_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="k3" name="kantonis_hk" value="baik sekali"<?php if($d['kantonis_hk']== "baik sekali") echo "checked"?> class="custom-control-input"> </td>
             </tr>
             <tr>
                 <td><b>Spoken Mandarin</b></td>
-                <td><input type="checkbox" id="m1" name="mandarin_hk" value="rata-rata"<?php if($d['mandarin_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="m2" name="mandarin_hk" value="baik"<?php if($d['mandarin_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
-                <td><input type="checkbox" id="m3" name="mandarin_hk" value="baik sekali"<?php if($d['mandarin_hk']== "baik sekali") echo "checked"?> class="custom-control-input">  </td>
+                <th><input type="checkbox" id="m1" name="mandarin_hk" value="rata-rata"<?php if($d['mandarin_hk']== "rata-rata") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="m2" name="mandarin_hk" value="baik"<?php if($d['mandarin_hk']== "baik") echo "checked"?> class="custom-control-input"></td>
+                <th><input type="checkbox" id="m3" name="mandarin_hk" value="baik sekali"<?php if($d['mandarin_hk']== "baik sekali") echo "checked"?> class="custom-control-input">  </td>
             </tr>
             <tr>
                 <td><b>Otder Country Exp.</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             <tr>
                 <td><br></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><b>R  E  M  A  R  K  S</b></td>
                 <td colspan="4">MAID EVER BEEN WORKING IN HONGKONG - MALAYSIA </td>
             </tr>
@@ -200,7 +200,7 @@
             <tr>
                 <td></td>
                 <td colspan="4">SHE HAS EXPERIENCE TAKE CARE OF BABY - ELDERLY - CHILDREN</td>
-            </tr>
+            </tr> -->
             <?php 
                 }
             ?>
