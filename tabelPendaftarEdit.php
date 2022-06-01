@@ -246,9 +246,8 @@
                                                     <div class="col-sm-10">
                                                     <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02" name="id_negara">
-                                                                <option selected>pilih ulang negara tujuan...</option>
-                                                                <option value='9'>Hongkong</option>
-                                                                <option value='15'>Taiwan</option>
+                                                                <option value='1' <?php if($d['id_negara']== '1') echo "selected"?>>Hongkong</option>
+                                                                <option value='2' <?php if($d['id_negara']== '2') echo "selected"?>>Taiwan</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -285,9 +284,8 @@
                                                     <div class="col-sm-10">
                                                     <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02" name="jenis_kelamin">
-                                                                <option selected>pilih ulang jenis kelamin...</option>
-                                                                <option>Pria</option>
-                                                                <option>Wanita</option>
+                                                                <option value='Pria'<?php if($d['jenis_kelamin']== 'Pria') echo "selected"?>>Pria</option>
+                                                                <option value='Wanita'<?php if($d['jenis_kelamin']== 'Wanita') echo "selected"?>>Wanita</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -318,11 +316,10 @@
                                                     <div class="col-sm-10">
                                                         <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02"  name="status">
-                                                                <option selected>pilih ulang status...</option>
-                                                                <option>Menikah</option>
-                                                                <option>Belum Menikah</option>
-                                                                <option>Cerai Hidup</option>
-                                                                <option>Cerai Mati</option>
+                                                                <option value='Menikah' <?php if($d['status']== 'Menikah') echo "selected"?>>Menikah</option>
+                                                                <option value='Belum Menikah' <?php if($d['status']== 'Belum Menikah') echo "selected"?>>Belum Menikah</option>
+                                                                <option value='Cerai Hidup' <?php if($d['status']== 'Cerai Hidup') echo "selected"?>>Cerai Hidup</option>
+                                                                <option value='Cerai Mati' <?php if($d['status']== 'Cerai Mati') echo "selected"?>>Cerai Mati</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -341,9 +338,8 @@
                                                     <div class="col-sm-10">
                                                         <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02" name="pengalaman_kerja">
-                                                                <option selected>pilih ulang pengalaman kerja...</option>
-                                                                <option>Ex</option>
-                                                                <option>Non</option>
+                                                                <option value="Ex"<?php if($d['pengalaman_kerja']== 'Ex') echo "selected"?>>Ex</option>
+                                                                <option value="Non"<?php if($d['pengalaman_kerja']== 'Non') echo "selected"?>>Non</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -420,7 +416,7 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Medical Check</label>
                                                     <div class="col-sm-10">
-                                                    <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
                                                     <input type="file" name="medical_check">
                                                     <input type="hidden" name="medical_check_lama" value="<?php echo $d['medical_check']; ?>">
                                                     </div>
@@ -428,7 +424,7 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Pas Foto</label>
                                                     <div class="col-sm-10">
-                                                    <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                    <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
                                                     <input type="file" name="pas_foto">
                                                     <input type="hidden" name="pas_foto_lama" value="<?php echo $d['pas_foto']; ?>">
                                                     </div>
@@ -438,11 +434,10 @@
                                                     <div class="col-sm-10">
                                                         <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02" name="id_tahapsatu">
-                                                                <option selected>pilih ulang status proses...</option>
-                                                                <option value='1'>Diajukan</option>
-                                                                <option value='2'>Diverifikasi</option>
-                                                                <option value='3'>Diterima</option>
-                                                                <option value='4'>Ditolak</option>
+                                                                <option value='1'<?php if($d['id_tahapsatu']== '1') echo "selected"?>>Diajukan</option>
+                                                                <option value='2'<?php if($d['id_tahapsatu']== '2') echo "selected"?>>Diverifikasi</option>
+                                                                <option value='3'<?php if($d['id_tahapsatu']== '3') echo "selected"?>>Diterima</option>
+                                                                <option value='4'<?php if($d['id_tahapsatu']== '4') echo "selected"?>>Ditolak</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>

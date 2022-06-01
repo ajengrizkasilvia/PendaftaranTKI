@@ -307,7 +307,30 @@
                                         </tr>
                                         <tr>
                                             <th>Status Proses</th>
-                                                <td><?php echo $d['keterangan']; ?></td>
+                                            <td> 
+                                                <?php
+                                                    {
+                                                        if($d['keterangan'] == 'diajukan'){ 
+                                                    ?>
+                                                        <span class="badge badge-pill badge-warning">Diajukan</span>
+                                                    <?php
+                                                        } else if($d['keterangan'] == 'diverifikasi'){ 
+                                                    ?>   
+                                                        <span class="badge badge-pill badge-info">Diverifikasi</span>
+                                                    <?php
+                                                        } else if ($d['keterangan'] == 'diterima'){
+                                                    ?>
+                                                        <span class="badge badge-pill badge-success">Diterima</span>
+                                                    <?php
+                                                        } else if($d['keterangan'] == 'ditolak'){
+                                                    ?>
+                                                        <span class="badge badge-pill badge-danger">Ditolak</span>
+                                                    <?php
+                                                        }
+                                                    }
+                                                ?>
+                                            </td>
+                                                <!-- <td><?php echo $d['keterangan']; ?></td> -->
                                         </tr>
                                         <tr>
                                             <th>Keterangan</th>

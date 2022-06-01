@@ -204,7 +204,6 @@
                     </div>
                     <p class="mb-4">Berikut merupakan data-data dari pendaftar atau calon TKI dari semua negara tujuan TKI. Untuk merekap semua data dapat dilakukan pada
                         <a href="tabelPendaftarCetakAll.php"> Cetak disini</a>.</p>
-
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -292,7 +291,29 @@
                                                 <td><?php echo $d['umur_anak']; ?> tahun</p>
                                                 <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
                                                 <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
-                                                <td><?php echo $d['keterangan']; ?></td>
+                                                <td>
+                                                    <?php
+                                                        {
+                                                           if($d['keterangan'] == 'diajukan'){ 
+                                                        ?>
+                                                            <span class="badge badge-pill badge-warning">Diajukan</span>
+                                                        <?php
+                                                        } else if($d['keterangan'] == 'diverifikasi'){ 
+                                                        ?>   
+                                                            <span class="badge badge-pill badge-info">Diverifikasi</span>
+                                                        <?php
+                                                        } else if ($d['keterangan'] == 'diterima'){
+                                                        ?>
+                                                            <span class="badge badge-pill badge-success">Diterima</span>
+                                                        <?php
+                                                        } else if($d['keterangan'] == 'ditolak'){
+                                                        ?>
+                                                            <span class="badge badge-pill badge-danger">Ditolak</span>
+                                                        <?php
+                                                            }
+                                                        }
+                                                    ?>
+                                                </td>
                                                 <td>
                                                     <div class="hero-unit">
                                                     <p>

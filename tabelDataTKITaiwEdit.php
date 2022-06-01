@@ -327,11 +327,10 @@
                                                     <div class="col-sm-10">
                                                         <div class="input-group mb-3">
                                                             <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
-                                                                <option selected>pilih ulang status proses...</option>
-                                                                <option value='1'>Diajukan</option>
-                                                                <option value='2'>Diverifikasi</option>
-                                                                <option value='3'>Diterima</option>
-                                                                <option value='4'>Ditolak</option>
+                                                                <option value='1'<?php if($d['id_tahapdua']== '1') echo "selected"?>>Diajukan</option>
+                                                                <option value='2'<?php if($d['id_tahapdua']== '2') echo "selected"?>>Diverifikasi</option>
+                                                                <option value='3'<?php if($d['id_tahapdua']== '3') echo "selected"?>>Diterima</option>
+                                                                <option value='4'<?php if($d['id_tahapdua']== '4') echo "selected"?>>Ditolak</option>
                                                             </select>
                                                             <div class="input-group-append">
                                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>

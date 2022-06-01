@@ -207,17 +207,17 @@
      echo "<script>alert('Data berhasil diubah.');window.location='tabelDataTKIHong.php';</script>";
      }           
         
-    //Rekom id
+    //Kartu Kuning
     if($kartukuning_hk != "") {
-        $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+        $ekstensi_diperbolehkankar = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
         $kartukuning = explode('.', $kartukuning_hk); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensirek = strtolower(end($kartukuning));
-        $file_tmprek = $_FILES['kartukuning_hk']['tmp_name'];   
+        $ekstensikar = strtolower(end($kartukuning));
+        $file_tmpkar = $_FILES['kartukuning_hk']['tmp_name'];   
         $angka_acak     = rand(1,999);
         $kartukuning_baru = $angka_acak.'-'.$kartukuning_hk;
 
-        if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-            move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$kartukuning_baru); 
+        if(in_array($ekstensikar, $ekstensi_diperbolehkankar) === true)  {
+            move_uploaded_file($file_tmpkar, 'berkas/Hongkong/'.$kartukuning_baru); 
         }
     }else {
         $kartukuning_baru = $_POST['kartukuning_hk_lama'];
@@ -317,12 +317,12 @@
                                     $file_tmpsk = $_FILES['skck_hk']['tmp_name'];   
                                     $angka_acak     = rand(1,999);
                                     $skck_baru = $angka_acak.'-'.$skck_hk;
-                                    //Rekom id
+                                    //Kartu Kuning
                                     if($kartukuning_hk != "") {
-                                        $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+                                        $ekstensi_diperbolehkankar = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
                                         $kartukuning = explode('.', $kartukuning_hk); //memisahkan nama file dengan ekstensi yang diupload
-                                        $ekstensirek = strtolower(end($kartukuning));
-                                        $file_tmprek = $_FILES['kartukuning_hk']['tmp_name'];   
+                                        $ekstensikar = strtolower(end($kartukuning));
+                                        $file_tmpkar = $_FILES['kartukuning_hk']['tmp_name'];   
                                         $angka_acak     = rand(1,999);
                                         $kartukuning_baru = $angka_acak.'-'.$kartukuning_hk;
                                         //Biometri
@@ -348,8 +348,8 @@
                                                                     move_uploaded_file($file_tmpep, 'berkas/Hongkong/'.$expaspor_baru);
                                                                     if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                                                                         move_uploaded_file($file_tmpsk, 'berkas/Hongkong/'.$skck_baru);  
-                                                                        if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                                                                            move_uploaded_file($file_tmprek, 'berkas/Hongkong/'.$kartukuning_baru); 
+                                                                        if(in_array($ekstensikar, $ekstensi_diperbolehkankar) === true)  {
+                                                                            move_uploaded_file($file_tmpkar, 'berkas/Hongkong/'.$kartukuning_baru); 
                                                                             if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                                                                                 move_uploaded_file($file_tmpbio, 'berkas/Hongkong/'.$biometri_baru);  
 

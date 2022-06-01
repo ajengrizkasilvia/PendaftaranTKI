@@ -266,15 +266,28 @@
                                             <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
                                             <td>Klik link berikut <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a></td>
                                             <td>
-                                            <div class="hero-unit">
-                                                        <p>
-                                                            <a class="btn btn-success btn-large">
-                                                            <?php echo $d['keterangan']; ?>
-                                                            </a>
-                                                        </p>
-                                                    </div>
+                                                <?php
+                                                    {
+                                                        if($d['keterangan'] == 'diajukan'){ 
+                                                    ?>
+                                                        <span class="badge badge-pill badge-warning">Diajukan</span>
+                                                    <?php
+                                                        } else if($d['keterangan'] == 'diverifikasi'){ 
+                                                    ?>   
+                                                        <span class="badge badge-pill badge-info">Diverifikasi</span>
+                                                    <?php
+                                                        } else if ($d['keterangan'] == 'diterima'){
+                                                    ?>
+                                                        <span class="badge badge-pill badge-success">Diterima</span>
+                                                    <?php
+                                                        } else if($d['keterangan'] == 'ditolak'){
+                                                    ?>
+                                                        <span class="badge badge-pill badge-danger">Ditolak</span>
+                                                    <?php
+                                                        }
+                                                    }
+                                                ?>
                                             </td>
-                                            <!-- <td><?php echo $d['keterangan']; ?></td> -->
                                             <td><?php echo $d['keterangan_taiw']; ?></td>
                                                 <td>
                                                     <div class="hero-unit">
