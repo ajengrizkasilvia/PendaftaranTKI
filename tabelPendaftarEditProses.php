@@ -63,7 +63,7 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
       } else {
       echo "<script>alert('Data berhasil diubah.');window.location='tabelPendaftar.php';</script>";
       }
-  
+      
       //Pas Foto
       if($pas_foto != "") {
         $ekstensi_diperbolehkanpf = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -84,7 +84,7 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
         status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', nama_ayah='$nama_ayah', pekerjaan_ayah='$pekerjaan_ayah', nama_ibu='$nama_ibu',
         pekerjaan_ibu='$pekerjaan_ibu', jml_brother='$jml_brother', jml_sister='$jml_sister', anak_no='$anak_no', nama_pasangan='$nama_pasangan',
-        pekerjaan_pasangan='$pekerjaan_pasangan', jml_anak='$jml_anak', umur_anak='$umur_anak' pas_foto='$pasfoto_baru', id_tahapsatu='$id_tahapsatu'
+        pekerjaan_pasangan='$pekerjaan_pasangan', jml_anak='$jml_anak', umur_anak='$umur_anak', pas_foto='$pasfoto_baru', id_tahapsatu='$id_tahapsatu'
         WHERE id_dft='$id_dft'";
       $result = mysqli_query($konektor, $query);
       if(!$result){

@@ -29,6 +29,8 @@
             <th>Status</th>
             <th>Agama</th>
             <th>Pengalaman Kerja</th>
+            <th>Medical Check</th>
+            <th>Pas Foto</th>
 		</tr>
 		<?php 
 		$no = 1;
@@ -53,6 +55,8 @@
             <td><?php echo $d['status']; ?></td>
             <td><?php echo $d['agama']; ?></td>
             <td><?php echo $d['pengalaman_kerja']; ?></td>
+            <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 100px;"></td>
+            <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"> </td>
 		</tr>
 		<?php 
 		}

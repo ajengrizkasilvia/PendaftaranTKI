@@ -184,7 +184,7 @@
                                 Status <strong>"Diajukan!"</strong> periksa kembali data anda dengan benar.
                             </div>
                         <?php
-                        } else if($d['keterangan'] == 'divertifikasi'){ 
+                        } else if($d['keterangan'] == 'diverifikasi'){ 
                         ?>   
                              <div class="alert alert-info">
                                  <button type="button" class="close" data-dismiss="alert">&times;</button>

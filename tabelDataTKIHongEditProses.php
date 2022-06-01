@@ -224,7 +224,7 @@
     } 
     $id = $_POST['id_lama'];
     $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk',
-        rekomid_hk='$rekomid_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
+        kartukuning_hk='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
         WHERE id_hongkong='$id_hongkong'";
      $result = mysqli_query($konektor, $query);
      if(!$result){

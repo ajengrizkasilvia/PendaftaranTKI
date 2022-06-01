@@ -222,8 +222,8 @@
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="id_negara">
                                                     <option selected>pilih negara tujuan...</option>
-                                                    <option value="9">Hongkong</option>
-                                                    <option value="15">Taiwan</option>
+                                                    <option value="1">Hongkong</option>
+                                                    <option value="2">Taiwan</option>
                                                 </select>
                                                 <div class="input-group-append">
                                                     <label class="input-group-text" for="inputGroupSelect02">Options</label>

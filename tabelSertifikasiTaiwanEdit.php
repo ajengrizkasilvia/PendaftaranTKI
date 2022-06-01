@@ -229,6 +229,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Id Daftar</label>
+                                     <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['nama_lengkap']; ?>" readonly>
+                                        <input type="hidden" name="id_dft_lama" class="form-control" value="<?php echo $d['id_dft']; ?>"/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Perawatan Bayi</label>
                                     <div class="col-sm-10">
                                         <div class="custom-control custom-radio custom-control-inline"> 

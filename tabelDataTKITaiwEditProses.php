@@ -209,20 +209,21 @@
         
     //Rekom id
     if($kartukuning_taiw != "") {
-        $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+        $ekstensi_diperbolehkankar = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
         $kartukuning = explode('.', $kartukuning_taiw); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensirek = strtolower(end($kartukuning));
-        $file_tmprek = $_FILES['kartukuning_taiw']['tmp_name'];   
+        $ekstensikar = strtolower(end($kartukuning));
+        $file_tmpkar = $_FILES['kartukuning_taiw']['tmp_name'];   
         $angka_acak     = rand(1,999);
         $kartukuning_baru = $angka_acak.'-'.$kartukuning_taiw;
 
-        if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-            move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
+        if(in_array($ekstensikar, $ekstensi_diperbolehkankar) === true)  {
+            move_uploaded_file($file_tmpkar, 'berkas/Taiwan/'.$kartukuning_baru); 
         }
     }else {
         $kartukuning_baru = $_POST['kartukuning_taiw_lama'];
     } 
-    $query  = "UPDATE taiwan SET id_dft='$id_dft', sektor_taiw='$sektor_taiw',
+    $id = $_POST['id_lama'];
+    $query  = "UPDATE taiwan SET id='$id', sektor_taiw='$sektor_taiw',
         kartukuning_taiw='$kartukuning_baru', id_tahapdua='$id_tahapdua', keterangan_taiw= '$keterangan_taiw' 
         WHERE id_taiwan='$id_taiwan'";
     $result = mysqli_query($konektor, $query);
@@ -319,10 +320,10 @@
       $skck_baru = $angka_acak.'-'.$skck_taiw;
       //Rekom Id
       if($kartukuning_taiw != "") {
-      $ekstensi_diperbolehkanrek = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+      $ekstensi_diperbolehkankar = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
       $kartukuning = explode('.', $kartukuning_taiw); //memisahkan nama file dengan ekstensi yang diupload
-      $ekstensirek = strtolower(end($kartukuning));
-      $file_tmprek = $_FILES['kartukuning_taiw']['tmp_name'];   
+      $ekstensikar = strtolower(end($kartukuning));
+      $file_tmpkar = $_FILES['kartukuning_taiw']['tmp_name'];   
       $angka_acak     = rand(1,999);
       $kartukuning_baru = $angka_acak.'-'.$kartukuning_taiw;
       //Biometri
@@ -348,8 +349,8 @@
                     move_uploaded_file($file_tmpep, 'berkas/Taiwan/'.$expaspor_baru);
                     if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
                     move_uploaded_file($file_tmpsk, 'berkas/Taiwan/'.$skck_baru);  
-                    if(in_array($ekstensirek, $ekstensi_diperbolehkanrek) === true)  {
-                    move_uploaded_file($file_tmprek, 'berkas/Taiwan/'.$kartukuning_baru); 
+                    if(in_array($ekstensikar, $ekstensi_diperbolehkankar) === true)  {
+                    move_uploaded_file($file_tmpkar, 'berkas/Taiwan/'.$kartukuning_baru); 
                     if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                     move_uploaded_file($file_tmpbio, 'berkas/Taiwan/'.$biometri_baru);   
         

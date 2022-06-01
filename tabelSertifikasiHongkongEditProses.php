@@ -5,6 +5,7 @@
     // menangkap data yang di kirim dari form
     $id_sertif_hk = $_POST['id_sertif_hk'];
     $id = $_POST['id'];
+    $id_dft = $_POST['id_dft'];
     $perawatanbayi_hk = $_POST['perawatanbayi_hk'];
     $pedulianak_hk = $_POST['pedulianak_hk'];
     $pekerjaanrt_hk = $_POST['pekerjaanrt_hk'];
@@ -32,7 +33,8 @@
         $keahlian_baru = $_POST['keahlian_hk_lama'];
     }
     $id = $_POST['id_lama'];
-    $query  = "UPDATE sertifhongkong SET id='$id', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
+    $id_dft = $_POST['id_dft_lama'];
+    $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
     memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk',mandarin_hk='$mandarin_hk',keahlian_hk='$keahlian_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
@@ -59,7 +61,8 @@
         $bahasa_baru = $_POST['bahasa_hk_lama'];
     }
     $id = $_POST['id_lama'];
-    $query  = "UPDATE sertifhongkong SET id='$id', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
+    $id_dft = $_POST['id_dft_lama'];
+    $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
     memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk',mandarin_hk='$mandarin_hk',bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
@@ -95,7 +98,8 @@
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $id = $_POST['id_lama'];
-        $query  = "UPDATE sertifhongkong SET id='$id', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
+        $id_dft = $_POST['id_dft_lama'];
+        $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
         memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
               $result = mysqli_query($konektor, $query);
@@ -116,7 +120,8 @@
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $id = $_POST['id_lama'];
-        $query  = "UPDATE sertifhongkong SET id='$id', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
+        $id_dft = $_POST['id_dft_lama'];
+        $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
         memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
         $result = mysqli_query($konektor, $query);

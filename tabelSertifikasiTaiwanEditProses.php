@@ -5,6 +5,7 @@
     // menangkap data yang di kirim dari form
     $id_sertif_taiw = $_POST['id_sertif_taiw'];
     $id = $_POST['id'];
+    $id_dft = $_POST['id_dft'];
     $perawatanbayi_taiw = $_POST['perawatanbayi_taiw'];
     $pedulianak_taiw = $_POST['pedulianak_taiw'];
     $pekerjaanrt_taiw = $_POST['pekerjaanrt_taiw'];
@@ -32,7 +33,8 @@
         $keahlian_baru = $_POST['keahlian_taiw_lama'];
     }
     $id = $_POST['id_lama'];
-    $query  = "UPDATE sertiftaiwan SET id='$id', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
+    $id_dft = $_POST['id_dft_lama'];
+    $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
     memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
@@ -59,7 +61,8 @@
         $bahasa_baru = $_POST['bahasa_taiw_lama'];
     }
     $id = $_POST['id_lama'];
-    $query  = "UPDATE sertiftaiwan SET id='$id', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
+    $id_dft = $_POST['id_dft_lama'];
+    $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
     memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
@@ -95,7 +98,8 @@
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $id = $_POST['id_lama'];
-        $query  = "UPDATE sertiftaiwan SET id='$id', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
+        $id_dft = $_POST['id_dft_lama'];
+        $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
         memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
               $result = mysqli_query($konektor, $query);
@@ -116,7 +120,8 @@
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $id = $_POST['id_lama'];
-        $query  = "UPDATE sertiftaiwan SET id='$id', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
+        $id_dft = $_POST['id_dft_lama'];
+        $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
         memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru', bahasa_taiw='$bahasa_baru'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
         $result = mysqli_query($konektor, $query);

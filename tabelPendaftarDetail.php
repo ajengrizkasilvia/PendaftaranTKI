@@ -197,7 +197,22 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div>
+                    <?php 
+                        include 'config.php';
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $no = 1;
+                        $id_dft = $_GET['id_dft'];
+                        $data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
+                                    INNER JOIN negara ON pendaftaran.id_negara = negara.id_negara
+                                    INNER JOIN tahapsatu ON pendaftaran.id_tahapsatu = tahapsatu.id_tahapsatu
+                                    INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
+                        while($d = mysqli_fetch_array($data)){
+                    ?>
                         <h1 class="h3 mb-2 text-gray-800">Data TKI</h1>
+                        <a href="tabelPendaftarCetak.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Cetak Detail</a>
+                        <?php 
+                            }
+                        ?>
                     </div>
                     <div>    
                         <ul class="breadcrumb">
