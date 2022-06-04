@@ -259,8 +259,8 @@
                                             <td><?php echo $d['inggris_taiw']; ?></td>
                                             <td><?php echo $d['kantonis_taiw']; ?></td>
                                             <td><?php echo $d['mandarin_taiw']; ?></td>
-                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 100px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 100px;"></td>
                                             <td>
                                                 <div class="hero-unit">
                                                     <p>

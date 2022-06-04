@@ -256,7 +256,7 @@
                                         <tr>
                                             <th>E-KTP</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;"> 
+                                                <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;"> 
                                                 <a href="tabelDataTKIHongCetakEktp.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                  
                                             </td>
@@ -264,7 +264,7 @@
                                         <tr>
                                             <th>Kartu Keluarga</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">  
+                                                <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">  
                                                 <a href="tabelDataTKIHongCetakKK.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                   
                                             </td>
@@ -272,7 +272,7 @@
                                         <tr>
                                             <th>Akta Kelahiran</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">   
+                                                <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">   
                                                 <a href="tabelDataTKIHongCetakAkte.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                  
                                             </td>
@@ -280,7 +280,7 @@
                                         <tr>
                                             <th>Surat Menikah</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                                 <a href="tabelDataTKIHongCetakSuratNikah.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a> 
                                             </td>
@@ -288,7 +288,7 @@
                                         <tr>
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">  
+                                                <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">  
                                                 <a href="tabelDataTKIHongCetakSuratIzin.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                  
                                             </td>
@@ -296,7 +296,7 @@
                                         <tr>
                                             <th>Ex Paspor</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;"> 
+                                                <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;"> 
                                                 <a href="tabelDataTKIHongCetakExPaspor.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                    
                                             </td>
@@ -304,7 +304,7 @@
                                         <tr>
                                             <th>SKCK</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;"> 
+                                                <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;"> 
                                                 <a href="tabelDataTKIHongCetakSKCK.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                    
                                             </td>
@@ -312,7 +312,7 @@
                                         <tr>
                                             <th>Kartu Kuning</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">   
+                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">   
                                                 <a href="tabelDataTKIHongCetakKartuKuning.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                  
                                             </td>
@@ -320,7 +320,7 @@
                                         <tr>
                                             <th>Biometri</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                                 <a href="tabelDataTKIHongCetakBiometri.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a> 
                                             </td>

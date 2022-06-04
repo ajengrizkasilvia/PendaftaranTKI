@@ -204,13 +204,13 @@
                                         <tr>
                                             <th>Sertifikasi Keahlian</th>
                                             <td>
-                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">                                                
+                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 400px;">                                                
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Sertifikasi Bahasa</th>
                                             <td>
-                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">                                                 
+                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 400px;">                                                 
                                             </td>
                                         </tr>
                                     <?php 

@@ -256,7 +256,7 @@
                                         <tr>
                                             <th>E-KTP</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                                 <a href="tabelDataTKITaiwCetakEktp.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                     
                                             </td>
@@ -264,7 +264,7 @@
                                         <tr>
                                             <th>Kartu Keluarga</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">       
+                                                <img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">       
                                                 <a href="tabelDataTKITaiwCetakKK.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                               
                                             </td>
@@ -272,7 +272,7 @@
                                         <tr>
                                             <th>Akta Kelahiran</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">  
+                                                <img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">  
                                                 <a href="tabelDataTKITaiwCetakAkte.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                    
                                             </td>
@@ -280,7 +280,7 @@
                                         <tr>
                                             <th>Surat Menikah</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                                 <a href="tabelDataTKITaiwCetakSuratNikah.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>  
                                             </td>
@@ -288,7 +288,7 @@
                                         <tr>
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">     
+                                                <img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">     
                                                 <a href="tabelDataTKITaiwCetakSuratIzin.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                
                                             </td>
@@ -296,7 +296,7 @@
                                         <tr>
                                             <th>Ex Paspor</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">     
+                                                <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">     
                                                 <a href="tabelDataTKITaiwCetakExPaspor.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>     
                                             </td>
@@ -304,7 +304,7 @@
                                         <tr>
                                             <th>SKCK</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">  
+                                                <img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">  
                                                 <a href="tabelDataTKITaiwCetakSKCK.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>        
                                             </td>
@@ -312,7 +312,7 @@
                                         <tr>
                                             <th>Kartu Kuning</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">     
+                                                <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">     
                                                 <a href="tabelDataTKITaiwCetakKartuKuning.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                 
                                             </td>
@@ -320,7 +320,7 @@
                                         <tr>
                                             <th>Biometri</th>
                                             <td>
-                                                <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                                 <a href="ttabelDataTKITaiwCetakBiometri.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>  
                                             </td>

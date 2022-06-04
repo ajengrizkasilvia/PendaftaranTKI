@@ -195,8 +195,6 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <!-- Page Heading -->
-                    <div>
                     <?php 
                         include 'config.php';
                         $konektor = mysqli_connect("localhost","root","", "tki");
@@ -208,12 +206,15 @@
                                     INNER JOIN user ON pendaftaran.id = user.id WHERE id_dft='$id_dft'");
                         while($d = mysqli_fetch_array($data)){
                     ?>
-                        <h1 class="h3 mb-2 text-gray-800">Data TKI</h1>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Detail Pendaftar</h1>
                         <a href="tabelPendaftarCetak.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Cetak Detail</a>
-                        <?php 
-                            }
-                        ?>
                     </div>
+                    <p>Berikut merupakan detail pendaftar dari negara tujuan Hongkong</p>
+                    <?php 
+                        }
+                    ?>
                     <div>    
                         <ul class="breadcrumb">
                             <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
@@ -374,7 +375,7 @@
                                         <tr>
                                             <th>Medical Check</th>
                                             <td>
-                                                <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 200px;float: left;margin-bottom: 5px;">
                                                 <a href="tabelPendaftarCetakMedical.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                     
                                             </td>
@@ -382,7 +383,7 @@
                                         <tr>
                                             <th>Pas Foto</th>
                                             <td>
-                                                <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">       
+                                                <img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 200px;float: left;margin-bottom: 5px;">       
                                                 <a href="tabelPendaftarCetakPasFoto.php?id_dft=<?php echo $d['id_dft']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                               
                                             </td>

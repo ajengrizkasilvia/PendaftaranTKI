@@ -23,7 +23,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
-						<h3 class="mb-4 text-center">Register</h3>
+						<h3 class="mb-4 text-center">Create an Account!</h3>
 						<form action="prosesregistrasi.php" method="post">
 							<div class="form-group">
 								<input type="text" class="form-control" name="nama_lengkap" placeholder="Masukkan nama lengkap" id="nama_lengkap">
@@ -48,7 +48,7 @@
 							<div class="form-group">
 								<td>
                                     <select class="form-control" name="role" id="role">
-                                        <option>--klik role 'TKI'--</option>
+                                        <option>klik role 'TKI'</option>
                                         <option value='2'>TKI</option>
                                     </select>   
                                 </td>
@@ -59,12 +59,9 @@
 							
 						</form>
 						<hr>
-							<div class="text-center">
-								<a class="small" href="##">Forgot Password?</a>
-							</div>
-							<div class="text-center">
-								<a class="small" href="login.php">Already have an account? Login!</a>
-							</div>
+						<div class="text-center">
+							<a class="small" href="login.php">Already have an account? Login!</a>
+						</div>
 		      		</div>
 				</div>
 			</div>

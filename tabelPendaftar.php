@@ -289,8 +289,8 @@
                                                 <td><?php echo $d['pekerjaan_pasangan']; ?></p>
                                                 <td><?php echo $d['jml_anak']; ?></p>
                                                 <td><?php echo $d['umur_anak']; ?> tahun</p>
-                                                <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
-                                                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"></td>
+                                                <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 100px;"></td>
+                                                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"></td>
                                                 <td>
                                                     <?php
                                                         {

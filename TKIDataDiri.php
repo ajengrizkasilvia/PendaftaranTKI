@@ -167,8 +167,12 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Halaman Data Diri</h1>
                     </div>
-                        <p>Berikut merupakan data diri anda. Apabila ada data yang tidak sesuai silahkan konfirmasi ke Admin.</p>
-                        <p> Cek status proses untuk mengetahui proses anda. </p>
+                    <p>Berikut merupakan data diri anda. Apabila ada data yang tidak sesuai silahkan konfirmasi ke Admin. 
+                        Cek status proses untuk mengetahui proses anda.</p>
+                    <ul class="breadcrumb">
+                        <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
+                        <li class="active"> Data Diri</li>
+                    </ul>
                     <?php
                         $konektor = mysqli_connect("localhost","root","", "tki");
                         $username = $_SESSION['username'];
@@ -335,11 +339,11 @@
                                 </tr>
                                 <tr>
                                     <th>Medical Check</th>
-                                        <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 600px;"></td>
+                                        <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 150px;"></td>
                                 </tr>
                                 <tr>
                                     <th>Pas Foto</th>
-                                        <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 600px;"></td>
+                                        <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 150px;"></td>
                                 </tr>
                                 <tr>
                                     <th>Status Proses</th>
@@ -366,7 +370,6 @@
                                             }
                                         ?>
                                     </td>
-                                        <!-- <td><?php echo $d['keterangan']; ?></td> -->
                                 </tr>
                             <tbody>
                             </table>

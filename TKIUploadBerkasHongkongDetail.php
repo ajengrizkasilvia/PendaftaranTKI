@@ -173,9 +173,12 @@
                     </div>
                     <p class="mb-4">Berikut merupakan detail data berkas-berkas anda. Tekan menu upload berkas untuk mengupload berkas jika anda dinyatakan lolos tahap pertama. 
                         Apabila terdapat data yang tidak sesuai silahkan upload ulang berkas anda dengan tekan menu upload berkas lagi dan konfirmasi ke Admin.
-                    </p>
-                    <p> Selalu cek status proses untuk mengetahui proses anda. Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya. </p>
-
+                        Selalu cek status proses untuk mengetahui proses anda. Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya. </p>
+                    <ul class="breadcrumb">
+                        <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
+                        <li><a href="TKIUploadBerkasHongkong.php">Berkas TKI Hongkong</a> <span class="divider">/</span></li>
+                        <li class="active">Detail</li>
+                    </ul>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -211,55 +214,55 @@
                                         <tr>
                                             <th>E-KTP</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
+                                                <img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                   
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Kartu Keluarga</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                                <img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Akta Kelahiran</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                                <img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Surat Menikah</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                   
+                                                <img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                   
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Ex Paspor</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                                <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>SKCK</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                                <img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Kartu Kuning</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">                                                    
+                                                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">                                                    
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Biometri</th>
                                             <td>
-                                                <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;">
+                                                <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                             </td>
                                         </tr>
                                         <tr>

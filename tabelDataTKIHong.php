@@ -255,15 +255,15 @@
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $d['nama_lengkap']; ?></p>
                                     <td><?php echo $d['sektor_hk']; ?></p>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 300px;"></td>
-                                    <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 200px;"></td>
                                     <td>Klik link berikut <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a></td>
                                     <td> 
                                         <?php

@@ -174,8 +174,11 @@
                     </div>
                     <p class="mb-4">Berikut merupakan data berkas-berkas anda. Tekan menu upload berkas untuk mengupload berkas jika anda dinyatakan lolos tahap pertama. 
                         Apabila terdapat data yang tidak sesuai silahkan upload ulang berkas anda dengan tekan menu upload berkas lagi dan konfirmasi ke Admin.
-                    </p>
-                    <p> Cek status proses untuk mengetahui proses anda. </p>
+                        Cek status proses untuk mengetahui proses anda. </p>
+                    <ul class="breadcrumb">
+                        <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
+                        <li class="active"> Upload Berkas Taiwan</li>
+                    </ul>
                     <?php
                         $konektor = mysqli_connect("localhost","root","", "tki");
                         $username = $_SESSION['username'];

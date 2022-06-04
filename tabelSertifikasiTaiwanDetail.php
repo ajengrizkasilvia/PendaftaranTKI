@@ -289,7 +289,7 @@
                                         <tr>
                                             <th>Sertifikasi Keahlian</th>
                                             <td>
-                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 800px;">
+                                                <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 400px;">
                                                 <a href="tabelSertifikasiTaiwanCetakKeahlian.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                
                                             </td>
@@ -297,7 +297,7 @@
                                         <tr>
                                             <th>Sertifikasi Bahasa</th>
                                             <td>
-                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 800px;">    
+                                                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 400px;">    
                                                 <a href="tabelSertifikasiTaiwanCetakBahasa.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                             
                                             </td>
