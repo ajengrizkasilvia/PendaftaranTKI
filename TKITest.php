@@ -170,49 +170,29 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Test TKI</h6><br>
-                            <a href="TKITestAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Data Test
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Negara Tujuan</th>
-                                            <th>Score Test</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM test INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft INNER JOIN negara ON test.id_negara = negara.id_negara");
-                                        while($d = mysqli_fetch_array($data)){
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $no++; ?></td>
-                                                <td><?php echo $d['nama_lengkap']; ?></td>
-                                                <td><?php echo $d['negara_tujuan']; ?></td>
-                                                <td><img src="nilai/<?php echo $d['nilai']; ?>" style="width: 200px;"></td>
-                                            </tr>
-                                            <?php 
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                    <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Brand Buttons -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary"></h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Berikut merupakan halaman test calon TKI, test ini digunakan sebagai latihan kemampuan bahasa Anda.</p>
+                                    <p>Cara pengerjaan soal test yaitu pilih salah satu jawaban yang benar, dan score atau hasil akan ditampilkan setelah mengerjakan seluruh soal test yang telah disediakan.
+                                    Untuk pengerjaan silahkan tekan atau klik button dibawah sesuai negara tujuan.</p>
+                                
+                                    <a href="quizcantonese.php" class="btn btn-primary btn-block"><i class="fas fa-language fa-sm text-white-50"></i>
+                                        Kerjakan cantonese</a>
+                                    <a href="quizmandarin.php" class="btn btn-primary btn-block"><i
+                                        class="fas fa-language fa-sm text-white-50"></i>
+                                        Kerjakan mandarin</a>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 <!-- /.container-fluid -->
 

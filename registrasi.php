@@ -26,10 +26,10 @@
 						<h3 class="mb-4 text-center">Create an Account!</h3>
 						<form action="prosesregistrasi.php" method="post">
 							<div class="form-group">
-								<input type="text" class="form-control" name="nama_lengkap" placeholder="Masukkan nama lengkap" id="nama_lengkap">
+								<input type="text" class="form-control" name="nama_lengkap" required placeholder="Masukkan nama lengkap" id="nama_lengkap">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="username" placeholder="Masukkan username" id="username">
+								<input type="text" class="form-control" name="username" required placeholder="Masukkan username" id="username">
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control" name="password" placeholder="Masukkan password" id="password">

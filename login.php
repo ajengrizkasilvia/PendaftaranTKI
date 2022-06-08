@@ -30,10 +30,10 @@
 		      	<h3 class="mb-4 text-center">Have an account?</h3>
 		      	<form action="proseslogin.php" method="post" onSubmit="return validasi()" class="signin-form">
 		      		<div class="form-group">
-		      			<input type="text" class="form-control" name="username" placeholder="Masukkan username" id="username">
+		      			<input type="text" class="form-control" name="username" required placeholder="Masukkan username" id="username">
 		      		</div>
 	            <div class="form-group">
-					<input type="password" class="form-control" name="password" placeholder="Masukkan password" id="password">
+					<input type="password" class="form-control" name="password" required placeholder="Masukkan password" id="password">
 	              	<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" onclick="myFunction()"></span>
 					<script>
 						function myFunction() {
@@ -52,9 +52,6 @@
 	            
 	          </form>
 			  <hr>
-			  	<div class="text-center">
-                    <a class="small" href="##">Forgot Password?</a>
-            	</div>
                 <div class="text-center">
                     <a class="small" href="registrasi.php">Create an Account!</a>
                 </div>

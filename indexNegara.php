@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="#tujuan">Negara Tujuan</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.php">Tentang Kami</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="TKIFormDaftar.php">Daftar Disini!</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.php">Login Disini!</a></li>
                     </ul>
                 </div>
             </div>
