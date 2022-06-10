@@ -128,11 +128,20 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="tabelTest.php">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test TKI</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Test TKI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
@@ -199,8 +208,6 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian atau Ketrampilan TKI</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Cetak Disini</a>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
                     Upload berkas sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg. </p>

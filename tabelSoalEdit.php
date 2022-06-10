@@ -107,11 +107,20 @@
                     <span>Negara Tujuan</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-user-edit"></i>
+                    <span>Test TKI</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Test TKI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -201,17 +210,13 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4">Berikut adalah halaman Edit Soal Test. Untuk mengedit soal, edit field atau bagian yang diperlukan kemudian klik simpan dibawah.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Test TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Soal Test TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -260,15 +265,18 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Jawaban Benar</label>
-                                        <td>
-                                            <select class="form-control" name="correct_ans" required>
+                                        <div class="input-group mb-3">
+                                            <select class="custom-select" id="inputGroupJawab" name="correct_ans" required>
                                                 <option value="" selected>--Atur Jawaban Benar--</option>
                                                 <option value="a" <?= ($data['correct'] == 'a' ? 'selected' : '') ?>>Opsi A</option>
                                                 <option value="b" <?= ($data['correct'] == 'b' ? 'selected' : '') ?>>Opsi B</option>
                                                 <option value="c" <?= ($data['correct'] == 'c' ? 'selected' : '') ?>>Opsi C</option>
                                                 <option value="d" <?= ($data['correct'] == 'd' ? 'selected' : '') ?>>Opsi D</option>
-                                            </select>   
-                                        </td>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <label class="input-group-text" for="inputGroupJawab">Options</label>
+                                            </div>   
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Bobot Soal</label>
@@ -276,13 +284,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Bahasa</label>
-                                        <td>
-                                            <select class="form-control" name="tipe" required>
+                                        <div class="input-group mb-3">
+                                            <select class="custom-select" id="inputGroupSelect02" name="tipe" required>
                                                 <option value="" selected>--Atur Bahasa--</option>
                                                 <option <?= ($data['type'] == 'cantonese' ? 'selected' : '') ?> value="cantonese">cantonese</option>
                                                 <option <?= ($data['type'] == 'mandarin' ? 'selected' : '') ?> value="mandarin">mandarin</option>
-                                            </select>   
-                                        </td>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                            </div>     
+                                        </div>
                                     </div>
                                          <p>
                                             <td></td>

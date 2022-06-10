@@ -130,11 +130,20 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="tabelTest.php">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test TKI</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Test TKI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
@@ -200,7 +209,7 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
-                    <p class="mb-4">Berikut merupakan data-data dari pendaftar atau calon TKI dari semua negara tujuan TKI yang meliputi Sertifikasi Keahlian dan Sertifkasi Bahasa.</p>
+                    <p class="mb-4">Berikut merupakan halaman untuk menambah soal test TKI baik soal test bahasa cantonese maupun bahasa manndarin.</p>
 
                     
                     <!-- DataTales Example -->

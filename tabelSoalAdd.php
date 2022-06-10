@@ -130,11 +130,20 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="tabelTest.php">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test TKI</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Test TKI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
@@ -201,17 +210,14 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4">Berikut adalah halaman Tambah Soal Test. Untuk menambah soal, tambahkan sesuai dengan type bahasa soal test.</p>
+                    <p> Tekan <a href="tabelSoal.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Test TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Soal Test TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -228,37 +234,40 @@
                                         <div class="row">
                                             <div class="col-3">
                                                 <td>
-                                                    <input required type="text" name="op_a" class="form-control" placeholder="Masukkan Opsi"/>
+                                                    <input required type="text" name="op_a" class="form-control" placeholder="Masukkan Opsi A"/>
                                                 </td>
                                             </div>
                                             <div class="col-3">
                                                 <td>
-                                                    <input required type="text" name="op_b" class="form-control" placeholder="Masukkan Opsi"/>
+                                                    <input required type="text" name="op_b" class="form-control" placeholder="Masukkan Opsi B"/>
                                                 </td>
                                             </div>
                                             <div class="col-3">
                                                 <td>
-                                                    <input required type="text" name="op_c" class="form-control" placeholder="Masukkan Opsi"/>
+                                                    <input required type="text" name="op_c" class="form-control" placeholder="Masukkan Opsi C"/>
                                                 </td>
                                             </div>
                                             <div class="col-3">
                                                 <td>
-                                                    <input required type="text" name="op_d" class="form-control" placeholder="Masukkan Opsi"/>
+                                                    <input required type="text" name="op_d" class="form-control" placeholder="Masukkan Opsi D"/>
                                                 </td>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Jawaban Benar</label>
-                                        <td>
-                                            <select class="form-control" name="correct_ans" required>
-                                                <option value="" selected>--Atur Jawaban Benar--</option>
+                                        <div class="input-group mb-3">
+                                            <select class="custom-select" id="inputGroupJawab" name="correct_ans" required>
+                                                <option value="" selected>--atur jawaban benar--</option>
                                                 <option value="a">Opsi A</option>
                                                 <option value="b">Opsi B</option>
                                                 <option value="c">Opsi C</option>
                                                 <option value="d">Opsi D</option>
                                             </select>   
-                                        </td>
+                                            <div class="input-group-append">
+                                                <label class="input-group-text" for="inputGroupJawab">Options</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Bobot Soal</label>
@@ -266,13 +275,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Bahasa</label>
-                                        <td>
-                                            <select class="form-control" name="tipe" required>
-                                                <option value="" selected>--Atur Bahasa--</option>
+                                        <div class="input-group mb-3">
+                                            <select class="custom-select" id="inputGroupSelect02" name="tipe" required>
+                                                <option value="" selected>--atur bahasa--</option>
                                                 <option value="cantonese">cantonese</option>
                                                 <option value="mandarin">mandarin</option>
-                                            </select>   
-                                        </td>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                            </div>   
+                                        </div>
                                     </div>
                                          <p>
                                             <td></td>

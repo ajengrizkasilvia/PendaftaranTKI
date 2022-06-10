@@ -128,11 +128,20 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="tabelTest.php">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test TKI</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Test TKI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
@@ -245,18 +254,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Negara Tujuan</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="id_negara">
-                                                    <option>--pilih negara tujuan--</option>
-                                                    <option value='1'>Hongkong</option>
-                                                    <option value='2'>Taiwan</option>
-                                                </select>   
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="id_negara">
                                                     <option selected>pilih negara tujuan...</option>
-                                                    <option value="9">Hongkong</option>
-                                                    <option value="15">Taiwan</option>
+                                                    <option value="1">Hongkong</option>
+                                                    <option value="2">Taiwan</option>
                                                 </select>
                                                 <div class="input-group-append">
                                                     <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -269,7 +271,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Tanggal Lahir (Contoh Format : 1997-02-14 (tahun-bulan-tanggal))</label>
-                                            <td><input type="text" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
+                                            <td><input type="date" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Umur</label>
@@ -306,15 +308,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Status</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="status">
-                                                    <option>--pilih status--</option>
-                                                    <option>Menikah</option>
-                                                    <option>Belum Menikah</option>
-                                                    <option>Cerai Hidup</option>
-                                                    <option>Cerai Mati</option>
-                                                </select>   
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02"  name="status">
                                                     <option selected>pilih status...</option>
@@ -334,13 +327,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Pengalaman Kerja Ex / Non (Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="pengalaman_kerja">
-                                                    <option>---(Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)---</option>
-                                                    <option>Ex</option>
-                                                    <option>Non</option>
-                                                </select>   
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="pengalaman_kerja">
                                                     <option selected>pilih pengalaman kerja...</option>
@@ -408,15 +394,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Status Proses</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="id_tahapsatu">
-                                                    <option>--pilih status proses--</option>
-                                                    <option value='1'>Diajukan</option>
-                                                    <option value='2'>Diverifikasi</option>
-                                                    <option value='3'>Diterima</option>
-                                                    <option value='4'>Ditolak</option>
-                                                </select>  
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="id_tahapsatu">
                                                     <option selected>pilih status proses...</option>
