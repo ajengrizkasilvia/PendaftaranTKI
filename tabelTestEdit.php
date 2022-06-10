@@ -234,20 +234,19 @@
                                                 <div class="form-group">
                                                     <label>Negara Tujuan</label>
                                                     <td>
-                                                        <select class="form-control" name="id_negara">
+                                                        <select class="form-control" name="id_negara" required>
                                                             <option>--Atur Ulang Negara Tujuan--</option>
-                                                            <option value='1'>Hongkong</option>
-                                                            <option value='2'>Taiwan</option>
-                                                            <option value='3'>Singapore</option>
-                                                            <option value='4'>Malaysia</option>
+                                                            <option value='1' <?= ($d['id_negara'] == '1' ? 'selected' : '') ?>>Hongkong</option>
+                                                            <option value='2' <?= ($d['id_negara'] == '2' ? 'selected' : '') ?>>Taiwan</option>
+                                                            <option value='3' <?= ($d['id_negara'] == '3' ? 'selected' : '') ?>>Singapore</option>
+                                                            <option value='4' <?= ($d['id_negara'] == '4' ? 'selected' : '') ?>>Malaysia</option>
                                                         </select>   
                                                     </td>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Score Nilai</label>
+                                                <div class="form-group">			
+                                                    <label>Nilai</label>
                                                     <td>
-                                                        <img src="nilai/<?php echo $d['nilai']; ?>" class="form-control" style="width: 200px;height: 200px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="nilai" />
+                                                        <input type="number" class="form-control" name="nilai" value="<?php echo $d['score']; ?>">
                                                     </td>
                                                 </div>
                                                 <br><br><br><br><br><br><br>

@@ -135,6 +135,21 @@
                     <span>Test TKI</span></a>
             </li>
 
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTh"
+                    aria-expanded="true" aria-controls="collapseTh">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Soal Test</span>
+                </a>
+                <div id="collapseTh" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Soal Test TKI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

@@ -199,56 +199,87 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
-                    <p class="mb-4">Berikut merupakan data-data dari pendaftar atau calon TKI dari semua negara tujuan TKI yang meliputi Sertifikasi Keahlian dan Sertifkasi Bahasa.</p>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
+                    </div>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
 
-                    
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Test TKI</h6><br>
-                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
-                            </a>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Test TKI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama TKI</th>
-                                            <th>Negara Tujuan</th>
-                                            <th>Score Test</th>
-                                            <th>Type Test</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php 
-                                        include 'config.php';
-                                        $konektor = mysqli_connect("localhost","root","", "tki");
-                                        $no = 1;
-                                        $data = mysqli_query($konektor,"SELECT * FROM test INNER JOIN pendaftaran ON test.id_dft = pendaftaran.id_dft INNER JOIN negara ON test.id_negara = negara.id_negara INNER JOIN user ON pendaftaran.id = user.id ORDER BY test.id_test DESC");
-                                        while($d = mysqli_fetch_array($data)){
-                                    ?>
-                                        <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><?php echo $d['negara_tujuan']; ?></td>
-                                            <td><?php echo $d['score']; ?></td>
-                                            <td><?php echo $d['type']; ?></td>
-                                            
-                                            <td>
-                                                <a href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
-                                                <a href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">HAPUS</a>
-                                            </td>
-                                        </tr>
-                                    <?php 
-                                        }
-                                    ?>
-                                    </tbody>
-                                </table>
+                            <form method="post" action="tabelSoalAddProses.php" enctype="multipart/form-data">
+                                <fieldset>
+                                    <div class="form-group">			
+                                        <label>Soal</label>
+                                        <td>
+                                            <input required type="text" name="quest" class="form-control" placeholder="Masukkan Soal"/>
+                                        </td>
+                                    </div>
+                                    <div class="form-group">			
+                                        <label>Opsi</label>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <td>
+                                                    <input required type="text" name="op_a" class="form-control" placeholder="Masukkan Opsi"/>
+                                                </td>
+                                            </div>
+                                            <div class="col-3">
+                                                <td>
+                                                    <input required type="text" name="op_b" class="form-control" placeholder="Masukkan Opsi"/>
+                                                </td>
+                                            </div>
+                                            <div class="col-3">
+                                                <td>
+                                                    <input required type="text" name="op_c" class="form-control" placeholder="Masukkan Opsi"/>
+                                                </td>
+                                            </div>
+                                            <div class="col-3">
+                                                <td>
+                                                    <input required type="text" name="op_d" class="form-control" placeholder="Masukkan Opsi"/>
+                                                </td>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Jawaban Benar</label>
+                                        <td>
+                                            <select class="form-control" name="correct_ans" required>
+                                                <option value="" selected>--Atur Jawaban Benar--</option>
+                                                <option value="a">Opsi A</option>
+                                                <option value="b">Opsi B</option>
+                                                <option value="c">Opsi C</option>
+                                                <option value="d">Opsi D</option>
+                                            </select>   
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Bobot Soal</label>
+                                        <td><input required type="number" name="point" class="form-control"/></td>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Bahasa</label>
+                                        <td>
+                                            <select class="form-control" name="tipe" required>
+                                                <option value="" selected>--Atur Bahasa--</option>
+                                                <option value="cantonese">cantonese</option>
+                                                <option value="mandarin">mandarin</option>
+                                            </select>   
+                                        </td>
+                                    </div>
+                                         <p>
+                                            <td></td>
+                                            <td><button class="btn btn-primary" type="submit">Simpan</button></td>
+                                         </p>		
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>

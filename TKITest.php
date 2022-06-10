@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
 
 </head>
 
@@ -185,9 +186,9 @@
                                     <p>Cara pengerjaan soal test yaitu pilih salah satu jawaban yang benar, dan score atau hasil akan ditampilkan setelah mengerjakan seluruh soal test yang telah disediakan.
                                     Untuk pengerjaan silahkan tekan atau klik button dibawah sesuai negara tujuan.</p>
                                 
-                                    <a href="quizcantonese.php" class="btn btn-primary btn-block"><i class="fas fa-language fa-sm text-white-50"></i>
+                                    <a href="quizez.php?type=cantonese" class="btn btn-primary btn-block"><i class="fas fa-language fa-sm text-white-50"></i>
                                         Kerjakan cantonese</a>
-                                    <a href="quizmandarin.php" class="btn btn-primary btn-block"><i
+                                    <a href="quizez.php?type=mandarin" class="btn btn-primary btn-block"><i
                                         class="fas fa-language fa-sm text-white-50"></i>
                                         Kerjakan mandarin</a>
                             </div>

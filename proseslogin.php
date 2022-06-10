@@ -19,6 +19,7 @@ if($cek > 0){
  
 		// buat session login dan username
 		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $data['id'];
 		$_SESSION['role'] = "1";
 		// alihkan ke halaman dashboard admin
 		header("location:indexadmin.php");
@@ -27,6 +28,7 @@ if($cek > 0){
 	}else if($data['role']=="2"){
 		// buat session login dan username
 		$_SESSION['username'] = $username;
+		$_SESSION['id'] = $data['id'];
 		$_SESSION['role'] = "2";
 		// alihkan ke halaman dashboard pegawai
 		header("location:indextki.php");
