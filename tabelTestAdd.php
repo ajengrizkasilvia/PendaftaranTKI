@@ -95,8 +95,6 @@
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
             </li>

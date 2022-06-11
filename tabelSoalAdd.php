@@ -82,6 +82,20 @@
             <div class="sidebar-heading">
                 Tenaga Kerja
             </div>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="tabelNegaraTujuan.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Negara Tujuan</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabelPendaftar.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pendaftar</span></a>
+            </li>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -100,20 +114,7 @@
                     </div>
                 </div>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tabelNegaraTujuan.php">
-                    <i class="fas fa-fw fa-globe"></i>
-                    <span>Negara Tujuan</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tabelPendaftar.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pendaftar</span></a>
-            </li>
-
+            
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
