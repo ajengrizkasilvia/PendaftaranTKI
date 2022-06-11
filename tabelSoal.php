@@ -247,8 +247,20 @@
                                             <td><?php echo $d['type']; ?></td>
                                             
                                             <td>
-                                                <a href="tabelSoalEdit.php?id=<?php echo $d['id']; ?>">EDIT</a>
-                                                <a href="tabelSoalDelete.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-sm" href="tabelSoalEdit.php?id=<?php echo $d['id']; ?>">
+                                                        Edit
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-sm" href="tabelSoalDelete.php?id=<?php echo $d['id']; ?>">
+                                                        Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php 

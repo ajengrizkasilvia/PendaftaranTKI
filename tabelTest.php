@@ -246,8 +246,20 @@
                                             <td><?php echo $d['type']; ?></td>
                                             
                                             <td>
-                                                <a href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">EDIT</a>
-                                                <a href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">HAPUS</a>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-warning btn-sm" href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">
+                                                        Edit
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="hero-unit">
+                                                    <p>
+                                                        <a class="btn btn-danger btn-sm" href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">
+                                                        Hapus
+                                                        </a>
+                                                    </p>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php 
