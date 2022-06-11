@@ -15,6 +15,7 @@
 	<table border="1" style="width: 100%">
 		<tr>
 			<th>No</th>
+            <th>Tanggal Pendaftaran</th>
             <th>NIK</th>
             <th>Nama Lengkap</th>
             <th>Negara Tujuan</th>
@@ -41,6 +42,7 @@
 		?>
 		<tr>
 			<td><?php echo $no++; ?></td>
+            <td><?php echo $d['tgl_daftar']; ?></td>
             <td><?php echo $d['nik']; ?></td>
             <td><?php echo $d['nama_lengkap']; ?></td>
             <td><?php echo $d['negara_tujuan']; ?></td>

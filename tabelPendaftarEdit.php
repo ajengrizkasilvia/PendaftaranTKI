@@ -228,6 +228,12 @@
                                         <form method="post" action="tabelPendaftarEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Tanggal Pendaftaran</label>
+                                                    <div class="col-sm-10">
+                                                    <input type="date" class="form-control" name="tgl_daftar" value="<?php echo $d['tgl_daftar']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">No Telp / WA</label>
                                                     <div class="col-sm-10">
                                                         <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
@@ -273,7 +279,7 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                                     <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>">
+                                                    <input type="date" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -476,7 +482,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

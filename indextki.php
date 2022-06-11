@@ -170,7 +170,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Halaman Beranda</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Halo <?php echo $_SESSION['username']; ?>, Selamat Datang di SIPTKI ! <i class="fas fa-laugh-wink"></i></h1>
                     </div>
 
                     <!-- Content Row -->
@@ -182,7 +182,7 @@
                                 <!-- Illustrations -->
                                 <div >
                                     <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Landing Page</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Halaman Beranda</h6>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
@@ -258,7 +258,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2021</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

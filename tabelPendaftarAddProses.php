@@ -5,6 +5,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
 // menangkap data yang di kirim dari form
 $id = $_POST['id'];
 $id_negara = $_POST['id_negara'];
+$tgl_daftar = $_POST['tgl_daftar'];
 $no_telp = $_POST['no_telp'];
 $nik = $_POST['nik'];
 $id = $_POST['id'];
@@ -65,11 +66,11 @@ if($medical_check != "") {
   }else {
       $pasfoto_baru = $_POST['pas_foto_lama'];
   }
-  $query = "INSERT INTO pendaftaran (id_negara, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
+  $query = "INSERT INTO pendaftaran (id_negara, tgl_daftar, no_telp, nik, id, tempat_lahir, tanggal_lahir, umur, 
     alamat_lengkap, jenis_kelamin, tb, bb, pendidikan_terakhir, status, agama, pengalaman_kerja, nama_ayah, pekerjaan_ayah,
     nama_ibu, pekerjaan_ibu, jml_brother, jml_sister, anak_no, nama_pasangan, pekerjaan_pasangan, jml_anak, umur_anak,
     medical_check, pas_foto, id_tahapsatu)
-    VALUES('$id_negara', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
+    VALUES('$id_negara','tgl_daftar', '$no_telp', '$nik','$id','$tempat_lahir','$tanggal_lahir', '$umur', '$alamat_lengkap',
     '$jenis_kelamin', '$tb', '$bb', '$pendidikan_terakhir', '$status', '$agama', '$pengalaman_kerja', '$nama_ayah',
      '$pekerjaan_ayah', '$nama_ibu', '$pekerjaan_ibu', '$jml_brother', '$jml_sister', '$anak_no', '$nama_pasangan',
      '$pekerjaan_pasangan', '$jml_anak', '$umur_anak',

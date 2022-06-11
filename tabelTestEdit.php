@@ -256,15 +256,15 @@
                                                         <input type="number" class="form-control" name="nilai" value="<?php echo $d['score']; ?>">
                                                     </td>
                                                 </div>
-                                                <br><br><br><br><br><br><br>
                                                 <div class="form-group">
-                                                    <td><input type="submit" value="SIMPAN"></td>
+                                                    <td><input class="btn btn-primary btn-lg" type="submit" value="Simpan"></td>
                                                 </div>	
                                             </fieldset>
                                         </form>
                                         <?php 
                                     }
                                 ?>
+                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelTest.php';">Cancel</button></td>
                             </div>
                         </div>
                     </div>
@@ -278,7 +278,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2020</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

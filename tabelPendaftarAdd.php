@@ -223,8 +223,12 @@
                                 <form method="post" action="tabelPendaftarAddProses.php" enctype="multipart/form-data">
                                     <fieldset>
                                         <div class="form-group">
-                                            <label>No Telp / WA</label>
+                                            <label>Tanggal Pendaftaran (Sekarang)</label>
                                             <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                            <td><input type="date" name="tgl_daftar" class="form-control" required placeholder="Masukkan tanggal pendaftaran"/></td>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>No Telp / WA</label>
                                             <td><input type="text" name="no_telp" class="form-control" required placeholder="Masukkan No Telp atau Whatsapp"/></td>
                                         </div>
                                         <div class="form-group">			
@@ -270,8 +274,8 @@
                                             <td><input type="text" name="tempat_lahir" class="form-control" required placeholder="Masukkan tempat lahir"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Tanggal Lahir (Contoh Format : 1997-02-14 (tahun-bulan-tanggal))</label>
-                                            <td><input type="date" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
+                                            <label>Tanggal Lahir</label>
+                                            <td><input type="date" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Umur</label>
@@ -427,7 +431,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

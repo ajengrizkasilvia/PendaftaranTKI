@@ -226,6 +226,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Tanggal Pendaftaran</th>
                                             <th>No Telp</th>
                                             <th>NIK</th>
                                             <th>Nama Lengkap</th>
@@ -272,6 +273,7 @@
                                             ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
+                                                <td><?php echo $d['tgl_daftar']; ?></td>
                                                 <td><?php echo $d['no_telp']; ?></td>
                                                 <td><?php echo $d['nik']; ?></td>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
@@ -364,7 +366,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

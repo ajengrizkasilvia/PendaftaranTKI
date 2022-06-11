@@ -233,6 +233,10 @@
                         <table class="table table-bordered">
                             
                             <tbody>
+                                <tr>    
+                                    <th>Tanggal Pendaftaran</th>
+                                        <td><?php echo $d['tgl_daftar']; ?></td>
+                                </tr>
                                 <tr>
                                     <th>No Telp</th>
                                         <td><?php echo $d['no_telp']; ?></td>
@@ -387,7 +391,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2021</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

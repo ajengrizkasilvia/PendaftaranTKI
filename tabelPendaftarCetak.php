@@ -108,20 +108,21 @@
             <tr>
                 <td><br></td>
             </tr>
-            <tr>
-                <td><b>Medical Check</b></td>
-            </tr>
-            <tr>
-                <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 300px;"></td>
-            </tr>
-            <tr>
-                <td><br></td>
-            </tr>
+            
             <tr>
                 <td><b>Pas Foto</b></td>
             </tr>
             <tr>
-                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 300px;"> </td>
+                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 200px;"> </td>
+            </tr>
+            <tr>
+                <td><b>Medical Check</b></td>
+            </tr>
+            <tr>
+                <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 800px;float: left;margin-bottom: 5px;"></td>
+            </tr>
+            <tr>
+                <td><br></td>
             </tr>
     </table>
             <?php 

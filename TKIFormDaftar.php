@@ -177,15 +177,19 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data Pendaftar</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Pendaftaran PT Hendrarta Argaraya</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form method="post" action="TKIFormDaftarProses.php" enctype="multipart/form-data">
-                                <fieldset>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label>Tanggal Pendaftaran (Sekarang)</label>
+                                            <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
+                                            <td><input type="date" name="tgl_daftar" class="form-control" required placeholder="Masukkan tanggal pendaftaran"/></td>
+                                        </div>
                                         <div class="form-group">
                                             <label>No Telp / WA</label>
-                                            <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                             <td><input type="text" name="no_telp" class="form-control" required placeholder="Masukkan No Telp atau Whatsapp"/></td>
                                         </div>
                                         <div class="form-group">			
@@ -212,13 +216,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Negara Tujuan</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="id_negara">
-                                                    <option>--pilih negara tujuan--</option>
-                                                    <option value='1'>Hongkong</option>
-                                                    <option value='2'>Taiwan</option>
-                                                </select>   
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="id_negara">
                                                     <option selected>pilih negara tujuan...</option>
@@ -236,7 +233,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Tanggal Lahir</label>
-                                            <td><input type="text" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
+                                            <td><input type="date" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Umur</label>
@@ -273,15 +270,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Status</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="status">
-                                                    <option>--pilih status--</option>
-                                                    <option>Menikah</option>
-                                                    <option>Belum Menikah</option>
-                                                    <option>Cerai Hidup</option>
-                                                    <option>Cerai Mati</option>
-                                                </select>   
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02"  name="status">
                                                     <option selected>pilih status...</option>
@@ -375,15 +363,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Status Proses</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="id_tahapsatu">
-                                                    <option>--pilih status proses--</option>
-                                                    <option value='1'>Diajukan</option>
-                                                    <option value='2'>Diverifikasi</option>
-                                                    <option value='3'>Diterima</option>
-                                                    <option value='4'>Ditolak</option>
-                                                </select>  
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="id_tahapsatu">
                                                     <option selected>pilih ajukan status proses...</option>
@@ -414,7 +393,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT Hendrarta Argaraya 2021</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

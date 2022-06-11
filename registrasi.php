@@ -32,7 +32,7 @@
 								<input type="text" class="form-control" name="username" required placeholder="Masukkan username" id="username">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" name="password" placeholder="Masukkan password" id="password">
+								<input type="password" class="form-control" name="password" required placeholder="Masukkan password" id="password">
 								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" onclick="myFunction()"></span>
 								<script>
 									function myFunction() {
@@ -47,7 +47,7 @@
 							</div>
 							<div class="form-group">
 								<td>
-                                    <select class="form-control" name="role" id="role">
+                                    <select class="form-control" name="role" id="role" required>
                                         <option>klik role 'TKI'</option>
                                         <option value='2'>TKI</option>
                                     </select>   

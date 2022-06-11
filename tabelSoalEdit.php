@@ -218,7 +218,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Edit Soal Test TKI</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
                             <?php 
                             
                             $koneksi = mysqli_connect("localhost","root","","tki");
@@ -296,12 +295,12 @@
                                     </div>
                                          <p>
                                             <td></td>
-                                            <td><button class="btn btn-primary" type="submit">Simpan</button></td>
+                                            <td><button class="btn btn-primary btn-lg" type="submit">Simpan</button></td>
                                          </p>		
                                     </fieldset>
                                 </form>
-                            </div>
                             <?php } ?>
+                            <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSoal.php';">Cancel</button></td>
                         </div>
                     </div>
 
@@ -315,7 +314,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

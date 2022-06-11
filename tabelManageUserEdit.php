@@ -245,18 +245,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <td>Role</td>
-                                                <!-- <td>
-                                                    <select class="form-control" name="role">
-                                                        <option>--atur ulang pilih role--</option>
-                                                        <option value='1'>Admin</option>
-                                                        <option value='2'>TKI</option>
-                                                    </select>   
-                                                </td> -->
                                                 <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="role">
-                                                    <option selected>pilih ulang role...</option>
-                                                    <option value='1'>Admin</option>
-                                                    <option value='2'>TKI</option>
+                                                    <option value='1' <?php if($d['role']== '1') echo "selected"?>>Admin</option>
+                                                    <option value='2' <?php if($d['role']== '2') echo "selected"?>>TKI</option>
                                                 </select>
                                                 <div class="input-group-append">
                                                     <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -290,7 +282,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

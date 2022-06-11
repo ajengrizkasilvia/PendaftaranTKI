@@ -26,16 +26,16 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
-						<h3 class="mb-4 text-center">Register Admin</h3>
+						<h3 class="mb-4 text-center">Create an Account for Admin!</h3>
 						<form action="prosesregistrasi.php" method="post">
 							<div class="form-group">
-								<input type="text" class="form-control" name="nama_lengkap" placeholder="Masukkan nama lengkap" id="nama">
+								<input type="text" class="form-control" name="nama_lengkap" required placeholder="Masukkan nama lengkap" id="nama">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="username" placeholder="Masukkan username" id="username">
+								<input type="text" class="form-control" name="username" required placeholder="Masukkan username" id="username">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" name="password" placeholder="Masukkan password" id="password">
+								<input type="password" class="form-control" name="password" required placeholder="Masukkan password" id="password">
 								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" onclick="myFunction()"></span>
 								<script>
 									function myFunction() {
@@ -50,7 +50,7 @@
 							</div>
 							<div class="form-group">
                                 <td>
-                                    <select class="form-control" name="role" id="role">
+                                    <select class="form-control" required name="role" id="role">
                                         <option>--pilih role--</option>
                                         <option value='1'>Admin</option>
                                         <option value='2'>TKI</option>
@@ -63,9 +63,6 @@
 							
 						</form>
 						<hr>
-							<div class="text-center">
-								<a class="small" href="##">Forgot Password?</a>
-							</div>
 							<div class="text-center">
 								<a class="small" href="login.php">Already have an account? Login!</a>
 							</div>
