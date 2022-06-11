@@ -186,11 +186,11 @@
                                         <div class="form-group">
                                             <label>No Telp / WA</label>
                                             <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
-                                            <td><input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telp atau Whatsapp"/></td>
+                                            <td><input type="text" name="no_telp" class="form-control" required placeholder="Masukkan No Telp atau Whatsapp"/></td>
                                         </div>
                                         <div class="form-group">			
                                             <label>NIK</label>
-                                                <td><input type="text" name="nik" class="form-control" placeholder="Masukkan NIK"/></td>
+                                                <td><input type="text" name="nik" class="form-control" required placeholder="Masukkan NIK"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Lengkap</label>
@@ -232,19 +232,19 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Tempat Lahir</label>
-                                            <td><input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan tempat lahir"/></td>
+                                            <td><input type="text" name="tempat_lahir" class="form-control" required placeholder="Masukkan tempat lahir"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Tanggal Lahir</label>
-                                            <td><input type="text" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
+                                            <td><input type="text" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Umur</label>
-                                            <td><input type="text" name="umur" class="form-control" placeholder="Masukkan umur"/></td>
+                                            <td><input type="text" name="umur" class="form-control" required placeholder="Masukkan umur"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Alamat Lengkap</label>
-                                            <td><input type="text" name="alamat_lengkap" class="form-control" placeholder="Masukkan alamat lengkap"/></td>
+                                            <td><input type="text" name="alamat_lengkap" class="form-control" required placeholder="Masukkan alamat lengkap"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Jenis Kelamin</label>
@@ -261,15 +261,15 @@
                                         </div>
                                         <div class="form-group">
                                             <label>TB</label>
-                                            <td><input type="text" name="tb" class="form-control" placeholder="Masukkan tinggi badan"/></td>
+                                            <td><input type="text" name="tb" class="form-control" required placeholder="Masukkan tinggi badan"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>BB</label>
-                                            <td><input type="text" name="bb" class="form-control" placeholder="Masukkan berat badan"/></td>
+                                            <td><input type="text" name="bb" class="form-control" required placeholder="Masukkan berat badan"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Pendidikan Terakhir</label>
-                                            <td><input type="text" name="pendidikan_terakhir" class="form-control" placeholder="Masukkan pendidikan terakhir"/></td>
+                                            <td><input type="text" name="pendidikan_terakhir" class="form-control" required placeholder="Masukkan pendidikan terakhir"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Status</label>
@@ -297,7 +297,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Agama</label>
-                                            <td><input type="text" name="agama" class="form-control" placeholder="Masukkan agama"/></td>
+                                            <td><input type="text" name="agama" class="form-control" required placeholder="Masukkan agama"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Pengalaman Kerja Ex / Non (Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)</label>
@@ -321,47 +321,47 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Ayah</label>
-                                            <td><input type="text" name="nama_ayah" class="form-control" placeholder="Masukkan Nama Ayah"/></td>
+                                            <td><input type="text" name="nama_ayah" class="form-control" required placeholder="Masukkan Nama Ayah"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Pekerjaan Ayah</label>
-                                            <td><input type="text" name="pekerjaan_ayah" class="form-control" placeholder="Masukkan Pekerjaan Ayah"/></td>
+                                            <td><input type="text" name="pekerjaan_ayah" class="form-control" required placeholder="Masukkan Pekerjaan Ayah"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Ibu</label>
-                                            <td><input type="text" name="nama_ibu" class="form-control" placeholder="Masukkan Nama Ibu"/></td>
+                                            <td><input type="text" name="nama_ibu" class="form-control" required placeholder="Masukkan Nama Ibu"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Pekerjaan Ibu</label>
-                                            <td><input type="text" name="pekerjaan_ibu" class="form-control" placeholder="Masukkan Pekerjaan Ibu"/></td>
+                                            <td><input type="text" name="pekerjaan_ibu" class="form-control" required placeholder="Masukkan Pekerjaan Ibu"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Jumlah Saudara Laki-laki</label>
-                                            <td><input type="text" name="jml_brother" class="form-control" placeholder="Masukkan Jumlah Saudara Laki-laki"/></td>
+                                            <td><input type="text" name="jml_brother" class="form-control" required placeholder="Masukkan Jumlah Saudara Laki-laki"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Jumlah Saudara Perempuan</label>
-                                            <td><input type="text" name="jml_sister" class="form-control" placeholder="Masukkan Jumlah Saudara Perempuan"/></td>
+                                            <td><input type="text" name="jml_sister" class="form-control" required placeholder="Masukkan Jumlah Saudara Perempuan"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Anak Nomor</label>
-                                            <td><input type="text" name="anak_no" class="form-control" placeholder="Masukkan Anak Nomor"/></td>
+                                            <td><input type="text" name="anak_no" class="form-control" required placeholder="Masukkan Anak Nomor"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Pasangan</label>
-                                            <td><input type="text" name="nama_pasangan" class="form-control" placeholder="Masukkan Nama Pasangan"/></td>
+                                            <td><input type="text" name="nama_pasangan" class="form-control" required placeholder="Masukkan Nama Pasangan"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Pekerjaan Pasangan</label>
-                                            <td><input type="text" name="pekerjaan_pasangan" class="form-control" placeholder="Masukkan Pekerjaan Pasangan"/></td>
+                                            <td><input type="text" name="pekerjaan_pasangan" class="form-control" required placeholder="Masukkan Pekerjaan Pasangan"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Jumlah Anak</label>
-                                            <td><input type="text" name="jml_anak" class="form-control" placeholder="Masukkan Jumlah Anak"/></td>
+                                            <td><input type="text" name="jml_anak" class="form-control" required placeholder="Masukkan Jumlah Anak"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Umur Anak</label>
-                                            <td><input type="text" name="umur_anak" class="form-control" placeholder="Masukkan Umur Anak"/></td>
+                                            <td><input type="text" name="umur_anak" class="form-control" required placeholder="Masukkan Umur Anak"/></td>
                                         </div>
                                         <div class="form-group">
                                             <td>Medical Check</td>

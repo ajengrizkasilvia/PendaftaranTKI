@@ -271,11 +271,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Tanggal Lahir (Contoh Format : 1997-02-14 (tahun-bulan-tanggal))</label>
-                                            <td><input type="date" name="tanggal_lahir" class="form-control" placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
+                                            <td><input type="date" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir yy/mm/dd"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Umur</label>
-                                            <td><input type="text" name="umur" class="form-control" required placeholder="Masukkan umur"/></td>
+                                            <td><input type="text" name="umur" class="form-control" required required placeholder="Masukkan umur"/></td>
                                         </div>
                                         <div class="form-group">
                                             <label>Alamat Lengkap</label>
