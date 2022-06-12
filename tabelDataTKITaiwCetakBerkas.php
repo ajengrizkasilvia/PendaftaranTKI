@@ -22,62 +22,62 @@
             <table border="1" width= "100%">
             <tr>
                 <th>Nama TKI</th>
-                <td><?php echo $d['nama_lengkap']; ?></td>
+                <th><?php echo $d['nama_lengkap']; ?></th>
             </tr>
             <tr>
                 <th>Sektor</th>
-                <td><?php echo $d['sektor_taiw']; ?></td>
+                <th><?php echo $d['sektor_taiw']; ?></th>
             </tr>
             <tr>
                 <th>E-KTP</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Kartu Keluarga</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Akta Kelahiran</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Surat Menikah</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Surat Ijin Ortu/Suami</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Ex Paspor</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>SKCK</th>
-                <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Kartu Kuning</th>
-                <td>
-                <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 280px;"></td>
+                <th>
+                <img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Biometri</th>
-                <td>
+                <th>
                 <img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width:280px;">
-                </td>
+                </th>
             </tr>
             <tr>
                 <th>Status Proses</th>
-                <td>
+                <th>
                 <?php echo $d['keterangan']; ?>
-                </td>
+                </th>
             </tr>
             <tr>
                 <th>Keterangan</th>
-                <td>
+                <th>
                 <?php echo $d['keterangan_taiw']; ?>
-                </td>
+                </th>
             </tr>
 		<?php 
 		}

@@ -22,62 +22,62 @@
             <table border="1" width= "100%">
             <tr>
                 <th>Nama TKI</th>
-                <td><?php echo $d['nama_lengkap']; ?><td>
+                <th><?php echo $d['nama_lengkap']; ?></th>
             </tr>
             <tr>
                 <th>Sektor</th>
-                <td><?php echo $d['sektor_hk']; ?></td>
+                <th><?php echo $d['sektor_hk']; ?></th>
             </tr>
             <tr>
                 <th>E-KTP</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Kartu Keluarga</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Akta Kelahiran</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Surat Menikah</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Surat Ijin Ortu/Suami</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Ex Paspor</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>SKCK</th>
-                <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 280px;"></td>
+                <th><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Kartu Kuning</th>
-                <td>
-                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 280px;"></td>
+                <th>
+                <img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
                 <th>Biometri</th>
-                <td>
+                <th>
                 <img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width:280px;">
-                </td>
+                </th>
             </tr>
             <tr>
                 <th>Status Proses</th>
-                <td>
+                <th>
                 <?php echo $d['keterangan']; ?>
-                </td>
+                </th>
             </tr>
             <tr>
                 <th>Keterangan</th>
-                <td>
+                <th>
                 <?php echo $d['keterangan_hk']; ?>
-                </td>
+                </th>
             </tr>
 		<?php 
 		}

@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <th>Nama TKI</th>
-                <th><?php echo $d['nama_lengkap']; ?>
+                <th><?php echo $d['nama_lengkap']; ?></th>
             </tr>
             <tr>
                 <th>Sektor</th>
