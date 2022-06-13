@@ -201,19 +201,11 @@
                                                         </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
+                                                    <label class="col-sm-2 col-form-label">Sertifikasi Uji Kompetensi</label>
                                                     <div class="col-sm-10">
                                                         <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="keahlian_hk" /></td>
                                                         <input type="hidden" name="keahlian_hk_lama" value="<?php echo $d['keahlian_hk']; ?>">
-                                                    </div>			
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sertifikasi Bahasa</label>
-                                                    <div class="col-sm-10">
-                                                        <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 150px;float: left;margin-bottom: 5px;">
-                                                        <input type="file" name="bahasa_hk" /></td>
-                                                        <input type="hidden" name="bahasa_hk_lama" value="<?php echo $d['bahasa_hk']; ?>">
                                                     </div>			
                                                 </div>
                                                 <p>

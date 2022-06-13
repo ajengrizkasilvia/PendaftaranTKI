@@ -15,7 +15,6 @@
     $kantonis_hk = $_POST['kantonis_hk'];
     $mandarin_hk = $_POST['mandarin_hk'];
     $keahlian_hk = $_FILES['keahlian_hk']['name'];
-    $bahasa_hk = $_FILES['bahasa_hk']['name'];
 
     //keahlian
   if($keahlian_hk != "") {
@@ -43,37 +42,7 @@
             " - ".mysqli_error($konektor));
     } else {
     echo "<script>alert('Data berhasil diubah.');window.location='tabelSertifikasiHongkong.php';</script>";
-    }
-
-    //bahasa
-    if($bahasa_hk != "") {
-        $ekstensi_diperbolehkanbahasa = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-        $bahasa = explode('.', $bahasa_hk); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensibahasa = strtolower(end($bahasa));
-        $file_tmpbahasa = $_FILES['bahasa_hk']['tmp_name'];   
-        $angka_acak     = rand(1,999);
-        $bahasa_baru = $angka_acak.'-'.$bahasa_hk;
-
-        if(in_array($ekstensibahasa, $ekstensi_diperbolehkanbahasa) === true)  {
-            move_uploaded_file($file_tmpbahasa, 'berkas/SertifHongkong/Bahasa/'.$bahasa_baru);
-        } 
-    }else {
-        $bahasa_baru = $_POST['bahasa_hk_lama'];
-    }
-    $id = $_POST['id_lama'];
-    $id_dft = $_POST['id_dft_lama'];
-    $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
-    memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk',mandarin_hk='$mandarin_hk',bahasa_hk='$bahasa_baru'
-        WHERE id_sertif_hk='$id_sertif_hk'";
-    $result = mysqli_query($konektor, $query);
-    if(!$result){
-        die ("Query gagal dijalankan: ".mysqli_errno($konektor).
-            " - ".mysqli_error($konektor));
-    } else {
-    echo "<script>alert('Data berhasil diubah.');window.location='tabelSertifikasiHongkong.php';</script>";
-    }
-
-   
+    }   
 
     if($keahlian_hk != "") {
         $ekstensi_diperbolehkankeahlian = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -83,24 +52,14 @@
         $angka_acak     = rand(1,999);
         $keahlian_baru = $angka_acak.'-'.$keahlian_hk;
       
-      if($bahasa_hk != "") {
-        $ekstensi_diperbolehkanbahasa = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-        $bahasa = explode('.', $bahasa_hk); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensibahasa = strtolower(end($bahasa));
-        $file_tmpbahasa = $_FILES['bahasa_hk']['tmp_name'];   
-        $angka_acak     = rand(1,999);
-        $bahasa_baru = $angka_acak.'-'.$bahasa_hk;
-      
         if(in_array($ekstensikeahlian, $ekstensi_diperbolehkanekeahlian) === true)  {     
             move_uploaded_file($file_tmpkeahlian, 'berkas/SertifHongkong/Keahlian/'.$keahlian_baru);
-            if(in_array($ekstensibahasa, $ekstensi_diperbolehkanbahasa) === true)  {
-                move_uploaded_file($file_tmpbahasa, 'berkas/SertifHongkong/Bahasa/'.$bahasa_baru);
                    
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $id = $_POST['id_lama'];
         $id_dft = $_POST['id_dft_lama'];
         $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
-        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
+        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -115,14 +74,12 @@
        //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
           echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='tabelSertifikasiHongkongEdit.php';</script>";
         }
-        }
-        }
         } else {
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
         $id = $_POST['id_lama'];
         $id_dft = $_POST['id_dft_lama'];
         $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
-        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru', bahasa_hk='$bahasa_baru'
+        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru'
         WHERE id_sertif_hk='$id_sertif_hk'";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error

@@ -203,15 +203,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Sertifikasi Keahlian</th>
+                                        <th>Sertifikasi Uji Kompetensi</th>
                                             <td>
                                                 <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 400px;">                                                
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Sertifikasi Bahasa</th>
-                                            <td>
-                                                <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 400px;">                                                 
                                             </td>
                                     </tr>
                                 <?php 
