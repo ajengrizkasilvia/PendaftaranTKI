@@ -205,17 +205,10 @@
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label>Upload Sertifikasi Keahlian atau Ketrampilan</label>
+                                            <label>Upload Sertifikasi Uji Kompetensi</label>
                                             <td>
                                                 <input type="file" name="keahlian_hk" class="form-control"/>
                                                 <input type="hidden" name="keahlian_hk_lama" class="form-control"/>
-                                            </td>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Upload Sertifikasi Bahasa</label>
-                                            <td>
-                                                <input type="file" name="bahasa_hk" class="form-control"/>
-                                                <input type="hidden" name="bahasa_hk_lama" class="form-control"/>
                                             </td>
                                         </div>
                                         <p>

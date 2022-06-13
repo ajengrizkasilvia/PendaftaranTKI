@@ -67,12 +67,6 @@
                 <th>
                 <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 280px;"></th>
             </tr>
-            <tr>
-                <th>Sertifikasi Bahasa</th>
-                <th>
-                <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width:280px;">
-                </th>
-            </tr>
 		<?php 
 		}
 		?>

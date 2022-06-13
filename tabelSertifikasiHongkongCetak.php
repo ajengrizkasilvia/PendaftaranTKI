@@ -67,12 +67,6 @@
                 <th>
                 <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 280px;"></th>
             </tr>
-            <tr>
-                <th>Sertifikasi Bahasa</th>
-                <th>
-                <img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width:280px;">
-                </th>
-            </tr>
 		<?php 
 		}
 		?>

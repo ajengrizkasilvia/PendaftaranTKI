@@ -6,7 +6,7 @@
 <body>
  
          <h3 ALIGN="Center">PT. HENDRARTA ARGARAYA</h3>
-         <h3 ALIGN="Center">APPLICANT'S INFORMATION SHEET</h3><br>
+         <h3 ALIGN="Center">BIODATA RECORD</h3><br>
          <div>
             <?php 
                 include 'config.php';
