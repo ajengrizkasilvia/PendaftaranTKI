@@ -207,24 +207,24 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Taiwan</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Taiwan</h1>
                         <a href="tabelSertifikasiTaiwanCetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Cetak All Sertifikasi</a>
                     </div>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi Uji Kompetensi dan Penilaian Wawancara calon PMI dari negara tujuan Taiwan.</p>
                     
                     <div>    
                         <ul class="breadcrumb">
                             <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
                             <li><a href="#">Sertifikasi</a> <span class="divider">/</span></li>
-                            <li class="active">Sertifikasi TKI Taiwan</li>
+                            <li class="active">Sertifikasi PMI Taiwan</li>
                         </ul>
                     </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi PMI</h6><br>
                             <a href="tabelSertifikasiTaiwanAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i> Tambah Baru
                             </a>

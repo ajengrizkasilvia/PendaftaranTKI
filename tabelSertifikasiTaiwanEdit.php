@@ -209,7 +209,7 @@
                         <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Taiwan</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
-                    Pastikan sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg.
+                    Pastikan sertifikasi yang sesuai dengan format namaTKI_Sertifikasi.jpg.
                     <p> Tekan <a href="tabelSertifikasiTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

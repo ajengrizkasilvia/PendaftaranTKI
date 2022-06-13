@@ -117,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -208,7 +208,7 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Manage User</h1>
                     <p class="mb-4">Manage User merupakan fitur untuk mengelola data-data user yang login. Admin dapat mengedit, menambah, dan menghapus data user.</p>
-                    <p>Keterangan Role : 1 -> Admin, 2 -> PMI</p>
+                    <p>Keterangan Role : 1 -> Admin, 2 -> Pekerja Migran Indonesia (PMI)</p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">

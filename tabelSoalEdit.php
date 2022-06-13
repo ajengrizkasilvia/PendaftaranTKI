@@ -211,8 +211,8 @@
                         <h1 class="h3 mb-2 text-gray-800">Test PMI</h1>
                     </div>
                     <p class="mb-4">Berikut adalah halaman Edit Soal Test. Untuk mengedit soal, edit field atau bagian yang diperlukan kemudian klik simpan dibawah.
-                    Tekan <a href="tabelSoal.php"> BACK</a> untuk kembali ke halaman sebelumnya.</p>
-                    </p>
+                    <p> Tekan <a href="tabelSoal.php"> BACK</a> untuk kembali ke halaman sebelumnya.</p>
+
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

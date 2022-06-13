@@ -117,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -216,7 +216,7 @@
                     ?>
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Data PMI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">View Detail Data PMI Hongkong</h1>
                         <a href="tabelDataTKIHongCetakBerkas.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i>Cetak Disini</a>
                     </div>

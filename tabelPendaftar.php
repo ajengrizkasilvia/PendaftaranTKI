@@ -117,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -211,7 +211,7 @@
                         <a href="tabelPendaftarCetakAll.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i> Cetak All Pendaftar</a>
                     </div>
-                    <p class="mb-4">Berikut merupakan data-data dari pendaftar atau calon PMI dari semua negara tujuan TKI. Untuk merekap semua data dapat dilakukan pada
+                    <p class="mb-4">Berikut merupakan data-data dari pendaftar atau calon PMI dari semua negara tujuan PMI. Untuk merekap semua data dapat dilakukan pada
                         <a href="tabelPendaftarCetakAll.php"> Cetak disini</a>.</p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

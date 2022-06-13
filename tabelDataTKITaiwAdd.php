@@ -210,7 +210,7 @@
                         <h1 class="h3 mb-2 text-gray-800">PMI Taiwan</h1>
                     </div>
                     <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format namaBerkas_negaraTujuan.jpg.
+                    Upload berkas dengan format namaPMI_namaBerkas_negaraTujuan.jpg.
                     Tekan <a href="tabelDataTKITaiw.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

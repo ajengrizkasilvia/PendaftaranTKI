@@ -117,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -213,10 +213,10 @@
                     ?>
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Taiwan</h1>
+                        <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Taiwan</h1>
                         <a href="tabelCetakCVTaiw.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download CV</a>
                     </div>
-                    <p>Berikut merupakan berkas Sertifikasi calon PMI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <p>Berikut merupakan berkas Sertifikasi Uji Kompetensi dan Penilaian Wawancara calon PMI dari negara tujuan Taiwan.</p>
                     <?php 
                         }
                     ?>

@@ -210,7 +210,7 @@
                         <h1 class="h3 mb-2 text-gray-800">Pendaftar</h1>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
-                    Upload berkas medical check-up dengan format nama_umur_medicalcheck.jpg. </p>
+                    Upload berkas dengan format nama_medicalcheck.jpg dan nama_pasfoto.jpg. </p>
                     <p> Tekan <a href="tabelPendaftar.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

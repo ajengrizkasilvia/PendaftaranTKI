@@ -169,7 +169,7 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Taiwan</h1>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon PMI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi PMI Hongkong & Penilaian Wawancara calon PMI dari negara tujuan Taiwan.</p>
                     <ul class="breadcrumb">
                             <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
                             <li class="active"> Sertifikasi PMI Taiwan</li>

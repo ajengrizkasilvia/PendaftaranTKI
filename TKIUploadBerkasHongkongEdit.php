@@ -165,10 +165,10 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-2 text-gray-800">PMI Hongkong</h1>
+                <h1 class="h3 mb-2 text-gray-800">Edit Berkas PMI Hongkong</h1>
             </div>
             <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
-            Pastikan berkas dengan format namaBerkas_negaraTujuan. 
+            Pastikan berkas dengan format namaPMI_negaraTujuan_namaBerkas.jpg.
             <p> Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
             <!-- DataTales Example -->

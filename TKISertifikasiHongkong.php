@@ -169,7 +169,7 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Hongkong</h1>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon PMI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi PMI Hongkong & Penilaian Wawancara calon PMI dari negara tujuan Hongkong.</p>
                     <ul class="breadcrumb">
                             <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
                             <li class="active"> Sertifikasi PMI Hongkong</li>

@@ -117,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -208,7 +208,7 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Manage User</h1>
                     <p class="mb-4">Isi form tambah user dengan benar dan sesuai.
-                    Pilih Role : 1 -> Admin, Role 2 -> PMI
+                    Pilih Role : 1 -> Admin, Role 2 -> Pekerja Migran Indonesia (PMI)
                     </p>
                     Tekan <a href="tabelManageUser.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 

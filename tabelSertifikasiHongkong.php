@@ -211,7 +211,7 @@
                         <a href="tabelSertifikasiHongkongCetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Cetak All Sertifikasi</a>
                     </div>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon PMI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi Uji Kompetensi dan Penilaian Wawancara calon PMI dari negara tujuan Hongkong.</p>
                     
                     <div>
                         <ul class="breadcrumb">

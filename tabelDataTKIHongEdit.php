@@ -118,7 +118,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -212,7 +212,7 @@
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
                     Pastikan berkas dengan format namaBerkas_negaraTujuan. 
-                    Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

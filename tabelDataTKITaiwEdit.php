@@ -116,7 +116,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -209,7 +209,7 @@
                         <h1 class="h3 mb-2 text-gray-800">Data PMI Taiwan</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
-                    Pastikan berkas dengan format namaBerkas_negaraTujuan.jpg 
+                    Pastikan berkas dengan format namaPMI_namaBerkas_negaraTujuan.jpg 
                     Tekan <a href="tabelDataTKITaiw.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

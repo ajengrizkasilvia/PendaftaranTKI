@@ -117,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -207,10 +207,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Keahlian atau Ketrampilan PMI</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Uji Kompetensi</h1>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
-                    Upload berkas sertifikasi yang sesuai dengan format namaPMI_namaSertifikasi.jpg. </p>
+                    Upload berkas sertifikasi yang sesuai dengan format namaPMI_Sertifikasi.jpg. </p>
                     <p> Tekan <a href="tabelSertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

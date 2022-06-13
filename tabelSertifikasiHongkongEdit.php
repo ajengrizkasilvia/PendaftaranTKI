@@ -101,7 +101,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data TKI</span>
+                    <span>Data PMI</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -207,10 +207,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi Uji Kompetensi</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
-                    Pastikan sertifikasi yang sesuai dengan format namaPMI_namaSertifikasi.jpg.
+                    Pastikan sertifikasi yang sesuai dengan format namaPMI_Sertifikasi.jpg.
                     <p> Tekan <a href="tabelSertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

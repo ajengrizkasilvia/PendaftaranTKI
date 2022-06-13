@@ -168,8 +168,8 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Taiwan</h1>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon PMI dari negara tujuan Taiwan yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Taiwan</h1>
+                    
                     <ul class="breadcrumb">
                             <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
                             <li><a href="TKISertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a> <span class="divider">/</span></li>

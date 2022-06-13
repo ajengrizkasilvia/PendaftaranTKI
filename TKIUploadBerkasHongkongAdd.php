@@ -163,42 +163,21 @@
 
                 <div class="container-fluid">
 
-<!-- Page Heading -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-2 text-gray-800">Berkas</h1>
-</div>
-<p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-    Upload berkas dengan format namaBerkas_negaraTujuan.jpg
-<p> Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-2 text-gray-800">Upload Berkas PMI Hongkong</h1>
+                </div>
+                <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
+                    Upload berkas dengan format namaPMI_negaraTujuan_namaBerkas.jpg.
+                <p> Tekan <a href="TKIUploadBerkasHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Berkas PMI</h6>
-    </div>
-    <div class="card-body">
-        <!-- <form action="TKIUploadBerkasHongkongAddProses.php" method="post" enctype="multipart/form-data">
-            <table>
-                <tr>	
-                        <?php 
-                            include 'config.php';
-                            $konektor = mysqli_connect("localhost","root","", "tki");
-                            $no = 1;
-                            $username = $_SESSION['username'];
-                            $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
-                            while($d = mysqli_fetch_array($data)){
-                        ?>
-                    <td>Nama Lengkap</td>
-                    <td class="form-control">
-                        <?php echo $d['nama_lengkap']; ?>
-                    </td>
-                    <td><input type="hidden" name="id" class="form-control" value="<?php echo $d['nama_lengkap']; ?>"/></td>
-                    <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
-                        <?php
-                            }
-                        ?>
-                    </tr> -->
-            <form method="post" action="TKIUploadBerkasHongkongAddProses.php" enctype="multipart/form-data">
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Berkas PMI</h6>
+                    </div>
+                    <div class="card-body">
+                            <form method="post" action="TKIUploadBerkasHongkongAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
                                     <div class="form-group">			
                                         <label>Nama PMI</label>
@@ -269,19 +248,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
-                                        <!-- <td>
-                                            <select class="form-control" name="id_tahapdua">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                            </select>  
-                                        </td> -->
                                         <div class="input-group mb-3">
                                             <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
-                                                <option selected>pilih status proses...</option>
-                                                <option value='1'>Diajukan</option>
-                                                <option value='2'>Diverifikasi</option>
-                                                <option value='3'>Diterima</option>
-                                                <option value='4'>Ditolak</option>
+                                                <option selected>pilih ajukan status proses...</option>
                                             </select>
                                             <div class="input-group-append">
                                                 <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -297,15 +266,15 @@
                                         <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
                                     </p>		
                                 </fieldset>
-                                </form>
-    </div>
-</div>
+                            </form>
+                        </div>
+                    </div>
 
-</div>
-<!-- /.container-fluid -->
+                </div>
+                <!-- /.container-fluid -->
 
-</div>
-<!-- End of Main Content -->
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

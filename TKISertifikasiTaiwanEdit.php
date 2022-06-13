@@ -169,10 +169,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Taiwan</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Edit Sertifikat Uji Kompetensi PMI Taiwan</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
-                    Pastikan sertifikasi yang sesuai dengan format namaPMI_namaSertifikasi.jpg.
+                    Pastikan sertifikasi yang sesuai dengan format namaPMI_Sertifikasi.jpg.
                     Tekan <a href="TKISertifikasiTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
