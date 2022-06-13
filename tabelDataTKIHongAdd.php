@@ -101,7 +101,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data TKI</span>
+                    <span>Data PMI</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -121,9 +121,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -133,13 +133,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span>
+                    <span>Test PMI</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Test TKI:</h6>
-                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
-                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                        <h6 class="collapse-header">Test PMI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test PMI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test PMI</a>
                     </div>
                 </div>
             </li>
@@ -207,23 +207,23 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">TKI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">PMI Hongkong</h1>
                     </div>
                     <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format namaTKI_negaraTujuan_namaBerkas.jpg.
+                    Upload berkas dengan format namaPMI_negaraTujuan_namaBerkas.jpg.
                     <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data TKI Hongkong</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Data PMI Hongkong</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form method="post" action="tabelDataTKIHongAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
                                     <div class="form-group">			
-                                        <label>Nama TKI</label>
+                                        <label>Nama PMI</label>
                                         <select class="custom-select" id="inputGroupSelect02" name="id">
                                             <option selected>pilih nama lengkap...</option>
                                                 <?php
@@ -245,7 +245,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Sektor</label>
-                                        <td><input type="text" name="sektor_hk" class="form-control" placeholder="Masukkan Sektor"/></td>
+                                        <td><input type="text" name="sektor_hk" class="form-control" placeholder="Masukkan Sektor" required/></td>
                                     </div>
                                     <div class="form-group">
                                         <label>E-KTP</label>
@@ -294,12 +294,6 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Status Proses</label>
-                                        <!-- <td>
-                                            <select class="form-control" name="id_tahapdua">
-                                                <option>--pilih status proses--</option>
-                                                <option value='1'>Diajukan</option>
-                                            </select>  
-                                        </td> -->
                                         <div class="input-group mb-3">
                                             <select class="custom-select" id="inputGroupSelect02" name="id_tahapdua">
                                                 <option selected>pilih status proses...</option>
@@ -337,7 +331,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

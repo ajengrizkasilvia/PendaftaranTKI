@@ -102,7 +102,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data TKI</span>
+                    <span>Data PMI</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -122,9 +122,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -134,13 +134,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span>
+                    <span>Test PMI</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Test TKI:</h6>
-                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
-                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                        <h6 class="collapse-header">Test PMI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test PMI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test PMI</a>
                     </div>
                 </div>
             </li>
@@ -209,7 +209,7 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Manage User</h1>
                     <p class="mb-4"> Cek ulang seluruh isian form dengan benar dan sesuai. 
-                        Pilih ulang Role : 1 -> admin, 2 -> tki</p>
+                        Pilih ulang Role : 1 -> Admin, 2 -> PMI</p>
                     Tekan <a href="tabelManageUser.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
                     
                     <!-- DataTales Example -->
@@ -248,7 +248,7 @@
                                                 <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="role">
                                                     <option value='1' <?php if($d['role']== '1') echo "selected"?>>Admin</option>
-                                                    <option value='2' <?php if($d['role']== '2') echo "selected"?>>TKI</option>
+                                                    <option value='2' <?php if($d['role']== '2') echo "selected"?>>PMI</option>
                                                 </select>
                                                 <div class="input-group-append">
                                                     <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -282,7 +282,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

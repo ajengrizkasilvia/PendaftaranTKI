@@ -101,7 +101,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data TKI</span>
+                    <span>Data PMI</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -117,13 +117,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -133,13 +133,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span>
+                    <span>Test PMI</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Test TKI:</h6>
-                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
-                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                        <h6 class="collapse-header">Test PMI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test PMI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test PMI</a>
                     </div>
                 </div>
             </li>
@@ -207,23 +207,23 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Hongkong</h1>
                         <a href="tabelSertifikasiHongkongCetak.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Cetak All Sertifikasi</a>
                     </div>
-                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon TKI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
+                    <p class="mb-4">Berikut merupakan berkas Sertifikasi calon PMI dari negara tujuan Hongkong yang meliputi Sertifikasi Keahlian atau Ketrampilan dan Sertifkasi Bahasa.</p>
                     
                     <div>
                         <ul class="breadcrumb">
                             <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
-                            <li class="active"> Sertifikasi TKI Hongkong</li>
+                            <li class="active"> Sertifikasi PMI Hongkong</li>
                         </ul>
                     </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi TKI</h6><br>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Sertifikasi PMI</h6><br>
                             <a href="tabelSertifikasiHongkongAdd.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-plus fa-sm text-white-50"></i>Tambah Baru
                             </a>
@@ -234,7 +234,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama TKI</th>
+                                            <th>Nama PMI</th>
                                             <th>Perawatan Bayi</th>
                                             <th>Peduli Anak-anak</th>
                                             <th>Pekerjaan Rumah Tangga</th>
@@ -313,7 +313,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

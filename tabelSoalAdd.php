@@ -102,15 +102,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data TKI</span>
+                    <span>Data PMI</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Negara Tujuan:</h6>
                         <a class="collapse-item" href="tabelDataTKIHong.php">Hongkong</a>
                         <a class="collapse-item" href="tabelDataTKITaiw.php">Taiwan</a>
-                        <a class="collapse-item" href="tabelDataTKISing.php">Singapore</a>
-                        <a class="collapse-item" href="tabelDataTKIMalay.php">Malaysia</a>
                     </div>
                 </div>
             </li>
@@ -120,13 +118,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Sertifikasi</span>
+                    <span>Sertifikasi PMI</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -136,13 +134,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span>
+                    <span>Test PMI</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Test TKI:</h6>
-                        <a class="collapse-item" href="tabelSoal.php">Soal Test TKI</a>
-                        <a class="collapse-item" href="tabelTest.php">Hasil Test TKI</a>
+                        <h6 class="collapse-header">Test PMI:</h6>
+                        <a class="collapse-item" href="tabelSoal.php">Soal Test PMI</a>
+                        <a class="collapse-item" href="tabelTest.php">Hasil Test PMI</a>
                     </div>
                 </div>
             </li>
@@ -210,7 +208,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Test TKI</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Test PMI</h1>
                     </div>
                     <p class="mb-4">Berikut adalah halaman Tambah Soal Test. Untuk menambah soal, tambahkan sesuai dengan type bahasa soal test.</p>
                     <p> Tekan <a href="tabelSoal.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
@@ -218,7 +216,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Soal Test TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Soal Test PMI</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -307,7 +305,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

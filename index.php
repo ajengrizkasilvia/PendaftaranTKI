@@ -187,7 +187,7 @@
                 </ul>
             </div>
         </section>
-        <!-- Team-->
+        <!-- Team
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
@@ -230,9 +230,9 @@
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Clients-->
-        <div class="py-5">
+        <!-- <div class="py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-3 col-sm-6 my-3">
@@ -249,7 +249,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -303,7 +303,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
