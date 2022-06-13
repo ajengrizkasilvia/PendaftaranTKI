@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PT Hendrarta Argaraya - TKI</title>
+    <title>PT Hendrarta Argaraya - PMI</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template-->
@@ -44,7 +44,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-house-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIP<sub>TKI</sub></div>
+                <div class="sidebar-brand-text mx-3">SIP<sub>PMI</sub></div>
             </a>
 
             <!-- Divider -->
@@ -73,7 +73,7 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Data TKI</h6>
+                        <h6 class="collapse-header">Data PMI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">lengkapi Hongkong</a>
                         <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
@@ -92,9 +92,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -103,7 +103,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test PMI</span></a>
             </li>
 
             <!-- Divider -->
@@ -220,7 +220,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

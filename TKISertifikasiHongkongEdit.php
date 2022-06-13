@@ -47,7 +47,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-house-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIP<sub>TKI</sub></div>
+                <div class="sidebar-brand-text mx-3">SIP<sub>PMI</sub></div>
             </a>
 
             <!-- Divider -->
@@ -76,7 +76,7 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Data TKI</h6>
+                        <h6 class="collapse-header">Data PMI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
@@ -93,9 +93,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -104,7 +104,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test PMI</span></a>
             </li>
 
             <!-- Divider -->
@@ -169,16 +169,16 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi TKI Hongkong</h1>
+                        <h1 class="h3 mb-2 text-gray-800">Sertifikasi PMI Hongkong</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan benar dan sesuai setelah mengedit.
-                    Pastikan sertifikasi yang sesuai dengan format namaTKI_namaSertifikasi.jpg.
+                    Pastikan sertifikasi yang sesuai dengan format namaPMI_namaSertifikasi.jpg.
                     <p> Tekan <a href="TKISertifikasiHongkong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi TKI</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Form Edit Sertifikasi PMI</h6>
                         </div>
                         <div class="card-body">
                                 <?php
@@ -193,7 +193,7 @@
                                         <form method="post" action="TKISertifikasiHongkongEditProses.php" enctype="multipart/form-data">
                                             <fieldset>
                                                 <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Nama TKI</label>
+                                                <label class="col-sm-2 col-form-label">Nama PMI</label>
                                                     <div class="col-sm-10">
                                                         <input type="hidden" name="id_sertif_hk" value="<?php echo $d['id_sertif_hk']; ?>">
                                                         <input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly>
@@ -239,7 +239,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>

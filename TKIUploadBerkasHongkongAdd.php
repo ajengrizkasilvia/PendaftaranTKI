@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PT Hendrarta Argaraya - TKI</title>
+    <title>PT Hendrarta Argaraya - PMI</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
     <!-- Custom fonts for this template-->
@@ -44,7 +44,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-house-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SIP<sub>TKI</sub></div>
+                <div class="sidebar-brand-text mx-3">SIP<sub>PMI</sub></div>
             </a>
 
             <!-- Divider -->
@@ -73,7 +73,7 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Data TKI</h6>
+                        <h6 class="collapse-header">Data PMI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
@@ -90,9 +90,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sertifikasi TKI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi TKI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi TKI Taiwan</a>
+                        <h6 class="collapse-header">Sertifikasi PMI:</h6>
+                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -101,7 +101,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="TKITest.php">
                     <i class="fas fa-fw fa-user-edit"></i>
-                    <span>Test TKI</span></a>
+                    <span>Test PMI</span></a>
             </li>
 
             <!-- Divider -->
@@ -174,7 +174,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Berkas TKI</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Berkas PMI</h6>
     </div>
     <div class="card-body">
         <!-- <form action="TKIUploadBerkasHongkongAddProses.php" method="post" enctype="multipart/form-data">
@@ -197,82 +197,11 @@
                         <?php
                             }
                         ?>
-                    </tr>
-                    <tr>
-                    <td>Sektor</td>
-                        <td><input type="text" name="sektor_hk" class="form-control"/></td>
-                    </tr>
-                    <tr>
-                        <td>E-KTP</td>
-                        <td><input type="file" name="ektp_hk" class="form-control"/></td>
-                        <input type="hidden" name="ektp_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Kartu Keluarga</td>
-                        <td><input type="file" name="kk_hk" class="form-control"/></td>
-                        <input type="hidden" name="kk_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Akta Kelahiran</td>
-                        <td><input type="file" name="akte_hk" class="form-control"/></td>
-                        <input type="hidden" name="akte_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Surat Menikah</td>
-                        <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
-                        <input type="hidden" name="suratnikah_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Surat Ijin Ortu/Suami</td>
-                        <td><input type="file" name="suratijin_hk" class="form-control"/></td>
-                        <input type="hidden" name="suratijin_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Ex Paspor</td>
-                        <td><input type="file" name="expaspor_hk" class="form-control"/></td>
-                        <input type="hidden" name="expaspor_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>SKCK</td>
-                        <td><input type="file" name="skck_hk" class="form-control"/></td>
-                        <input type="hidden" name="skck_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Kartu Kuning</td>
-                        <td><input type="file" name="kartukuning_hk" class="form-control"/></td>
-                        <input type="hidden" name="kartukuning_hk_lama">
-                    </div>
-                    <tr>
-                    <div class="form-group">
-                        <td>Biometri</td>
-                        <td><input type="file" name="biometri_hk" class="form-control"/></td>
-                        <input type="hidden" name="biometri_hk_lama">
-                    </tr>
-                    <tr>
-                        <td>Status Proses</td>
-                        <td>
-                            <select class="form-control" name="id_tahapdua">
-                            <option>--klik ajukan status proses--</option>
-                                <option value='1'>Diajukan</option>
-                            </select>  
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Keterangan</td>
-                        <td>
-                            <input type="text" name="keterangan_hk" class="form-control"/>
-                        </td>
-                    </tr>
-                    <p>
-                        <td></td>
-                        <td><input type="submit" value="SIMPAN"></td>
-                    </p>		
-                </table>
-	        </form> -->
+                    </tr> -->
             <form method="post" action="TKIUploadBerkasHongkongAddProses.php" enctype="multipart/form-data">
                                 <fieldset>
                                     <div class="form-group">			
-                                        <label>Nama TKI</label>
+                                        <label>Nama PMI</label>
                                         <?php 
                                                     include 'config.php';
                                                     $konektor = mysqli_connect("localhost","root","", "tki");
@@ -382,7 +311,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIPTKI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
+                        <span>Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></span>
                     </div>
                 </div>
             </footer>
