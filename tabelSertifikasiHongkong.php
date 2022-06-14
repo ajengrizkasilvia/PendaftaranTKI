@@ -243,8 +243,7 @@
                                             <th>Bahasa Inggris</th>
                                             <th>Bahasa Kantonis</th>
                                             <th>Bahasa Mandarin</th>
-                                            <th>Sertifikasi Keahlian</th>
-                                            <th>Sertifikasi Bahasa</th>
+                                            <th>Sertifikasi Uji Kompetensi</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -269,7 +268,6 @@
                                             <td><?php echo $d['kantonis_hk']; ?></td>
                                             <td><?php echo $d['mandarin_hk']; ?></td>
                                             <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/SertifHongkong/Bahasa/<?php echo $d['bahasa_hk']; ?>" style="width: 300px;"></td>
                                             <td>
                                                 <div class="hero-unit">
                                                     <p>

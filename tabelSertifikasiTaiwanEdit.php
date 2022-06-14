@@ -381,18 +381,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian / Ketrampilan</label>
+                                    <label class="col-sm-2 col-form-label">Sertifikasi Uji Kompetensi</label>
                                     <div class="col-sm-10">
                                         <img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 150px;height:150px;float: left;margin-bottom: 5px;">
                                         <input type="file" name="keahlian_taiw" />
-                                        <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
-                                    </div>			
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Sertifikasi Keahlian</label>
-                                    <div class="col-sm-10">
-                                        <img src="berkas/SertifTaiwan/Bahasa/<?php echo $d['bahasa_taiw']; ?>" style="width: 150px;height: 150px;float: left;margin-bottom: 5px;">
-                                        <input type="file" name="bahasa_taiw" />
                                         <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                     </div>			
                                 </div>

@@ -337,8 +337,7 @@
                                         <tr>
                                             <th>Rekom ID</th>
                                             <td>
-                                                <p>Klik link berikut untuk rekom id</p>
-                                                <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a>
+                                            Untuk Rekom ID silahkan menghubungi admin untuk pendaftaran ke Dinas Tenaga Kerja Dan Migrasi
                                             </td>
                                         </tr>
                                         <tr>
