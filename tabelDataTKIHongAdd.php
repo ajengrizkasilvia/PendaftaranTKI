@@ -273,9 +273,15 @@
                                         <input type="hidden" name="suratijin_hk_lama">
                                     </div>
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label>Ijasah</label>
                                         <td><input type="file" name="ijasah_hk" class="form-control"/></td>
                                         <input type="hidden" name="ijasah_hk_lama">
+=======
+                                        <label>Ijazah</label>
+                                        <td><input type="file" name="ijazah_hk" class="form-control"/></td>
+                                        <input type="hidden" name="ijazah_hk_lama">
+>>>>>>> f7863766805a5df12f6ed8755dd66ede85fd848f
                                     </div>
                                     <div class="form-group">
                                         <label>Ex Paspor</label>

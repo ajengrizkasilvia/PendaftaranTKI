@@ -303,6 +303,14 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th>Ijazah</th>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">     
+                                                <a href="tabelDataTKITaiwCetakIjazah.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>     
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th>Ex Paspor</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">     

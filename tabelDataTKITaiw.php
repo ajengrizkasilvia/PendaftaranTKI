@@ -240,6 +240,7 @@
                                         <th>Akta Kelahiran</th>
                                         <th>Surat Keterangan Status/Surat Menikah</th>
                                         <th>Surat Ijin Ortu/Suami</th>
+                                        <th>Ijazah</th>
                                         <th>Ex Paspor</th>
                                         <th>SKCK</th>
                                         <th>Kartu Kuning</th>
@@ -269,6 +270,7 @@
                                             <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>

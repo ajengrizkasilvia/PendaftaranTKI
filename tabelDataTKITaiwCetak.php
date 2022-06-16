@@ -46,12 +46,16 @@
                 <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 280px;"></td>
             </tr>
             <tr>
-                <th>Surat Keterangan Status/Surat Menikah</th>
+                <th>Surat Menikah</th>
                 <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 280px;"></td>
             </tr>
             <tr>
                 <th>Surat Ijin Ortu/Suami</th>
                 <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 280px;"></td>
+            </tr>
+            <tr>
+                <th>Ijazah</th>
+                <td><img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 280px;"></td>
             </tr>
             <tr>
                 <th>Ex Paspor</th>

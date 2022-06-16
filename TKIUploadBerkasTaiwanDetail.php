@@ -241,6 +241,12 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th>Ijazah</th>
+                                            <td>
+                                                <img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">        
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th>Ex Paspor</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">        
