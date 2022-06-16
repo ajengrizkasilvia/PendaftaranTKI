@@ -12,7 +12,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $akte_hk = $_FILES['akte_hk']['name'];
   $suratnikah_hk = $_FILES['suratnikah_hk']['name'];
   $suratijin_hk = $_FILES['suratijin_hk']['name'];
-  $ijasah_hk = $_FILES['ijasah_hk']['name'];
+  $ijazah_hk = $_FILES['ijazah_hk']['name'];
   $expaspor_hk = $_FILES['expaspor_hk']['name'];
   $skck_hk = $_FILES['skck_hk']['name'];
   $kartukuning_hk = $_FILES['kartukuning_hk']['name'];
@@ -99,19 +99,20 @@ $konektor = mysqli_connect("localhost","root","", "tki");
       $suratijin_baru = $_POST['suratijin_hk_lama'];
   }
 
-  if($ijasah_hk != "") {
+  //ijazah
+  if($ijazah_hk != "") {
     $ekstensi_diperbolehkanij = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-    $ijasah = explode('.', $ijasah_hk); //memisahkan nama file dengan ekstensi yang diupload
-    $ekstensiij = strtolower(end($ijasah));
-    $file_tmpij = $_FILES['ijasah_hk']['tmp_name'];   
+    $ijazah = explode('.', $ijazah_hk); //memisahkan nama file dengan ekstensi yang diupload
+    $ekstensiij = strtolower(end($ijazah));
+    $file_tmpij = $_FILES['ijazah_hk']['tmp_name'];   
     $angka_acak     = rand(1,999);
-    $ijasah_baru = $angka_acak.'-'.$ijasah_hk;
+    $ijazah_baru = $angka_acak.'-'.$ijazah_hk;
 
     if(in_array($ekstensiij, $ekstensi_diperbolehkanij) === true)  {
-        move_uploaded_file($file_tmpij, 'berkas/Hongkong/'.$ijasah_baru);
+        move_uploaded_file($file_tmpij, 'berkas/Hongkong/'.$ijazah_baru);
     } 
     }else {
-        $ijasah_baru = $_POST['ijasah_hk_lama'];
+        $ijazah_baru = $_POST['ijazah_hk_lama'];
     }
 
   //ex paspor
@@ -177,7 +178,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   }else {
       $biometri_baru = $_POST['biometri_hk_lama'];
   } 
-  $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, ijasah_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$ijasah_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
+  $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, ijazah_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$ijazah_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
   $result = mysqli_query($konektor, $query);
    if(!$result){
        die ("Query gagal dijalankan: ".mysqli_errno($konektor).
@@ -228,14 +229,14 @@ $konektor = mysqli_connect("localhost","root","", "tki");
     $file_tmpsi = $_FILES['suratijin_hk']['tmp_name'];   
     $angka_acak     = rand(1,999);
     $suratijin_baru = $angka_acak.'-'.$suratijin_hk;
-    //ijasah
-    if($ijasah_hk != "") {
+    //ijazah
+    if($ijazah_hk != "") {
         $ekstensi_diperbolehkanij = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
-        $ijasah = explode('.', $ijasah_hk); //memisahkan nama file dengan ekstensi yang diupload
-        $ekstensiij = strtolower(end($ijasah));
-        $file_tmpij = $_FILES['ijasah_hk']['tmp_name'];   
+        $ijazah = explode('.', $ijazah_hk); //memisahkan nama file dengan ekstensi yang diupload
+        $ekstensiij = strtolower(end($ijazah));
+        $file_tmpij = $_FILES['ijazah_hk']['tmp_name'];   
         $angka_acak     = rand(1,999);
-        $ijasah_baru = $angka_acak.'-'.$ijasah_hk;
+        $ijazah_baru = $angka_acak.'-'.$ijazah_hk;
     //ex paspor
     if($expaspor_hk != "") {
     $ekstensi_diperbolehkanep = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -280,7 +281,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensisi, $ekstensi_diperbolehkansi) === true)  {
                   move_uploaded_file($file_tmpsi, 'berkas/Hongkong/'.$suratijin_baru);
                   if(in_array($ekstensij, $ekstensi_diperbolehkanij) === true)  {
-                    move_uploaded_file($file_tmpij, 'berkas/Hongkong/'.$ijasah_baru);
+                    move_uploaded_file($file_tmpij, 'berkas/Hongkong/'.$ijazah_baru);
                   if(in_array($ekstensiep, $ekstensi_diperbolehkanep) === true)  {
                   move_uploaded_file($file_tmpep, 'berkas/Hongkong/'.$expaspor_baru);
                   if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
@@ -290,7 +291,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
                   if(in_array($ekstensibio, $ekstensi_diperbolehkanbio) === true)  {
                   move_uploaded_file($file_tmpbio, 'berkas/Hongkong/'.$biometri_baru); 
                   // jalankan query INSERT untuk menambah data ke database pastikan sesuai urutan (id tidak perlu karena dibikin otomatis)
-                    $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
+                    $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, ijazah_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$ijazah_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_hk')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -316,7 +317,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
               }
             }
   } else {
-     $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, ijasah_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', null, null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_hk')";
+     $query = "INSERT INTO hongkong (id, sektor_hk, ektp_hk, kk_hk, akte_hk, suratnikah_hk, suratijin_hk, ijazah_hk, expaspor_hk, skck_hk, kartukuning_hk, biometri_hk, id_tahapdua, keterangan_hk) VALUES ('$id', '$sektor_hk', null, null, null, null, null, null, null, null, null, null, '$id_tahapdua', '$keterangan_hk')";
                     $result = mysqli_query($konektor, $query);
                     // periska query apakah ada error
                     if(!$result){

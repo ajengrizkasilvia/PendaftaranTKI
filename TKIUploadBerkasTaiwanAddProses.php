@@ -11,6 +11,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
   $akte_taiw = $_FILES['akte_taiw']['name'];
   $suratnikah_taiw = $_FILES['suratnikah_taiw']['name'];
   $suratijin_taiw = $_FILES['suratijin_taiw']['name'];
+  $ijazah_hk = $_FILES['ijazah_hk']['name'];
   $expaspor_taiw = $_FILES['expaspor_taiw']['name'];
   $skck_taiw = $_FILES['skck_taiw']['name'];
   $kartukuning_taiw = $_FILES['kartukuning_taiw']['name'];
@@ -97,6 +98,22 @@ $konektor = mysqli_connect("localhost","root","", "tki");
         }else {
             $suratijin_baru = $_POST['suratijin_taiw_lama'];
         }
+
+        //ijazah
+        if($ijazah_taiw != "") {
+            $ekstensi_diperbolehkanij = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+            $ijazah = explode('.', $ijazah_taiw); //memisahkan nama file dengan ekstensi yang diupload
+            $ekstensiij = strtolower(end($ijazah));
+            $file_tmpij = $_FILES['ijazah_taiw']['tmp_name'];   
+            $angka_acak     = rand(1,999);
+            $ijazah_baru = $angka_acak.'-'.$ijazah_taiw;
+
+            if(in_array($ekstensiij, $ekstensi_diperbolehkanij) === true)  {
+                move_uploaded_file($file_tmpij, 'berkas/Taiwan/'.$ijazah_baru);
+            } 
+            }else {
+                $ijazah_baru = $_POST['ijazah_taiw_lama'];
+            }
     
         //ex paspor
         if($expaspor_taiw != "") {
@@ -162,7 +179,7 @@ $konektor = mysqli_connect("localhost","root","", "tki");
             $biometri_baru = $_POST['biometri_taiw_lama'];
         } 
         $id = $_POST['id_lama'];
-        $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
+        $query = "INSERT INTO taiwan (id, sektor_taiw, ektp_taiw, kk_taiw, akte_taiw, suratnikah_taiw, suratijin_taiw, ijazah_taiw, expaspor_taiw, skck_taiw, kartukuning_taiw, biometri_taiw, id_tahapdua, keterangan_taiw) VALUES ('$id', '$sektor_taiw', '$ektp_baru', '$kk_baru', '$akte_baru', '$suratnikah_baru', '$suratijin_baru', '$ijazah_baru', '$expaspor_baru', '$skck_baru', '$kartukuning_baru', '$biometri_baru', '$id_tahapdua', '$keterangan_taiw')";
         $result = mysqli_query($konektor, $query);
         if(!$result){
             die ("Query gagal dijalankan: ".mysqli_errno($konektor).

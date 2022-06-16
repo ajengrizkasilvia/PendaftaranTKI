@@ -11,6 +11,7 @@
     $akte_hk = $_FILES['akte_hk']['name'];
     $suratnikah_hk = $_FILES['suratnikah_hk']['name'];
     $suratijin_hk = $_FILES['suratijin_hk']['name'];
+    $ijazah_hk = $_FILES['ijazah_hk']['name'];
     $expaspor_hk = $_FILES['expaspor_hk']['name'];
     $skck_hk = $_FILES['skck_hk']['name'];
     $kartukuning_hk = $_FILES['kartukuning_hk']['name'];
@@ -151,6 +152,33 @@
              " - ".mysqli_error($konektor));
      } else {
      echo "<script>alert('Data berhasil diubah.');window.location='TKIUploadBerkasHongkong.php';</script>";
+     }
+
+      //ijazah
+    if($ijazah_hk != "") {
+        $ekstensi_diperbolehkanij = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+        $ijazah = explode('.', $ijazah_hk); //memisahkan nama file dengan ekstensi yang diupload
+        $ekstensiij = strtolower(end($ijazah));
+        $file_tmpij = $_FILES['ijazah_hk']['tmp_name'];   
+        $angka_acak     = rand(1,999);
+        $ijazah_baru = $angka_acak.'-'.$ijazah_hk;
+
+        if(in_array($ekstensiij, $ekstensi_diperbolehkanij) === true)  {
+            move_uploaded_file($file_tmpij, 'berkas/Hongkong/'.$ijazah_baru);
+        } 
+    }else {
+        $ijazah_baru = $_POST['ijazah_hk_lama'];
+    }
+    $id = $_POST['id_lama'];
+    $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', ijazah_hk='$ijazah_baru',
+         id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
+        WHERE id_hongkong='$id_hongkong'";
+     $result = mysqli_query($konektor, $query);
+     if(!$result){
+         die ("Query gagal dijalankan: ".mysqli_errno($konektor).
+             " - ".mysqli_error($konektor));
+     } else {
+        echo "<script>alert('Data berhasil diubah.');window.location='TKIUploadBerkasHongkong.php';</script>";
      }
 
     //ex paspor
@@ -300,6 +328,14 @@
                             $file_tmpsi = $_FILES['suratijin_hk']['tmp_name'];   
                             $angka_acak     = rand(1,999);
                             $suratijin_baru = $angka_acak.'-'.$suratijin_hk;
+                            //ijazah
+                            if($ijazah_hk != "") {
+                                $ekstensi_diperbolehkanij = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
+                                $ijazah = explode('.', $ijazah_hk); //memisahkan nama file dengan ekstensi yang diupload
+                                $ekstensiij = strtolower(end($suratijin));
+                                $file_tmpij = $_FILES['ijazah_hk']['tmp_name'];   
+                                $angka_acak     = rand(1,999);
+                                $ijazah_baru = $angka_acak.'-'.$ijazah_hk;
                             //ex paspor
                             if($expaspor_hk != "") {
                                 $ekstensi_diperbolehkanep = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -343,6 +379,8 @@
                                                             move_uploaded_file($file_tmpsn, 'berkas/Hongkong/'.$suratnikah_baru);
                                                             if(in_array($ekstensisi, $ekstensi_diperbolehkansi) === true)  {
                                                                 move_uploaded_file($file_tmpsi, 'berkas/Hongkong/'.$suratijin_baru);
+                                                                if(in_array($ekstensiij, $ekstensi_diperbolehkanij) === true)  {
+                                                                    move_uploaded_file($file_tmpij, 'berkas/Hongkong/'.$ijazah_baru);
                                                                 if(in_array($ekstensiep, $ekstensi_diperbolehkanep) === true)  {
                                                                     move_uploaded_file($file_tmpep, 'berkas/Hongkong/'.$expaspor_baru);
                                                                     if(in_array($ekstensisk, $ekstensi_diperbolehkansk) === true)  {
@@ -356,7 +394,7 @@
                                                                                 // jalankan query UPDATE berdasarkan ID yang produknya kita edit
                                                                                 $id = $_POST['id_lama'];
                                                                                 $query  = "UPDATE hongkong SET id='$id', sektor_hk='$sektor_hk', ektp_hk='$ektp_baru', kk_hk='$kk_baru',
-                                                                                    akte_hk='$akte_baru', suratnikah_hk='$suratnikah_baru', suratijin_hk='$suratijin_baru',
+                                                                                    akte_hk='$akte_baru', suratnikah_hk='$suratnikah_baru', suratijin_hk='$suratijin_baru', ijazah_hk='$ijazah_baru',
                                                                                     expaspor_hk='$expaspor_baru', skck_hk='$skck_baru', kartukuning_hk='$kartukuning_baru',
                                                                                     biometri_hk='$biometri_baru', id_tahapdua='$id_tahapdua', keterangan_hk= '$keterangan_hk' 
                                                                                     WHERE id_hongkong='$id_hongkong'";
@@ -402,6 +440,10 @@
                                                         //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
                                                             echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='TKIUploadBerkasHongkongEdit.php';</script>";
                                                             }
+                                                        } else {     
+                                                            //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
+                                                                echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='TKIUploadBerkasHongkongEdit.php';</script>";
+                                                                }
                                                
                                                 } else {     
                                                     //jika file ekstensi tidak jpg dan png maka alert ini yang tampil
@@ -449,6 +491,9 @@
                 }
                 
         } else {
+        echo "<script>alert('Data berhasil diubah.');window.location='TKIUploadBerkasHongkong.php';</script>";
+        }
+    } else {
         echo "<script>alert('Data berhasil diubah.');window.location='TKIUploadBerkasHongkong.php';</script>";
         }
 
