@@ -275,7 +275,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                                <label class="col-sm-2 col-form-label">Tanggal Lahir (bulan-tanggal-tahun)</label>
                                                     <div class="col-sm-10">
                                                     <input type="date" class="form-control" name="tanggal_lahir" value="<?php echo $d['tanggal_lahir']; ?>">
                                                     </div>

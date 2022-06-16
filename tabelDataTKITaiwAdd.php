@@ -273,7 +273,7 @@
                                             </td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Surat Menikah</label>
+                                            <label>Surat Keterangan Status/Surat Menikah</label>
                                             <td>
                                                 <input type="file" name="suratnikah_taiw" class="form-control"/>
                                                 <input type="hidden" name="suratnikah_taiw_lama" class="form-control"/>

@@ -287,7 +287,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Surat Menikah</th>
+                                            <th>Surat Keterangan Status/Surat Menikah</th>
                                             <td>
                                                 <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;">
                                                 <a href="tabelDataTKITaiwCetakSuratNikah.php?id_taiwan=<?php echo $d['id_taiwan']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">

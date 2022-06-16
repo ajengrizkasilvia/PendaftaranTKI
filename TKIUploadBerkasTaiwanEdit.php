@@ -228,7 +228,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Surat Menikah</label>
+                                                <label class="col-sm-2 col-form-label">Surat Keterangan Status/Surat Menikah</label>
                                                     <div class="col-sm-10">
                                                         <img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
                                                         <input type="file" name="suratnikah_taiw" /></td>
@@ -291,7 +291,7 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Keterangan</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="keterangan_taiw" value="<?php echo $d['keterangan_taiw']; ?>">
+                                                        <input type="text" class="form-control" name="keterangan_taiw" value="<?php echo $d['keterangan_taiw']; ?>" readonly>
                                                     </div>
                                                 </div>
                                                 <p>

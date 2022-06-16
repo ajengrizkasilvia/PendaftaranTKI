@@ -46,7 +46,7 @@
                 <th><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>
-                <th>Surat Menikah</th>
+                <th>Surat Keterangan Status/Surat Menikah</th>
                 <th><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 280px;"></th>
             </tr>
             <tr>

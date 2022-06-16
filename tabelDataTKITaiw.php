@@ -238,7 +238,7 @@
                                         <th>E-KTP</th>
                                         <th>Kartu Keluarga</th>
                                         <th>Akta Kelahiran</th>
-                                        <th>Surat Menikah</th>
+                                        <th>Surat Keterangan Status/Surat Menikah</th>
                                         <th>Surat Ijin Ortu/Suami</th>
                                         <th>Ex Paspor</th>
                                         <th>SKCK</th>

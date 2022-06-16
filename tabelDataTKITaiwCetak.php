@@ -46,7 +46,7 @@
                 <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 280px;"></td>
             </tr>
             <tr>
-                <th>Surat Menikah</th>
+                <th>Surat Keterangan Status/Surat Menikah</th>
                 <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 280px;"></td>
             </tr>
             <tr>

@@ -232,7 +232,7 @@
                                             <td><input type="text" name="tempat_lahir" class="form-control" required placeholder="Masukkan tempat lahir"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Tanggal Lahir</label>
+                                            <label>Tanggal Lahir (bulan-tanggal-tahun)</label>
                                             <td><input type="date" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir"/></td>
                                         </div>
                                         <div class="form-group">
@@ -289,13 +289,6 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Pengalaman Kerja Ex / Non (Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)</label>
-                                            <!-- <td>
-                                                <select class="form-control" name="pengalaman_kerja">
-                                                    <option>---(Ex : Jika pernah bekerja di Luar Negeri | Non : Jika belum ada pengalaman kerja di Luar Negeri)---</option>
-                                                    <option>Ex</option>
-                                                    <option>Non</option>
-                                                </select>   
-                                            </td> -->
                                             <div class="input-group mb-3">
                                                 <select class="custom-select" id="inputGroupSelect02" name="pengalaman_kerja">
                                                     <option selected>pilih pengalaman kerja...</option>

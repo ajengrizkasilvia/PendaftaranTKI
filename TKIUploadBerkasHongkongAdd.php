@@ -217,7 +217,7 @@
                                         <input type="hidden" name="akte_hk_lama">
                                     </div>
                                     <div class="form-group">
-                                        <label>Surat Menikah</label>
+                                        <label>Surat Keterangan Status/Surat Menikah</label>
                                         <td><input type="file" name="suratnikah_hk" class="form-control"/></td>
                                         <input type="hidden" name="suratnikah_hk_lama">
                                     </div>
@@ -259,7 +259,7 @@
                                     </div>
                                     <div class="form-group">
                                         <td>Keterangan</td>
-                                        <td><input type="text" class="form-control" name="keterangan_hk"></td>
+                                        <td><input type="text" class="form-control" name="keterangan_hk" readonly></td>
                                     </div>
                                     <p>
                                         <td></td>

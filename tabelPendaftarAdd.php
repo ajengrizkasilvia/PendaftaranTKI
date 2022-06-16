@@ -274,7 +274,7 @@
                                             <td><input type="text" name="tempat_lahir" class="form-control" required placeholder="Masukkan tempat lahir"/></td>
                                         </div>
                                         <div class="form-group">
-                                            <label>Tanggal Lahir</label>
+                                            <label>Tanggal Lahir (bulan-tanggal-tahun)</label>
                                             <td><input type="date" name="tanggal_lahir" class="form-control" required placeholder="Masukkan tanggal lahir"/></td>
                                         </div>
                                         <div class="form-group">
