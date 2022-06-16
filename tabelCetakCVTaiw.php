@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Curriculum Vitae</title>
+	<title>BIODATA RECORD</title>
 </head>
 <body>
  

@@ -273,7 +273,7 @@
                                             <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
-                                            <td>Klik link berikut <a href="http://siskotkln.bnp2tki.go.id/">http://siskotkln.bnp2tki.go.id/</a></td>
+                                            <td>Untuk Rekom ID silahkan menghubungi admin untuk pendaftaran ke Dinas Tenaga Kerja Dan Migrasi</td>
                                             <td>
                                                 <?php
                                                     {
