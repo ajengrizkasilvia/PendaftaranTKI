@@ -241,6 +241,7 @@
                                             <th>Akta Kelahiran</th>
                                             <th>Surat Keterangan Status/Surat Nikah</th>
                                             <th>Surat Ijin Ortu/Suami</th>
+                                            <th>Ijazah</th>
                                             <th>Ex Paspor</th>
                                             <th>SKCK</th>
                                             <th>Kartu Kuning</th>
@@ -269,6 +270,7 @@
                                     <td><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 200px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 200px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 200px;"></td>
+                                    <td><img src="berkas/Hongkong/<?php echo $d['ijazah_hk']; ?>" style="width: 200px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 200px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 200px;"></td>
                                     <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 200px;"></td>

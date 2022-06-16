@@ -287,6 +287,10 @@
                                                 <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
+                                            <th>Ijazah</th>
+                                                <td><img src="berkas/Hongkong/<?php echo $d['ijazah_hk']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
                                             <th>Ex-Paspor</th>
                                                 <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
                                         </tr>

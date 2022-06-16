@@ -244,6 +244,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Ijazah</label>
+                                                    <div class="col-sm-10">
+                                                    <img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">
+                                                        <input type="file" name="ijazah_taiw" /></td>
+                                                        <input type="hidden" name="ijazah_taiw_lama" value="<?php echo $d['ijazah_taiw']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Ex Pasport</label>
                                                     <div class="col-sm-10">
                                                     <img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 120px;float: left;margin-bottom: 5px;">

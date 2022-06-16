@@ -287,6 +287,13 @@
                                             </td>
                                         </div>
                                         <div class="form-group">
+                                            <label>Ijazah</label>
+                                            <td>
+                                                <input type="file" name="ijazah_taiw" class="form-control"/>
+                                                <input type="hidden" name="ijazah_taiw_lama" class="form-control"/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">
                                             <label>Ex Paspor</label>
                                             <td>
                                                 <input type="file" name="expaspor_taiw" class="form-control"/>

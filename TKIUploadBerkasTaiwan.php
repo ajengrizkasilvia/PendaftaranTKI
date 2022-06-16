@@ -288,6 +288,10 @@
                                                 <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>
                                         <tr>
+                                            <th>Ijazah</th>
+                                                <td><img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 300px;"></td>
+                                        </tr>
+                                        <tr>
                                             <th>Ex-Paspor</th>
                                                 <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
                                         </tr>

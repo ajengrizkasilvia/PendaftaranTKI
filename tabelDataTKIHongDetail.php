@@ -303,6 +303,14 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                        <tr>
+                                            <th>Ijazah</th>
+                                            <td>
+                                                <img src="berkas/Hongkong/<?php echo $d['ijazah_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;"> 
+                                                <a href="tabelDataTKIHongCetakIjazah.php?id_hongkong=<?php echo $d['id_hongkong']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                                                <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                    
+                                            </td>
+                                        </tr>
                                             <th>Ex Paspor</th>
                                             <td>
                                                 <img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 400px;float: left;margin-bottom: 5px;"> 
