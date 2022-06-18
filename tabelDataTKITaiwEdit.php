@@ -209,8 +209,8 @@
                         <h1 class="h3 mb-2 text-gray-800">Data PMI Taiwan</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
-                    Pastikan berkas dengan format namaPMI_namaBerkas_negaraTujuan.jpg 
-                    Tekan <a href="tabelDataTKITaiw.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
+                    Pastikan berkas dengan format JPG/PNG (nama file: namaPMI_namaBerkas.jpg). 
+                    <p> Tekan <a href="tabelDataTKITaiw.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

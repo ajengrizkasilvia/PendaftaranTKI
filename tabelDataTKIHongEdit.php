@@ -211,7 +211,7 @@
                         <h1 class="h3 mb-2 text-gray-800">PMI Hongkong</h1>
                     </div>
                     <p class="mb-4"><a href="#">Ingat!</a> Cek ulang seluruh isian form dengan berkas-berkas yang benar dan sesuai.
-                    Pastikan berkas dengan format namaBerkas_negaraTujuan. 
+                    Pastikan berkas dengan format JPG/PNG (nama file: namaPMI_namaBerkas.jpg). 
                     <p> Tekan <a href="tabelDataTKIHong.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->

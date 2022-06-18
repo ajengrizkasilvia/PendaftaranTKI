@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Cetak All Sertifikasi Taiwan</title>
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
 </head>
 <body>
  
