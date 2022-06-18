@@ -48,8 +48,8 @@
 							<div class="form-group">
 								<td>
                                     <select class="form-control" name="role" id="role" required>
-                                        <option>klik role 'TKI'</option>
-                                        <option value='2'>TKI</option>
+                                        <option>klik role 'PMI'</option>
+                                        <option value='2'>PMI</option>
                                     </select>   
                                 </td>
 							</div>

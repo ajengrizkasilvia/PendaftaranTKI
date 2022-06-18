@@ -13,27 +13,7 @@
 	?>
     <h2>Data TKI</h2>
 	<table border="1" style="width: 100%">
-		<tr>
-			<th>No</th>
-            <th>Tanggal Pendaftaran</th>
-            <th>NIK</th>
-            <th>Nama Lengkap</th>
-            <th>Negara Tujuan</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Umur</th>
-            <th>Alamat Lengkap</th>
-            <th>Jenis Kelamin</th>
-            <th>TB</th>
-            <th>BB</th>
-            <th>Pendidikan Terakhir</th>
-            <th>Status</th>
-            <th>Agama</th>
-            <th>Pengalaman Kerja</th>
-            <th>Medical Check</th>
-            <th>Pas Foto</th>
-		</tr>
-		<?php 
+    <?php 
 		$no = 1;
 		$data = mysqli_query($konektor,"SELECT * FROM pendaftaran 
                                         INNER JOIN user ON pendaftaran.id = user.id
@@ -41,24 +21,76 @@
 		while($d = mysqli_fetch_array($data)){
 		?>
 		<tr>
-			<td><?php echo $no++; ?></td>
-            <td><?php echo $d['tgl_daftar']; ?></td>
-            <td><?php echo $d['nik']; ?></td>
-            <td><?php echo $d['nama_lengkap']; ?></td>
-            <td><?php echo $d['negara_tujuan']; ?></td>
-            <td><?php echo $d['tempat_lahir']; ?></td>
-            <td><?php echo $d['tanggal_lahir']; ?></td>
-            <td><?php echo $d['umur']; ?></td>
-            <td><?php echo $d['alamat_lengkap']; ?></td>
-            <td><?php echo $d['jenis_kelamin']; ?></td>
-            <td><?php echo $d['tb']; ?></td>
-            <td><?php echo $d['bb']; ?></td>
-            <td><?php echo $d['pendidikan_terakhir']; ?></td>
-            <td><?php echo $d['status']; ?></td>
-            <td><?php echo $d['agama']; ?></td>
-            <td><?php echo $d['pengalaman_kerja']; ?></td>
-            <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 100px;"></td>
-            <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"> </td>
+			<th>No</th>
+            <th><?php echo $no++; ?></th>
+        </tr>
+        <tr>    
+            <th>Tanggal Pendaftaran</th>
+            <th><?php echo $d['tgl_daftar']; ?></th>
+        </tr>
+        <tr>
+            <th>NIK</th>
+            <th><?php echo $d['nik']; ?></th>
+        </tr>
+        <tr>
+            <th>Nama Lengkap</th>
+            <th><?php echo $d['nama_lengkap']; ?></th>
+        </tr>
+        <tr>
+            <th>Negara Tujuan</th>
+            <th><?php echo $d['negara_tujuan']; ?></th>
+        </tr>
+        <tr>
+            <th>Tempat Lahir</th>
+            <th><?php echo $d['tempat_lahir']; ?></th>
+        </tr>
+        <tr>
+            <th>Tanggal Lahir</th>
+            <th><?php echo $d['tanggal_lahir']; ?></th>
+        </tr>
+        <tr>
+            <th>Umur</th>
+            <th><?php echo $d['umur']; ?> tahun</th>
+        </tr>
+        <tr>
+            <th>Alamat Lengkap</th>
+            <th><?php echo $d['alamat_lengkap']; ?></th>
+        </tr>
+        <tr>
+            <th>Jenis Kelamin</th>
+            <th><?php echo $d['jenis_kelamin']; ?></th>
+        </tr>
+        <tr>
+            <th>TB</th>
+            <th><?php echo $d['tb']; ?></th>
+        </tr>
+        <tr>
+            <th>BB</th>
+            <th><?php echo $d['bb']; ?></th>
+        </tr>
+        <tr>
+            <th>Pendidikan Terakhir</th>
+            <th><?php echo $d['pendidikan_terakhir']; ?></th>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <th><?php echo $d['status']; ?></th>
+        </tr>
+        <tr>
+            <th>Agama</th>
+            <th><?php echo $d['agama']; ?></th>
+        </tr>
+        <tr>
+            <th>Pengalaman Kerja</th>
+            <th><?php echo $d['pengalaman_kerja']; ?></th>
+        </tr>
+        <tr>
+            <th>Medical Check</th>
+            <th><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 100px;"></th>
+        </tr>
+        <tr> 
+            <th>Pas Foto</th>
+            <th><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"> </th>
 		</tr>
 		<?php 
 		}

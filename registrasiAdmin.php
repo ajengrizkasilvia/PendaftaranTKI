@@ -53,7 +53,7 @@
                                     <select class="form-control" required name="role" id="role">
                                         <option>--pilih role--</option>
                                         <option value='1'>Admin</option>
-                                        <option value='2'>TKI</option>
+                                        <option value='2'>PMI</option>
                                     </select>   
                                 </td>
 							</div>

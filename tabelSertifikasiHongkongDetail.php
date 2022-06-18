@@ -214,7 +214,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Hongkong</h1>
-                        <a href="tabelCetakCVHk.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download CV</a>
+                        <a href="tabelCetakCVHk.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download Biodata Record</a>
                     </div>
                     <p>Berikut merupakan berkas Sertifikasi Uji Kompetensi dan Penilaian Wawancara calon PMI dari negara tujuan Hongkong.</p>
                     <?php 
