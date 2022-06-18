@@ -223,7 +223,7 @@
                                 <form method="post" action="tabelPendaftarAddProses.php" enctype="multipart/form-data">
                                     <fieldset>
                                         <div class="form-group">
-                                            <label>Tanggal Pendaftaran (Sekarang)</label>
+                                            <label>Tanggal Pendaftaran (Sekarang(bulan-tanggal-tahun))</label>
                                             <input type="hidden" name="id_dft" value="<?php echo $d['id_dft']; ?>">
                                             <td><input type="date" name="tgl_daftar" class="form-control" required placeholder="Masukkan tanggal pendaftaran"/></td>
                                         </div>

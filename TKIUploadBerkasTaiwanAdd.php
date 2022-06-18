@@ -227,7 +227,7 @@
                                         <input type="hidden" name="suratijin_taiw_lama">
                                     </div>
                                     <div class="form-group">
-                                        <label>Ijazah asli</label>
+                                        <label>Ijazah</label>
                                         <td><input type="file" name="ijazah_taiw" class="form-control"/></td>
                                         <input type="hidden" name="ijazah_taiw_lama">
                                     </div>

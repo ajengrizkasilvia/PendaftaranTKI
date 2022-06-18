@@ -208,7 +208,12 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Test PMI</h1>
                     <p class="mb-4">Berikut merupakan halaman untuk menambah soal test PMI baik soal test bahasa cantonese maupun bahasa manndarin.</p>
-
+                    <div>
+                        <ul class="breadcrumb">
+                            <li><a href="indexAdmin.php">Dashboard</a> <span class="divider">/</span></li>
+                            <li class="active">Soal Test PMI</li>
+                        </ul>
+                    </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

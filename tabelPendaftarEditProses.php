@@ -81,7 +81,7 @@ $id_tahapsatu = $_POST['id_tahapsatu'];
           $pasfoto_baru = $_POST['pas_foto_lama'];
       }
       $id = $_POST['id_lama'];
-      $query = "UPDATE pendaftaran SET id_negara='$id_negara', tgl_daftar='tgl_daftar', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
+      $query = "UPDATE pendaftaran SET id_negara='$id_negara', tgl_daftar='$tgl_daftar', no_telp='$no_telp', nik='$nik', id='$id', tempat_lahir='$tempat_lahir',
         tanggal_lahir='$tanggal_lahir', umur='$umur', alamat_lengkap='$alamat_lengkap', jenis_kelamin='$jenis_kelamin', tb='$tb', bb='$bb', pendidikan_terakhir='$pendidikan_terakhir',
         status='$status', agama='$agama', pengalaman_kerja='$pengalaman_kerja', nama_ayah='$nama_ayah', pekerjaan_ayah='$pekerjaan_ayah', nama_ibu='$nama_ibu',
         pekerjaan_ibu='$pekerjaan_ibu', jml_brother='$jml_brother', jml_sister='$jml_sister', anak_no='$anak_no', nama_pasangan='$nama_pasangan',

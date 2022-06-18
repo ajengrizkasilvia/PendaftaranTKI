@@ -297,74 +297,23 @@
                     <!-- Content Row -->
 
                     <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Illustrations -->
-                                <div >
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Landing Page</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="text-center">
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                                src="img/undraw_posting_photo.svg" alt="...">
-                                        </div>
-                                        <p>Halaman Landing Page merupakan halaman utama dari website PT. Hendrarta Argaraya yang menampilkan profil PT, negara tujuan tenaga kerja dan keterangan lainnya.</p>
-                                        <!-- <a target="_blank" rel="nofollow" href="index.php">Klik untuk menuju Landing Page &rarr;</a> -->
-                                        <div class="hero-unit">
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="index.php">
-                                                Website PT
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Landing Page</h6>
                             </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Negara Tujuan</h6>
-                                    <!--<div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="img/undraw_building_websites_i78t.svg" alt="...">
                                     </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Hongkong
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Taiwan
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-warning"></i> Singapore
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-danger"></i> Malaysia
-                                        </span>
+                                    <p>Halaman Landing Page merupakan halaman utama dari website PT. Hendrarta Argaraya yang menampilkan profil PT, negara tujuan tenaga kerja dan keterangan lainnya.</p>
+                                    <div class="hero-unit">
+                                        <p>
+                                            <a class="btn btn-primary btn-large" href="index.php">
+                                            Website PT
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

@@ -243,7 +243,6 @@
                                             <th>Surat Ijin Ortu/Suami</th>
                                             <th>Ijazah</th>
                                             <th>Ex Paspor</th>
-                                            <th>Ijazah</th>
                                             <th>SKCK</th>
                                             <th>Kartu Kuning</th>
                                             <th>Biometri</th>
