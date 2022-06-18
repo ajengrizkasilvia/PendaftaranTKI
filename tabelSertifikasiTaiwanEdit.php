@@ -224,6 +224,7 @@
                             $id_sertif_taiw = $_GET['id_sertif_taiw'];
                             $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan 
                                                             INNER JOIN user ON sertiftaiwan.id = user.id 
+                                                            INNER JOIN pendaftaran ON sertiftaiwan.id_dft = pendaftaran.id_dft
                                                             WHERE id_sertif_taiw='$id_sertif_taiw'");
                             while($d = mysqli_fetch_array($data)){
                         ?>
