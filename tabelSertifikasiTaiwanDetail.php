@@ -247,6 +247,9 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th style="text-align:left" bgcolor='#dae4f7'>Penilaian Wawancara</th>
+                                        </tr>
+                                        <tr>
                                             <th>Perawatan Bayi</th>
                                             <td>
                                                 <?php echo $d['perawatanbayi_taiw']; ?>
@@ -294,7 +297,6 @@
                                                 <?php echo $d['mandarin_taiw']; ?>
                                             </td>
                                         </tr>
-                                        <tr>
                                         <tr>
                                             <th>Sertifikasi Uji Kompetensi</th>
                                             <td>

@@ -236,14 +236,6 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama PMI</th>
-                                            <th>Perawatan Bayi</th>
-                                            <th>Peduli Anak-anak</th>
-                                            <th>Pekerjaan Rumah Tangga</th>
-                                            <th>Perawatan Ortu/Cacat</th>
-                                            <th>Memasak</th>
-                                            <th>Bahasa Inggris</th>
-                                            <th>Bahasa Kantonis</th>
-                                            <th>Bahasa Mandarin</th>
                                             <th>Sertifikasi Uji Kompetensi</th>
                                             <th>Action</th>
                                         </tr>
@@ -260,14 +252,6 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><?php echo $d['perawatanbayi_taiw']; ?></td>
-                                            <td><?php echo $d['pedulianak_taiw']; ?></td>
-                                            <td><?php echo $d['pekerjaanrt_taiw']; ?></td>
-                                            <td><?php echo $d['perawatanortu_taiw']; ?></td>
-                                            <td><?php echo $d['memasak_taiw']; ?></td>
-                                            <td><?php echo $d['inggris_taiw']; ?></td>
-                                            <td><?php echo $d['kantonis_taiw']; ?></td>
-                                            <td><?php echo $d['mandarin_taiw']; ?></td>
                                             <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 100px;"></td>
                                             <td>
                                                 <div class="hero-unit">
