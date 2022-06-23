@@ -203,7 +203,26 @@
                                                     ?>
                                                 </td>
                                         </div>
-                                        
+                                        <div class="form-group">			
+                                        <label>Id Daftar</label>
+                                        <select class="custom-select" id="inputGroupSelect02" name="id_dft">
+                                            <option selected>pilih nama lengkap...</option>
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $data = mysqli_query($konektor, "SELECT * FROM pendaftaran INNER JOIN user ON pendaftaran.id = user.id");
+                                                        while ($d = mysqli_fetch_array($data)) {
+                                                ?>
+                                                
+                                                    <option value="<?=$d['id_dft'];?>">
+                                                        <?php echo $d['nama_lengkap']; ?>
+                                                    </option>
+                                                <?php
+                                                    }
+                                                ?>
+                                        </select>
+                                    </div>
                                         <div class="form-group">
                                             <label>Upload Sertifikasi Uji Kompetensi</label>
                                             <td>

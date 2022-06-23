@@ -78,9 +78,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data PMI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
-                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a> 
+                        <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
-                    </div> 
+                    </div>
                 </div>
             </li>
 
@@ -173,10 +173,7 @@
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form dengan benar dan sesuai. 
                     Upload berkas sertifikasi yang sesuai dengan format namaPMI_Sertifikasi.jpg. </p>
-                    <ul class="breadcrumb">
-                            <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
-                            <li class="active">Sertifikasi PMI Taiwan</li>
-                    </ul>
+                    <p> Tekan <a href="TKISertifikasiTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -189,7 +186,7 @@
                                     <fieldset>
                                         <div class="form-group">			
                                             <label>Nama PMI</label>
-                                            <td>
+                                                <td>
                                                     <?php 
                                                         include 'config.php';
                                                         $konektor = mysqli_connect("localhost","root","", "tki");
@@ -198,19 +195,40 @@
                                                         $data = mysqli_query($konektor,"SELECT * FROM user WHERE username='$username'");
                                                         while($d = mysqli_fetch_array($data)){
                                                     ?>
-                                                    <input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
+                                                    <td><input type="hidden" name="id_sertif_taiw" value="<?php echo $d['id_sertif_taiw']; ?>">
                                                     <td><input class="form-control" type="text" name="id" value="<?php echo $d['nama_lengkap']; ?>" readonly></td>
                                                     <td><input type="hidden" name="id_lama" class="form-control" value="<?php echo $d['id']; ?>"/></td>
                                                     <?php
                                                         }
                                                     ?>
-                                            </td>
+                                                </td>
                                         </div>
-                                        
+                                        <div class="form-group">			
+                                        <label>Id Daftar</label>
+                                        <select class="custom-select" id="inputGroupSelect02" name="id_dft">
+                                            <option selected>pilih nama lengkap...</option>
+                                                <?php
+                                                    include 'config.php';
+                                                    $konektor = mysqli_connect("localhost","root","", "tki");
+                                                    $no = 1;
+                                                    $data = mysqli_query($konektor, "SELECT * FROM pendaftaran INNER JOIN user ON pendaftaran.id = user.id");
+                                                        while ($d = mysqli_fetch_array($data)) {
+                                                ?>
+                                                
+                                                    <option value="<?=$d['id_dft'];?>">
+                                                        <?php echo $d['nama_lengkap']; ?>
+                                                    </option>
+                                                <?php
+                                                    }
+                                                ?>
+                                        </select>
+                                    </div>
                                         <div class="form-group">
-                                            <label>Sertifikasi Uji Kompetensi</label>
-                                            <td><input type="file" name="keahlian_taiw" class="form-control"/></td>
-                                            <input type="hidden" name="keahlian_taiw_lama" class="form-control"/>
+                                            <label>Upload Sertifikasi Uji Kompetensi</label>
+                                            <td>
+                                                <input type="file" name="keahlian_taiw" class="form-control"/>
+                                                <input type="hidden" name="keahlian_taiw_lama" class="form-control"/>
+                                            </td>
                                         </div>
                                         <p>
                                             <td></td>
@@ -221,7 +239,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     
                 </div>
                 <!-- /.container-fluid -->
