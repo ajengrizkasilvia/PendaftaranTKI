@@ -172,7 +172,7 @@
                         <h1 class="h3 mb-2 text-gray-800">Form Pendaftaran PMI</h1>
                     </div>
                     <p class="mb-4"><a href="#">Wajib!</a> Isi seluruh form pendaftaran dengan benar dan sesuai. 
-                    Upload berkas medical check-up dengan format nama_umur_medicalcheck.jpg. </p>
+                    Upload berkas dengan format JPG/PNG (nama_medicalcheck.jpg dan nama_pasfoto.jpg). </p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

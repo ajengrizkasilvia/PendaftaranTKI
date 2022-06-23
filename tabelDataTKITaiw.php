@@ -236,18 +236,7 @@
                                         <th>Nama PMI</th>
                                         <th>Sektor</th>
                                         <th>E-KTP</th>
-                                        <th>Kartu Keluarga</th>
-                                        <th>Akta Kelahiran</th>
-                                        <th>Surat Keterangan Status/Surat Menikah</th>
-                                        <th>Surat Ijin Ortu/Suami</th>
-                                        <th>Ijazah</th>
-                                        <th>Ex Paspor</th>
-                                        <th>SKCK</th>
-                                        <th>Kartu Kuning</th>
-                                        <th>Biometri</th>
-                                        <th>Rekom ID</th>
                                         <th>Status Proses</th>
-                                        <th>Keterangan</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -266,16 +255,6 @@
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['sektor_taiw']; ?></td>
                                             <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['kk_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['akte_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['suratnikah_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['suratijin_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['ijazah_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['expaspor_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['skck_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['kartukuning_taiw']; ?>" style="width: 300px;"></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['biometri_taiw']; ?>" style="width: 300px;"></td>
-                                            <td>Untuk Rekom ID silahkan menghubungi admin untuk pendaftaran ke Dinas Tenaga Kerja Dan Migrasi</td>
                                             <td>
                                                 <?php
                                                     {
@@ -299,7 +278,6 @@
                                                     }
                                                 ?>
                                             </td>
-                                            <td><?php echo $d['keterangan_taiw']; ?></td>
                                                 <td>
                                                     <div class="hero-unit">
                                                         <p>

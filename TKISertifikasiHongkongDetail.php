@@ -203,6 +203,57 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th style="text-align:left" bgcolor='#dae4f7'>Penilaian Wawancara</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Perawatan Bayi</th>
+                                        <td>
+                                            <?php echo $d['perawatanbayi_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Peduli Anak-anak</th>
+                                        <td>
+                                            <?php echo $d['pedulianak_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pekerjaan Rumah Tangga</th>
+                                        <td>
+                                            <?php echo $d['pekerjaanrt_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Perawatan Orangtua/Cacat</th>
+                                        <td>
+                                            <?php echo $d['perawatanortu_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Memasak</th>
+                                        <td>
+                                            <?php echo $d['memasak_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bahasa Inggris</th>
+                                        <td>
+                                            <?php echo $d['inggris_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bahasa Kantonis</th>
+                                        <td>
+                                            <?php echo $d['kantonis_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bahasa Mandarin</th>
+                                        <td>
+                                            <?php echo $d['mandarin_hk']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <th>Sertifikasi Uji Kompetensi</th>
                                             <td>
                                                 <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 400px;">                                                

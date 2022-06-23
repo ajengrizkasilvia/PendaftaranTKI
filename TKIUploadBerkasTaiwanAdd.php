@@ -168,7 +168,7 @@
                     <h1 class="h3 mb-2 text-gray-800">Upload Berkas PMI Taiwan</h1>
                 </div>
                 <p class="mb-4"><a href="#">Harus!</a> Isi seluruh form dengan berkas-berkas yang sesuai. 
-                    Upload berkas dengan format namaPMI_negaraTujuan_namaBerkas.jpg.
+                    Upload bberkas dengan format JPG/PNG (nama file: namaPMI_namaBerkas.jpg).
                 <p> Tekan <a href="TKIUploadBerkasTaiwan.php">BACK</a> untuk kembali ke halaman sebelumnya.</p>
 
                 <!-- DataTales Example -->

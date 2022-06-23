@@ -80,8 +80,6 @@
                         <h6 class="collapse-header">Data PMI</h6>
                         <a class="collapse-item" href="TKIDataDiri.php">Data Diri</a>
                         <a class="collapse-item" href="TKIUploadBerkasHongkong.php">Lengkapi Hongkong</a>
-                        <a class="collapse-item" href="TKIUploadBerkasSingapore.php">Lengkapi Singapore</a>
-                        <a class="collapse-item" href="TKIUploadBerkasMalay.php">Lengkapi Malaysia</a>
                         <a class="collapse-item" href="TKIUploadBerkasTaiwan.php">Lengkapi Taiwan</a>
                     </div>
                 </div>
