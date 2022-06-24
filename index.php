@@ -50,7 +50,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Mitra untuk Sukses di Luar Negeri</h2>
                     <h3 class="section-subheading text-muted">Partners for Success Abroad</h3>
-                    <h3 class="section-subheading text-muted">PT Hendrarta Argaraya merupakan Perusahaan Penenmpatan Kerja Indonesia Swasta (PPTKIS)
+                    <h3 class="section-subheading text-muted">PT Hendrarta Argaraya merupakan Perusahaan Penempatan Pekerja Migran Indonesia Swasta (P3MIS)
                                                             yang telah mendapat ijin dan pengakuan resmi Pemerintah Indonesia untuk melakukan kegiatan 
                                                             perekrutan calon tenaga kerja, pendidikan dan pelatihan, dan penempatan kerja diluar negeri.</h3>
                 </div>
@@ -72,7 +72,7 @@
                             <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Legalitas</h4>
-                        <p class="text-muted">PT. Hendrarta Argaraya adalah perusahaan Pelaksana Penempatan Tenaga Kerja Indonesia Swasta (PPTKIS) yang resmi sebagaimana tercantum dalam keputusan Menakertrans RI nomor 543 tahun 2016.</p>
+                        <p class="text-muted">PT. Hendrarta Argaraya adalah Perusahaan Pelaksana Penempatan Pekerja Migran Indonesia Swasta (P3MIS) yang resmi sebagaimana tercantum dalam keputusan Menakertrans RI nomor 543 tahun 2016.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -149,7 +149,8 @@
                                 <h4></h4>
                                 <h4 class="subheading">Pengajian dan Ceramah Agama</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Penyelenggaraan atau kegiatan belajar agama Islam yang dibimbing atau 
+                                                                            diberikan oleh seorang guru ngaji (da'i) di lingkungan kami. </p></div>
                         </div>
                     </li>
                     <li>
@@ -170,7 +171,7 @@
                                 <h4></h4>
                                 <h4 class="subheading">Olahraga dan Permainan</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Olahraga yg pada dasarnya adalah permainan yang dilakukan setiap hari minggu. Seperti kegiatan olahraga permainan bola, olahraga permainan voli.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
@@ -304,7 +305,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; SIPPMI dibuat oleh Mahasiswa Polinema <i class="fas fa-graduation-cap"></i></div>
-                    <div class="col-lg-4 my-3 my-lg-0">
+                    <!-- <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -312,7 +313,7 @@
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
                         <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </footer>
