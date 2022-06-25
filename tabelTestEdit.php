@@ -254,21 +254,21 @@
                                                     </td>
                                                 </div>
                                                 <div class="form-group">			
-                                                    <label>Grade</label>
-                                                    <p>>=80 = 'Baik Sekali', >= 60 = 'Baik', >= 40 = 'Kurang', >= 20 = 'Cukup'</p>
+                                                    <label>Predikat (Keterangan: Score>=80 = 'Baik Sekali', Score>= 60 = 'Baik', Score>= 40 = 'Kurang', Score>= 20 = 'Cukup')</label>
                                                     <td>
                                                         <input type="text" class="form-control" name="grade" value="<?php echo $d['grade']; ?>">
                                                     </td>
                                                 </div>
                                                 <div class="form-group">
-                                                    <td><input class="btn btn-primary btn-lg" type="submit" value="Simpan"></td>
+                                                    <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                                    <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelTest.php';">Cancel</button></td>
                                                 </div>	
                                             </fieldset>
                                         </form>
                                         <?php 
                                     }
                                 ?>
-                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelTest.php';">Cancel</button></td>
+                                
                             </div>
                         </div>
                     </div>

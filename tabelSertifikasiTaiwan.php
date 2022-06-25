@@ -253,7 +253,7 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 100px;"></td>
+                                            <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 200px;"></td>
                                             <td><?php echo $d['note_taiw']; ?></td>
                                             <td>
                                                 <div class="hero-unit">

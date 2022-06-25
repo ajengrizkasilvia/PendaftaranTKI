@@ -229,7 +229,7 @@
                                             <th>Nama PMI</th>
                                             <th>Negara Tujuan</th>
                                             <th>Score Test</th>
-                                            <th>Grade Nilai</th>
+                                            <th>Predikat</th>
                                             <th>Type Test</th>
                                             <th>Action</th>
                                         </tr>

@@ -257,11 +257,9 @@
                                             </div>
                                             <p>
                                                 <td></td>
-                                                <!-- <td><input type="submit" value="SIMPAN"></td> -->
-                                                <!-- <td><input type="submit" href="tabelManageUSer.php" value="Cancel"></td> -->
-                                                <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
-                                                <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td>
-                                                <!-- <td><button type="cancel" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td> -->
+                                                <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                                <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td>
+                                               
                                             </p>		
                                         </fieldset>
                                     </form>

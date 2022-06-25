@@ -297,12 +297,13 @@
                                     </div>
                                          <p>
                                             <td></td>
-                                            <td><button class="btn btn-primary btn-lg" type="submit">Simpan</button></td>
+                                            <td><button type="submit" class="btn btn-primary btn-lg" >Simpan</button></td>
+                                            <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSoal.php';">Cancel</button></td>
                                          </p>		
                                     </fieldset>
                                 </form>
                             <?php } ?>
-                            <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSoal.php';">Cancel</button></td>
+                           
                         </div>
                     </div>
 

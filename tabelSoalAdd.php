@@ -219,80 +219,79 @@
                             <h6 class="m-0 font-weight-bold text-primary">Form Tambah Soal Test PMI</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                            <form method="post" action="tabelSoalAddProses.php" enctype="multipart/form-data">
-                                <fieldset>
-                                    <div class="form-group">			
-                                        <label>Soal</label>
-                                        <td>
-                                            <input required type="text" name="quest" class="form-control" placeholder="Masukkan Soal"/>
-                                        </td>
-                                    </div>
-                                    <div class="form-group">			
-                                        <label>Opsi</label>
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <td>
-                                                    <input required type="text" name="op_a" class="form-control" placeholder="Masukkan Opsi A"/>
-                                                </td>
-                                            </div>
-                                            <div class="col-3">
-                                                <td>
-                                                    <input required type="text" name="op_b" class="form-control" placeholder="Masukkan Opsi B"/>
-                                                </td>
-                                            </div>
-                                            <div class="col-3">
-                                                <td>
-                                                    <input required type="text" name="op_c" class="form-control" placeholder="Masukkan Opsi C"/>
-                                                </td>
-                                            </div>
-                                            <div class="col-3">
-                                                <td>
-                                                    <input required type="text" name="op_d" class="form-control" placeholder="Masukkan Opsi D"/>
-                                                </td>
+                                <form method="post" action="tabelSoalAddProses.php" enctype="multipart/form-data">
+                                    <fieldset>
+                                        <div class="form-group">			
+                                            <label>Soal</label>
+                                            <td>
+                                                <input required type="text" name="quest" class="form-control" placeholder="Masukkan Soal" required/>
+                                            </td>
+                                        </div>
+                                        <div class="form-group">			
+                                            <label>Opsi</label>
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <td>
+                                                        <input required type="text" name="op_a" class="form-control" placeholder="Masukkan Opsi A" required/>
+                                                    </td>
+                                                </div>
+                                                <div class="col-3">
+                                                    <td>
+                                                        <input required type="text" name="op_b" class="form-control" placeholder="Masukkan Opsi B" required/>
+                                                    </td>
+                                                </div>
+                                                <div class="col-3">
+                                                    <td>
+                                                        <input required type="text" name="op_c" class="form-control" placeholder="Masukkan Opsi C" required/>
+                                                    </td>
+                                                </div>
+                                                <div class="col-3">
+                                                    <td>
+                                                        <input required type="text" name="op_d" class="form-control" placeholder="Masukkan Opsi D" required/>
+                                                    </td>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jawaban Benar</label>
-                                        <div class="input-group mb-3">
-                                            <select class="custom-select" id="inputGroupJawab" name="correct_ans" required>
-                                                <option value="" selected>--atur jawaban benar--</option>
-                                                <option value="a">Opsi A</option>
-                                                <option value="b">Opsi B</option>
-                                                <option value="c">Opsi C</option>
-                                                <option value="d">Opsi D</option>
-                                            </select>   
-                                            <div class="input-group-append">
-                                                <label class="input-group-text" for="inputGroupJawab">Options</label>
+                                        <div class="form-group">
+                                            <label>Jawaban Benar</label>
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupJawab" name="correct_ans" required>
+                                                    <option value="" selected>--atur jawaban benar--</option>
+                                                    <option value="a">Opsi A</option>
+                                                    <option value="b">Opsi B</option>
+                                                    <option value="c">Opsi C</option>
+                                                    <option value="d">Opsi D</option>
+                                                </select>   
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupJawab">Options</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Bobot Soal</label>
-                                        <td><input required type="number" name="point" class="form-control"/></td>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Bahasa</label>
-                                        <div class="input-group mb-3">
-                                            <select class="custom-select" id="inputGroupSelect02" name="tipe" required>
-                                                <option value="" selected>--atur bahasa--</option>
-                                                <option value="cantonese">cantonese</option>
-                                                <option value="mandarin">mandarin</option>
-                                            </select>
-                                            <div class="input-group-append">
-                                                <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                                            </div>   
+                                        <div class="form-group">
+                                            <label>Bobot Soal</label>
+                                            <td><input required type="number" name="point" class="form-control" required/></td>
                                         </div>
-                                    </div>
-                                         <p>
+                                        <div class="form-group">
+                                            <label>Bahasa</label>
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select" id="inputGroupSelect02" name="tipe" required>
+                                                    <option value="" selected>--atur bahasa--</option>
+                                                    <option value="cantonese">cantonese</option>
+                                                    <option value="mandarin">mandarin</option>
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                                </div>   
+                                            </div>
+                                        </div>
+                                        <p>
                                             <td></td>
-                                            <td><button class="btn btn-primary" type="submit">Simpan</button></td>
-                                         </p>		
+                                            <td><button type="submit" class="btn btn-primary btn-lg" >Simpan</button></td>
+                                            <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSoal.php';">Cancel</button></td>
+                                        </p>		
                                     </fieldset>
                                 </form>
                             </div>
-                        </div>
                     </div>
 
                 </div>
