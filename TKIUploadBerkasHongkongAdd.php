@@ -91,8 +91,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sertifikasi PMI:</h6>
-                        <a class="collapse-item" href="tabelSertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
-                        <a class="collapse-item" href="tabelSertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
+                        <a class="collapse-item" href="TKISertifikasiHongkong.php">Sertifikasi PMI Hongkong</a>
+                        <a class="collapse-item" href="TKISertifikasiTaiwan.php">Sertifikasi PMI Taiwan</a>
                     </div>
                 </div>
             </li>
@@ -269,7 +269,8 @@
                                     </div>
                                     <p>
                                         <td></td>
-                                        <td><button type="submit" class="btn btn-primary btn-lg">SIMPAN</button></td>
+                                        <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
+                                        <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='TKIUploadBerkasHongkong.php';">Cancel</button></td>
                                     </p>		
                                 </fieldset>
                             </form>
