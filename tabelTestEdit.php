@@ -253,6 +253,13 @@
                                                         <input type="number" class="form-control" name="nilai" value="<?php echo $d['score']; ?>">
                                                     </td>
                                                 </div>
+                                                <div class="form-group">			
+                                                    <label>Grade</label>
+                                                    <p>>=80 = 'Baik Sekali', >= 60 = 'Baik', >= 40 = 'Kurang', >= 20 = 'Cukup'</p>
+                                                    <td>
+                                                        <input type="text" class="form-control" name="grade" value="<?php echo $d['grade']; ?>">
+                                                    </td>
+                                                </div>
                                                 <div class="form-group">
                                                     <td><input class="btn btn-primary btn-lg" type="submit" value="Simpan"></td>
                                                 </div>	
