@@ -248,22 +248,9 @@
                                             <td><?php echo $d['quest']; ?></td>
                                             <td><?php echo $d['point']; ?></td>
                                             <td><?php echo $d['type']; ?></td>
-                                            
                                             <td>
-                                                <div class="hero-unit">
-                                                    <p>
-                                                        <a class="btn btn-warning btn-sm" href="tabelSoalEdit.php?id=<?php echo $d['id']; ?>">
-                                                        Edit
-                                                        </a>
-                                                    </p>
-                                                </div>
-                                                <div class="hero-unit">
-                                                    <p>
-                                                        <a class="btn btn-danger btn-sm" href="tabelSoalDelete.php?id=<?php echo $d['id']; ?>">
-                                                        Hapus
-                                                        </a>
-                                                    </p>
-                                                </div>
+                                                <a class="btn btn-warning btn-sm" href="tabelSoalEdit.php?id=<?php echo $d['id']; ?>">Edit</a>
+                                                <a class="btn btn-danger btn-sm" href="tabelSoalDelete.php?id=<?php echo $d['id']; ?>">Hapus</a>
                                             </td>
                                         </tr>
                                     <?php 

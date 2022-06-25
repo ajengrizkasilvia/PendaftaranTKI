@@ -220,6 +220,10 @@
                                             <th>Sertifikasi Uji Kompetensi</th>
                                                 <td><img src="berkas/SertifTaiwan/Keahlian/<?php echo $d['keahlian_taiw']; ?>" style="width: 300px;"></td>
                                         </tr> 
+                                        <tr>
+                                            <th>Keterangan</th>
+                                                <td><?php echo $d['note_taiw']; ?></td>
+                                        </tr>
                                     <tbody>
                                 </table>
                                 <?php 

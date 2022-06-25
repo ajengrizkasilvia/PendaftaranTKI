@@ -312,6 +312,12 @@
                                                 <i class="fas fa-download fa-sm text-white-50"></i>Download</a>                                                
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th>Keterangan</th>
+                                            <td>
+                                                <?php echo $d['note_hk']; ?>
+                                            </td>
+                                    </tr>
                                     <?php 
                                         }
                                     ?>

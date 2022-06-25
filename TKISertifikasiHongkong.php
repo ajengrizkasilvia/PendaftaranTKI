@@ -219,6 +219,10 @@
                                             <th>Sertifikasi Uji Kompetensi</th>
                                                 <td><img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 300px;"></td>
                                         </tr>
+                                        <tr>
+                                            <th>Keterangan</th>
+                                                <td><?php echo $d['note_hk']; ?></td>
+                                        </tr>
                                     <tbody>
                                 </table>
                                 <?php 

@@ -242,7 +242,7 @@
                                                 <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Id Daftar</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['nama_lengkap']; ?>" readonly>
+                                                        <input type="text" class="form-control" name="id_dft" value="<?php echo $d['id_dft']; ?>" readonly>
                                                         <input type="hidden" name="id_dft_lama" class="form-control" value="<?php echo $d['id_dft']; ?>"/>
                                                     </div>
                                                 </div>
@@ -390,8 +390,13 @@
                                                         <input type="hidden" name="keahlian_hk_lama" value="<?php echo $d['keahlian_hk']; ?>">
                                                     </div>			
                                                 </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Keterangan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" name="note_hk" value="<?php echo $d['note_hk']; ?>">
+                                                    </div>
+                                                </div>
                                                 <p>
-                                                    <td></td>
                                                     <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
                                                     <td><button type="cancel" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelSertifikasiHongkong.php';">Cancel</button></td>
                                                 </p>
@@ -400,6 +405,7 @@
                                         <?php 
                                     }
                                 ?>
+                                
                         </div>
                     </div>
                 </div>

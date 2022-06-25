@@ -15,6 +15,7 @@
     $kantonis_taiw = $_POST['kantonis_taiw'];
     $mandarin_taiw = $_POST['mandarin_taiw'];
     $keahlian_taiw = $_FILES['keahlian_taiw']['name'];
+    $note_taiw = $_POST['note_taiw'];
 
     //keahlian
   if($keahlian_taiw != "") {
@@ -34,7 +35,7 @@
     $id = $_POST['id_lama'];
     $id_dft = $_POST['id_dft_lama'];
     $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
-    memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru'
+    memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru', note_taiw='$note_taiw'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -60,7 +61,7 @@
         $id = $_POST['id_lama'];
         $id_dft = $_POST['id_dft_lama'];
         $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
-        memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru'
+        memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru', note_taiw='$note_taiw'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -80,7 +81,7 @@
         $id = $_POST['id_lama'];
         $id_dft = $_POST['id_dft_lama'];
         $query  = "UPDATE sertiftaiwan SET id='$id', id_dft='$id_dft', perawatanbayi_taiw='$perawatanbayi_taiw',pedulianak_taiw='$pedulianak_taiw', pekerjaanrt_taiw='$pekerjaanrt_taiw', perawatanortu_taiw='$perawatanortu_taiw',
-        memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru'
+        memasak_taiw='$memasak_taiw',inggris_taiw='$inggris_taiw', kantonis_taiw='$kantonis_taiw',mandarin_taiw='$mandarin_taiw', keahlian_taiw='$keahlian_baru', note_taiw='$note_taiw'
         WHERE id_sertif_taiw='$id_sertif_taiw'";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error

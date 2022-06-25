@@ -231,10 +231,10 @@
                                             <th>NIK</th>
                                             <th>Nama Lengkap</th>
                                             <th>Negara Tujuan</th>
-                                            <th>Tempat Lahir</th>
+                                            <!-- <th>Tempat Lahir</th>
                                             <th>Tanggal Lahir</th>
                                             <th>Umur</th>
-                                            <th>Alamat Lengkap</th>
+                                            <th>Alamat Lengkap</th> -->
                                             <!-- <th>Jenis Kelamin</th>
                                             <th>TB</th>
                                             <th>BB</th>
@@ -254,7 +254,7 @@
                                             <th>Jumlah Anak</th>
                                             <th>Umur Anak</th> -->
                                             <th>Medical Check-up</th>
-                                            <th>Pas Foto</th>
+                                            <!-- <th>Pas Foto</th> -->
                                             <th>Status Proses</th>
                                             <th>Action</th>
                                         </tr>
@@ -278,10 +278,10 @@
                                                 <td><?php echo $d['nik']; ?></td>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
                                                 <td><?php echo $d['negara_tujuan']; ?></td>
-                                                <td><?php echo $d['tempat_lahir']; ?></td>
+                                                <!-- <td><?php echo $d['tempat_lahir']; ?></td>
                                                 <td><?php echo $d['tanggal_lahir']; ?></td>
                                                 <td><?php echo $d['umur']; ?> tahun</td>
-                                                <td><?php echo $d['alamat_lengkap']; ?></td>
+                                                <td><?php echo $d['alamat_lengkap']; ?></td> -->
                                                 <!-- <td><?php echo $d['jenis_kelamin']; ?></td>
                                                 <td><?php echo $d['tb']; ?></td>
                                                 <td><?php echo $d['bb']; ?></td>
@@ -301,7 +301,7 @@
                                                 <td><?php echo $d['jml_anak']; ?></td>
                                                 <td><?php echo $d['umur_anak']; ?> tahun</td> -->
                                                 <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 100px;"></td>
-                                                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"></td>
+                                                <!-- <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"></td> -->
                                                 <td>
                                                     <?php
                                                         {

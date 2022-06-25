@@ -259,6 +259,12 @@
                                                 <img src="berkas/SertifHongkong/Keahlian/<?php echo $d['keahlian_hk']; ?>" style="width: 400px;">                                                
                                             </td>
                                     </tr>
+                                    <tr>
+                                        <th>Keterangan</th>
+                                            <td>
+                                                <?php echo $d['note_hk']; ?>
+                                            </td>
+                                    </tr>
                                 <?php 
                                     }
                                     ?>

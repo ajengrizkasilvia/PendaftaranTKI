@@ -15,6 +15,7 @@
     $kantonis_hk = $_POST['kantonis_hk'];
     $mandarin_hk = $_POST['mandarin_hk'];
     $keahlian_hk = $_FILES['keahlian_hk']['name'];
+    $note_hk = $_POST['note_hk'];
 
     //keahlian
   if($keahlian_hk != "") {
@@ -34,7 +35,7 @@
     $id = $_POST['id_lama'];
     $id_dft = $_POST['id_dft_lama'];
     $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
-    memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk',mandarin_hk='$mandarin_hk',keahlian_hk='$keahlian_baru'
+    memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk',mandarin_hk='$mandarin_hk',keahlian_hk='$keahlian_baru', note_hk='$note_hk'
         WHERE id_sertif_hk='$id_sertif_hk'";
     $result = mysqli_query($konektor, $query);
     if(!$result){
@@ -59,7 +60,7 @@
         $id = $_POST['id_lama'];
         $id_dft = $_POST['id_dft_lama'];
         $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
-        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru'
+        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru', note_hk='$note_hk'
         WHERE id_sertif_hk='$id_sertif_hk'";
               $result = mysqli_query($konektor, $query);
               if(!$result){
@@ -79,7 +80,7 @@
         $id = $_POST['id_lama'];
         $id_dft = $_POST['id_dft_lama'];
         $query  = "UPDATE sertifhongkong SET id='$id', id_dft='$id_dft', perawatanbayi_hk='$perawatanbayi_hk',pedulianak_hk='$pedulianak_hk', pekerjaanrt_hk='$pekerjaanrt_hk', perawatanortu_hk='$perawatanortu_hk',
-        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru'
+        memasak_hk='$memasak_hk',inggris_hk='$inggris_hk', kantonis_hk='$kantonis_hk', mandarin_hk='$mandarin_hk', keahlian_hk='$keahlian_baru', note_hk='$note_hk'
         WHERE id_sertif_hk='$id_sertif_hk'";
         $result = mysqli_query($konektor, $query);
         // periska query apakah ada error

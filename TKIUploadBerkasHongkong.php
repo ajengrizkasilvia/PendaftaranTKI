@@ -336,11 +336,6 @@
                                                     }
                                                 ?>
                                             </td>
-                                                <!-- <td><?php echo $d['keterangan']; ?></td> -->
-                                        </tr>
-                                        <tr>
-                                            <th>Keterangan</th>
-                                                <td><?php echo $d['keterangan_hk']; ?></td>
                                         </tr>
                                     <tbody>
                                 </table>

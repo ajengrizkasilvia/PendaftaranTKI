@@ -389,6 +389,12 @@
                                         <input type="hidden" name="keahlian_taiw_lama" value="<?php echo $d['keahlian_taiw']; ?>">
                                     </div>			
                                 </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Keterangan</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="note_taiw" value="<?php echo $d['note_taiw']; ?>">
+                                        </div>
+                                    </div>
                                 <p>
                                     <td></td>
                                     <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>

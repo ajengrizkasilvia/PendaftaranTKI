@@ -404,6 +404,10 @@
                                         <td><input type="file" name="keahlian_taiw" class="form-control"/></td>
                                         <input type="hidden" name="keahlian_taiw_lama" class="form-control"/>
                                     </div>
+                                    <div class="form-group">
+                                        <td>Keterangan</td>
+                                        <td><input type="text" class="form-control" name="note_taiw"></td>
+                                    </div>
                                     <p>
                                         <td></td>
                                         <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>

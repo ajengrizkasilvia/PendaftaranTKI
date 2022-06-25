@@ -229,6 +229,7 @@
                                             <th>Nama PMI</th>
                                             <th>Negara Tujuan</th>
                                             <th>Score Test</th>
+                                            <th>Grade</th>
                                             <th>Type Test</th>
                                             <th>Action</th>
                                         </tr>
@@ -246,23 +247,18 @@
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['negara_tujuan']; ?></td>
                                             <td><?php echo $d['score']; ?></td>
+                                            <td>
+                                               
+                                            </td>
                                             <td><?php echo $d['type']; ?></td>
                                             
                                             <td>
-                                                <div class="hero-unit">
-                                                    <p>
-                                                        <a class="btn btn-warning btn-sm" href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">
+                                                <a class="btn btn-warning btn-sm" href="tabelTestEdit.php?id_test=<?php echo $d['id_test']; ?>">
                                                         Edit
                                                         </a>
-                                                    </p>
-                                                </div>
-                                                <div class="hero-unit">
-                                                    <p>
-                                                        <a class="btn btn-danger btn-sm" href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">
+                                                <a class="btn btn-danger btn-sm" href="tabelTestDelete.php?id_test=<?php echo $d['id_test']; ?>">
                                                         Hapus
                                                         </a>
-                                                    </p>
-                                                </div>
                                             </td>
                                         </tr>
                                     <?php 
