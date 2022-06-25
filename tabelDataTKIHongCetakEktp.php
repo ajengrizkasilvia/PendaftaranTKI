@@ -19,7 +19,7 @@
          <div>
             <table width= "100%">
             <tr>
-                <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 800px;float: left;margin-bottom: 5px;"></td>
+                <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 50px;float: left;margin-bottom: 5px;"></td>
             </tr>
             
 		<?php 

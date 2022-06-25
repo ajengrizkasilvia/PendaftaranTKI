@@ -17,7 +17,7 @@
          <div>
             <table width= "100%">
             <tr>
-                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 690px;float: left;margin-bottom: 5px;"></td>
+                <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 144 x 211px;float: left;margin-bottom: 5px;"></td>
             </tr>
 		<?php 
 		    }
