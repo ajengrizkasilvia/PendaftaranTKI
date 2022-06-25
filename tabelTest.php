@@ -229,6 +229,7 @@
                                             <th>Nama PMI</th>
                                             <th>Negara Tujuan</th>
                                             <th>Score Test</th>
+                                            <th>Grade Nilai</th>
                                             <th>Type Test</th>
                                             <th>Action</th>
                                         </tr>
@@ -246,6 +247,7 @@
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['negara_tujuan']; ?></td>
                                             <td><?php echo $d['score']; ?></td>
+                                            <td><?php echo $d['grade']; ?></td>
                                             <td><?php echo $d['type']; ?></td>
                                             
                                             <td>
