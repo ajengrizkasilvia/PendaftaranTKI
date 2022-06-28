@@ -293,7 +293,7 @@
                                         ?>
                                     </tbody>
                                 </table>
-                                <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='TKISertifikasiHongkong.php';">Back</button></td>
+                                <td><button type="back" class="btn btn-primary btn-lg" onclick="javascript:window.location='TKIUploadBerkasHongkong.php';">Back</button></td>
                             </div>
                         </div>
                     </div>

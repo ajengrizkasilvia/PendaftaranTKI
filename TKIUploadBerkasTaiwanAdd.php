@@ -265,7 +265,7 @@
                                     </div>
                                     <div class="form-group">
                                         <td>Keterangan</td>
-                                        <td><input type="text" class="form-control" name="keterangan_taiw" readonly></td>
+                                        <td><input type="text" class="form-control" name="keterangan_taiw" readonly>*diisi oleh admin</td>
                                     </div>
                                     <p>
                                         <td></td>

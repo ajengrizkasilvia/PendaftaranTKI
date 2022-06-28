@@ -267,51 +267,6 @@
                                                 <td><?php echo $d['sektor_hk']; ?></td>
                                         </tr>
                                         <tr>
-                                            <th>E-KTP</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['ektp_hk']; ?>" style="width: 300px;"></td>
-                                        </tr> 
-                                        <tr>   
-                                            <th>Kartu Keluarga</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['kk_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>    
-                                            <th>Akta Kelahiran</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['akte_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>    
-                                            <th>Surat Keterangan Status/Surat Menikah</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['suratnikah_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Surat Ijin Ortu/Suami</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['suratijin_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Ijazah</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['ijazah_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Ex-Paspor</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['expaspor_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>SKCK</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['skck_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Kartu Kuning</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['kartukuning_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Biometri</th>
-                                                <td><img src="berkas/Hongkong/<?php echo $d['biometri_hk']; ?>" style="width: 300px;"></td>
-                                        </tr>
-                                        </tr>
-                                        <tr>
-                                            <th>Rekom ID</th>
-                                            <td>Untuk Rekom ID silahkan menghubungi admin untuk pendaftaran ke Dinas Tenaga Kerja Dan Migrasi</td>
-                                        </tr>
-                                        <tr>
                                             <th>Status Proses</th>
                                             <td> 
                                                 <?php
