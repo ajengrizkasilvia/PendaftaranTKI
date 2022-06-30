@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Cetak Surat Ijin</title>
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
 </head>
 <body>
  

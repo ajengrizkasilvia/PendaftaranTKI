@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Cetak E-Ktp</title>
     <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
 </head>
 <body>
@@ -19,7 +20,7 @@
          <div>
             <table width= "100%">
             <tr>
-                <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 690px;float: left;margin-bottom: 5px;"></td>
+                <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 400px;float: left;margin-bottom: 5px;"></td>
             </tr>
 		<?php 
 		    }

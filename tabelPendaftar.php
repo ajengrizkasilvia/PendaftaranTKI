@@ -231,30 +231,7 @@
                                             <th>NIK</th>
                                             <th>Nama Lengkap</th>
                                             <th>Negara Tujuan</th>
-                                            <!-- <th>Tempat Lahir</th>
-                                            <th>Tanggal Lahir</th>
-                                            <th>Umur</th>
-                                            <th>Alamat Lengkap</th> -->
-                                            <!-- <th>Jenis Kelamin</th>
-                                            <th>TB</th>
-                                            <th>BB</th>
-                                            <th>Pendidikan Terakhir</th>
-                                            <th>Status</th>
-                                            <th>Agama</th>
-                                            <th>Pengalaman Kerja</th>
-                                            <th>Nama Ayah</th>
-                                            <th>Pekerjaan Ayah</th>
-                                            <th>Nama Ibu</th>
-                                            <th>Pekerjaan Ibu</th>
-                                            <th>Jumlah Saudara Laki-laki</th>
-                                            <th>Jumlah Saudara Perempuan</th>
-                                            <th>Anak Nomor</th>
-                                            <th>Nama Pasangan</th>
-                                            <th>Pekerjaan Pasangan</th>
-                                            <th>Jumlah Anak</th>
-                                            <th>Umur Anak</th> -->
                                             <th>Medical Check-up</th>
-                                            <!-- <th>Pas Foto</th> -->
                                             <th>Status Proses</th>
                                             <th>Action</th>
                                         </tr>
@@ -278,30 +255,7 @@
                                                 <td><?php echo $d['nik']; ?></td>
                                                 <td><?php echo $d['nama_lengkap']; ?></td>
                                                 <td><?php echo $d['negara_tujuan']; ?></td>
-                                                <!-- <td><?php echo $d['tempat_lahir']; ?></td>
-                                                <td><?php echo $d['tanggal_lahir']; ?></td>
-                                                <td><?php echo $d['umur']; ?> tahun</td>
-                                                <td><?php echo $d['alamat_lengkap']; ?></td> -->
-                                                <!-- <td><?php echo $d['jenis_kelamin']; ?></td>
-                                                <td><?php echo $d['tb']; ?></td>
-                                                <td><?php echo $d['bb']; ?></td>
-                                                <td><?php echo $d['pendidikan_terakhir']; ?></td>
-                                                <td><?php echo $d['status']; ?></td>
-                                                <td><?php echo $d['agama']; ?></td>
-                                                <td><?php echo $d['pengalaman_kerja']; ?></td>
-                                                <td><?php echo $d['nama_ayah']; ?></td>
-                                                <td><?php echo $d['pekerjaan_ayah']; ?></td>
-                                                <td><?php echo $d['nama_ibu']; ?></td>
-                                                <td><?php echo $d['pekerjaan_ibu']; ?></td>
-                                                <td><?php echo $d['jml_brother']; ?></td>
-                                                <td><?php echo $d['jml_sister']; ?></td>
-                                                <td><?php echo $d['anak_no']; ?></td>
-                                                <td><?php echo $d['nama_pasangan']; ?></td>
-                                                <td><?php echo $d['pekerjaan_pasangan']; ?></td>
-                                                <td><?php echo $d['jml_anak']; ?></td>
-                                                <td><?php echo $d['umur_anak']; ?> tahun</td> -->
                                                 <td><img src="berkas/Medical/<?php echo $d['medical_check']; ?>" style="width: 100px;"></td>
-                                                <!-- <td><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 100px;"></td> -->
                                                 <td>
                                                     <?php
                                                         {

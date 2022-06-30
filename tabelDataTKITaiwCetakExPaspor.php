@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" type="image/x-icon" href="img\favicon.ico" />
+    <title>Cetak Ex-Pasport</title>
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
 </head>
 <body>
  

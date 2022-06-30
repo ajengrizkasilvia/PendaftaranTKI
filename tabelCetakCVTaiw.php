@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>BIODATA RECORD</title>
+    <link rel="icon" type="image/x-icon" href="img\favicon.ico" />
 </head>
 <body>
  
@@ -120,7 +121,7 @@
                 <th>Good</th>
                 <th>Excelent</th>
                 <th></th>
-                <td rowspan="5"><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 210px;"></td>
+                <td rowspan="5"><img src="berkas/PasFoto/<?php echo $d['pas_foto']; ?>" style="width: 144 x 211px;"></td>
             </tr>
             <tr>
                 <td></td>

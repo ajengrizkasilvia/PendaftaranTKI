@@ -254,7 +254,7 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
                                             <td><?php echo $d['sektor_taiw']; ?></td>
-                                            <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 300px;"></td>
+                                            <td><img src="berkas/Taiwan/<?php echo $d['ektp_taiw']; ?>" style="width: 200px;"></td>
                                             <td>
                                                 <?php
                                                     {
