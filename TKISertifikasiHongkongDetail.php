@@ -167,8 +167,21 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    <?php
+                        include 'config.php';
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $id_sertif_hk = $_GET['id_sertif_hk'];
+                        $data = mysqli_query($konektor,"SELECT * FROM sertifhongkong WHERE id_sertif_hk='$id_sertif_hk'");
+                        while($d = mysqli_fetch_array($data)){
+                    ?>
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Hongkong</h1>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Hongkong</h1>
+                        <a href="tabelCetakCVHk.php?id_sertif_hk=<?php echo $d['id_sertif_hk']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download Biodata Record</a>
+                    </div>
+                    <?php 
+                        }
+                    ?>
                     
                     <ul class="breadcrumb">
                             <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>

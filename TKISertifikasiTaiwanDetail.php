@@ -168,7 +168,21 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Taiwan</h1>
+                    <?php
+                        include 'config.php';
+                        $konektor = mysqli_connect("localhost","root","", "tki");
+                        $id_sertif_taiw = $_GET['id_sertif_taiw'];
+                        $data = mysqli_query($konektor,"SELECT * FROM sertiftaiwan WHERE id_sertif_taiw='$id_sertif_taiw'");
+                        while($d = mysqli_fetch_array($data)){
+                    ?>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">View Detail Sertifikasi PMI Taiwan</h1>
+                        <a href="tabelCetakCVTaiw.php?id_sertif_taiw=<?php echo $d['id_sertif_taiw']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download Biodata Record</a>
+                    </div>
+                    <?php 
+                        }
+                    ?>
                     
                     <ul class="breadcrumb">
                             <li><a href="indextki.php">Beranda</a> <span class="divider">/</span></li>
