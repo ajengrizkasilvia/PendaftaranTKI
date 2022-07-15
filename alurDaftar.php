@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.php">Home Page</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tujuan">Negara Tujuan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Negara Tujuan</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.php">Tentang Kami</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="alurDaftar.php">Alur Pendaftaran</a></li>
@@ -45,46 +45,38 @@
             </div>
         </header>
 
-        <!-- Negara Tujuan-->
-        <section class="page-section" id="negara">
+        <!-- Alur Daftar-->
+        <section class="page-section" id="alur">
             <div class="container">
                 <div>
-                    <?php 
-                    include 'config.php';
-                    $konektor = mysqli_connect("localhost","root","", "tki");
-                    $id_negara = $_GET['id_negara'];
-                    $data = mysqli_query($konektor,"select * from negara where id_negara='$id_negara'");
-                    while($d = mysqli_fetch_array($data)){
-                    ?>
-                    <section class="page-section" id="negara">
+                    <section class="page-section" id="alur">
                         <div class="container">
                             <div class="text-center">
-                            <h2 class="section-heading text-uppercase">Negara Tujuan</h2>
-                            <h3 class="section-subheading text-muted">Country Of Destination.</h3>
-                            <h2 type="hidden" name="id_negara" value="<?php echo $d['id_negara']; ?>"></h2>
-                            <h2 id="tujuan" class="section-heading text-uppercase"><?php echo $d['negara_tujuan']; ?></h2>
-                            <img src="gambar/<?php echo $d['gambar_negara']; ?>" style="width: 700px;"><br><br>
-                            </div>
-                            <br><br>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <h4 class="my-3">Kriteria</h4>
-                                    <p class="text-muted"><?php echo $d['kriteria']; ?></p>
-                                </div>
-                                <div class="col-md-4">
-                                    <h4 class="my-3">Persyaratan</h4>
-                                    <p class="text-muted"><?php echo $d['persyaratan']; ?></p>
-                                </div>
-                                <div class="col-md-4">
-                                    <h4 class="my-3">Gaji</h4>
-                                    <p class="text-muted">Rp. <?php echo $d['jumlah_gaji']; ?></p>
+                            <h2 class="section-heading text-uppercase">Mekanisme Pendaftaran</h2>
+                            <h3 class="section-subheading text-muted">Registration Mechanism</h3>
+                            
+                            <p>
+                                <img src="images/alur.jpg" alt="Alur Daftar" height="350" width="1200" />
+                            </p>
+                            <h3 span align="left">Keterangan</h3>
+                            <div class="text-center">
+                                    <h4 span align="justify">
+                                        <br>1. Calon Pekerja Migran Indonesia(PMI) mendaftar melalui laman https://sippmi.freehost.id/ 
+                                            dengan menekan button LOGIN DISINI dan selanjutnya membuat akun atau registrasi terlebih dahulu
+                                            dengan melengkapi semua isian data dengan benar pada formulir registrasi. Kemudian dapat login untuk mendaftarkan diri ke sistem informasi pendaftaran PMI PT.Hendrarta Argaraya.
+                                        <br>2. Untuk tahap pertama WAJIB menyiapkan berkas Medical-checkup. Pilih menu FORM PENDAFTARAN dan 
+                                            selanjutnya melengkapi semua isian data dengan benar pada formulir pandaftaran.
+                                        <br>3. Setelah berhasil melakukan pendaftaran, harap tunggu Status Pendaftaran yang akan tampil sampai diverifikasi oleh admin(pihak PT) estimasi pengecekan 2-3 hari.
+                                        <br>4. Apabila Status Pendaftaran sudah disetujui, langkah selanjutnya pilih menu General-> Lengkapi Berkas pilih sesuai negara tujuan. 
+                                            Lengkapi berkas yang sesuai dengan cara klik UPLOAD BERKAS. Harap tunggu Status Pendaftaran yang akan tampil sampai diverifikasi oleh admin(pihak PT) estimasi pengecekan 2-3 hari.
+                                        <br>5. Calon Pekerja Migran Indonesia(PMI) dapat mengikuti tes latihan kemampuan bahasa Cantonese/Mandarin sesuai yang akan dikerjakan pada Menu Tes PMI.
+                                        <br>6. Pendaftaran untuk Pekerja Migran Indonesia(PMI) pada PT. Hendrarta Argaraya TIDAK DIPUNGUT BIAYA apapun, apabila terjadi penipuan bukan tanggung jawab pihak PT.
+                                    </span>
+                                    </h4>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <?php 
-                    }
-                    ?>
                 </div>
             </div>
         </section>

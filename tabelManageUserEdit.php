@@ -258,7 +258,7 @@
                                             <p>
                                                 <td></td>
                                                 <td><button type="submit" class="btn btn-primary btn-lg">Simpan</button></td>
-                                                <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelManageUSer.php';">Cancel</button></td>
+                                                <td><button type="button" class="btn btn-secondary btn-lg" onclick="javascript:window.location='tabelManageUser.php';">Cancel</button></td>
                                                
                                             </p>		
                                         </fieldset>

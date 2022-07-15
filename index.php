@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Negara Tujuan</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.php">Login Disini!</a></li>
+                        <li class="nav-item"><a class="nav-link" href="alurDaftar.php">Alur Pendaftaran</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To PT Hendrarta Argaraya !</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="login.php">Sign In</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="login.php">LOGIN DISINI!</a>
             </div>
         </header>
         <!-- Content-->
@@ -72,7 +72,8 @@
                             <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Legalitas</h4>
-                        <p class="text-muted">PT. Hendrarta Argaraya adalah Perusahaan Pelaksana Penempatan Pekerja Migran Indonesia Swasta (P3MIS) yang resmi sebagaimana tercantum dalam keputusan Menakertrans RI nomor 543 tahun 2016.</p>
+                        <p class="text-muted">PT. Hendrarta Argaraya adalah Perusahaan Pelaksana Penempatan Pekerja Migran Indonesia Swasta (P3MIS) yang resmi sebagaimana tercantum 
+                            dengan Nomor izin : 258 Tahun 2012, tanggal: 31 Mei 2012 yang telah mendapatkan ijin dan pengakuan resmi Pemerintah Indonesia untuk melakukan kegiatan perekrutan calon pekerja migran, pendidikan, pelatihan dan penempatan kerja di luar negeri.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -94,8 +95,6 @@
                     <h2 class="section-heading text-uppercase">Negara Tujuan</h2>
                     <h3 class="section-subheading text-muted">Country Of Destination.</h3>
                 </div>
-                    <div class="row text-center">
-                        <!-- Portfolio item 1-->
                         <?php
                         include 'config.php';
                         $konektor = mysqli_connect("localhost","root","", "tki");
@@ -188,69 +187,7 @@
                 </ul>
             </div>
         </section>
-        <!-- Team
-        <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
-            </div>
-        </section> -->
-        <!-- Clients-->
-        <!-- <div class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." /></a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
